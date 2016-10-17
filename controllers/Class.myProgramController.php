@@ -5,7 +5,7 @@ class myProgramController extends Controller{
   /**
    * Method that controls the page 'myProgram.php'
    */
-  function myProgram(){
+  function myprogram(){
 
     //The page cannot be displayed if no user connected
     if(!$this->getActiveUser()){

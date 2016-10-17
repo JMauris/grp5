@@ -7,7 +7,7 @@ $user = $_SESSION['personne'];
 <head>
 	<meta charset="UTF-8">
 	<title>SAC Info</title>
-	<link rel="stylesheet" type="text/css" href="http://localhost/cas_montana/public/css/main.css">
+<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
 
 </head>
 <body>

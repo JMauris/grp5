@@ -5,6 +5,7 @@ include_once ROOT_DIR.'global/header.php';
 $msg = $this->vars['msg'];
 $user = $_SESSION['personne'];
 ?>
+	<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
 <br><br>
 <div>
 	<table align="center">
