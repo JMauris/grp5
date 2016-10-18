@@ -1,35 +1,42 @@
 <?php
 
-include_once ROOT_DIR.'global/header.php';
-$tourArray = $_SESSION['tour'];
+	include_once ROOT_DIR.'global/header.php';
+	$tourArray = $_SESSION['tour'];
 ?>
 
 <html>
 	<head>
 		<title>Proposal</title>
-		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
+		<link rel="stylesheet" type="text/css" href="http://localhost/cas_montana/public/css/main.css">
 		<style type="text/css">
 			#show{
+				overflow-y : scroll;
 				background-color : transparent;
+<<<<<<< HEAD
 				width: 100%;
 				padding-left: 2%;
 				padding-right: 2%;
+=======
+				height: 30%;
+				border: 1px solid black;
+>>>>>>> origin/master
 				padding-bottom: 2%;
 			}
-			
+
 			button {
 				width: 100%;
 				text-align: left;
 			}
-			
+
 			h2 {
 				text-align: center;
 			}
-			
+
 			p {
 			    margin: 0;
 			    padding: 0;
 			}
+<<<<<<< HEAD
 			
 			
 			#searchButton {
@@ -46,6 +53,17 @@ $tourArray = $_SESSION['tour'];
 				font-weight: bold;								
 			}
 			#near{
+=======
+
+			#search {
+				display:inline-block;
+				align: left;
+				width: 20%;
+			}
+
+			#searchButton, #near {
+
+>>>>>>> origin/master
 				float: right;
 				width: 25%;
 				display: inline;
@@ -58,31 +76,26 @@ $tourArray = $_SESSION['tour'];
 				font-size: 100%;
 				font-weight: bold;
 			}
-			#buttonDiv{
-				background-color : transparent;
-				height: 30%;
-			}
 			a{
 				text-decoration: none;
 			}
-			
+
 		</style>
 	</head>
 	<body>
-		<div class="wrapper">
+		<div style="height: 600px;">
 			<h1>Proposal</h1>
-			
-			
-			<table id="show">
-			<tr>
-			<td  style="text-align: center;">
 			<h2>These are our Proposals for you:</h2>
+<<<<<<< HEAD
 
 			</td>
 			</tr>
 			<tr style="height: 50%;">
 			<td style= "height: 50%; overflow-y: scroll;">
 			<a href="<?php echo URL_DIR.'proposal/proposal_detail'?>">
+=======
+			<div id="show"> <a href="<?php echo URL_DIR.'proposal/proposal_detail'?>">
+>>>>>>> origin/master
 			<?php foreach( $tourArray as $cle => $element)
 
 					 {?>
@@ -90,9 +103,11 @@ $tourArray = $_SESSION['tour'];
 					<button id = <?php echo ' '.$tourArray[$cle]->getId(); ?>>
 					<p><?php echo ' '.$tourArray[$cle]->getTitre(); ?></p>
 					<p><?php echo ' '.$tourArray[$cle]->getInformation_fr(); ?></p>
+				S
 				<?php } ?>
 					</button>
 				</a>
+<<<<<<< HEAD
 			</td>
 			</tr>
 			<tr>
@@ -105,8 +120,13 @@ $tourArray = $_SESSION['tour'];
 			
 		
 			
+=======
+			</div>
+
+			<button id="searchButton"><img id="search" src="http://localhost/cas_montana/public/img/search.png" onclick="window.location = 'search_path.php';">Search route</button>
+			<button id="near">Near us</button>
+>>>>>>> origin/master
 		</div>
-			
-			<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?>
-		</body>
-	</html>
+</body>
+</html>
+<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>
