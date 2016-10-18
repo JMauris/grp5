@@ -15,7 +15,7 @@
 
         <title>Cas Montana</title>
     </head>
-    
+
     <body>
     	<ul class="head">
     	<li class="ulh">
@@ -23,16 +23,16 @@
     	</li>
     	</ul>
       <ul class="ulh">
-        <li class="lih"><a class="ah" href="<?php echo URL_DIR.'mainPage/mainPage'?>">Home</a></li>
+        <li class="lih"><a class="ah" href="<?php echo URL_DIR.'mainpage/mainpage'?>">Home</a></li>
         <li class="lih"><a class="ah" href="<?php echo URL_DIR.'programm/programm'?>">Program</a></li>
         <?php if(isset($_SESSION["personne"]))
         {
-            echo  '<li class="lih"><a class="ah" href="' .URL_DIR."myProgram/myProgram". ' ">My Program</a></li>';
+            echo  '<li class="lih"><a class="ah" href="' .URL_DIR."myprogram/myprogram". ' ">My Program</a></li>';
         }?>
         <li class="lih"><a class="ah" href="<?php echo URL_DIR.'proposal/proposal'?>">Proposal</a></li>
         <?php if(isset($_SESSION["personne"]))
         {
-            echo  '<li class="lih"><a class="ah" href="' .URL_DIR."myProposal/myProposal". ' "">MyProposal</a></li>';
+            echo  '<li class="lih"><a class="ah" href="' .URL_DIR."myproposal/myproposal". ' "">MyProposal</a></li>';
         }?>
         <li class="lih"><a class="ah" href="<?php echo URL_DIR.'contact/contact'?>">Contact</a></li>
         <li class="lih"><a class="ah"  href="<?php echo URL_DIR.'about/about'?>">About</a></li>
