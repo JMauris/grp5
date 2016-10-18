@@ -28,15 +28,22 @@ class ProgrammController extends Controller{
 
 
   }
-  /**
-   * Method that controls the page 'programm_overview.php'
-   */
-  function programm_overview(){
+
+function hiking_detail(){
 
 
+  if(!isset ($_POST['selectedTour']))
+  {
+    $this->redirect('programm', 'programm');
+    exit;
 
   }
+  $Tour=$_SESSION['tour'];
+  $id =$_POST['selectedTour'];
 
+  $_SESSION['Selected_Tour'] = $Tour[$id];
+
+}
   function search_path(){
 
   }

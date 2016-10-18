@@ -21,6 +21,15 @@ $tourArray=$_SESSION['tour'];
 
 		<style type="text/css">
 
+		button {
+			width: 100%;
+			text-align: left;
+		}
+		p {
+				margin: 0;
+				padding: 0;
+		}
+
 			#tableDiv{
 				width: 94%;
 				height: 50%;
@@ -217,11 +226,14 @@ $tourArray=$_SESSION['tour'];
 
 
 					 </tr>
+
+					<form action="<?php echo URL_DIR.'programm/hiking_detail'?>" method= "post">
 					 <?php foreach( $tourArray as $cle => $element)
 
 					 {?>
 					 <tr>
-	            <td><?php if( $tourArray[$cle]->getIdxTypeTour() == 1){
+						 	<button  name ="selectedTour" value = <?php echo $cle?>>
+	            <p><?php if( $tourArray[$cle]->getIdxTypeTour() == 1){
                 echo "Hiking";
               }
               elseif ($tourArray[$cle]->getIdxTypeTour() == 2) {
@@ -229,15 +241,16 @@ $tourArray=$_SESSION['tour'];
               }
               else {
                 echo "Proposal";
-              } ?> </td>
-					<td><?php echo  $tourArray[$cle]->getTitre(); ?> </td>
-					<td><?php echo  $tourArray[$cle]->getInformation_fr(); ?> </td>
-					<td><?php echo  $tourArray[$cle]->getIdxDepartLocalite(); ?> </td>
-					<td><?php echo  $tourArray[$cle]->getDateDebut(); ?> </td>
+              } ?> </p>
+
+							<p><?php echo ' '.$tourArray[$cle]->getTitre(); ?></p>
+							<p><?php echo ' '.$tourArray[$cle]->getInformation_fr(); ?></p>
 
 
+				</button>
 
 					<?php } ?>
+			</form>
 					</tr>
 			</table>
 

@@ -215,14 +215,14 @@ public function getDifficulte(){
 
 public function setDifficulte($difficulte)
 {
-  $this->id= $difficulte;
+  $this->difficulte= $difficulte;
 }
 
 
 
 public function getDuree(){
 
-  return $this->Duree;
+  return $this->duree;
 }
 
 public function setDuree($duree)
