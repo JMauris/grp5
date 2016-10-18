@@ -11,9 +11,10 @@ $tourArray = $_SESSION['tour'];
 		<style type="text/css">
 			#show{
 				background-color : transparent;
-				height: 30%;
-				width:100%;
-				padding: 2%;
+				width: 100%;
+				padding-left: 2%;
+				padding-right: 2%;
+				padding-bottom: 2%;
 			}
 			
 			button {
@@ -30,35 +31,32 @@ $tourArray = $_SESSION['tour'];
 			    padding: 0;
 			}
 			
-			#search {
-				display:inline-block;
-				align: left;
-				width: 20%;
-			}
 			
 			#searchButton {
 				float: right;
-				width: 20%;
+				width: 25%;
 				display: inline;
-				height: 50px;
-				margin-top: 5%;
+				height: 30%;
+				margin-top: 4%;
 				margin-right: 3%;
 				text-align: center;
 				font-family: "Times New Roman", Times, serif;
 				font-style: normal;
-				font-size: 1.30em;
+				font-size: 100%;
+				font-weight: bold;								
 			}
 			#near{
 				float: right;
-				width: 15%;
+				width: 25%;
 				display: inline;
-				height: 50px;
-				margin-top: 5%;
+				height: 30%;
+				margin-top: 4%;
 				margin-right: 3%;
 				text-align: center;
 				font-family: "Times New Roman", Times, serif;
 				font-style: normal;
-				font-size: 1.30em;
+				font-size: 100%;
+				font-weight: bold;
 			}
 			#buttonDiv{
 				background-color : transparent;
@@ -82,9 +80,9 @@ $tourArray = $_SESSION['tour'];
 
 			</td>
 			</tr>
-			<tr>
-			<td style= "height: 30%; overflow-y: scroll;">
-			<div id="show"> <a href="<?php echo URL_DIR.'proposal/proposal_detail'?>">
+			<tr style="height: 50%;">
+			<td style= "height: 50%; overflow-y: scroll;">
+			<a href="<?php echo URL_DIR.'proposal/proposal_detail'?>">
 			<?php foreach( $tourArray as $cle => $element)
 
 					 {?>
@@ -99,7 +97,7 @@ $tourArray = $_SESSION['tour'];
 			</tr>
 			<tr>
 			<td>
-			<a><button id="searchButton"><img id="search" src="http://localhost/cas_montana/public/img/search.png">Search route</button></a>
+			<a><button id="searchButton">Search route</button></a>
 			<a><button id="near">Near us</button></a>
 			</td>
 			</tr>

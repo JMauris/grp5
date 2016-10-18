@@ -16,7 +16,7 @@
 		</style>
 	</head>
 	<body>
-		<div class="wrapper">
+		<div class="wrapper" style= "padding-bottom: 2%;">
 			<h1>Proposal Detail</h1>
 			<h3>"Name"</h3>
 			<table>
@@ -49,10 +49,9 @@
 					<td>*********</td>
 				</tr>
 			</table>
-			<a href="<?php echo URL_DIR.'proposal/proposal'?>">
-			<input type="button" value="go back" ></input>
+			<a href="<?php echo URL_DIR.'proposal/proposal'?>" style="padding-bottom: 2%;">
+			<input type="button" value="Go back" ></input>
 		</a>
-		<div class="push"></div>
 			</div>
 			
 			<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?>

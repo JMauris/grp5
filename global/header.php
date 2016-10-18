@@ -19,7 +19,7 @@
     <body>
     	<ul class="head">
     	<li class="ulh">
-    	<a class="header" href="<?php echo URL_DIR.'mainPage/mainPage'?>"><img src="/<?php echo SITE_NAME; ?>/public/img/logo.png" align="middle" /></a>
+    	<a class="header" href="<?php echo URL_DIR.'mainPage/mainPage'?>"><img src="/<?php echo SITE_NAME; ?>/public/img/newLogo.png" align="middle" height="15%" width="15%"/></a>
     	</li>
     	</ul>
       <ul class="ulh">

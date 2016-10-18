@@ -15,7 +15,7 @@ h1{
 	height:100%;
 	width: 85%;
 	margin: 0 auto 11em;
-	background-color: rgba(235,235,235,0.7);
+	background-color: rgba(235,235,235,0.85);
 	font-family: "Times New Roman", Times, serif;
 	font-style: normal;
 	font-size: 1.10em;
@@ -24,7 +24,7 @@ h1{
 
 body {
 	height: 100%;
-	background: url('http://localhost/cas_montana/background.jpg') no-repeat fixed center !important;
+	background: url('http://localhost/grp5/public/img/Valais.jpg') no-repeat fixed center !important;
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;

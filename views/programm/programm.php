@@ -31,9 +31,11 @@ $tourArray=$_SESSION['tour'];
 		}
 
 			#tableDiv{
-				width: 94%;
 				height: 50%;
 				background: transparent;
+				padding-left: 2%;
+				padding-right: 2%;
+				padding-top: 2%;
 			}
 
 			#insideTable{
@@ -57,16 +59,16 @@ $tourArray=$_SESSION['tour'];
 			}
 			#searchButton{
 				float: right;
-				width: 15%;
+				width: 20%;
 				display: inline;
-				height: 50px;
-				margin-top: 5%;
+				height: 30%;
+				margin-top: 4%;
 				margin-right: 3%;
-				align: center;
+				text-align: center;
 				font-family: "Times New Roman", Times, serif;
 				font-style: normal;
-				font-size: 1.30em;
-
+				font-size: 100%;
+				font-weight: bold;
 			}
 			#top {
 				float: top;
@@ -81,17 +83,20 @@ $tourArray=$_SESSION['tour'];
 
 			#mainTable{
 				width: 100%;
-				margin-left: 2%;
-				margin-right: 2%;
-				margin-top: 2%;
+				padding: 2%;
 			}
 			#submit1{
 				float: right;
-				margin-left: 2%;
+				width: 40%;
+				display: inline;
+				height: 30%;
+				margin-top: 4%;
+				margin-right: 3%;
 				text-align: center;
 				font-family: "Times New Roman", Times, serif;
 				font-style: normal;
-				font-size: 1.10em;
+				font-size: 100%;
+				font-weight: bold;
 			}
 			#submit2{
 				float: right;
@@ -116,26 +121,23 @@ $tourArray=$_SESSION['tour'];
 				background: transparent;
 			}
 			#search1{
-				float: left;
-				width: 30%;
-			}
-			#searchButton{
 				float: right;
 				width: 20%;
-				margin: 0;
-				padding-left: 1%;
-				text-align: right;
-				font-family: "Times New Roman", Times, serif;
-				font-style: normal;
-				font-size: 1.20em;
+				padding: 2%;
 			}
+			
+			#datepicker{
+				width: 100%;
+				padding: 0;
+			}
+			
 		</style>
 	</head>
 	<body>
-		<div class="wrapper">
+		<div class="wrapper" style= "padding-bottom: 2%; padding-right: 2%; padding-left: 2%;">
 			<h1>Hikinglists</h1>
 			<div id="topButton">
-				<button id="searchButton"><img id="search1" src="http://localhost/cas_montana/public/img/search.png" onclick="window.location = 'search_path.php';">Search route</button>
+				<a href="<?php echo URL_DIR.'search/search_path.php'?>"><img id="search1" src="<?php echo URL_DIR. 'public/img/searchRoute.png'?>"></a>
 			</div>
 			<div id="top">
 			<table style="width: 100%;">
@@ -167,11 +169,7 @@ $tourArray=$_SESSION['tour'];
 				</tr>
 				<tr>
 					<td></td>
-					<td>
-						<form action="<?php echo URL_DIR.'programm/programm'?>" method= "post">
-					<button id="submit1" name ="type" value = '1'>only hike</button>
-						</from>
-					</td>
+					
 				</tr>
 			  	</table>
 				</div>
@@ -186,11 +184,11 @@ $tourArray=$_SESSION['tour'];
 			  	</tr>
 			  	<tr>
 				    <td><b>From:</b></td>
-				    <td><input type="text" id="datepicker2" name="from"></td>
+				    <td><input type="text" id="datepicker" name="from"></td>
 				</tr>
 				<tr>
 					<td><b>To:</b></td>
-					<td><input type="text" id="datepicker3" name="to"></td>
+					<td><input type="text" id="datepicker" name="to"></td>
 				</tr>
 				<tr>
 					<td>Route for the selected stay:</td>
@@ -198,11 +196,7 @@ $tourArray=$_SESSION['tour'];
 				</tr>
 				<tr>
 					<td></td>
-					<td>
-							<form action="<?php echo URL_DIR.'programm/programm'?>" method= "post">
-					<button id="submit1" name ="type" value = '2'>only multi-hike</button>
-					</form>
-					</td>
+					
 				</tr>
 			  	</table>
 
@@ -212,6 +206,24 @@ $tourArray=$_SESSION['tour'];
 		</tr>
 	</table>
 </div>
+
+<div id="buttonsDiv1">
+			<table style="width: 100%;">
+			<tr>
+			<td>
+				<form action="<?php echo URL_DIR.'programm/programm'?>" method= "post">
+					<button id="submit1" name ="type" value = '1'>Only hike</button>
+				</from>
+			</td>
+			<td>
+				<form action="<?php echo URL_DIR.'programm/programm'?>" method= "post">
+					<button id="submit1" name ="type" value = '2'>Only multi-hike</button>
+				</form>
+			</td>
+			</tr>
+			</table>
+		</div>
+		
 <div id="yourProg">
 			<h2>Your Programm:</h2>
 			</div>
