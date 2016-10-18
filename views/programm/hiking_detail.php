@@ -18,7 +18,7 @@ $SelectedTour = $_SESSION['Selected_Tour'];
 		</style>
 	</head>
 	<body>
-		<div style="height: 100%">
+		<div class="wrapper" style="height: 100%">
 			<h1>Programm Detail</h1>
 			<h3><?php echo ' '.$SelectedTour->getTitre(); ?></h3>
 			<table>
@@ -60,7 +60,10 @@ $SelectedTour = $_SESSION['Selected_Tour'];
 			</a>
 			<a href="">
 				<input type="button" value="register"></input>
+
+
 			</a>
+			<br>
 		</div>
 	</body>
 </html>
