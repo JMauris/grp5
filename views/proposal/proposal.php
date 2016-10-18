@@ -79,14 +79,16 @@ $tourArray = $_SESSION['tour'];
 			<tr>
 			<td  style="text-align: center;">
 			<h2>These are our Proposals for you:</h2>
+
 			</td>
 			</tr>
 			<tr>
 			<td style= "height: 30%; overflow-y: scroll;">
+			<div id="show"> <a href="<?php echo URL_DIR.'proposal/proposal_detail'?>">
 			<?php foreach( $tourArray as $cle => $element)
 
 					 {?>
-					<a href="<?php echo URL_DIR.'proposal/proposal_detail'?>">
+
 					<button id = <?php echo ' '.$tourArray[$cle]->getId(); ?>>
 					<p><?php echo ' '.$tourArray[$cle]->getTitre(); ?></p>
 					<p><?php echo ' '.$tourArray[$cle]->getInformation_fr(); ?></p>
