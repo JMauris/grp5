@@ -1,22 +1,38 @@
+.head{
+	text-align: center;
+	list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   background:#6cf;
+   background-color: #333333;
+}
 .ulh {
    list-style-type: none;
    margin: 0;
    padding: 0;
    overflow: hidden;
+   background:#6cf;
    background-color: #333333;
 
 }
-
 .lih {
     float:left;
+    font-family: "Times New Roman", Times, serif;
+	font-style: normal;
+	font-size: 1.10em;
 }
 
 .ah {
+    float: right;
     display: block;
     color: white;
     text-align: center;
     padding: 16px;
     text-decoration: none;
+    font-family: "Times New Roman", Times, serif;
+	font-style: normal;
+	font-size: 1.10em;
 
 }
 
@@ -26,6 +42,8 @@
 
  c {
 
+	
+	font-size: 1.10em;
   float:right;
   text-align: center;
 

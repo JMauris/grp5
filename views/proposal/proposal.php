@@ -1,5 +1,6 @@
-<?php include_once ROOT_DIR.'global/header.php';?>
-
+<?php include_once ROOT_DIR.'global/header.php';
+include_once ROOT_DIR.'global/header.php';
+$tour = $_SESSION['tour'];?>
 <html>
 	<head>
 		<title>Proposal</title>
@@ -8,7 +9,9 @@
 			#show{
 				overflow-y : scroll;
 				background-color : transparent;
-				height: 60%;
+				height: 30%;
+				border: 1px solid black;
+				padding-bottom: 2%;
 			}
 
 			button {
@@ -25,9 +28,24 @@
 			    padding: 0;
 			}
 
-			#search, #near {
+			#search {
 				display:inline-block;
-				width: 5%;
+				align: left;
+				width: 20%;
+			}
+
+			#searchButton, #near {
+
+				float: right;
+				width: 15%;
+				display: inline;
+				height: 50px;
+				margin-top: 5%;
+				margin-right: 3%;
+				text-align: center;
+				font-family: "Times New Roman", Times, serif;
+				font-style: normal;
+				font-size: 1.30em;
 			}
 
 		</style>
@@ -38,9 +56,9 @@
 			<h2>These are our Proposals for you:</h2>
 			<div id="show">
 			<a href="<?php echo URL_DIR.'proposal/proposal_detail'?>">
-					<button id="0">
-						<p>Name</p>
-						<p>Description..........................</p>
+				<button id="0">
+					<p><?php// echo ' '.$tour->getTitre(); ?></p>
+					<p><?php //echo ' '.$tour->getInformation_fr(); ?></p>
 					</button>
 				</a>
 				<a href="<?php echo URL_DIR.'proposal/proposal_detail'?>">
@@ -50,7 +68,7 @@
 					</button>
 				</a>
 			</div>
-			<button id="search">Search</button>
+			<button id="searchButton"><img id="search" src="http://localhost/cas_montana/public/img/search.png" onclick="window.location = 'search_path.php';">Search route</button>
 			<button id="near">Near us</button>
 		</div>
 	</body>

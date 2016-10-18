@@ -13,6 +13,13 @@ class proposalController extends Controller{
 
 
   }
+  
+   	function GetAllTours()
+  	{
+  		/*$result = Tour::getAll();
+  		$_SESSION['msg'] = '<span class="success">'.$result->getTitre().'</span>';
+  		$_SESSION['tour'] = $result;*/
+  	}
 
 
 
