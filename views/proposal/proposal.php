@@ -1,5 +1,5 @@
-<?php 
-	
+<?php
+
 	include_once ROOT_DIR.'global/header.php';
 	$tourArray = $_SESSION['tour'];
 ?>
@@ -16,29 +16,29 @@
 				border: 1px solid black;
 				padding-bottom: 2%;
 			}
-			
+
 			button {
 				width: 100%;
 				text-align: left;
 			}
-			
+
 			h2 {
 				text-align: center;
 			}
-			
+
 			p {
 			    margin: 0;
 			    padding: 0;
 			}
-			
+
 			#search {
 				display:inline-block;
 				align: left;
 				width: 20%;
 			}
-			
+
 			#searchButton, #near {
-			
+
 				float: right;
 				width: 15%;
 				display: inline;
@@ -53,7 +53,7 @@
 			a{
 				text-decoration: none;
 			}
-			
+
 		</style>
 	</head>
 	<body>
@@ -64,7 +64,7 @@
 			<?php foreach( $tourArray as $cle => $element)
 
 					 {?>
-					<a href="http://localhost/cas_montana/views/proposal/proposal_detail.php">
+					<a href="<?php echo URL_DIR.'proposal/proposal_detail'?>">
 					<button id = <?php echo ' '.$tourArray[$cle]->getId(); ?>>
 					<p><?php echo ' '.$tourArray[$cle]->getTitre(); ?></p>
 					<p><?php echo ' '.$tourArray[$cle]->getInformation_fr(); ?></p>
@@ -73,7 +73,7 @@
 					</button>
 				</a>
 			</div>
-				
+
 			<button id="searchButton"><img id="search" src="http://localhost/cas_montana/public/img/search.png" onclick="window.location = 'search_path.php';">Search route</button>
 			<button id="near">Near us</button>
 		</div>

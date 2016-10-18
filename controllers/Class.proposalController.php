@@ -10,6 +10,11 @@ class proposalController extends Controller{
   	$result = Tour::connectTour(1, 2);
   	$_SESSION['tour']=$result;
   }
-  
+
+  function  proposal_detail()
+  {
+    
+  }
+
   }
 ?>
