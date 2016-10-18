@@ -1,5 +1,5 @@
 <?php include_once ROOT_DIR.'global/header.php';
- $tourArray=$_SESSION['tour'];
+$tourArray=$_SESSION['tour'];
 
 ?>
 
@@ -11,7 +11,7 @@
 
 		<title>Programm overview</title>
 
-		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
+		<link rel="stylesheet" type="text/css" href="http://localhost/cas_montana/public/css/main.css">
 
 		<script>
 		   $(function() {
@@ -20,63 +20,133 @@
 		</script>
 
 		<style type="text/css">
-			#left {
-				text-align: center;
-			    float:left;
-			    width:43%;
-			    height: 40%;
-			    background-color : transparent;
+			
+			#tableDiv{
+				width: 94%;
+				height: 50%;
+				background: transparent;
 			}
-
-			#right {
+			
+			#insideTable{
+				background: transparent;
+				padding: 0;
+				margin-bottom: 3%;
+				width: 94%;
+				text-align: left;
+				float: top;
 				text-align: center;
-			    float:right;
-			    width:43%;
-			    height: 40%;
-			    background-color : transparent;
 			}
-
+			
+			tr{
+				text-align:left;
+			}
+			
+			#search{
+				display:inline-block;
+				align: left;
+				width: 20%;
+			}	
+			#searchButton{
+				float: right;
+				width: 15%;
+				display: inline;
+				height: 50px;
+				margin-top: 5%;
+				margin-right: 3%;
+				align: center;
+				font-family: "Times New Roman", Times, serif;
+				font-style: normal;
+				font-size: 1.30em;
+				
+			}
 			#top {
-				width: 80%;
-				display: block;
-				text-align: center;
+				float: top;
+				height: 6%;
 				background-color : transparent;
 			}
-
+			
+			#yourProg{
+				background-color : transparent;
+				text-align: center;
+			}
+			
+			#mainTable{
+				width: 100%;
+				margin-left: 2%;
+				margin-right: 2%;
+				margin-top: 2%;
+			}
+			#submit1{
+				float: right;
+				margin-left: 2%;
+				text-align: center;
+				font-family: "Times New Roman", Times, serif;
+				font-style: normal;
+				font-size: 1.10em;
+			}
+			#submit2{
+				float: right;
+				margin-left: 2%;
+				text-align: center;
+				font-family: "Times New Roman", Times, serif;
+				font-style: normal;
+				font-size: 1.10em;
+			}
 			#bottom {
 				float: bottom;
 				background-color : transparent;
 				height: 150px;
 				overflow-y : scroll;
+				margin-bottom: 2%;
 			}
-
-			#search{
-				width: 15%;
-				height: 15%;
+			#table{
+				border: 1px;
 			}
-
-			table {
-				margin: 0 auto;
-				text-align: left;
+			#topButton{
+				background: transparent;
 			}
-
-			h3 {
-				padding-left: 10%;
+			#search1{
+				float: left;
+				width: 30%;
 			}
-
+			#searchButton{
+				float: right;
+				width: 20%;
+				margin: 0;
+				padding-left: 1%;
+				text-align: right;
+				font-family: "Times New Roman", Times, serif;
+				font-style: normal;
+				font-size: 1.20em;
+			}
 		</style>
 	</head>
 	<body>
 		<div style="height: 110%;">
 			<h1>Hikinglists</h1>
-			<br>
-			<div id="top">
-				<button><img id="search" src="http://localhost/cas_montana/public/img/search.png" onclick="window.location = 'search_path.php';">search route</button>
+			<div id="topButton">
+				<button id="searchButton"><img id="search1" src="http://localhost/cas_montana/public/img/search.png" onclick="window.location = 'search_path.php';">Search route</button>
 			</div>
-
-			<div id="left">
-			  <h2>Single hikes</h2>
-			  <table>
+			<div id="top">
+			<table style="width: 100%;">
+			<tr>
+			<td style="text-align: center; width: 50%;">
+				<h2>Single hikes</h2>
+			</td>
+			<td style="text-align: center; width: 50%;">
+				<h2>Multi-day hikes</h2>
+			</td>
+			</tr>
+			</table>
+		</div>
+<div id="tableDiv">
+			
+<table id = "mainTable">
+		<tr>
+			<td style="width: 50%;">
+				<div id="insideTable">
+				 
+				<table>
 				<tr>
 				  <td>Choose a day:</td>
 				  <td><input type="text" id="datepicker" name="from"></td>
@@ -85,13 +155,20 @@
 					<td>Route for the selected day:</td>
 					<td>...</td>
 				</tr>
-			  </table>
-			  <button id="submit1" onclick="window.location = '';">only hike</button>
-			</div>
-
-			<div id="right">
-			  <h2>multi-day hikes</h2>
-			  <table>
+				<tr>
+					<td></td>
+					<td>
+					<button id="submit1" onclick="window.location = '';">Add hike</button>
+					</td>
+				</tr>
+			  	</table>
+				</div>
+			</td>
+			
+			<td style="width: 50%;">
+							
+				<div id="insideTable">
+			  	<table>
 			  	<tr>
 			  		<td>Choose date</td>
 			  	</tr>
@@ -107,16 +184,28 @@
 					<td>Route for the selected stay:</td>
 					<td>....</td>
 				</tr>
-			  </table>
-			  <button id="submit2" onclick="window.location = '';">only multi-hike</button>
+				<tr>
+					<td></td>
+					<td>
+					<button id="submit2" onclick="window.location = '';">Add multi-hike</button>
+					</td>
+				</tr>
+			  	</table>
+			 
+				</div>
+			</td>			
+			
+		</tr>
+	</table>
+</div>
+<div id="yourProg">
+			<h2>Your Programm:</h2>
 			</div>
-
-			<h3>Your Programm:</h3>
-			<div id="bottom">
-				<table class="table table-bordered">
+			<div id="bottom">						
+					<table id="table">
 
 					 <tr>
-              <th> Type </th>
+              			<th> Type </th>
 						 <th> Titre </th>
 						 <th> Information </th>
 						 <th> Depart</th>
@@ -147,8 +236,9 @@
 					<?php } ?>
 					</tr>
 			</table>
+
 			</div>
-		</div>
+			</div>
 	</body>
 </html>
 

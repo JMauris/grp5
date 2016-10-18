@@ -3,12 +3,12 @@
 <html>
 	<head>
 		<title>Proposal Detail</title>
-		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
+		<link rel="stylesheet" type="text/css" href="http://localhost/cas_montana/public/css/main.css">
 		<style type="text/css">
 			div {
 				text-align: center;
 			}
-
+			
 			table {
 				margin: 0 auto;
 				text-align: left;
@@ -49,11 +49,10 @@
 					<td>*********</td>
 				</tr>
 			</table>
-			<a href="<?php echo URL_DIR.'proposal/proposal'?>">
-			<input type="button" value="go back" ></input>
-		</a>
+			<input type="button" value="go back"></input>
 		</div>
 	</body>
 </html>
 
 <?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>
+

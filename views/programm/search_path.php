@@ -4,12 +4,12 @@
 		<head>
 			<meta charset="UTF-8">
 			<title>search path</title>
-	<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
+			<link rel="stylesheet" type="text/css" href="http://localhost/cas_montana/public/css/main.css">
 			<style type="text/css">
 				select{
 					width: 150px;
 				}
-
+				
 				#filter{
 					width: 400px;
 				}
@@ -77,7 +77,7 @@
 								<button>Search</button>
 							</td>
 						</tr>
-					</table>
+					</table>					
 			</div>
 		</body>
 	</html>
