@@ -2,7 +2,7 @@
 /**
  *
  */
-class searchControler extends Controller
+class searchController extends Controller
 {
 
   function search()

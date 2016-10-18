@@ -1,4 +1,4 @@
-<?php ?>
+<?php include_once ROOT_DIR.'global/header.php';?>
 
 <html>
 	<head>
@@ -9,7 +9,7 @@
 			select{
 				width: 150px;
 			}
-				
+
 			#filter{
 				width: 400px;
 			}
@@ -20,6 +20,7 @@
 		</style>
 	</head>
 	<body>
+			<div class="wrapper">
 		<div style="height: 600px;">
 			<h1>Search</h1>
 			<br>
@@ -78,7 +79,9 @@
 							<button>Search</button>
 						</td>
 					</tr>
-				</table>					
+				</table>
+		</div>
 		</div>
 	</body>
 </html>
+<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>

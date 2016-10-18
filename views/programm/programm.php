@@ -134,7 +134,9 @@ $tourArray=$_SESSION['tour'];
 		<div style="height: 110%;">
 			<h1>Hikinglists</h1>
 			<div id="topButton">
-				<button id="searchButton" onclick="window.location = '/<?php echo SITE_NAME; ?>/search/search_path;'"><img id="search1" src="http://localhost/cas_montana/public/img/search.png" >Search route</button>
+				<a  href = "<?php echo URL_DIR.'search/search_path'?>">
+				<button id="searchButton"><img id="search1" src="http://localhost/cas_montana/public/img/search.png" >Search route</button>
+			</a>
 			</div>
 			<div id="top">
 			<table style="width: 100%;">
