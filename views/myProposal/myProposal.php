@@ -3,8 +3,8 @@
 <html>
 	<head>
 		<title>My proposal</title>
-		<link rel="stylesheet" type="text/css" href="http://localhost/cas_montana/public/css/main.css">
-		
+		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
+
 		<style>
 			#left {
 				text-align: center;
@@ -14,42 +14,48 @@
 			    background-color : transparent;
 			    overflow-y : scroll;
 			}
-						
+
+			#right {
+				text-align: center;
+			    float:right;
+			    width:43%;
+			    height: 40%;
+			    background-color : transparent;
+			    overflow-y : scroll;
+			}
+
 			p {
 			    margin: 0;
 			    padding: 0;
 			}
-			
+
 			button {
 				width: 100%;
 				text-align: left;
 			}
-			
+
 			#top {
 				float: top;
-				height: 6%;
 				background-color : transparent;
 				padding-bottom: 5%;
 			}
-			
-			#table3 {
-				float: left;
-				width: 47%;
-				background: transparent;
-				padding-left: 3%;
+
+			h3 {
+				display: inline;
+				padding-left: 10%;
 			}
 		</style>
 	</head>
 	<body>
-		<div style="height: 600px;">
+		<div style="height: 100%;">
 			<h1>My proposal</h1>
-			
+
 			<div id="top">
-				<h2 style="float: left;">My Favorites</h2>
-				<h2 style="float: right;">My Opinions</h2>
+				<h3 style="padding-right: 40%;">My Favorites</h3>
+				<h3>My Opinions</h3>
 			</div>
-			
-			<div id="table3">	
+
+			<div id="left">
 				<a href="http://localhost/cas_montana/views/proposal/proposal_detail.php">
 					<button id="0">
 						<p>Name</p>
@@ -74,10 +80,13 @@
 						<p>Description..........................</p>
 					</button>
 				</a>
-				
-				</div>
-			
 			</div>
+
+			<div id="right">
+
+			</div>
+
+		</div>
 	</body>
 </html>
 
