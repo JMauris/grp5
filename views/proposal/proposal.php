@@ -60,11 +60,11 @@
 		<div style="height: 600px;">
 			<h1>Proposal</h1>
 			<h2>These are our Proposals for you:</h2>
-			<div id="show">
+			<div id="show"> <a href="<?php echo URL_DIR.'proposal/proposal_detail'?>">
 			<?php foreach( $tourArray as $cle => $element)
 
 					 {?>
-					<a href="<?php echo URL_DIR.'proposal/proposal_detail'?>">
+
 					<button id = <?php echo ' '.$tourArray[$cle]->getId(); ?>>
 					<p><?php echo ' '.$tourArray[$cle]->getTitre(); ?></p>
 					<p><?php echo ' '.$tourArray[$cle]->getInformation_fr(); ?></p>
