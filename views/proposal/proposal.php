@@ -1,10 +1,13 @@
-<?php include_once ROOT_DIR.'global/header.php';
-include_once ROOT_DIR.'global/header.php';
-$tour = $_SESSION['tour'];?>
+<?php 
+	
+	include_once ROOT_DIR.'global/header.php';
+	$tourArray = $_SESSION['tour'];
+?>
+
 <html>
 	<head>
 		<title>Proposal</title>
-		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
+		<link rel="stylesheet" type="text/css" href="http://localhost/cas_montana/public/css/main.css">
 		<style type="text/css">
 			#show{
 				overflow-y : scroll;
@@ -13,29 +16,29 @@ $tour = $_SESSION['tour'];?>
 				border: 1px solid black;
 				padding-bottom: 2%;
 			}
-
+			
 			button {
 				width: 100%;
 				text-align: left;
 			}
-
+			
 			h2 {
 				text-align: center;
 			}
-
+			
 			p {
 			    margin: 0;
 			    padding: 0;
 			}
-
+			
 			#search {
 				display:inline-block;
 				align: left;
 				width: 20%;
 			}
-
+			
 			#searchButton, #near {
-
+			
 				float: right;
 				width: 15%;
 				display: inline;
@@ -47,31 +50,33 @@ $tour = $_SESSION['tour'];?>
 				font-style: normal;
 				font-size: 1.30em;
 			}
-
+			a{
+				text-decoration: none;
+			}
+			
 		</style>
 	</head>
 	<body>
-		<div style="height: 100%">
+		<div style="height: 600px;">
 			<h1>Proposal</h1>
 			<h2>These are our Proposals for you:</h2>
 			<div id="show">
-			<a href="<?php echo URL_DIR.'proposal/proposal_detail'?>">
-				<button id="0">
-					<p><?php// echo ' '.$tour->getTitre(); ?></p>
-					<p><?php //echo ' '.$tour->getInformation_fr(); ?></p>
-					</button>
-				</a>
-				<a href="<?php echo URL_DIR.'proposal/proposal_detail'?>">
-					<button id="1">
-						<p>Name</p>
-						<p>Description..........................</p>
+			<?php foreach( $tourArray as $cle => $element)
+
+					 {?>
+					<a href="http://localhost/cas_montana/views/proposal/proposal_detail.php">
+					<button id = <?php echo ' '.$tourArray[$cle]->getId(); ?>>
+					<p><?php echo ' '.$tourArray[$cle]->getTitre(); ?></p>
+					<p><?php echo ' '.$tourArray[$cle]->getInformation_fr(); ?></p>
+				S
+				<?php } ?>
 					</button>
 				</a>
 			</div>
+				
 			<button id="searchButton"><img id="search" src="http://localhost/cas_montana/public/img/search.png" onclick="window.location = 'search_path.php';">Search route</button>
 			<button id="near">Near us</button>
 		</div>
-	</body>
+</body>
 </html>
-
 <?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>
