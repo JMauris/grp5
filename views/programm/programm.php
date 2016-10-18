@@ -11,7 +11,7 @@ $tourArray=$_SESSION['tour'];
 
 		<title>Programm overview</title>
 
-		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
+		<link rel="stylesheet" type="text/css" href="http://localhost/cas_montana/public/css/main.css">
 
 		<script>
 		   $(function() {
@@ -106,11 +106,10 @@ $tourArray=$_SESSION['tour'];
 				background-color : transparent;
 				height: 150px;
 				overflow-y : scroll;
-				padding-bottom: 2%;
+				margin-bottom: 2%;
 			}
 			#table{
-				padding: 2%;
-				
+				border: 1px;
 			}
 			#topButton{
 				background: transparent;
@@ -132,10 +131,10 @@ $tourArray=$_SESSION['tour'];
 		</style>
 	</head>
 	<body>
-		<div class="wrapper">
+		<div style="height: 110%;">
 			<h1>Hikinglists</h1>
 			<div id="topButton">
-				<button id="searchButton"><img id="search1" src="http://localhost/cas_montana/public/img/search.png" onclick="window.location = 'search_path.php';">Search route</button>
+				<button id="searchButton" onclick="window.location = '/<?php echo SITE_NAME; ?>/search/search_path;'"><img id="search1" src="http://localhost/cas_montana/public/img/search.png" >Search route</button>
 			</div>
 			<div id="top">
 			<table style="width: 100%;">
@@ -216,7 +215,7 @@ $tourArray=$_SESSION['tour'];
 			<h2>Your Programm:</h2>
 			</div>
 			<div id="bottom">
-					<table id="table" style="padding: 2%;">
+					<table id="table">
 
 					 <tr>
               			<th> Type </th>
@@ -247,15 +246,17 @@ $tourArray=$_SESSION['tour'];
 							<p><?php echo ' '.$tourArray[$cle]->getTitre(); ?></p>
 							<p><?php echo ' '.$tourArray[$cle]->getInformation_fr(); ?></p>
 
+
+				</button>
+
 					<?php } ?>
 			</form>
 					</tr>
 			</table>
+
 			</div>
 			</div>
-			
-			<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>
 	</body>
 </html>
 
-
+<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>
