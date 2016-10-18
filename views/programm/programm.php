@@ -158,7 +158,9 @@ $tourArray=$_SESSION['tour'];
 				<tr>
 					<td></td>
 					<td>
-					<button id="submit1" onclick="window.location = '';">Add hike</button>
+						<form action="<?php echo URL_DIR.'programm/programm'?>" method= "post">
+					<button id="submit1" name ="type" value = '1'>only hike</button>
+						</from>
 					</td>
 				</tr>
 			  	</table>
@@ -187,7 +189,9 @@ $tourArray=$_SESSION['tour'];
 				<tr>
 					<td></td>
 					<td>
-					<button id="submit2" onclick="window.location = '';">Add multi-hike</button>
+							<form action="<?php echo URL_DIR.'programm/programm'?>" method= "post">
+					<button id="submit1" name ="type" value = '2'>only multi-hike</button>
+					</form>
 					</td>
 				</tr>
 			  	</table>

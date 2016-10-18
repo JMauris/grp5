@@ -27,7 +27,7 @@ class profilController extends Controller{
     $locality = $_POST['localite'];
     $phone = $_POST['phone'];
     $mobile = $_POST['mobile'];
-
+    $abo = $_POST['abonnement'];
 
 
 
@@ -36,10 +36,10 @@ class profilController extends Controller{
       $user->setLocalite($locality);
       $user->setPhone($phone);
       $user->setPortable($mobile);
-
+      $user->setIdxAbonnement($abo);
 
       $user->update($user->getId());
-    
+
 
 	     $this->redirect('profil', 'profil');
 

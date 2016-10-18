@@ -518,15 +518,15 @@ private static function queryAll()
 private static function queryOne($idTour1)
 {
   $query =  "SELECT * From tour
-              where idxTypeTour = 1";
+              where idxTypeTour =$idTour1";
 
   return $query;
 }
 private static function queryTwo($idTour1, $idTour2)
 {
   $query =  "SELECT * From tour
-              where idxTypeTour = 1
-              or idxTypeTour = 2";
+              where idxTypeTour = $idTour1
+              or idxTypeTour = $idTour2";
 
   return $query;
 }

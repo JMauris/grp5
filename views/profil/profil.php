@@ -27,7 +27,7 @@ $user = $_SESSION['personne'];
 	<div style="height: 90%">
 		<h1> My Profil</h1>
 		<h3>* = field obligatory</h3>
-		<form method="post" action="<?php echo URL_DIR.'profil/profil';?>">
+		<form method="post" action="<?php echo URL_DIR.'profil/save';?>" onsubmit="alert('Saved')">
 			<table style="align:center">
 					<tr>
 					<th><label for="name">Name</label>* : </th>
@@ -64,34 +64,26 @@ $user = $_SESSION['personne'];
 				<tr>
 					<th><label for="abonnement">Abonnement de transports publics</label> :  </th>
 					<th>
-						<?php $optionAbo = array('Select please', 'neither','gerneral rail pass', 'half price');?>
-							<form>
-								<select name="abonnement" >
-								<?php
-								for ($cpt=0; $cpt<=3; $cpt++) {
-									if(($cpt+1)==$user->getIdxAbonnement())	{
-										echo '<option value="'.$cpt.'" selected="selected">'.$optionAbo[$cpt].'</option>';
-									} else {
-										echo '<option value="'.$cpt.'">'.$optionAbo[$cpt].'</option>';
-									}
-								}
-								?>
-							</select>
-						</form>
+						<?php
+				$optionAbo = array('Select please', 'neither','gerneral rail pass', 'half price');
+				 ?>
+				    <FORM>
+				    <SELECT name="abonnement" id= "abonnement">
 
-						<select name="age">
-							<?php
-								$valeurChoisie = 20;
-								for ($i=7; $i<=77; $i++) {
-									if ($i == $valeurChoisie) {
-										echo '<option value="'.$i.'" selected="selected">'.$i.'</option>';
-									} else {
-										echo '<option value="'.$i.'">'.$i.'</option>';
-									}
-								}
-							?>
-						</select>
-					</th>
+
+				<?php
+				for ($cpt=0; $cpt<=3; $cpt++) {
+					if(($cpt)==$user->getIdxAbonnement())
+					{
+						echo '<option value="'.$cpt.'" selected="selected">'.$optionAbo[$cpt] .'</option>';
+					}else {
+					echo '<option value="'.$cpt.'">'.$optionAbo[$cpt].'</option>';
+					}
+				}
+				?>
+				</SELECT>
+				</FORM>
+			</th></br>
 				</tr>
 			</table>
 		</form>
