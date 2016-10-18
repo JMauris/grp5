@@ -8,20 +8,20 @@
 			color: black;
 			font-family: "Times New Roman", Times, serif;
 			font-size:105%;
-			padding-left: 10%;
+			padding-left: 9%;
 
 			}
 			
 		</style>
 			<meta charset="UTF-8">
 			<title>Contact</title>
-			<link rel="stylesheet" type="text/css" href="http://localhost/cas_montana/public/css/main.css">
+		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
 		</head>
 		<body>
-			<div style="height: 600px;">
+			<div class="wrapper">
 				<h1>Contact information</h1>
 				<br>
-				<img  style="width: 400px; padding-right: 10%; height: 400px; float:right; " alt="contactinfo" src="http://localhost/cas_montana/contactinfo.png">
+				<img  style="width: 28%; padding-right: 10%; padding-bottom: 2%; height: 28%; float:right; " alt="contactinfo" src="http://localhost/cas_montana/contactinfo.png">
 				<p id= "contactDiv">		VALRANDO
 				<br>	Association Valaisanne de la Randonnée
 				<br>	Pré-Fleuri 6
@@ -37,11 +37,13 @@
 				<br> Fax +41 (0)27 / 327 35 81
 				</p>
 
-				<p id= "contactDiv">	or per Mail:
-				<br>info[@]valrando.ch
+				<p id= "contactDiv" style="padding-bottom: 2%;">    or per Mail:
+				<br> info[@]valrando.ch
 				</p>
+				
 			</div>
+			
+			<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?>
 		</body>
 	</html>
 	
-<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?>

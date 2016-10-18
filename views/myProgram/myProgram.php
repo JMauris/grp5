@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>My Programm</title>
-		<link rel="stylesheet" type="text/css" href="http://localhost/cas_montana/public/css/main.css">
+		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
 		<style type="text/css">
 		
 			#table2 {
@@ -32,43 +32,27 @@
 		</style>
 	</head>
 	<body>
-		<div style="height: 600px;">
+		<div class="wrapper">
 			<h1>Overview of my programm</h1>
 				
 			<div id="tableDiv">
-			<h2 style="float: left; padding-left: 10%;">My registrations</h2>
-			<h2 style="float: right; padding-right: 20%;">My favorites</h2>
+			
 			<table id=table2>
 			<tr>
-			<td style="width: 50%;">
-			     <div id="insideTable">
-					
-				 <table>
-				<tr>
-				  <td>
-				  <div id="insideTable">						
+				 	<td style="text-align: center;"><h2>My registrations</h2></td>
+				 	<td style="text-align: center;"><h2>My favorites</h2></td>
+			</tr>
+			<tr>
+			<td style="width: 50%; padding: 2%;">
 					Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
 					sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
 					aliquyam erat, sed diam voluptua.
-			</div>
-			
 			</td>
-			</tr>
-			</table>
-			</div>
-			
-			<td style="width: 50%;">
-			     
-					
-				 <table>
-				<tr>
-				  <td>
-				  <div id="insideTable">						
+			<td style="width: 50%; padding: 2%;">					
 					Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
 					sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
 					aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
 					duo dolores et ea rebum.
-			</div>
 			</td>
 			</tr>
 			</table>
@@ -77,8 +61,9 @@
 			</tr>
 			</table>
 			</div>
+			<div class="push"></div>
 			</div>
-	</body>
-</html>
-
-<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>
+			
+			<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?>
+		</body>
+	</html>

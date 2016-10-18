@@ -3,18 +3,18 @@ class proposalController extends Controller{
 
 
   /**
-   * Method that controls the page 'Propossal.php'
+   * Method that controls the page 'myProgram.php'
    */
-  function Proposal()
-  {
-  	$result = Tour::connectTour(1, 2);
+  function proposal(){
+  	$result = Tour::connectTour(6, null);
   	$_SESSION['tour']=$result;
-  }
+  	}
+  	
+  	
+  	function  proposal_detail()
+  	{
+  	
+  	}
+}
 
-  function  proposal_detail()
-  {
-    
-  }
-
-  }
 ?>

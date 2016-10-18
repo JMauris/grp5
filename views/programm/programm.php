@@ -11,7 +11,7 @@ $tourArray=$_SESSION['tour'];
 
 		<title>Programm overview</title>
 
-		<link rel="stylesheet" type="text/css" href="http://localhost/cas_montana/public/css/main.css">
+		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
 
 		<script>
 		   $(function() {
@@ -97,10 +97,11 @@ $tourArray=$_SESSION['tour'];
 				background-color : transparent;
 				height: 150px;
 				overflow-y : scroll;
-				margin-bottom: 2%;
+				padding-bottom: 2%;
 			}
 			#table{
-				border: 1px;
+				padding: 2%;
+				
 			}
 			#topButton{
 				background: transparent;
@@ -122,7 +123,7 @@ $tourArray=$_SESSION['tour'];
 		</style>
 	</head>
 	<body>
-		<div style="height: 110%;">
+		<div class="wrapper">
 			<h1>Hikinglists</h1>
 			<div id="topButton">
 				<button id="searchButton"><img id="search1" src="http://localhost/cas_montana/public/img/search.png" onclick="window.location = 'search_path.php';">Search route</button>
@@ -206,7 +207,7 @@ $tourArray=$_SESSION['tour'];
 			<h2>Your Programm:</h2>
 			</div>
 			<div id="bottom">
-					<table id="table">
+					<table id="table" style="padding: 2%;">
 
 					 <tr>
               			<th> Type </th>
@@ -235,15 +236,14 @@ $tourArray=$_SESSION['tour'];
 					<td><?php echo  $tourArray[$cle]->getIdxDepartLocalite(); ?> </td>
 					<td><?php echo  $tourArray[$cle]->getDateDebut(); ?> </td>
 
-
-
 					<?php } ?>
 					</tr>
 			</table>
-
 			</div>
 			</div>
+			
+			<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>
 	</body>
 </html>
 
-<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>
+

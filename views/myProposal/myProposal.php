@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<title>My proposal</title>
-		<link rel="stylesheet" type="text/css" href="http://localhost/cas_montana/public/css/main.css">
+		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
 		
 		<style>
 			#left {
@@ -35,21 +35,22 @@
 			#table3 {
 				float: left;
 				width: 47%;
-				background: transparent;
+				
 				padding-left: 3%;
 			}
 		</style>
 	</head>
 	<body>
-		<div style="height: 600px;">
+		<div class="wrapper">
 			<h1>My proposal</h1>
+			<table>
+				<tr>
+					<td style="text-align: center;"><h2>My Favorites</h2></td>
+					<td style="text-align: center;"><h2>My Opinions</h2></td>
+				</tr>
 			
-			<div id="top">
-				<h2 style="float: left;">My Favorites</h2>
-				<h2 style="float: right;">My Opinions</h2>
-			</div>
-			
-			<div id="table3">	
+				<tr>
+				<td style="width: 50%; padding-left: 2%; padding-bottom: 2%; padding-top: 2%;">
 				<a href="http://localhost/cas_montana/views/proposal/proposal_detail.php">
 					<button id="0">
 						<p>Name</p>
@@ -74,11 +75,15 @@
 						<p>Description..........................</p>
 					</button>
 				</a>
-				
+				</td>
+				<td></td>
+				<tr>
+				</table>
 				</div>
 			
+			<div class="push"></div>
 			</div>
-	</body>
-</html>
-
-<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?>
+			
+			<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?>
+		</body>
+	</html>

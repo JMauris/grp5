@@ -7,10 +7,10 @@
 		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
 	</head>
 	<body>
-		<div style="height: 760px;">
+		<div class="wrapper">
 			<h1>Information about SAC</h1>
-			<br>
-			<table style="border: 1px; padding-left: 2%; padding-right: 2%;">
+			<div style = "height: 100%; padding-bottom: 2%;">
+			<table style="border: 1px; padding-left: 2%; padding-right: 2%; padding-bottom: 2%;">
 				<tr>
 				    <td><b>Name:</b></td>
 				    <td>SAC is the abbreviation for Schweizer Alpen Club</td>
@@ -63,8 +63,10 @@
 					<td><a href="http://www.casmontana.ch/Default.aspx?num=37">Download statutes as pdf</a></td>
 				</tr>
 			</table>
-		</div>
-	</body>
-</html>
-<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?>
-
+			</div>
+			
+			</div>
+			
+			<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?>
+		</body>
+	</html>

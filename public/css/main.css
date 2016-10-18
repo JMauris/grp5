@@ -3,39 +3,50 @@
 h1{
 	color:black;
 	text-align:center;
-	padding-top:1%;
+	padding-top:2%;
 	font-family: "Times New Roman", Times, serif;
 	font-style: normal;
 	font-size: 3.00em;
 }
 
-
-
-div{
-	margin: auto;
-    width: 85%;
-	height: 100%;
-	align: center;
+.wrapper{
+	min-height: 100%;
+	height: auto !important;
+	height:100%;
+	width: 85%;
+	margin: 0 auto 11em;
 	background-color: rgba(235,235,235,0.7);
 	font-family: "Times New Roman", Times, serif;
 	font-style: normal;
 	font-size: 1.10em;
 }
 
+
 body {
+	height: 100%;
 	background: url('http://localhost/cas_montana/background.jpg') no-repeat fixed center !important;
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	padding-bottom:16px;
 	background-attachment: fixed;	
 }
 
 p {
+	text-align: center;
 	margin: 200em, 20em;
 	color: black;
 	font-family: "Times New Roman", Times, serif;
 	font-size:105%;
-	padding-left: 3%;
-	padding-right: 3%;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+.pLastMain {
+	text-align: center;
+	margin: 200em, 20em;
+	color: black;
+	font-family: "Times New Roman", Times, serif;
+	font-size:105%;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-bottom: 2%;
 }

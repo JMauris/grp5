@@ -16,7 +16,7 @@
 		</style>
 	</head>
 	<body>
-		<div style="height: 100%">
+		<div class="wrapper">
 			<h1>Proposal Detail</h1>
 			<h3>"Name"</h3>
 			<table>
@@ -52,8 +52,9 @@
 			<a href="<?php echo URL_DIR.'proposal/proposal'?>">
 			<input type="button" value="go back" ></input>
 		</a>
-		</div>
-	</body>
-</html>
-
-<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>
+		<div class="push"></div>
+			</div>
+			
+			<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?>
+		</body>
+	</html>
