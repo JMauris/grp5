@@ -7,38 +7,26 @@
 <html>
 	<head>
 		<title>Proposal</title>
-		<link rel="stylesheet" type="text/css" href="http://localhost/cas_montana/public/css/main.css">
+		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
 		<style type="text/css">
-			#show{
-				overflow-y : scroll;
-				background-color : transparent;
-<<<<<<< HEAD
-				width: 100%;
-				padding-left: 2%;
-				padding-right: 2%;
-=======
-				height: 30%;
-				border: 1px solid black;
->>>>>>> origin/master
-				padding-bottom: 2%;
-			}
-
-			button {
-				width: 100%;
-				text-align: left;
-			}
-
-			h2 {
+			.top{
 				text-align: center;
 			}
-
-			p {
-			    margin: 0;
-			    padding: 0;
+			.middle{
+				width: 100%;
+				height: 30%;
 			}
-<<<<<<< HEAD
-			
-			
+			.show{
+				width: 100%;
+				height: 100%;
+			}
+			.bottom{
+				height: 100%;
+				width: 100%;
+			}
+			.buttons{
+				width: 100%;
+			}
 			#searchButton {
 				float: right;
 				width: 25%;
@@ -52,9 +40,6 @@
 				font-size: 100%;
 				font-weight: bold;								
 			}
-			#near{
-=======
-
 			#search {
 				display:inline-block;
 				align: left;
@@ -62,8 +47,6 @@
 			}
 
 			#searchButton, #near {
-
->>>>>>> origin/master
 				float: right;
 				width: 25%;
 				display: inline;
@@ -79,54 +62,60 @@
 			a{
 				text-decoration: none;
 			}
+			#search1{
+				float: right;
+				width: 20%;
+				padding: 2%;
+			}
+			
 
 		</style>
 	</head>
 	<body>
-		<div style="height: 600px;">
+		<div class= "wrapper">
+			<div class= "top">
 			<h1>Proposal</h1>
 			<h2>These are our Proposals for you:</h2>
-<<<<<<< HEAD
-
-			</td>
-			</tr>
-			<tr style="height: 50%;">
-			<td style= "height: 50%; overflow-y: scroll;">
-			<a href="<?php echo URL_DIR.'proposal/proposal_detail'?>">
-=======
-			<div id="show"> <a href="<?php echo URL_DIR.'proposal/proposal_detail'?>">
->>>>>>> origin/master
-			<?php foreach( $tourArray as $cle => $element)
-
-					 {?>
-
-					<button id = <?php echo ' '.$tourArray[$cle]->getId(); ?>>
-					<p><?php echo ' '.$tourArray[$cle]->getTitre(); ?></p>
-					<p><?php echo ' '.$tourArray[$cle]->getInformation_fr(); ?></p>
-				S
-				<?php } ?>
-					</button>
-				</a>
-<<<<<<< HEAD
-			</td>
-			</tr>
-			<tr>
-			<td>
-			<a><button id="searchButton">Search route</button></a>
-			<a><button id="near">Near us</button></a>
-			</td>
-			</tr>
-			</table>
-			
-		
-			
-=======
 			</div>
+			
+			<div class="middle">
+				<table class="show">
+					<tr>
+						<td style= "overflow-y: scroll; height: 100%;">
+							<div id="show"> 
+								<a href="<?php echo URL_DIR.'proposal/proposal_detail'?>">
+									<?php foreach( $tourArray as $cle => $element)
 
-			<button id="searchButton"><img id="search" src="http://localhost/cas_montana/public/img/search.png" onclick="window.location = 'search_path.php';">Search route</button>
-			<button id="near">Near us</button>
->>>>>>> origin/master
+					 				{?>
+
+										<button id = <?php echo ' '.$tourArray[$cle]->getId(); ?> style="width: 100%;">
+										<p><?php echo ' '.$tourArray[$cle]->getTitre(); ?></p>
+										<p><?php echo ' '.$tourArray[$cle]->getInformation_fr(); ?></p>
+									<?php } ?>
+										</button>
+								</a>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			
+			<div class = "bottom">
+				<table class="buttons">
+					<tr>
+						<td>
+							<div id="topButton">
+								<a href="<?php echo URL_DIR.'search/search_path.php'?>"><img id="search1" src="<?php echo URL_DIR. 'public/img/searchRoute.png'?>"></a>
+							</div>
+						<button id="near">Near us</button>
+						</td>
+					</tr>
+				</table>
+			</div>
+			
 		</div>
+		
+		<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>
 </body>
 </html>
-<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>
+

@@ -238,15 +238,20 @@ $tourArray=$_SESSION['tour'];
 		<div id="yourProg">
 			<h2>Your Programm:</h2>
 		</div>
-		<div id="bottom">
-			<table id="table">
+		
+			<div>
+				<table style = "width: 100%;">
 					 <tr>
-              			<th> Type </th>
-						 <th> Titre </th>
-						 <th> Information </th>
-						 <th> Depart</th>
-						 <th> Date debut </th>
+              			<th style = "width: 20%; text-align: left;"> Type </th>
+						 <th style = "width: 20%; text-align: left;"> Titre </th>
+						 <th style = "width: 20%; text-align: left;"> Information </th>
+						 <th style = "width: 20%; text-align: left;"> Depart</th>
+						 <th style = "width: 20%; text-align: left;"> Date debut </th>
 					 </tr>
+				</table>
+			</div>
+		<div id="bottom">
+					 <table id="table">
 					 <tr>
 					  <td colspan = "5">
 						<form action="<?php echo URL_DIR.'programm/hiking_detail'?>" method= "post">
@@ -256,7 +261,7 @@ $tourArray=$_SESSION['tour'];
 					 	<button  name ="selectedTour" value = <?php echo $cle?>>
 					 		<table style="width: 100%;">
 					 			<tr>
-					 			<td style="width: 25%">
+					 			<td style="width: 20%">
 	            				<?php if( $tourArray[$cle]->getIdxTypeTour() == 1)
 	            					{
                 					echo "Hiking";
@@ -271,13 +276,16 @@ $tourArray=$_SESSION['tour'];
               								}
               					?> 
               					</td>
-					 			<td style="width: 25%">
+					 			<td style="width: 20%">
               					<?php echo ' '.$tourArray[$cle]->getTitre(); ?>
 								</td>
-					 			<td style="width: 25%">
+					 			<td style="width: 20%">
 								<?php echo ' '.$tourArray[$cle]->getInformation_fr(); ?>
 								</td>
-					 			<td style="width: 25%">
+								<td style="width: 20%">
+								<?php echo ' '.$tourArray[$cle]->getDepartHeure() ?>
+								</td>
+					 			<td style="width: 20%">
 								<?php echo ' '.$tourArray[$cle]->getDateDebut() ?>
 								</td>
 								</tr>
