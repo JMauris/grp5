@@ -48,7 +48,7 @@
 				    <li>Municipalities and tourism organizations CHF 100.-</li>
 				    </td>
 				    <td><a href="http://www.valrando.ch/nouveaumembre.php">Membership registration form</a></td>
-				</tr>	
+				</tr>
 				<tr>
 					<td><b>Advantages of a membership:</b></td>
 					<td>
@@ -64,9 +64,10 @@
 				</tr>
 			</table>
 			</div>
-			
+
 			</div>
+
 			
-			<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?>
 		</body>
 	</html>
+		<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?>

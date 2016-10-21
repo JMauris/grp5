@@ -7,7 +7,7 @@ $user = $_SESSION['personne'];
 ?>
 	<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
 <br><br>
-<div>
+<div class="wrapper">
 	<table align="center">
 		<tr>
 			<td>

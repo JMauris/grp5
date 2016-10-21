@@ -45,10 +45,13 @@
 
         {
           echo  '<c><a class="ah" href="' .URL_DIR."login/logout". ' ">Logout</a></c> ' ;
+          if($_SESSION["personne"]->getRole()=='admin')
+            echo  '<c><a class="ah" href="' .URL_DIR."admin/admin". ' ">Admin</a></c> ' ;
+
         }
         else {
          echo  '<c><a class="ah" href="' . URL_DIR."login/login". ' ">Login</a></c>';
-        }
+     }
 
         ?>
       </ul>

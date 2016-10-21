@@ -4,7 +4,7 @@
 	<head>
 		<title>My proposal</title>
 		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
-		
+
 		<style>
 			#left {
 				text-align: center;
@@ -14,28 +14,28 @@
 			    background-color : transparent;
 			    overflow-y : scroll;
 			}
-						
+
 			p {
 			    margin: 0;
 			    padding: 0;
 			}
-			
+
 			button {
 				width: 100%;
 				text-align: left;
 			}
-			
+
 			#top {
 				float: top;
 				height: 6%;
 				background-color : transparent;
 				padding-bottom: 5%;
 			}
-			
+
 			#table3 {
 				float: left;
 				width: 47%;
-				
+
 				padding-left: 3%;
 			}
 		</style>
@@ -48,7 +48,7 @@
 					<td style="text-align: center;"><h2>My Favorites</h2></td>
 					<td style="text-align: center;"><h2>My Opinions</h2></td>
 				</tr>
-			
+
 				<tr>
 				<td style="width: 50%; padding-left: 2%; padding-bottom: 2%; padding-top: 2%;">
 				<a href="http://localhost/cas_montana/views/proposal/proposal_detail.php">
@@ -80,10 +80,10 @@
 				<tr>
 				</table>
 				</div>
-			
+
 			<div class="push"></div>
 			</div>
-			
+
 			<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?>
 		</body>
 	</html>
