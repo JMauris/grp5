@@ -58,10 +58,8 @@ $SelectedTour = $_SESSION['Selected_Tour'];
 			<a href="<?php echo URL_DIR.'programm/programm'?>">
 				<input type="button" value="go back" ></input>
 			</a>
-			<a href="">
+			<a href="<?php echo URL_DIR.'programm/programm_register'?>">
 				<input type="button" value="register"></input>
-
-
 			</a>
 			<br>
 		</div>

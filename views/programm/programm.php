@@ -124,23 +124,29 @@ $tourArray=$_SESSION['tour'];
 				width: 20%;
 				padding: 2%;
 			}
-			
+
 			#datepicker{
 				width: 100%;
 				padding: 0;
 			}
-			
+
+			#view_all{
+						width: 20%;
+						height: 10%;
+						font-size: 0.8em;
+						text-align: center;
+					}
 		</style>
 	</head>
 	<body>
 		<div class="wrapper" style= "padding-bottom: 2%; padding-right: 2%; padding-left: 2%;">
 			<h1>Hikinglists</h1>
 				<div id="topButton">
-					<a href="<?php echo URL_DIR.'search/search_path.php'?>"><img id="search1" src="<?php echo URL_DIR. 'public/img/searchRoute.png'?>"></a>
+					<a href="<?php echo URL_DIR.'search/search_path'?>"><img id="search1" src="<?php echo URL_DIR. 'public/img/searchRoute.png'?>"></a>
 				</div>
-			
+
 			<div>
-			
+
 			<div id="top">
 			<table style="width: 100%;">
 				<tr>
@@ -153,7 +159,7 @@ $tourArray=$_SESSION['tour'];
 				</tr>
 			</table>
 			</div>
-			
+
 			<div id="tableDiv">
 
 				<table id = "mainTable">
@@ -172,7 +178,7 @@ $tourArray=$_SESSION['tour'];
 								</tr>
 								<tr>
 									<td></td>
-					
+
 								</tr>
 			  				</table>
 							</div>
@@ -180,7 +186,7 @@ $tourArray=$_SESSION['tour'];
 
 						<td style="width: 50%;">
 							<div id="insideTable">
-							
+
 			  				<table>
 			  					<tr>
 			  						<td>Choose date</td>
@@ -207,7 +213,7 @@ $tourArray=$_SESSION['tour'];
 								</tr>
 								<tr>
 									<td></td>
-					
+
 								</tr>
 			  				</table>
 
@@ -234,11 +240,15 @@ $tourArray=$_SESSION['tour'];
 					</tr>
 			</table>
 		</div>
-		
+
 		<div id="yourProg">
 			<h2>Your Programm:</h2>
+
+			<form action="<?php echo URL_DIR.'programm/programm'?>" method= "post">
+				<button id="view_all" name ="type">view all</button>
+			</form>
 		</div>
-		
+
 			<div>
 				<table style = "width: 100%;">
 					 <tr>
@@ -266,15 +276,15 @@ $tourArray=$_SESSION['tour'];
 	            					{
                 					echo "Hiking";
 	            					}
-             							 elseif ($tourArray[$cle]->getIdxTypeTour() == 2) 
+             							 elseif ($tourArray[$cle]->getIdxTypeTour() == 2)
              							 {
                 							echo "Stay";
              							 }
-              							else 
+              							else
               								{
                 							echo "Proposal";
               								}
-              					?> 
+              					?>
               					</td>
 					 			<td style="width: 20%">
               					<?php echo ' '.$tourArray[$cle]->getTitre(); ?>

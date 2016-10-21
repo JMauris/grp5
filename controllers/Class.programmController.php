@@ -44,7 +44,16 @@ function hiking_detail(){
   $_SESSION['Selected_Tour'] = $Tour[$id];
 
 }
-  function search_path(){
+
+
+  function programm_register()
+  {
+    if(!isset ($_SESSION['Selected_Tour']))
+    {
+      $this->redirect('programm', 'programm');
+      exit;
+
+    }
 
   }
 
