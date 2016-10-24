@@ -42,20 +42,54 @@ function hiking_detail(){
   $id =$_POST['selectedTour'];
 
   $_SESSION['Selected_Tour'] = $Tour[$id];
+  //check the inscription to THIS programm
+
+  $idTour =$_SESSION['Selected_Tour']->getId();
+  $_SESSION['nbrInscription'] = Inscription::nbrInscription($idTour);
+
+  if(isset ($_SESSION['personne']))
+  {
+      $_SESSION['isInscri']=Inscription::isInscri($_SESSION['personne']->getId(),$idTour);
+
+  }
+
 
 }
 
 
   function programm_register()
   {
-    if(!isset ($_SESSION['Selected_Tour']))
+    if(!isset ($_SESSION['Selected_Tour'])||$_SESSION['isInscri']==0)
     {
       $this->redirect('programm', 'programm');
       exit;
 
     }
+    if(isset($_SESSION['personne']))
+       $user = $_SESSION['personne'];
+
+
+      
+    $adress=$_POST['adress'];
+    $npa = $_POST['npa'];
+    $locality = $_POST['localite'];
+    $phone = $_POST['phone'];
+    $mobile = $_POST['mobile'];
+    $abo = $_POST['abonnement'];
+
+
+
 
   }
+
+
+
+    function register_save()
+    {
+
+    }
+
+
 
 
 }

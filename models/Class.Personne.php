@@ -28,7 +28,7 @@ class Personne{
 
   //It uses null as the default value for the function argument $id
   public function __construct($id=null, $firstname, $lastname,
-                              $email, $password, $idxLangue, $estActif, $numMember, $role,
+                              $email, $password=null, $idxLangue, $estActif, $numMember, $role,
                                $portable, $phone, $adresse, $localite, $npa, $idxAbonnement){
 
       $this->setId($id);
@@ -220,7 +220,20 @@ public function update($id){
 }
 
 
+public static function checkExixt($adressEmail,$pwd){
 
+  $pwd = sha1($pwd);
+  $query = "SELECT * From personne WHERE email='$adressEmail' AND motDePasse='$pwd'";
+  $result = MySqlConn::getInstance()->selectDB($query);
+  $row = $result->fetch();
+  if(!$row) return false;
+
+  return new Personne($row['idPersonne'], $row['prenom'], $row['nom'],$row['email'], $row['motDePasse']
+                      , $row['idxLangue'], $row['estActif'] , $row['numMembre'], $row['role'], $row['portable'],
+                       $row['telephone'], $row['adresse'], $row['localite'], $row['NPA'], $row['idxAbonnement']);
+
+
+}
 
 
 

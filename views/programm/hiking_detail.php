@@ -1,5 +1,7 @@
 <?php include_once ROOT_DIR.'global/header.php';
 $SelectedTour = $_SESSION['Selected_Tour'];
+$nbrInscription = $_SESSION['nbrInscription'];
+
 ?>
 
 <html>
@@ -32,7 +34,7 @@ $SelectedTour = $_SESSION['Selected_Tour'];
 				</tr>
 				<tr>
 					<td>Destination:</td>
-					<td>XXX</td>
+					<td><?php echo ' '.$SelectedTour->getIdxArriveeLocalite(); ?></td>
 				</tr>
 				<tr>
 					<td>difficulty:</td>
@@ -47,6 +49,10 @@ $SelectedTour = $_SESSION['Selected_Tour'];
 					<td><?php echo ' '.$SelectedTour->getInformation_fr(); ?></td>
 				</tr>
 				<tr>
+					<td>Inscription:</td>
+					<td><?php echo ' '.$nbrInscription ?></td>
+				</tr>
+				<tr>
 					<td>Popularity for the SAC Members:</td>
 					<td></td>
 				</tr>
@@ -58,9 +64,14 @@ $SelectedTour = $_SESSION['Selected_Tour'];
 			<a href="<?php echo URL_DIR.'programm/programm'?>">
 				<input type="button" value="go back" ></input>
 			</a>
-			<a href="<?php echo URL_DIR.'programm/programm_register'?>">
-				<input type="button" value="register"></input>
-			</a>
+			<?php if($_SESSION['isInscri']==0)
+				{
+					echo 'You are already register 	<input type="button" value="disregister">';
+				}
+				else{echo	'<a href="' .URL_DIR."programm/programm_register". '">
+					<input type="button" value="register"></input>
+				</a>';} ?> </th>
+
 			<br>
 		</div>
 	</body>

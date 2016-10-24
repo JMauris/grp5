@@ -147,20 +147,26 @@ $tourArray=$_SESSION['tour'];
 
 			<div>
 
-			<div id="top">
+	<div id="top">
 			<table style="width: 100%;">
 				<tr>
 					<td style="text-align: center; width: 50%;">
 						<h2>Single hikes</h2>
+						<p>
+							Description
+						</P>
 					</td>
 					<td style="text-align: center; width: 50%;">
 						<h2>Multi-day hikes</h2>
+						<p>
+							Description
+						</P>
 					</td>
 				</tr>
 			</table>
 			</div>
 
-			<div id="tableDiv">
+	<!--				<div id="tableDiv">
 
 				<table id = "mainTable">
 					<tr>
@@ -222,7 +228,7 @@ $tourArray=$_SESSION['tour'];
 
 					</tr>
 			</table>
-		</div>
+		</div>-->
 
 		<div id="buttonsDiv1">
 			<table style="width: 100%;">

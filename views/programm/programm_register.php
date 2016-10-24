@@ -31,7 +31,7 @@ $SelectedTour = $_SESSION['Selected_Tour'];
 		<h1> Register</h1>
 		<h2> <?php echo ' '.$SelectedTour->getTitre(); ?></h2>
 		<h3>* = field obligatory</h3>
-		<form method="post" action="<?php echo URL_DIR.'profil/save';?>" onsubmit="alert('Saved')">
+		<form method="post" action="<?php echo URL_DIR.'program/register_save';?>" onsubmit="alert('Saved')">
 			<table style="align:center">
 					<tr>
 					<th><label for="name">Name</label>* : </th>
