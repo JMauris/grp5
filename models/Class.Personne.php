@@ -220,10 +220,10 @@ public function update($id){
 }
 
 
-public static function checkExixt($adressEmail,$pwd){
+public static function checkExist($adressEmail,$name,$lastname){
 
   $pwd = sha1($pwd);
-  $query = "SELECT * From personne WHERE email='$adressEmail' AND motDePasse='$pwd'";
+  $query = "SELECT * From personne WHERE email='$adressEmail' AND nom='$lastname' AND prenom='$name'";
   $result = MySqlConn::getInstance()->selectDB($query);
   $row = $result->fetch();
   if(!$row) return false;

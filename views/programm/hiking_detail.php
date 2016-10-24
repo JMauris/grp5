@@ -64,7 +64,7 @@ $nbrInscription = $_SESSION['nbrInscription'];
 			<a href="<?php echo URL_DIR.'programm/programm'?>">
 				<input type="button" value="go back" ></input>
 			</a>
-			<?php if($_SESSION['isInscri']==0)
+			<?php if(isset ($_SESSION['personne'])&&$_POST['isInscri']==0)
 				{
 					echo 'You are already register 	<input type="button" value="disregister">';
 				}
