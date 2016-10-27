@@ -4,7 +4,7 @@
 Language: German
 ------------------
 */
- 
+
 $lang = array();
 
 /*
@@ -199,4 +199,20 @@ $lang['LOGIN_EMAIL'] = 'E-mail: ';
 $lang['LOGIN_PW'] = 'Passwort: ';
 $lang['WELCOME_TITLE'] = 'Willkommen ';
 
+
+/*
+ ------------------
+hearder
+ ------------------
+ */
+
+ $lang['H_HOME'] = 'Home';
+ $lang['H_PROGRAM'] = 'Program';
+ $lang['H_MYPROGRAM'] = 'My Program';
+ $lang['H_PROPOSAL'] = 'Proposal ';
+ $lang['H_CONTACT'] = 'Contact ';
+  $lang['H_ABOUT'] = 'About';
+ $lang['H_MYPROPOSAL'] = 'My Proposals';
+ $lang['H_PROFIL'] = 'Profil ';
+ $lang['H_ADMIN'] = 'Admin';
 ?>

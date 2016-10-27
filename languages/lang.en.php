@@ -4,7 +4,7 @@
 Language: English
 ------------------
 */
- 
+
 $lang = array();
 
 /*
@@ -198,4 +198,20 @@ $lang['LOGIN_EMAIL'] = 'Email: ';
 $lang['LOGIN_PW'] = 'Password: ';
 $lang['WELCOME_TITLE'] = 'Welcome ';
 
+
+/*
+ ------------------
+hearder
+ ------------------
+ */
+
+ $lang['H_HOME'] = 'Home';
+ $lang['H_PROGRAM'] = 'Program';
+ $lang['H_MYPROGRAM'] = 'My Program';
+ $lang['H_PROPOSAL'] = 'Proposal ';
+ $lang['H_CONTACT'] = 'Contact ';
+  $lang['H_ABOUT'] = 'About';
+ $lang['H_MYPROPOSAL'] = 'My Proposals';
+ $lang['H_PROFIL'] = 'Profil ';
+ $lang['H_ADMIN'] = 'Admin';
 ?>

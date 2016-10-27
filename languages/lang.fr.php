@@ -198,4 +198,19 @@ $lang['LOGIN_EMAIL'] = 'Email: ';
 $lang['LOGIN_PW'] = 'Mot de passe: ';
 $lang['WELCOME_TITLE'] = 'Bienvenue ';
 
+/*
+ ------------------
+hearder
+ ------------------
+ */
+
+ $lang['H_HOME'] = 'Accueil';
+ $lang['H_PROGRAM'] = 'Programme ';
+ $lang['H_MYPROGRAM'] = 'Mon Programme ';
+ $lang['H_PROPOSAL'] = 'Proposition ';
+  $lang['H_CONTACT'] = 'Contact ';
+   $lang['H_ABOUT'] = 'A propos ';
+ $lang['H_MYPROPOSAL'] = 'Mes Propositions ';
+ $lang['H_PROFIL'] = 'Profil ';
+ $lang['H_ADMIN'] = 'Admin';
 ?>
