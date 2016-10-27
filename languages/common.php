@@ -1,7 +1,8 @@
 <?php
-	session_start();
+	if(!isset($_SESSION))
+{	session_start();}
 	header('Cache-control: private'); // IE 6 FIX
-	 
+
 	if(isSet($_GET['lang'])) {
 		$lang = $_GET['lang'];
 		// register the session and set the cookie
@@ -14,23 +15,23 @@
 	} else {
 		$lang = 'en';
 	}
- 
+
 	switch ($lang) {
 	  case 'en':
 	  $lang_file = 'lang.en.php';
 	  break;
-	 
+
 	  case 'de':
 	  $lang_file = 'lang.de.php';
 	  break;
-	 
+
 	  case 'fr':
 	  $lang_file = 'lang.fr.php';
 	  break;
-	 
+
 	  default:
 	  $lang_file = 'lang.en.php';
 	}
- 
+
 	include_once 'languages/'.$lang_file;
 ?>

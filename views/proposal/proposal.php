@@ -1,8 +1,5 @@
-<?php
+<?php include_once ROOT_DIR.'global/header.php'; $tourArray = $_SESSION['tour']; include_once ROOT_DIR.'languages/common.php';?>
 
-	include_once ROOT_DIR.'global/header.php';
-	$tourArray = $_SESSION['tour'];
-?>
 
 <html>
 	<head>
@@ -38,7 +35,7 @@
 				font-family: "Times New Roman", Times, serif;
 				font-style: normal;
 				font-size: 100%;
-				font-weight: bold;								
+				font-weight: bold;
 			}
 			#search {
 				display:inline-block;
@@ -67,22 +64,22 @@
 				width: 20%;
 				padding: 2%;
 			}
-			
+
 
 		</style>
 	</head>
 	<body>
 		<div class= "wrapper">
 			<div class= "top">
-			<h1>Proposal</h1>
-			<h2>These are our Proposals for you:</h2>
+				<h1><?php echo $lang['PROPOSAL_TITLE']; ?></h1>
+					<h2><?php echo $lang['PROPOSAL_SUBTITLE']; ?></h2>
 			</div>
-			
+
 			<div class="middle">
 				<table class="show">
 					<tr>
 						<td style= "overflow-y: scroll; height: 100%;">
-							<div id="show"> 
+							<div id="show">
 								<a href="<?php echo URL_DIR.'proposal/proposal_detail'?>">
 									<?php foreach( $tourArray as $cle => $element)
 
@@ -99,7 +96,7 @@
 					</tr>
 				</table>
 			</div>
-			
+
 			<div class = "bottom">
 				<table class="buttons">
 					<tr>
@@ -107,15 +104,14 @@
 							<div id="topButton">
 								<a href="<?php echo URL_DIR.'search/search_path.php'?>"><img id="search1" src="<?php echo URL_DIR. 'public/img/searchRoute.png'?>"></a>
 							</div>
-						<button id="near">Near us</button>
+						<button id="near"><?php echo $lang['BTN_NEAR']; ?></button>
 						</td>
 					</tr>
 				</table>
 			</div>
-			
+
 		</div>
-		
+
 		<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>
 </body>
 </html>
-

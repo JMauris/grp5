@@ -1,6 +1,6 @@
 <?php include_once ROOT_DIR.'global/header.php';
 $tourArray=$_SESSION['tour'];
-
+include_once ROOT_DIR.'languages/common.php';
 ?>
 
 <html>
@@ -140,7 +140,7 @@ $tourArray=$_SESSION['tour'];
 	</head>
 	<body>
 		<div class="wrapper" style= "padding-bottom: 2%; padding-right: 2%; padding-left: 2%;">
-			<h1>Hikinglists</h1>
+		<h1><?php echo $lang['PROGRAM_TITLE']; ?></h1>
 				<div id="topButton">
 					<a href="<?php echo URL_DIR.'search/search_path'?>"><img id="search1" src="<?php echo URL_DIR. 'public/img/searchRoute.png'?>"></a>
 				</div>
@@ -151,13 +151,13 @@ $tourArray=$_SESSION['tour'];
 			<table style="width: 100%;">
 				<tr>
 					<td style="text-align: center; width: 50%;">
-						<h2>Single hikes</h2>
+					<h2><?php echo $lang['SINGLE_HIKES']; ?></h2>
 						<p>
 							Description
 						</P>
 					</td>
 					<td style="text-align: center; width: 50%;">
-						<h2>Multi-day hikes</h2>
+				<h2><?php echo $lang['MULTI_DAY_HIKES']; ?></h2>
 						<p>
 							Description
 						</P>
@@ -166,81 +166,75 @@ $tourArray=$_SESSION['tour'];
 			</table>
 			</div>
 
-	<!--				<div id="tableDiv">
-
+	<!--			<div id="tableDiv">
 				<table id = "mainTable">
 					<tr>
 						<td style="width: 50%;">
 							<div id="insideTable">
-
-							<table>
-								<tr>
-				  					<td>Choose a day:</td>
-				  					<td><input type="text" id="datepicker" name="from"></td>
-								</tr>
-								<tr>
-									<td>Route for the selected day:</td>
-									<td>...</td>
-								</tr>
-								<tr>
-									<td></td>
-
-								</tr>
-			  				</table>
+								<table>
+									<tr>
+									  <td><?php echo $lang['CHOOSE_A_DAY']; ?></td>
+									  <td><input type="text" id="datepicker" name="from"></td>
+									</tr>
+									<tr>
+										<td><?php echo $lang['DAY_ROUTE']; ?></td>
+										<td>...</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<form action="<?php echo URL_DIR.'programm/programm'?>" method= "post">
+												<button id="submit1" name ="type" value = '1'><?php echo $lang['BTN_ONLY_HIKE']; ?></button>
+											</from>
+										</td>
+									</tr>
+							  	</table>
 							</div>
 						</td>
-
 						<td style="width: 50%;">
 							<div id="insideTable">
-
-			  				<table>
-			  					<tr>
-			  						<td>Choose date</td>
-			  					</tr>
-			  					<tr>
-				    				<td>
-				    					<b>From:</b>
-				    				</td>
-				    				<td>
-				    					<input type="text" id="datepicker" name="from">
-				    				</td>
-								</tr>
-								<tr>
-									<td>
-										<b>To:</b>
-									</td>
-									<td>
-										<input type="text" id="datepicker" name="to">
-									</td>
-								</tr>
-								<tr>
-									<td>Route for the selected stay:</td>
-									<td>....</td>
-								</tr>
-								<tr>
-									<td></td>
-
-								</tr>
-			  				</table>
-
+							  	<table>
+								  	<tr>
+								  		<td><?php echo $lang['CHOOSE_DATE']; ?></td>
+								  	</tr>
+								  	<tr>
+									    <td><b><?php echo $lang['FROM']; ?></b></td>
+									    <td><input type="text" id="datepicker2" name="from"></td>
+									</tr>
+									<tr>
+										<td><b><?php echo $lang['TO']; ?></b></td>
+										<td><input type="text" id="datepicker3" name="to"></td>
+									</tr>
+									<tr>
+										<td><?php echo $lang['STAY_ROUTE']; ?></td>
+										<td>....</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<form action="<?php echo URL_DIR.'programm/programm'?>" method= "post">
+												<button id="submit1" name ="type" value = '2'><?php echo $lang['BTN_ONLY_MULTI']; ?></button>
+											</form>
+										</td>
+									</tr>
+							  	</table>
 							</div>
 						</td>
-
 					</tr>
-			</table>
-		</div>-->
+				</table>
+			</div>-->
 
 		<div id="buttonsDiv1">
 			<table style="width: 100%;">
 					<tr>
 						<td>
 							<form action="<?php echo URL_DIR.'programm/programm'?>" method= "post">
-								<button id="submit1" name ="type" value = '1'>Only hike</button>
+								<button id="submit1" name ="type" value = '1'><?php echo $lang['BTN_ONLY_HIKE']; ?></button>
 							</form>
 						</td>
 						<td>
 							<form action="<?php echo URL_DIR.'programm/programm'?>" method= "post">
-								<button id="submit1" name ="type" value = '2'>Only multi-hike</button>
+								<button id="submit1" name ="type" value = '2'><?php echo $lang['BTN_ONLY_MULTI']; ?></button>
 							</form>
 						</td>
 					</tr>
@@ -248,11 +242,10 @@ $tourArray=$_SESSION['tour'];
 		</div>
 
 		<div id="yourProg">
-			<h2>Your Programm:</h2>
+				<h2><?php echo $lang['YOUR_PROGRAMM']; ?></h2>
 
 			<form action="<?php echo URL_DIR.'programm/programm'?>" method= "post">
-				<button id="view_all" name ="type">view all</button>
-			</form>
+				<button id="view_all"><?php echo $lang['BTN_VIEW']; ?></button>
 		</div>
 
 			<div>

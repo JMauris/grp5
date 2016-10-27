@@ -1,7 +1,4 @@
-<?php include_once ROOT_DIR.'global/header.php';
-
-
-?>
+<?php include_once ROOT_DIR.'global/header.php'; include_once ROOT_DIR.'languages/common.php';?>
 
 <br><br>
 	<table>
@@ -15,6 +12,4 @@
 <br/><br/><br/><br/>
 
 
-<?php
-include_once ROOT_DIR.'global/footer.php';
-?>
+<?php include_once ROOT_DIR.'global/footer.php'; ?>

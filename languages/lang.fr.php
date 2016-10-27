@@ -12,42 +12,42 @@ $lang = array();
 For all pages
 ------------------
 */
-$lang['BTN_SEARCH'] = 'Search route';
-$lang['MY_FAVORITES'] = 'My favorites';
-$lang['DATE_BEGIN'] = 'Date begin:';
-$lang['PROGRAMM_DETAIL'] = 'Programm Detail';
-$lang['REGISTER'] = 'register';
+$lang['BTN_SEARCH'] = 'chercher un itinéraire';
+$lang['MY_FAVORITES'] = 'Mes favoris';
+$lang['DATE_BEGIN'] = 'Date du début:';
+$lang['PROGRAMM_DETAIL'] = 'Détail du Programme';
+$lang['REGISTER'] = "s'enregistré";
 
 /*
  ------------------
  search path pages
  ------------------
  */
-$lang['SEARCH'] = 'Search';
+$lang['SEARCH'] = 'Recherche';
 $lang['REGION'] = 'Region: ';
 //DIFFICULTY FROM ANOTHER PAGE
-$lang['SORT_HIKE'] = 'Sort of hike:';
-$lang['HIKINGS'] = 'Hikings';
-$lang['PLACEHOLDER'] = 'Filter the results of your research here, tip in the name of the City';
+$lang['SORT_HIKE'] = 'Type de randonnée :';
+$lang['HIKINGS'] = 'Randonnée ';
+$lang['PLACEHOLDER'] = 'Filtrer les résultats de votre recherche ici, par exemple au nom de la Ville';
 
-$lang['ALL'] = 'Alle';
-$lang['SNOWSHOE'] = 'Snowshoeing';
-$lang['SKI_TOUR'] = 'Skitour';
-$lang['OTHERS'] = 'Others';
-$lang['WINTER_HIKES'] = 'Winterhiking in the snow';
-$lang['ALP_HIKES'] = 'Alpine hiking';
-$lang['MULTI_D_HIKE'] = 'multiple-day hiking';
+$lang['ALL'] = 'Tout';
+$lang['SNOWSHOE'] = 'Raquette';
+$lang['SKI_TOUR'] = 'Tour à ski';
+$lang['OTHERS'] = 'Autres';
+$lang['WINTER_HIKES'] = "Randonnée d'hiver dans la neige";
+$lang['ALP_HIKES'] = 'Randonnée alpine';
+$lang['MULTI_D_HIKE'] = 'Séjour';
 
 
-$lang['AVAIL_HIKINGS'] = 'Available Hikings';
-$lang['AVAIL_LIST'] = 'These are the available Hikings for the chosen day:';
+$lang['AVAIL_HIKINGS'] = 'Randonnée disponible';
+$lang['AVAIL_LIST'] = 'Randonnée disponible pour le jour choisi :';
 
 /*
  ------------------
  Home page
  ------------------
  */
-$lang['HOME_TITLE'] = 'Welcome to CAS Montana';
+$lang['HOME_TITLE'] = 'Bienvenue à Cas Montana';
 $lang['HOME_TEXT_1'] = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.';
 $lang['HOME_TEXT_2'] = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.';
 $lang['HOME_TEXT_3'] = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.';
@@ -57,145 +57,145 @@ $lang['HOME_TEXT_3'] = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
  Program page
  ------------------
  */
-$lang['PROGRAM_TITLE'] = 'Hikinglists';
+$lang['PROGRAM_TITLE'] = 'Liste des randonnées';
 
-$lang['SINGLE_HIKES'] = 'Single hikes';
-$lang['CHOOSE_A_DAY'] = 'Choose a day:';
-$lang['DAY_ROUTE'] = 'Route for the selected day:';
-$lang['BTN_ONLY_HIKE'] = 'only hike';
+$lang['SINGLE_HIKES'] = 'Randonnée simple';
+$lang['CHOOSE_A_DAY'] = 'Choisir un jour:';
+$lang['DAY_ROUTE'] = 'itinéraire pour le jour selectionné:';
+$lang['BTN_ONLY_HIKE'] = 'Randonnée simple';
 
-$lang['MULTI_DAY_HIKES'] = 'Multi-day hikes';
+$lang['MULTI_DAY_HIKES'] = 'Séjour';
 $lang['CHOOSE_DATE'] = 'Choose date';
 $lang['FROM'] = 'From:';
 $lang['TO'] = 'To:';
-$lang['STAY_ROUTE'] = 'Route for the selected stay:';
-$lang['BTN_ONLY_MULTI'] = 'only multi-hike';
+$lang['STAY_ROUTE'] = 'itinéraire pour le jour selectionné:';;
+$lang['BTN_ONLY_MULTI'] = 'Séjour uniquement';
 
-$lang['YOUR_PROGRAMM'] = 'Your Programm:';
-$lang['BTN_VIEW'] = 'view all';
+$lang['YOUR_PROGRAMM'] = 'Votre programme:';
+$lang['BTN_VIEW'] = 'Tout voir';
 
 /*
  ------------------
  My Program page
  ------------------
  */
-$lang['MY_PROGRAM_TITLE'] = 'Overview of my programm';
-$lang['MY_REGISTRATIONS'] = 'My registrations';
+$lang['MY_PROGRAM_TITLE'] = 'Vue du programme';
+$lang['MY_REGISTRATIONS'] = 'Mes inscriptions';
 
 /*
  ------------------
  Proposal page
  ------------------
  */
-$lang['PROPOSAL_TITLE'] = 'Proposal';
-$lang['PROPOSAL_SUBTITLE'] = 'These are our Proposals for you:';
-$lang['BTN_NEAR'] = 'Near us';
+$lang['PROPOSAL_TITLE'] = 'Proposition';
+$lang['PROPOSAL_SUBTITLE'] = 'Nos propostitions pour vous :';
+$lang['BTN_NEAR'] = 'Près de nous';
 
 /*
  ------------------
  Proposal_detail page
  ------------------
  */
-$lang['PROPOSAL_DETAIL_TITLE'] = 'Proposal Detail';
-$lang['PLACE_OF_DEP'] = 'Place of departure: ';
+$lang['PROPOSAL_DETAIL_TITLE'] = 'Propostion détaillé';
+$lang['PLACE_OF_DEP'] = 'Lie de départ : ';
 $lang['DESTINATION'] = 'Destination: ';
-$lang['DIFFICULTY'] = 'Difficulty: ';
-$lang['DURATION'] = 'Duration: ';
+$lang['DIFFICULTY'] = 'Difficulté : ';
+$lang['DURATION'] = 'Durée : ';
 $lang['DESCRIPTION'] = 'Description: ';
-$lang['POPULARITY'] = 'Popularity for the SAC Members:';
-$lang['OPINION'] = 'Share my Opinion:';
-$lang['BTN_BACK'] = 'go back';
+$lang['POPULARITY'] = 'Popularité au près des memebres du CAS: ';
+$lang['OPINION'] = 'Partager mes Opinions:';
+$lang['BTN_BACK'] = 'retour';
 
 /*
  ------------------
  SearchProposal page
  ------------------
  */
-$lang['SEARCH_PROPOSAL_TITLE'] = 'Search Proposal';
+$lang['SEARCH_PROPOSAL_TITLE'] = 'Proposition de recherche';
 
 /*
  ------------------
  My Proposal page
  ------------------
  */
-$lang['MY_PROPOSAL_TITLE'] = 'My proposal';
-$lang['MY_OPINIONS'] = 'My Opinions';
+$lang['MY_PROPOSAL_TITLE'] = 'Mes propostitions';
+$lang['MY_OPINIONS'] = 'Mes Opinions';
 
 /*
  ------------------
  Contact page
  ------------------
  */
-$lang['CONTACT_TITLE'] = 'Contact information';
+$lang['CONTACT_TITLE'] = 'Information Contact';
 
 /*
  ------------------
  About page
  ------------------
  */
-$lang['ABOUT_TITLE'] = 'Information about SAC';
+$lang['ABOUT_TITLE'] = 'Informations sur le CAS';
 
-$lang['NAME'] = 'Name:';
-$lang['ESTABLISHMENT'] = 'Establishment:';
-$lang['HEADQUARTERS'] = 'Headquarters:';
-$lang['MAINORGANISATION'] = 'Main organisation:';
+$lang['NAME'] = 'Nom:';
+$lang['ESTABLISHMENT'] = 'Création :';
+$lang['HEADQUARTERS'] = 'Siège:';
+$lang['MAINORGANISATION'] = 'organisation principale :';
 $lang['CERTIFICATION'] = 'Certification:';
-$lang['FIELD_OF_ACTIVITY'] = 'Field of activity:';
-$lang['AMOUNT_OF_MEMBERS'] = 'Amount of Members:';
-$lang['MEMBERSHIP_FEE'] = 'Membership fee:';
-$lang['ADVANTAGES'] = 'Advantages of a membership:';
-$lang['STATUTES'] = 'Statutes:';
+$lang['FIELD_OF_ACTIVITY'] =" Domaine d'activité:";
+$lang['AMOUNT_OF_MEMBERS'] = 'Montant des Membres';
+$lang['MEMBERSHIP_FEE'] = "Frais d'adhésion";
+$lang['ADVANTAGES'] = "Les avantages d'une adhésion:";
+$lang['STATUTES'] = 'Statuts:';
 
 //DESCRIPTIONS
-$lang['DES_NAME'] = 'SAC is the abbreviation for Schweizer Alpen Club';
-$lang['DES_FIELD_OF_ACTIVITY'] = 'Organisation of more than 50 leaded hikes, Hiking-Weekends und -weeks, Winterhikes und Snowshoeing';
+$lang['DES_NAME'] = 'Cas est une abréviation pour club alpin Suisse';
+$lang['DES_FIELD_OF_ACTIVITY'] =" Organisation de plus de  50 randonnées guidée, randonnée de semaines et de weel-end, Randonné d'hiver et Raquette";
 
-$lang['DES_MEMBERSHIP_FEE_1'] = 'single person and family CHF 50.-';
-$lang['DES_MEMBERSHIP_FEE_2'] = 'Municipalities and tourism organizations CHF 100.-';
-$lang['DES_MEMBERSHIP_FEE_3'] = 'Membership registration form';
+$lang['DES_MEMBERSHIP_FEE_1'] = 'presonne seule et famille CHF 50.-';
+$lang['DES_MEMBERSHIP_FEE_2'] = 'Les municipalités et les organismes de tourisme CHF 100';
+$lang['DES_MEMBERSHIP_FEE_3'] = "Formulaire d'inscriptions pour les membres";
 
-$lang['DES_ADVANTAGES_1'] = 'Participation in the walks at no extra charge (CHF 5.-)';
-$lang['DES_ADVANTAGES_2'] = 'Price reduction on all maps of the Swiss Federal Office of Topography, as are numerous hiking maps of our canton';
-$lang['DES_ADVANTAGES_3'] = 'Entitled to participate in the multi-day hikes and hiking weeks';
-$lang['DES_ADVANTAGES_4'] = '1 Hiking index with annually more than 50 new hiking tips';
-$lang['DES_ADVANTAGES_5'] = '6 times per year the magazine - Wanderland Schweiz';
+$lang['DES_ADVANTAGES_1'] = 'participation aux promenades sans frais supplémentaires (CHF 5.-) ';
+$lang['DES_ADVANTAGES_2'] = "Prix de réduction de prix sur toutes les cartes de l'Office fédéral de topographie, de même que de nombreuses cartes de randonnée de notre canton";
+$lang['DES_ADVANTAGES_3'] = 'La possibilité  de participer aux randonnées de plusieurs jours et des semaines de randonnée';
+$lang['DES_ADVANTAGES_4'] = 'Un Catalogue de randonnée avec chaque année plus de 50 nouveaux conseils de randonnée';
+$lang['DES_ADVANTAGES_5'] = '6 fois par année, le magazine - La Suisse à pied';
 
-$lang['DES_STATUTES'] = 'Download statutes as pdf';
+$lang['DES_STATUTES'] = 'Télécharger les statues de pdf';
 
 /*
  ------------------
  My Profil page
  ------------------
  */
-$lang['PROFIL_TITLE'] = 'My Profil';
-$lang['FIELD_OBLIGATORY'] = '* = field obligatory';
+$lang['PROFIL_TITLE'] = 'Mon Profil';
+$lang['FIELD_OBLIGATORY'] = '* = Champs obligatoire';
 
-$lang['P_NAME'] = 'Name* :';
-$lang['P_LASTNAME'] = 'Lastname* :';
-$lang['P_ADRESS'] = 'Adress* :';
+$lang['P_NAME'] = 'Prénom* :';
+$lang['P_LASTNAME'] = 'Nom* :';
+$lang['P_ADRESS'] = 'Adresse* :';
 $lang['P_NPA'] = 'NPA* :';
-$lang['P_LOCALITY'] = 'Locality* :';
-$lang['P_PHONE'] = 'Phone :';
+$lang['P_LOCALITY'] = 'Localité* :';
+$lang['P_PHONE'] = 'Téléphone :';
 $lang['P_MOBILE'] = 'Mobile :';
 $lang['P_EMAIL'] = 'Email :';
 $lang['P_ABO'] = 'Abonnement de transports publics :';
 
-$lang['BTN_SAVE'] = 'Save';
-$lang['LINK_CHANGE_PW'] = 'Change the password';
+$lang['BTN_SAVE'] = 'enregistrer';
+$lang['LINK_CHANGE_PW'] = 'Changer le mot de passe';
 
-$lang['SELECTION_1'] = 'Select please';
-$lang['SELECTION_2'] = 'neither';
-$lang['SELECTION_3'] = 'general rail pass';
-$lang['SELECTION_4'] = 'half price';
+$lang['SELECTION_1'] = 'Selectionné';
+$lang['SELECTION_2'] = 'rien';
+$lang['SELECTION_3'] = 'Abonnement général';
+$lang['SELECTION_4'] = 'demi tarif';
 
 /*
  ------------------
  login page
  ------------------
  */
-$lang['MON_CAS'] = 'My CAS';
+$lang['MON_CAS'] = 'Mon CAS';
 $lang['LOGIN_EMAIL'] = 'Email: ';
-$lang['LOGIN_PW'] = 'Password: ';
-$lang['WELCOME_TITLE'] = 'Welcome ';
+$lang['LOGIN_PW'] = 'Mot de passe: ';
+$lang['WELCOME_TITLE'] = 'Bienvenue ';
 
 ?>

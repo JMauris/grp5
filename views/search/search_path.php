@@ -1,10 +1,10 @@
-<?php include_once ROOT_DIR.'global/header.php';?>
+<?php include_once ROOT_DIR.'global/header.php'; include_once ROOT_DIR.'languages/common.php';?>
 
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title>search path</title>
-		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
+		<link rel="stylesheet" type="text/css" href="http://localhost/cas_montana/public/css/main.css">
 		<style type="text/css">
 			select{
 				width: 150px;
@@ -20,16 +20,15 @@
 		</style>
 	</head>
 	<body>
-			<div class="wrapper">
 		<div style="height: 600px;">
-			<h1>Search</h1>
+			<h1><?php echo $lang['SEARCH']; ?></h1>
 			<br>
 				<table>
 					<tr>
-						<td>Region:</td>
+						<td><?php echo $lang['REGION']; ?></td>
 						<td>
 							<select name="region">
-								<option value="all">Alle</option>
+								<option value="all"><?php echo $lang['ALL']; ?></option>
 								<option value="1">Center</option>
 								<option value="2">Upper</option>
 								<option value="3">Lower</option>
@@ -39,10 +38,10 @@
 						</td>
 					</tr>
 					<tr>
-						<td>Difficulty:</td>
+						<td><?php echo $lang['DIFFICULTY']; ?>:</td>
 						<td>
 							<select name="difficulty">
-								<option value="all">Alle</option>
+								<option value="all"><?php echo $lang['ALL']; ?></option>
 								<option value="1">*</option>
 								<option value="2">**</option>
 								<option value="3">***</option>
@@ -52,35 +51,34 @@
 						</td>
 					</tr>
 					<tr>
-						<td>Sort of hike:</td>
+						<td><?php echo $lang['SORT_HIKE']; ?></td>
 						<td>
 							<select name="difficulty">
-								<option value="all">Alle</option>
-								<option value="1">Snowshoeing</option>
-								<option value="2">Skitour</option>
-								<option value="3">Hiking</option>
+								<option value="all"><?php echo $lang['ALL']; ?></option>
+								<option value="1"><?php echo $lang['SNOWSHOE']; ?></option>
+								<option value="2"><?php echo $lang['SKI_TOUR']; ?></option>
+								<option value="3"><?php echo $lang['HIKINGS']; ?></option>
 								<option value="4">Via Ferrata</option>
 								<option value="5">Bike - MTB</option>
-								<option value="6">Others</option>
-								<option value="7">Winterhiking in the snow</option>
-								<option value="8">Alpine hiking</option>
-								<option value="9">multiple-day hiking</option>
+								<option value="6"><?php echo $lang['OTHERS']; ?></option>
+								<option value="7"><?php echo $lang['WINTER_HIKES']; ?></option>
+								<option value="8"><?php echo $lang['ALP_HIKES']; ?></option>
+								<option value="9"><?php echo $lang['MULTI_D_HIKE']; ?></option>
 							</select>
 						</td>
 					</tr>
 					<tr>
 						<td>Hikings:</td>
 						<td>
-							<input id="filter" placeholder="Filter the results of your research here, tip in the name of the City" data-type="search">
+							<input id="filter" placeholder="<?php echo $lang['PLACEHOLDER']; ?>" data-type="search">
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<button>Search</button>
+							<button><?php echo $lang['SEARCH']; ?></button>
 						</td>
 					</tr>
 				</table>
-		</div>
 		</div>
 	</body>
 </html>
