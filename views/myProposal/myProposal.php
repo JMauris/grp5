@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<title>My proposal</title>
-		<link rel="stylesheet" type="text/css" href="http://localhost/cas_montana/public/css/main.css">
+		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
 		<style>
 			#left {
 				text-align: center;
