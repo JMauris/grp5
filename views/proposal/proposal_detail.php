@@ -1,4 +1,6 @@
-<?php include_once ROOT_DIR.'global/header.php';?>
+<?php include_once ROOT_DIR.'global/header.php';
+		$SelectedTour = $_SESSION['Selected_Tour'];
+?>
 
 <html>
 	<head>
@@ -16,42 +18,38 @@
 		</style>
 	</head>
 	<body>
-		<div class="wrapper" style= "padding-bottom: 2%;">
+		<div class="wrapper" style="height: 100%">
 			<h1>Proposal Detail</h1>
-			<h3>"Name"</h3>
+			<h3><?php echo ' '.$SelectedTour->getTitre(); ?></h3>
 			<table>
 				<tr>
+					<td>Date begin:</td>
+					<td><?php echo ' '.$SelectedTour->getDateDebut(); ?></td>
+				</tr>
+				<tr>
 					<td>Place of departure: </td>
-					<td>....</td>
+					<td><?php echo ' '.$SelectedTour->getLieuRDV(); ?></td>
 				</tr>
 				<tr>
 					<td>Destination:</td>
-					<td>....</td>
+					<td><?php echo ' '.$SelectedTour->getIdxArriveeLocalite(); ?></td>
 				</tr>
 				<tr>
-					<td>Schwierigkeit:</td>
-					<td>***********</td>
+					<td>difficulty:</td>
+					<td><?php echo ' '.$SelectedTour->getDifficulte(); ?></td>
 				</tr>
 				<tr>
 					<td>Duration:</td>
-					<td>0</td>
+					<td><?php echo ' '.$SelectedTour->getDuree(); ?></td>
 				</tr>
 				<tr>
 					<td>Description:</td>
-					<td>---------------------</td>
-				</tr>
-				<tr>
-					<td>Popularity for the SAC Members:</td>
-					<td>*********</td>
-				</tr>
-				<tr>
-					<td>Share my Optinion:</td>
-					<td>*********</td>
+					<td><?php echo ' '.$SelectedTour->getInformation_fr(); ?></td>
 				</tr>
 			</table>
-			<a href="<?php echo URL_DIR.'proposal/proposal'?>" style="padding-bottom: 2%;">
-			<input type="button" value="Go back" ></input>
-		</a>
+			<a href="<?php echo URL_DIR.'proposal/proposal'?>">
+				<input type="button" value="go back" ></input>
+			</a>
 			</div>
 			
 			<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?>

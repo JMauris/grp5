@@ -83,17 +83,19 @@
 					<tr>
 						<td style= "overflow-y: scroll; height: 100%;">
 							<div id="show"> 
-								<a href="<?php echo URL_DIR.'proposal/proposal_detail'?>">
-									<?php foreach( $tourArray as $cle => $element)
+								<form action="<?php echo URL_DIR.'proposal/proposal_detail'?>" method= "post">
+					 				<?php foreach( $tourArray as $cle => $element)
 
-					 				{?>
+					 					{?>
 
-										<button id = <?php echo ' '.$tourArray[$cle]->getId(); ?> style="width: 100%;">
+										<button  name ="selectedTour" value = <?php echo $cle?> style="width: 100%;">
 										<p><?php echo ' '.$tourArray[$cle]->getTitre(); ?></p>
 										<p><?php echo ' '.$tourArray[$cle]->getInformation_fr(); ?></p>
+									
+									</button>
 									<?php } ?>
-										</button>
-								</a>
+								</form>
+										
 							</div>
 						</td>
 					</tr>
