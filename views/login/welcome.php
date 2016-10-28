@@ -7,7 +7,7 @@
 ?>
 	<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
 	<br><br>
-	<div>
+	<div class="wrapper">
 		<table style="align:center">
 			<tr>
 				<td>

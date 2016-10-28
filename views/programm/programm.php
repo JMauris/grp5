@@ -247,7 +247,7 @@ include_once ROOT_DIR.'languages/common.php';
 			<form action="<?php echo URL_DIR.'programm/programm'?>" method= "post">
 				<button id="view_all"><?php echo $lang['BTN_VIEW']; ?></button>
 		</div>
-
+	</form>
 			<div>
 				<table style = "width: 100%;">
 					 <tr>
@@ -263,11 +263,12 @@ include_once ROOT_DIR.'languages/common.php';
 					 <table id="table">
 					 <tr>
 					  <td colspan = "5">
-						<form action="<?php echo URL_DIR.'programm/hiking_detail'?>" method= "post">
+						<form action="<?php echo URL_DIR.'programm/hiking_detail';?>" method= "post">
 					 		<?php foreach( $tourArray as $cle => $element)
 
 					 		{?>
-					 	<button  name ="selectedTour" value = <?php echo $cle?>>
+
+					 	<button  name ="selectedTour" value = <?php echo $cle;?>>
 					 		<table style="width: 100%;">
 					 			<tr>
 					 			<td style="width: 20%">

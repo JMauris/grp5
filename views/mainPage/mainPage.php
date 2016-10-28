@@ -6,7 +6,7 @@
 			<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
 		</head>
 		<body>
-			<div style="height: 600px;">
+			<div class="wrapper" style="height: 600px;">
 				<h1><?php echo $lang['HOME_TITLE']; ?></h1>
 				<br>
 				<p>

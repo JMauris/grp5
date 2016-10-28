@@ -16,7 +16,7 @@
 		</style>
 	</head>
 	<body>
-		<div style="height: 100%">
+		<div  class= "wrapper" style="height: 100%">
 			<h1><?php echo $lang['PROPOSAL_DETAIL_TITLE']; ?></h1>
 			<h3>"Name"</h3>
 			<table>

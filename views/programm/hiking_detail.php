@@ -20,7 +20,7 @@ include_once ROOT_DIR.'languages/common.php';
 		</style>
 	</head>
 	<body>
-		<div style="height: 100%">
+		<div class= "wrapper" style="height: 100%">
 			<h1><?php echo $lang['PROGRAMM_DETAIL']; ?></h1>
 			<h3><?php echo ' '.$SelectedTour->getTitre(); ?></h3>
 			<table>
@@ -64,8 +64,8 @@ include_once ROOT_DIR.'languages/common.php';
 				{
 					echo 'You are already register 	<input type="button" value="disregister">';
 				}
-				else{echo	'<a href="' .URL_DIR."programm/programm_register". '">
-					<input type="button" value= echo $lang['REGISTER']</input>
+				else{echo	'<a href="' .URL_DIR."programm/programm_register". '>
+					<input type="button" value="' .$lang['REGISTER'].'</input>
 				</a>';} ?> </th>
 
 			<br>
