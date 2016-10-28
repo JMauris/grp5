@@ -10,8 +10,10 @@
 				text-align: center;
 			}
 			.middle{
-				width: 100%;
+				width: 96%;
 				height: 30%;
+				padding-left: 2%;
+				paddin g-right: 2%;
 			}
 			.show{
 				width: 100%;

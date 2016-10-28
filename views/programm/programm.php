@@ -74,6 +74,7 @@ include_once ROOT_DIR.'languages/common.php';
 				float: top;
 				height: 6%;
 				background-color : transparent;
+				padding-bottom: 2%;
 			}
 
 			#yourProg{
@@ -140,18 +141,18 @@ include_once ROOT_DIR.'languages/common.php';
 	</head>
 	<body>
 		<div class="wrapper" style= "padding-bottom: 2%; padding-right: 2%; padding-left: 2%;">
-		<h1><?php echo $lang['PROGRAM_TITLE']; ?></h1>
+				<h1><?php echo $lang['PROGRAM_TITLE']; ?></h1>
 				<div id="topButton">
 					<a href="<?php echo URL_DIR.'search/search_path'?>"><img id="search1" src="<?php echo URL_DIR. 'public/img/searchRoute.png'?>"></a>
 				</div>
 
-			<div>
+				<div>
 
-	<div id="top">
-			<table style="width: 100%;">
-				<tr>
-					<td style="text-align: center; width: 50%;">
-					<h2><?php echo $lang['SINGLE_HIKES']; ?></h2>
+				<div id="top">
+					<table style="width: 100%;">
+						<tr>
+							<td style="text-align: center; width: 50%;">
+								<h2><?php echo $lang['SINGLE_HIKES']; ?></h2>
 						<p>
 							Description
 						</P>

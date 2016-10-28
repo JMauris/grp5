@@ -46,8 +46,8 @@
 			<h1><?php echo $lang['MY_PROGRAM_TITLE']; ?></h1>
 			<table>
 				<tr>
-					<td style="text-align: center;">	<h2 style="float: left; padding-left: 10%;"><?php echo $lang['MY_REGISTRATIONS']; ?></h2></td>
-					<td style="text-align: center;">	<h2 style="float: right; padding-right: 20%;"><?php echo $lang['MY_FAVORITES']; ?></h2></td>
+					<td style="text-align: center;">	<h2 style="float: center;"><?php echo $lang['MY_REGISTRATIONS']; ?></h2></td>
+					<td style="text-align: center;">	<h2 style="float: center;"><?php echo $lang['MY_FAVORITES']; ?></h2></td>
 				</tr>
 
 				<tr>
@@ -78,7 +78,7 @@
 				</a>
 				</td>
 
-				<td style="width: 50%; padding-left: 2%; padding-bottom: 2%; padding-top: 2%;">
+				<td style="width: 50%; padding: 2%;">
 				<a href="http://localhost/cas_montana/views/proposal/proposal_detail.php">
 					<button id="0">
 						<p>Name</p>
@@ -90,7 +90,6 @@
 				</table>
 				</div>
 			<div class="push"></div>
-			</div>
 
 			<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?>
 		</body>
