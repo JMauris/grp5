@@ -1,10 +1,10 @@
-<?php include_once ROOT_DIR.'global/header.php';?>
+<?php include_once ROOT_DIR.'global/header.php'; include_once ROOT_DIR.'languages/common.php';?>
 
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title>My Programm</title>
-		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
+			<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
 		<style type="text/css">
 
 		#left {
@@ -43,11 +43,11 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<h1>Overview of my programm</h1>
+			<h1><?php echo $lang['MY_PROGRAM_TITLE']; ?></h1>
 			<table>
 				<tr>
-					<td style="text-align: center;"><h2>My registration</h2></td>
-					<td style="text-align: center;"><h2>My favorites</h2></td>
+					<td style="text-align: center;">	<h2 style="float: left; padding-left: 10%;"><?php echo $lang['MY_REGISTRATIONS']; ?></h2></td>
+					<td style="text-align: center;">	<h2 style="float: right; padding-right: 20%;"><?php echo $lang['MY_FAVORITES']; ?></h2></td>
 				</tr>
 
 				<tr>

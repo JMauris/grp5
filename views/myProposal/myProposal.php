@@ -1,10 +1,9 @@
-<?php include_once ROOT_DIR.'global/header.php';?>
+<?php include_once ROOT_DIR.'global/header.php'; include_once ROOT_DIR.'languages/common.php';?>
 
 <html>
 	<head>
 		<title>My proposal</title>
 		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
-
 		<style>
 			#left {
 				text-align: center;
@@ -35,55 +34,50 @@
 			#table3 {
 				float: left;
 				width: 47%;
-
+				background: transparent;
 				padding-left: 3%;
 			}
 		</style>
 	</head>
 	<body>
-		<div class="wrapper">
-			<h1>My proposal</h1>
-			<table>
-				<tr>
-					<td style="text-align: center;"><h2>My Favorites</h2></td>
-					<td style="text-align: center;"><h2>My Opinions</h2></td>
-				</tr>
+		<div style="height: 600px;">
+			<h1><?php echo $lang['MY_PROPOSAL_TITLE']; ?></h1>
 
-				<tr>
-				<td style="width: 50%; padding-left: 2%; padding-bottom: 2%; padding-top: 2%;">
-				<a href="http://localhost/cas_montana/views/proposal/proposal_detail.php">
-					<button id="0">
-						<p>Name</p>
-						<p>Description..........................</p>
-					</button>
-				</a>
-				<a href="http://localhost/cas_montana/views/proposal/proposal_detail.php">
-					<button id="1">
-						<p>Name</p>
-						<p>Description..........................</p>
-					</button>
-				</a>
-				<a href="http://localhost/cas_montana/views/proposal/proposal_detail.php">
-					<button id="0">
-						<p>Name</p>
-						<p>Description..........................</p>
-					</button>
-				</a>
-				<a href="http://localhost/cas_montana/views/proposal/proposal_detail.php">
-					<button id="1">
-						<p>Name</p>
-						<p>Description..........................</p>
-					</button>
-				</a>
-				</td>
-				<td></td>
-				<tr>
-				</table>
-				</div>
-
-			<div class="push"></div>
+			<div id="top">
+				<h2 style="float: left;"><?php echo $lang['MY_FAVORITES']; ?></h2>
+				<h2 style="float: right;"><?php echo $lang['MY_OPINIONS']; ?></h2>
 			</div>
 
-			<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?>
-		</body>
-	</html>
+			<div id="table3">
+				<a href="http://localhost/cas_montana/views/proposal/proposal_detail.php">
+					<button id="0">
+						<p>Name</p>
+						<p>Description..........................</p>
+					</button>
+				</a>
+				<a href="http://localhost/cas_montana/views/proposal/proposal_detail.php">
+					<button id="1">
+						<p>Name</p>
+						<p>Description..........................</p>
+					</button>
+				</a>
+				<a href="http://localhost/cas_montana/views/proposal/proposal_detail.php">
+					<button id="0">
+						<p>Name</p>
+						<p>Description..........................</p>
+					</button>
+				</a>
+				<a href="http://localhost/cas_montana/views/proposal/proposal_detail.php">
+					<button id="1">
+						<p>Name</p>
+						<p>Description..........................</p>
+					</button>
+				</a>
+
+				</div>
+
+			</div>
+	</body>
+</html>
+
+<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?>

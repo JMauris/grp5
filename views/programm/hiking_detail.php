@@ -1,7 +1,7 @@
 <?php include_once ROOT_DIR.'global/header.php';
 $SelectedTour = $_SESSION['Selected_Tour'];
 $nbrInscription = $_SESSION['nbrInscription'];
-
+include_once ROOT_DIR.'languages/common.php';
 ?>
 
 <html>
@@ -20,56 +20,52 @@ $nbrInscription = $_SESSION['nbrInscription'];
 		</style>
 	</head>
 	<body>
-		<div class="wrapper" style="height: 100%">
-			<h1>Programm Detail</h1>
+		<div class= "wrapper" style="height: 100%">
+			<h1><?php echo $lang['PROGRAMM_DETAIL']; ?></h1>
 			<h3><?php echo ' '.$SelectedTour->getTitre(); ?></h3>
 			<table>
 				<tr>
-					<td>Date begin:</td>
+					<td><?php echo $lang['DATE_BEGIN']; ?></td>
 					<td><?php echo ' '.$SelectedTour->getDateDebut(); ?></td>
 				</tr>
 				<tr>
-					<td>Place of departure: </td>
+					<td><?php echo $lang['PLACE_OF_DEP']; ?></td>
 					<td><?php echo ' '.$SelectedTour->getLieuRDV(); ?></td>
 				</tr>
 				<tr>
-					<td>Destination:</td>
-					<td><?php echo ' '.$SelectedTour->getIdxArriveeLocalite(); ?></td>
+					<td><?php echo $lang['DESTINATION']; ?></td>
+					<td>XXX</td>
 				</tr>
 				<tr>
-					<td>difficulty:</td>
+					<td><?php echo $lang['DIFFICULTY']; ?></td>
 					<td><?php echo ' '.$SelectedTour->getDifficulte(); ?></td>
 				</tr>
 				<tr>
-					<td>Duration:</td>
+					<td><?php echo $lang['DURATION']; ?></td>
 					<td><?php echo ' '.$SelectedTour->getDuree(); ?></td>
 				</tr>
 				<tr>
-					<td>Description:</td>
+					<td><?php echo $lang['DESCRIPTION']; ?></td>
 					<td><?php echo ' '.$SelectedTour->getInformation_fr(); ?></td>
 				</tr>
 				<tr>
-					<td>Inscription:</td>
-					<td><?php echo ' '.$nbrInscription ?></td>
-				</tr>
-				<tr>
-					<td>Popularity for the SAC Members:</td>
+					<td><?php echo $lang['POPULARITY']; ?></td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>Share my Optinion:</td>
+					<td><?php echo $lang['OPINION']; ?></td>
 					<td>*********</td>
 				</tr>
 			</table>
 			<a href="<?php echo URL_DIR.'programm/programm'?>">
-				<input type="button" value="go back" ></input>
+			<input type="button" value="<?php echo $lang['BTN_BACK']; ?>" ></input>
 			</a>
 			<?php if(isset ($_SESSION['personne'])&&$_POST['isInscri']==0)
 				{
 					echo 'You are already register 	<input type="button" value="disregister">';
 				}
-				else{echo	'<a href="' .URL_DIR."programm/programm_register". '">
-					<input type="button" value="register"></input>
+				else{echo	'<a href="' .URL_DIR."programm/programm_register". '>
+					<input type="button" value="' .$lang['REGISTER'].'</input>
 				</a>';} ?> </th>
 
 			<br>

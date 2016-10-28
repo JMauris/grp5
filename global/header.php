@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <?php
 
-
+include_once ROOT_DIR.'languages/common.php';
 
 ?>
 
@@ -23,22 +23,22 @@
     	</li>
     	</ul>
       <ul class="ulh">
-        <li class="lih"><a class="ah" href="<?php echo URL_DIR.'mainpage/mainpage'?>">Home</a></li>
-        <li class="lih"><a class="ah" href="<?php echo URL_DIR.'programm/programm'?>">Program</a></li>
+        <li class="lih"><a class="ah" href="<?php echo URL_DIR.'mainpage/mainpage'?>"><?php echo $lang['H_HOME']; ?></a></li>
+        <li class="lih"><a class="ah" href="<?php echo URL_DIR.'programm/programm'?>"><?php echo $lang['H_PROGRAM']; ?></a></li>
         <?php if(isset($_SESSION["personne"]))
         {
-            echo  '<li class="lih"><a class="ah" href="' .URL_DIR."myprogram/myprogram". ' ">My Program</a></li>';
+            echo  '<li class="lih"><a class="ah" href="' .URL_DIR."myprogram/myprogram". ' ">'.$lang['H_MYPROGRAM'].'</a></li>';
         }?>
-        <li class="lih"><a class="ah" href="<?php echo URL_DIR.'proposal/proposal'?>">Proposal</a></li>
+        <li class="lih"><a class="ah" href="<?php echo URL_DIR.'proposal/proposal'?>"><?php echo $lang['H_PROPOSAL']; ?></a></li>
         <?php if(isset($_SESSION["personne"]))
         {
-            echo  '<li class="lih"><a class="ah" href="' .URL_DIR."myproposal/myproposal". ' "">MyProposal</a></li>';
+            echo  '<li class="lih"><a class="ah" href="' .URL_DIR."myproposal/myproposal". ' "">'.$lang['H_MYPROPOSAL'].'</a></li>';
         }?>
-        <li class="lih"><a class="ah" href="<?php echo URL_DIR.'contact/contact'?>">Contact</a></li>
-        <li class="lih"><a class="ah"  href="<?php echo URL_DIR.'about/about'?>">About</a></li>
+        <li class="lih"><a class="ah" href="<?php echo URL_DIR.'contact/contact'?>"><?php echo $lang['H_CONTACT']; ?></a></li>
+        <li class="lih"><a class="ah"  href="<?php echo URL_DIR.'about/about'?>"><?php echo $lang['H_ABOUT']; ?></a></li>
         <?php if(isset($_SESSION["personne"]))
         {
-            echo  '<li class="lih"><a class="ah" href="' .URL_DIR."profil/profil". ' "">Profil</a></li>';
+            echo  '<li class="lih"><a class="ah" href="' .URL_DIR."profil/profil". ' "">'.$lang['H_PROFIL'].'</a></li>';
             }?>
 
         <?php if(isset($_SESSION["personne"]))
@@ -46,7 +46,7 @@
         {
           echo  '<c><a class="ah" href="' .URL_DIR."login/logout". ' ">Logout</a></c> ' ;
           if($_SESSION["personne"]->getRole()=='admin')
-            echo  '<c><a class="ah" href="' .URL_DIR."admin/admin". ' ">Admin</a></c> ' ;
+            echo  '<c><a class="ah" href="' .URL_DIR."admin/admin". ' ">'.$lang['H_ADMIN'].'</a></c> ' ;
 
         }
         else {
