@@ -79,15 +79,9 @@
 				<table class="show">
 					<tr>
 						<td style= "overflow-y: scroll; height: 100%;">
-<<<<<<< HEAD
 							<div id="show"> 
 								<form action="<?php echo URL_DIR.'proposal/proposal_detail'?>" method= "post">
 					 				<?php foreach( $tourArray as $cle => $element)
-=======
-							<div id="show">
-								<a href="<?php echo URL_DIR.'proposal/proposal_detail'?>">
-									<?php foreach( $tourArray as $cle => $element)
->>>>>>> origin/master
 
 					 					{?>
 
