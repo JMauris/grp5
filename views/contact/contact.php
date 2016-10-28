@@ -21,7 +21,7 @@
 			<div class="wrapper">
 				<h1>Contact information</h1>
 				<br>
-				<img  style="width: 28%; padding-right: 10%; padding-bottom: 2%; height: 28%; float:right; " alt="contactinfo" src="http://localhost/cas_montana/contactinfo.png">
+				<img  style="width: 28%; padding-right: 10%; padding-bottom: 2%; height: 28%; float:right; " alt="contactinfo" src="<?php echo URL_DIR. 'public/img/contactinfo.png'?>">
 				<p id= "contactDiv">		VALRANDO
 				<br>	Association Valaisanne de la Randonnée
 				<br>	Pré-Fleuri 6
