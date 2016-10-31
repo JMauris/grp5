@@ -1,12 +1,11 @@
-<? php
-/**
- *
- */
+<?php
+
 class Region
 {
   private $id;
   private $region_de;
   private  $region_fr;
+  
   function __construct($id=null, $region_fr, $region_de )
   {
 
@@ -14,8 +13,6 @@ class Region
     $this->setRegion_fr($region_fr);
     $this->setRegion_de($region_de);
   }
-}
-
 
 //id
 public function getId(){
@@ -59,4 +56,5 @@ public static function connectbyId($id){
   return new Region($row['idRegion'], $row['region_fr'],$row['region_de']);
 
 }
- ?>
+}
+?>

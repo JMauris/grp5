@@ -4,10 +4,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>search path</title>
-		<link rel="stylesheet" type="text/css" href="http://localhost/cas_montana/public/css/main.css">
-		<style type="text/css">
+		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css"><style type="text/css">
 			select{
-				width: 150px;
+				width: 30%;
 			}
 
 			#filter{
@@ -20,7 +19,8 @@
 		</style>
 	</head>
 	<body>
-		<div style="height: 600px;">
+	<div class="wrapper">
+		<div>
 			<h1><?php echo $lang['SEARCH']; ?></h1>
 			<br>
 				<table>
@@ -79,6 +79,7 @@
 						</td>
 					</tr>
 				</table>
+		</div>
 		</div>
 	</body>
 </html>

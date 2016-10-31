@@ -530,6 +530,34 @@ private static function queryTwo($idTour1, $idTour2)
 
   return $query;
 }
+
+private static function get_results($difficulty, $hikeType)
+{
+	$query = "SELECT * FROM tour
+				WHERE difficulte = $difficulty
+				AND idxTypeTour = $hikeType";
+	
+	$result = MySqlConn::getInstance()->selectDB($query);
+	
+	
+	while($row = $result->fetch())
+	{
+		$resultArray[] =   new Tour($row['idTour'],
+				$row['arriveeHeure'], $row['codeprogramme'],$row['dateDebut'], $row['dateFin'], $row['dateLimiteInscr'],
+				$row['departHeure'], $row['descente'],$row['description_de'], $row['description_fr'], $row['difficulte'],
+				$row['duree'], $row['idxArriveeLocalite'],$row['idxAssistant'], $row['idxDepartLocalite'], $row['idxGuide'],
+				$row['idxTypeTour'], $row['idxTypeTransport'],$row['information_de'], $row['information_fr'], $row['inscriptionMax'],
+				$row['lienCarte'], $row['lieuRDV'],$row['montee'], $row['prixMax'], $row['prixMin'],
+				$row['soustitre'], $row['status'],$row['titre'], $row['transportArrivee'], $row['transportDepart']);
+	
+	}
+	
+	$result->closeCursor();
+	
+	return $resultArray;
+	
+	
+}
 }
 
 ?>

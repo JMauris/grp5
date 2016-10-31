@@ -167,7 +167,7 @@ include_once ROOT_DIR.'languages/common.php';
 			</table>
 			</div>
 
-	<!--			<div id="tableDiv">
+			<div id="tableDiv">
 				<table id = "mainTable">
 					<tr>
 						<td style="width: 50%;">
@@ -186,7 +186,7 @@ include_once ROOT_DIR.'languages/common.php';
 										<td>
 											<form action="<?php echo URL_DIR.'programm/programm'?>" method= "post">
 												<button id="submit1" name ="type" value = '1'><?php echo $lang['BTN_ONLY_HIKE']; ?></button>
-											</from>
+											</form>
 										</td>
 									</tr>
 							  	</table>
@@ -223,7 +223,7 @@ include_once ROOT_DIR.'languages/common.php';
 						</td>
 					</tr>
 				</table>
-			</div>-->
+			</div>
 
 		<div id="buttonsDiv1">
 			<table style="width: 100%;">
@@ -247,8 +247,10 @@ include_once ROOT_DIR.'languages/common.php';
 
 			<form action="<?php echo URL_DIR.'programm/programm'?>" method= "post">
 				<button id="view_all"><?php echo $lang['BTN_VIEW']; ?></button>
+			</form>
+			
 		</div>
-	</form>
+	
 			<div>
 				<table style = "width: 100%;">
 					 <tr>
