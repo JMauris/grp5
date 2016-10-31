@@ -31,20 +31,20 @@ $SelectedTour = $_SESSION['Selected_Tour'];
 		<h1> Register</h1>
 		<h2> <?php echo ' '.$SelectedTour->getTitre(); ?></h2>
 		<h3>* = field obligatory</h3>
-		<form method="post" action="<?php echo URL_DIR.'program/register_save';?>" onsubmit="alert('Saved')">
+		<form method="post" action="<?php echo URL_DIR.'programm/register_save';?>" onsubmit="alert('Saved')">
 			<table style="align:center">
 					<tr>
 					<th><label for="name">Name</label>* : </th>
 					<th><input type="text" name="firstname" value=" <?php if(isset($_SESSION["personne"]))
 					 	{
-							echo $user->getLastname();
+							echo $user->getFirstname();
 						}?>" ></th>
 					</tr>
 					<tr>
 					<th><label for="lastname">Lastname</label>* : </th>
 					<th><input type="text" name="lastname" value="<?php if(isset($_SESSION["personne"]))
 					 	{
-							echo $user->getFirstname();}?>" ></th>
+							echo $user->getLastname();}?>" ></th>
 					</tr>
 					 <tr>
 					<th><label for="adress">Adress</label>* :  </th>
