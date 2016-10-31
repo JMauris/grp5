@@ -98,6 +98,27 @@ $RemarqueInscr = $inscription->getRemarque();
 
 	return  MySqlConn::getInstance()->executeQuery($query);
 }
+
+
+
+public static function connectByUser($idPersonne){
+
+
+  $query = "SELECT * FROM `inscription` WHERE `idPersonne` = '$idPersonne'";
+  $result = MySqlConn::getInstance()->selectDB($query);
+	while($row = $result->fetch())
+	{
+	$resultArray[] =   new inscription($row['idPersonne'], $row['idRandonnee'], $row['date'],$row['heure'], $row['idxStatus'], $row['remarque']);
+
+	}
+	$result->closeCursor();
+//($idPersonne, $idRandonnee, $date, $heure, $idxStatus, $remarque)
+
+
+return $resultArray;
+
+}
+
 }
 
 ?>

@@ -12,6 +12,20 @@ class myProgramController extends Controller{
       $this->redirect('login', 'login');
       exit;
     }
+
+
+    //charger tout les inscription de cette personne
+
+    $iduser=$_SESSION['personne']->getId();
+
+    $result = Inscription::connectByUser($iduser);
+
+    $_SESSION['MyRegister']=$result;
+    //faire un array des  Tour enregistrer
+
+    
+
+
   }
 
 

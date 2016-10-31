@@ -248,9 +248,9 @@ include_once ROOT_DIR.'languages/common.php';
 			<form action="<?php echo URL_DIR.'programm/programm'?>" method= "post">
 				<button id="view_all"><?php echo $lang['BTN_VIEW']; ?></button>
 			</form>
-			
+
 		</div>
-	
+
 			<div>
 				<table style = "width: 100%;">
 					 <tr>
@@ -304,7 +304,7 @@ include_once ROOT_DIR.'languages/common.php';
 								</tr>
 							</table>
 						</button>
-							<?php } ?>
+
 						</form>
 						</td>
 					</tr>

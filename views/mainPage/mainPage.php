@@ -7,8 +7,7 @@
 		</head>
 		<body>
 			<div class="wrapper" style="height: 600px;">
-				<h1><?php echo $today = date("Y-m-d H:i:s");  
-				 echo $lang['HOME_TITLE']; ?></h1>
+				<h1><?php echo $lang['HOME_TITLE']; ?></h1>
 				<br>
 				<p>
 					<?php echo $lang['HOME_TEXT_1'];?>

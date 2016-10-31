@@ -1,4 +1,6 @@
-<?php include_once ROOT_DIR.'global/header.php'; include_once ROOT_DIR.'languages/common.php';?>
+<?php include_once ROOT_DIR.'global/header.php'; include_once ROOT_DIR.'languages/common.php';
+$MyRegisterArray=$_SESSION['MyRegister'];
+?>
 
 <html>
 	<head>
@@ -52,12 +54,7 @@
 
 				<tr>
 				<td style="width: 50%; padding-left: 2%; padding-bottom: 2%; padding-top: 2%;">
-				<a href="http://localhost/cas_montana/views/proposal/proposal_detail.php">
-					<button id="0">
-						<p>Name</p>
-						<p>Description..........................</p>
-					</button>
-				</a>
+
 				<a href="http://localhost/cas_montana/views/proposal/proposal_detail.php">
 					<button id="1">
 						<p>Name</p>
@@ -79,12 +76,18 @@
 				</td>
 
 				<td style="width: 50%; padding: 2%;">
-				<a href="http://localhost/cas_montana/views/proposal/proposal_detail.php">
-					<button id="0">
+
+				<form action="<?php echo URL_DIR.'programm/programm_register';?>" method="post">
+					<?php foreach ($MyRegisterArray as $key => $element) { ?>
+
+					
+					<button name = "selectedMyRegister" value = <?php echo $key;?>>
+
 						<p>Name</p>
 						<p>Description..........................</p>
 					</button>
-				</a>
+							<?php } ?>
+						</form>
 				</td>
 				<tr>
 				</table>
