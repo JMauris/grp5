@@ -77,11 +77,12 @@ function hiking_detail(){
 
     function register_save()
     {
-      if(isset($_SESSION['personne']))
-         $user = $_SESSION['personne'];
+      date_default_timezone_set('UTC');
 
 
-      $name=$_POST['name'];
+
+
+      $name=$_POST['firstname'];
       $lastname=$_POST['lastname'];
       $adress=$_POST['adress'];
       $npa = $_POST['npa'];
@@ -91,16 +92,53 @@ function hiking_detail(){
       $abo = $_POST['abonnement'];
       $email = $_POST['email'];
       //check if this personn already exist
-      if(checkExist==false)
-      {
-      $user=  new Personne($id=null, $name, $lastname,
-                                    $email, null, null, null, null, null,
-                                     $mobile, $phone, $adresse, $localite, $npa, $abo);
-      }
-      else {
-        # code...
-      }
 
+
+
+
+
+       if(isset($_SESSION['personne']))
+          {
+            $user = $_SESSION['personne'];
+          }
+          else {
+            if(Personne::checkExist($email,$name,$lastname)==false)
+            {
+
+
+
+            $user=  new Personne($id=null, $name, $lastname,
+                                          $email, null, null, null, null, null,
+                                           $mobile, $phone, $adress, $locality, $npa, $abo);
+
+            //crée la personne et récupér son ID
+          Personne::CreateNonCAS($user);
+
+
+            }
+            else {
+              //charger la presonne
+            }
+          }
+
+
+
+
+       $idPersonne=$user->getId();
+
+      $idRandonnee=$_SESSION['Selected_Tour']->getId();
+       $date = date('Y-m-d');
+      $heure = date('h:i:s');
+       $idxStatus = 1;
+        $remarque ="test 2 Justine";
+
+
+              //créer une inscription
+              $inscription = new Inscription($idPersonne, $idRandonnee, $date, $heure, $idxStatus, $remarque);
+              //
+               Inscription::Create($inscription);
+
+          //      $this->redirect('programm', 'programm_register');
     }
 
 

@@ -64,8 +64,8 @@ include_once ROOT_DIR.'languages/common.php';
 				{
 					echo 'You are already register 	<input type="button" value="disregister">';
 				}
-				else{echo	'<a href="' .URL_DIR."programm/programm_register". '>
-					<input type="button" value="' .$lang['REGISTER'].'</input>
+				else{echo	'<a href="' .URL_DIR."programm/programm_register". '">
+					<input type="button" value="' .$lang['REGISTER'].'"</input>
 				</a>';} ?> </th>
 
 			<br>

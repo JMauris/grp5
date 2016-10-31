@@ -66,4 +66,12 @@ class MySqlConn {
 		}
 		return $result;
 	}
+
+	public function executeInsert($query)
+	{
+		$result = $this->_conn->query($query)
+			or die(print_r($this->_conn->errorInfo(), true));
+
+		return $result;
+	}
 }

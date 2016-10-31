@@ -82,6 +82,22 @@ class Inscription {
 		return $result!=null;
 	}
 
+public static function Create($inscription){
+
+$idPersonneInscr = $inscription->getIdPersonne();
+$idRandonneeInscr = $inscription->getIdRandonnee();
+$dateInscr = $inscription->getDate();
+$HeureInscr = $inscription->getHeure();
+$IdxStatusInscr = $inscription->getIdxStatus();
+$RemarqueInscr = $inscription->getRemarque();
+
+
+	$query ="INSERT INTO `inscription`(`idPersonne`, `idRandonnee`, `date`, `heure`, `idxStatus`, `remarque`)
+	VALUES ('$idPersonneInscr','$idRandonneeInscr','$dateInscr','$HeureInscr','$IdxStatusInscr','$RemarqueInscr');";
+
+
+	return  MySqlConn::getInstance()->executeQuery($query);
+}
 }
 
 ?>
