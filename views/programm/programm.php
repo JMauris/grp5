@@ -167,7 +167,7 @@ include_once ROOT_DIR.'languages/common.php';
 			</table>
 			</div>
 
-			<div id="tableDiv">
+	<!--		<div id="tableDiv">
 				<table id = "mainTable">
 					<tr>
 						<td style="width: 50%;">
@@ -223,7 +223,7 @@ include_once ROOT_DIR.'languages/common.php';
 						</td>
 					</tr>
 				</table>
-			</div>
+			</div>-->
 
 		<div id="buttonsDiv1">
 			<table style="width: 100%;">
@@ -304,7 +304,7 @@ include_once ROOT_DIR.'languages/common.php';
 								</tr>
 							</table>
 						</button>
-
+									<?php } ?>
 						</form>
 						</td>
 					</tr>

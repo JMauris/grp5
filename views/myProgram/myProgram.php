@@ -55,39 +55,45 @@ $MyRegisterArray=$_SESSION['MyRegister'];
 				<tr>
 				<td style="width: 50%; padding-left: 2%; padding-bottom: 2%; padding-top: 2%;">
 
-				<a href="http://localhost/cas_montana/views/proposal/proposal_detail.php">
-					<button id="1">
-						<p>Name</p>
-						<p>Description..........................</p>
-					</button>
-				</a>
-				<a href="http://localhost/cas_montana/views/proposal/proposal_detail.php">
-					<button id="0">
-						<p>Name</p>
-						<p>Description..........................</p>
-					</button>
-				</a>
-				<a href="http://localhost/cas_montana/views/proposal/proposal_detail.php">
-					<button id="1">
-						<p>Name</p>
-						<p>Description..........................</p>
-					</button>
-				</a>
+					<form action="<?php echo URL_DIR.'programm/programm_register';?>" method="post">
+						<?php foreach ($MyRegisterArray as $key => $element) { ?>
+
+
+						<button name = "selectedMyRegister" value = <?php echo $key;?>>
+							<table style="width: 100%;">
+								<tr>
+							<td style="width: 20%">
+											<?php echo ' '.$MyRegisterArray[$key]->getTitre(); ?>
+							</td>
+							<td style="width: 20%">
+							<?php echo ' '.$MyRegisterArray[$key]->getInformation_fr(); ?>
+							</td>
+							<td style="width: 20%">
+							<?php echo ' '.$MyRegisterArray[$key]->getDateDebut() ?>
+							</td>
+						</tr>
+					</table>
+						</button>
+								<?php } ?>
+							</form>
+
 				</td>
 
 				<td style="width: 50%; padding: 2%;">
 
-				<form action="<?php echo URL_DIR.'programm/programm_register';?>" method="post">
-					<?php foreach ($MyRegisterArray as $key => $element) { ?>
+					<a href="http://localhost/cas_montana/views/proposal/proposal_detail.php">
+						<button id="1">
+							<p>Name</p>
+							<p>Description..........................</p>
+						</button>
+					</a>
+					<a href="http://localhost/cas_montana/views/proposal/proposal_detail.php">
+						<button id="0">
+							<p>Name</p>
+							<p>Description..........................</p>
+						</button>
+					</a>
 
-					
-					<button name = "selectedMyRegister" value = <?php echo $key;?>>
-
-						<p>Name</p>
-						<p>Description..........................</p>
-					</button>
-							<?php } ?>
-						</form>
 				</td>
 				<tr>
 				</table>

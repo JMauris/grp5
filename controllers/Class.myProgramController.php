@@ -18,13 +18,14 @@ class myProgramController extends Controller{
 
     $iduser=$_SESSION['personne']->getId();
 
-    $result = Inscription::connectByUser($iduser);
+    $inscription = Inscription::connectByUser($iduser);
 
-    $_SESSION['MyRegister']=$result;
+
     //faire un array des  Tour enregistrer
 
-    
+    $TourRegister = Tour::connectForRegisterTour($inscription);
 
+      $_SESSION['MyRegister']=$TourRegister;
 
   }
 

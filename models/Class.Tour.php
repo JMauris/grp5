@@ -472,7 +472,7 @@ public static function connectbyIdType($idxTypeTour)
 
 
 }
-//if programm 1 or and 2 // proposal 6
+//if programm 1 or and 2 // proposal 6 by TYPE TOUR
 public static function connectTour($idTour1, $idTour2)
 {
 
@@ -536,10 +536,10 @@ private static function get_results($difficulty, $hikeType)
 	$query = "SELECT * FROM tour
 				WHERE difficulte = $difficulty
 				AND idxTypeTour = $hikeType";
-	
+
 	$result = MySqlConn::getInstance()->selectDB($query);
-	
-	
+
+
 	while($row = $result->fetch())
 	{
 		$resultArray[] =   new Tour($row['idTour'],
@@ -549,15 +549,65 @@ private static function get_results($difficulty, $hikeType)
 				$row['idxTypeTour'], $row['idxTypeTransport'],$row['information_de'], $row['information_fr'], $row['inscriptionMax'],
 				$row['lienCarte'], $row['lieuRDV'],$row['montee'], $row['prixMax'], $row['prixMin'],
 				$row['soustitre'], $row['status'],$row['titre'], $row['transportArrivee'], $row['transportDepart']);
-	
+
 	}
-	
+
 	$result->closeCursor();
-	
+
 	return $resultArray;
-	
-	
+
+
 }
+
+public static function connectForRegisterTour($inscriptionArray)
+{
+
+  $condition = Tour::CreateCondition($inscriptionArray);
+
+  $query = "SELECT * FROM tour " . $condition ;
+
+
+  $result = MySqlConn::getInstance()->selectDB($query);
+
+
+  while($row = $result->fetch())
+  {
+    $resultArray[] =   new Tour($row['idTour'],
+                $row['arriveeHeure'], $row['codeprogramme'],$row['dateDebut'], $row['dateFin'], $row['dateLimiteInscr'],
+                $row['departHeure'], $row['descente'],$row['description_de'], $row['description_fr'], $row['difficulte'],
+                $row['duree'], $row['idxArriveeLocalite'],$row['idxAssistant'], $row['idxDepartLocalite'], $row['idxGuide'],
+                $row['idxTypeTour'], $row['idxTypeTransport'],$row['information_de'], $row['information_fr'], $row['inscriptionMax'],
+                $row['lienCarte'], $row['lieuRDV'],$row['montee'], $row['prixMax'], $row['prixMin'],
+                $row['soustitre'], $row['status'],$row['titre'], $row['transportArrivee'], $row['transportDepart']);
+
+                }
+
+                $result->closeCursor();
+
+return $resultArray;
+
+}
+
+
+private static function CreateCondition($inscriptionArray)
+{
+  $condition = "WHERE ";
+  foreach ($inscriptionArray as $key => $element) {
+
+    if($key==0){
+    $condition .= " idTour = " . $inscriptionArray[$key]->getIdRandonnee();
+  }
+  else {
+      $condition .= " OR idTour = " . $inscriptionArray[$key]->getIdRandonnee();
+  }
+  }
+  return $condition  ;
+
+}
+
+
+
+
 }
 
 ?>
