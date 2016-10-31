@@ -50,7 +50,7 @@ function hiking_detail(){
   if(isset ($_SESSION['personne']))
   {
       $_POST['isInscri']=Inscription::isInscri($_SESSION['personne']->getId(),$idTour);
-      echo   $_POST['isInscri'];
+
   }
   else {
     $_POST['isInscri']=0;
@@ -138,7 +138,7 @@ function hiking_detail(){
               //
                Inscription::Create($inscription);
 
-      $this->redirect('programm', 'programm_register');
+      $this->redirect('programm', 'hiking_detail');
     }
 
 
