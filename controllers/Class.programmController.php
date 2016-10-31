@@ -91,7 +91,7 @@ function hiking_detail(){
       $mobile = $_POST['mobile'];
       $abo = $_POST['abonnement'];
       $email = $_POST['email'];
-      //check if this personn already exist
+
 
 
 
@@ -102,22 +102,22 @@ function hiking_detail(){
             $user = $_SESSION['personne'];
           }
           else {
-            if(Personne::checkExist($email,$name,$lastname)==false)
+            if(Personne::checkExist($email,$name,$lastname)==true)
             {
 
+                $user=Personne::checkExist($email,$name,$lastname);
 
 
-            $user=  new Personne($id=null, $name, $lastname,
-                                          $email, null, null, null, null, null,
-                                           $mobile, $phone, $adress, $locality, $npa, $abo);
-
-            //crée la personne et récupér son ID
-          Personne::CreateNonCAS($user);
 
 
             }
             else {
-              //charger la presonne
+              $user=  new Personne($id=null, $name, $lastname,
+                                            $email, null, null, null, null, null,
+                                             $mobile, $phone, $adress, $locality, $npa, $abo);
+
+              //crée la personne et récupér son ID
+              Personne::CreateNonCAS($user);
             }
           }
 
@@ -130,7 +130,7 @@ function hiking_detail(){
        $date = date('Y-m-d');
       $heure = date('h:i:s');
        $idxStatus = 1;
-        $remarque ="test 2 Justine";
+        $remarque ="test J";
 
 
               //créer une inscription
@@ -138,7 +138,7 @@ function hiking_detail(){
               //
                Inscription::Create($inscription);
 
-          //      $this->redirect('programm', 'programm_register');
+      $this->redirect('programm', 'programm_register');
     }
 
 
