@@ -55,24 +55,14 @@ else {
 			tr{
 				text-align:left;
 			}
-
+			#buttonsTr
+			{
+				text-align: center;
+			}
 			#search{
 				display:inline-block;
 				align: left;
 				width: 20%;
-			}
-			#searchButton{
-				float: right;
-				width: 20%;
-				display: inline;
-				height: 30%;
-				margin-top: 4%;
-				margin-right: 3%;
-				text-align: center;
-				font-family: "Times New Roman", Times, serif;
-				font-style: normal;
-				font-size: 100%;
-				font-weight: bold;
 			}
 			#top {
 				float: top;
@@ -94,25 +84,6 @@ else {
 				padding-top: 2%;
 				padding-left: 2%;
 				padding-right: 2%;
-			}
-			#submit1{
-				float: right;
-				width: 40%;
-				display: inline;
-				height: 30%;
-				text-align: center;
-				font-family: "Times New Roman", Times, serif;
-				font-style: normal;
-				font-size: 100%;
-				font-weight: bold;
-				background-color: #555555;
-			    color: white;
-			}
-			#submit1:hover {
-			    background-color: white;
-			    color: black;
-			    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-			    border: 2px solid #555555;
 			}
 			#bottom {
 				float: bottom;
@@ -138,25 +109,6 @@ else {
 			#datepicker{
 				width: 100%;
 				padding: 0;
-			}
-			#view_all{
-				float: center;
-				width: 20%;
-				display: inline;
-				height: 30%;
-				text-align: center;
-				font-family: "Times New Roman", Times, serif;
-				font-style: normal;
-				font-size: 100%;
-				font-weight: bold;
-				background-color: #555555;
-			    color: white;
-			}
-			#view_all:hover {
-			    background-color: white;
-			    color: black;
-			    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-			    border: 2px solid #555555;
 			}
 		</style>
 	</head>
@@ -231,7 +183,7 @@ else {
 			</div>
 		   <div>
 			<table style="width: 100%;">
-					<tr>
+					<tr id="buttonsTr">
 						<td>
 							<form action="<?php echo URL_DIR.'programm/programm'?>" method= "post">
 								<button id="submit1" name ="type" value = '1'><?php echo $lang['BTN_ONLY_HIKE']; ?></button>
@@ -250,7 +202,7 @@ else {
 				<h2 style="float: center; padding-left: 2%; padding-right: 2%;"><?php echo $lang['YOUR_PROGRAMM']; ?></h2>
 
 			<form action="<?php echo URL_DIR.'programm/programm'?>" method= "post">
-				<button id="view_all"><?php echo $lang['BTN_VIEW']; ?></button>
+				<button id="submit1"><?php echo $lang['BTN_VIEW']; ?></button>
 			</form>
 
 		</div>
