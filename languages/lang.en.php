@@ -16,7 +16,7 @@ $lang['BTN_SEARCH'] = 'Search route';
 $lang['MY_FAVORITES'] = 'My favorites';
 $lang['DATE_BEGIN'] = 'Date begin:';
 $lang['PROGRAMM_DETAIL'] = 'Programm Detail';
-$lang['REGISTER'] = 'register';
+$lang['REGISTER'] = 'Register';
 
 /*
  ------------------
@@ -62,17 +62,17 @@ $lang['PROGRAM_TITLE'] = 'Hikinglists';
 $lang['SINGLE_HIKES'] = 'Single hikes';
 $lang['CHOOSE_A_DAY'] = 'Choose a day:';
 $lang['DAY_ROUTE'] = 'Route for the selected day:';
-$lang['BTN_ONLY_HIKE'] = 'only hike';
+$lang['BTN_ONLY_HIKE'] = 'Only hike';
 
 $lang['MULTI_DAY_HIKES'] = 'Multi-day hikes';
 $lang['CHOOSE_DATE'] = 'Choose date';
 $lang['FROM'] = 'From:';
 $lang['TO'] = 'To:';
 $lang['STAY_ROUTE'] = 'Route for the selected stay:';
-$lang['BTN_ONLY_MULTI'] = 'only multi-hike';
+$lang['BTN_ONLY_MULTI'] = 'Only multi-hike';
 
 $lang['YOUR_PROGRAMM'] = 'Your Programm:';
-$lang['BTN_VIEW'] = 'view all';
+$lang['BTN_VIEW'] = 'View all';
 
 /*
  ------------------
@@ -104,7 +104,7 @@ $lang['DURATION'] = 'Duration: ';
 $lang['DESCRIPTION'] = 'Description: ';
 $lang['POPULARITY'] = 'Popularity for the SAC Members:';
 $lang['OPINION'] = 'Share my Opinion:';
-$lang['BTN_BACK'] = 'go back';
+$lang['BTN_BACK'] = 'Go back';
 
 /*
  ------------------
@@ -150,7 +150,7 @@ $lang['STATUTES'] = 'Statutes:';
 $lang['DES_NAME'] = 'SAC is the abbreviation for Schweizer Alpen Club';
 $lang['DES_FIELD_OF_ACTIVITY'] = 'Organisation of more than 50 leaded hikes, Hiking-Weekends und -weeks, Winterhikes und Snowshoeing';
 
-$lang['DES_MEMBERSHIP_FEE_1'] = 'single person and family CHF 50.-';
+$lang['DES_MEMBERSHIP_FEE_1'] = 'Single person and family CHF 50.-';
 $lang['DES_MEMBERSHIP_FEE_2'] = 'Municipalities and tourism organizations CHF 100.-';
 $lang['DES_MEMBERSHIP_FEE_3'] = 'Membership registration form';
 
@@ -178,7 +178,7 @@ $lang['P_LOCALITY'] = 'Locality* :';
 $lang['P_PHONE'] = 'Phone :';
 $lang['P_MOBILE'] = 'Mobile :';
 $lang['P_EMAIL'] = 'Email :';
-$lang['P_ABO'] = 'Abonnement de transports publics :';
+$lang['P_ABO'] = 'Subscription to public transport :';
 
 $lang['BTN_SAVE'] = 'Save';
 $lang['LINK_CHANGE_PW'] = 'Change the password';

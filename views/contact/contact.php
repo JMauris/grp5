@@ -4,12 +4,10 @@
 		<head>
 		<style type="text/css">
 			#contactDiv{
-			margin: 200em, 20em;
 			color: black;
 			font-family: "Times New Roman", Times, serif;
 			font-size:105%;
 			padding-left: 9%;
-
 			}
 			
 		</style>
@@ -37,7 +35,7 @@
 				<br> Fax +41 (0)27 / 327 35 81
 				</p>
 
-				<p id= "contactDiv" style="padding-bottom: 2%;">    or per Mail:
+				<p id= "contactDiv" style="padding-bottom: 2%; float: center;">    or by Mail:
 				<br> info[@]valrando.ch
 				</p>
 				

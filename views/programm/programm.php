@@ -22,14 +22,14 @@ $_SESSION['lang']=$_GET['lang'];
 
 		<style type="text/css">
 
-		button {
-			width: 100%;
-			text-align: left;
-		}
-		p {
+			button {
+				width: 100%;
+				text-align: left;
+			}
+			p {
 				margin: 0;
 				padding: 0;
-		}
+			}
 
 			#tableDiv{
 				height: 50%;
@@ -38,7 +38,6 @@ $_SESSION['lang']=$_GET['lang'];
 				padding-right: 2%;
 				padding-top: 2%;
 			}
-
 			#insideTable{
 				background: transparent;
 				padding: 0;
@@ -48,7 +47,6 @@ $_SESSION['lang']=$_GET['lang'];
 				float: top;
 				text-align: center;
 			}
-
 			tr{
 				text-align:left;
 			}
@@ -81,32 +79,35 @@ $_SESSION['lang']=$_GET['lang'];
 			#yourProg{
 				background-color : transparent;
 				text-align: center;
+				padding-bottom:2%;
+				padding-left: 2%;
+				padding-right: 2%;
 			}
 
 			#mainTable{
 				width: 100%;
-				padding: 2%;
+				padding-top: 2%;
+				padding-left: 2%;
+				padding-right: 2%;
 			}
 			#submit1{
 				float: right;
 				width: 40%;
 				display: inline;
 				height: 30%;
-				margin-top: 4%;
-				margin-right: 3%;
 				text-align: center;
 				font-family: "Times New Roman", Times, serif;
 				font-style: normal;
 				font-size: 100%;
 				font-weight: bold;
+				background-color: #555555;
+			    color: white;
 			}
-			#submit2{
-				float: right;
-				margin-left: 2%;
-				text-align: center;
-				font-family: "Times New Roman", Times, serif;
-				font-style: normal;
-				font-size: 1.10em;
+			#submit1:hover {
+			    background-color: white;
+			    color: black;
+			    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+			    border: 2px solid #555555;
 			}
 			#bottom {
 				float: bottom;
@@ -114,7 +115,7 @@ $_SESSION['lang']=$_GET['lang'];
 				height: 150px;
 				overflow-y : scroll;
 				margin-bottom: 2%;
-			}
+			}			
 			#table{
 				border: 1px;
 			}
@@ -124,20 +125,34 @@ $_SESSION['lang']=$_GET['lang'];
 			#search1{
 				float: right;
 				width: 20%;
-				padding: 2%;
 			}
-
+			#search1:hover {
+			    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+			    border: 2px solid #555555;
+			}
 			#datepicker{
 				width: 100%;
 				padding: 0;
 			}
-
 			#view_all{
-						width: 20%;
-						height: 10%;
-						font-size: 0.8em;
-						text-align: center;
-					}
+				float: center;
+				width: 20%;
+				display: inline;
+				height: 30%;
+				text-align: center;
+				font-family: "Times New Roman", Times, serif;
+				font-style: normal;
+				font-size: 100%;
+				font-weight: bold;
+				background-color: #555555;
+			    color: white;
+			}
+			#view_all:hover {
+			    background-color: white;
+			    color: black;
+			    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+			    border: 2px solid #555555;
+			}
 		</style>
 	</head>
 	<body>
@@ -168,7 +183,7 @@ $_SESSION['lang']=$_GET['lang'];
 			</table>
 			</div>
 
-	<!--		<div id="tableDiv">
+		<div id="tableDiv">
 				<table id = "mainTable">
 					<tr>
 						<td style="width: 50%;">
@@ -181,14 +196,6 @@ $_SESSION['lang']=$_GET['lang'];
 									<tr>
 										<td><?php echo $lang['DAY_ROUTE']; ?></td>
 										<td>...</td>
-									</tr>
-									<tr>
-										<td></td>
-										<td>
-											<form action="<?php echo URL_DIR.'programm/programm'?>" method= "post">
-												<button id="submit1" name ="type" value = '1'><?php echo $lang['BTN_ONLY_HIKE']; ?></button>
-											</form>
-										</td>
 									</tr>
 							  	</table>
 							</div>
@@ -211,22 +218,13 @@ $_SESSION['lang']=$_GET['lang'];
 										<td><?php echo $lang['STAY_ROUTE']; ?></td>
 										<td>....</td>
 									</tr>
-									<tr>
-										<td></td>
-										<td>
-											<form action="<?php echo URL_DIR.'programm/programm'?>" method= "post">
-												<button id="submit1" name ="type" value = '2'><?php echo $lang['BTN_ONLY_MULTI']; ?></button>
-											</form>
-										</td>
-									</tr>
 							  	</table>
 							</div>
 						</td>
 					</tr>
 				</table>
-			</div>-->
-
-		<div id="buttonsDiv1">
+			</div>
+		   <div>
 			<table style="width: 100%;">
 					<tr>
 						<td>
@@ -244,7 +242,7 @@ $_SESSION['lang']=$_GET['lang'];
 		</div>
 
 		<div id="yourProg">
-				<h2><?php echo $lang['YOUR_PROGRAMM']; ?></h2>
+				<h2 style="float: center; padding-left: 2%; padding-right: 2%;"><?php echo $lang['YOUR_PROGRAMM']; ?></h2>
 
 			<form action="<?php echo URL_DIR.'programm/programm'?>" method= "post">
 				<button id="view_all"><?php echo $lang['BTN_VIEW']; ?></button>

@@ -26,37 +26,33 @@
 			.buttons{
 				width: 100%;
 			}
-			#searchButton {
-				float: right;
-				width: 25%;
-				display: inline;
-				height: 30%;
-				margin-top: 4%;
-				margin-right: 3%;
-				text-align: center;
-				font-family: "Times New Roman", Times, serif;
-				font-style: normal;
-				font-size: 100%;
-				font-weight: bold;
-			}
 			#search {
 				display:inline-block;
 				align: left;
 				width: 20%;
 			}
-
-			#searchButton, #near {
+			#near {
 				float: right;
-				width: 25%;
+				width: 20%;
 				display: inline;
 				height: 30%;
-				margin-top: 4%;
-				margin-right: 3%;
 				text-align: center;
 				font-family: "Times New Roman", Times, serif;
 				font-style: normal;
 				font-size: 100%;
 				font-weight: bold;
+				background-color: #555555;
+			    color: white;
+			    align: center;
+			    padding-top: 1.5%;
+			    padding-bottom: 1.5%;
+			    margin-right: 2%;
+			 }
+			 #near:hover {
+			    background-color: white;
+			    color: black;
+			    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+			    border: 2px solid #555555;
 			}
 			a{
 				text-decoration: none;
@@ -64,10 +60,11 @@
 			#search1{
 				float: right;
 				width: 20%;
-				padding: 2%;
 			}
-
-
+			#search1:hover {
+			    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+			    border: 2px solid #555555;
+			}
 		</style>
 	</head>
 	<body>
@@ -105,10 +102,10 @@
 				<table class="buttons">
 					<tr>
 						<td>
-							<div id="topButton">
+							<div style="padding-top: 2%;">
 								<a href="<?php echo URL_DIR.'search/search_path.php'?>"><img id="search1" src="<?php echo URL_DIR. 'public/img/searchRoute.png'?>"></a>
+							<button id="near"><?php echo $lang['BTN_NEAR']; ?></button>
 							</div>
-						<button id="near"><?php echo $lang['BTN_NEAR']; ?></button>
 						</td>
 					</tr>
 				</table>

@@ -7,7 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
 	</head>
 	<body>
-		<div style="height: 760px;">
+		<div class="wrapper" style= "padding-bottom: 2%; padding-right: 2%; padding-left: 2%;">
 			<h1><?php echo $lang['ABOUT_TITLE']; ?></h1>
 			<br>
 			<table style="padding-left: 2%; padding-right: 2%; border-spacing: 10px;">

@@ -75,7 +75,7 @@
 				?>
 				</SELECT>
 				</FORM>
-			</th></br>
+			</th>
 				</tr>
 			</table>
 		</form>
