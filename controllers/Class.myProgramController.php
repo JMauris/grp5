@@ -35,8 +35,7 @@ class myProgramController extends Controller{
     //ne pas créer la session si elle est vide
     if($favoris!=false)
     {
-      var_dump($favoris);
-
+    
 
       $TourFavoris = Tour::connectForMyProgramm($favoris,1);
       $_SESSION['MyFavoris']=$TourFavoris;
