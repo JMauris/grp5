@@ -46,6 +46,7 @@ function hiking_detail(){
       $Tour=$_SESSION['MyRegister'];
   }
 
+
   //$Tour = $_SESSION[tour] OR $_SESSION ['']
   $Tour=$_SESSION['tour'];
 

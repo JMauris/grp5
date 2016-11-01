@@ -278,7 +278,7 @@ public static function CreateNonCAS($user){
       if(!$row) return false;
 
       $user->setId($row['idPersonne']);
-      $user->getId();
+      return getId();
 ;
 
 }

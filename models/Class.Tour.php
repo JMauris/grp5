@@ -559,14 +559,18 @@ private static function get_results($difficulty, $hikeType)
 
 }
 
-public static function connectForRegisterTour($inscriptionArray)
+public static function connectForMyProgramm($inscriptionArray, $isFavoris)
 {
 
-  $condition = Tour::CreateCondition($inscriptionArray);
-
-  $query = "SELECT * FROM tour " . $condition ;
-
-
+  if($isFavoris==0)
+  {
+  $condition = Tour::CreateConditionRegister($inscriptionArray);
+  }
+  if($isFavoris==1)
+  {
+    $condition = Tour::CreateConditionFavoris($inscriptionArray);
+}
+$query = "SELECT * FROM tour " . $condition ;
   $result = MySqlConn::getInstance()->selectDB($query);
 
 
@@ -589,22 +593,58 @@ return $resultArray;
 }
 
 
-private static function CreateCondition($inscriptionArray)
-{
-  $condition = "WHERE ";
-  foreach ($inscriptionArray as $key => $element) {
 
-    if($key==0){
-    $condition .= " idTour = " . $inscriptionArray[$key]->getIdRandonnee();
+
+private static function CreateConditionRegister($inscriptionArray)
+{
+
+  $condition = "WHERE ";
+  if(!is_array($inscriptionArray))
+  {
+    $condition .= " idTour = " . $inscriptionArray[0]->getIdRandonnee();
+      return $condition  ;
   }
   else {
-      $condition .= " OR idTour = " . $inscriptionArray[$key]->getIdRandonnee();
+
+
+    foreach ($inscriptionArray as $key => $element) {
+
+      if($key==0){
+      $condition .= " idTour = " . $inscriptionArray[$key]->getIdRandonnee();
+    }
+    else {
+        $condition .= " OR idTour = " . $inscriptionArray[$key]->getIdRandonnee();
+    }
   }
-  }
+}
   return $condition  ;
 
 }
 
+
+private static function CreateConditionFavoris($inscriptionArray)
+{
+
+  $condition = "WHERE ";
+  if(!is_array($inscriptionArray))
+  {
+    $condition .= " idTour = " . $inscriptionArray[0]->getIdTour();
+      return $condition  ;
+  }
+  else {
+    foreach ($inscriptionArray as $key => $element) {
+
+      if($key==0){
+      $condition .= " idTour = " . $inscriptionArray[$key]->getIdTour();
+    }
+    else {
+        $condition .= " OR idTour = " . $inscriptionArray[$key]->getIdTour();
+    }
+  }
+}
+  return $condition  ;
+
+}
 
 
 

@@ -1,5 +1,14 @@
 <?php include_once ROOT_DIR.'global/header.php'; include_once ROOT_DIR.'languages/common.php';
+
+if(isset($_SESSION['MyRegister'])){
+$MyRegisterArray=$_SESSION['MyRegister'];}
+
 $MyRegisterArray=$_SESSION['MyRegister'];
+
+
+if(isset($_SESSION['MyFavoris'])){
+$MyFavorisArray=$_SESSION['MyFavoris'];
+}
 ?>
 
 <html>
@@ -54,7 +63,7 @@ $MyRegisterArray=$_SESSION['MyRegister'];
 
 				<tr>
 				<td style="width: 50%; padding-left: 2%; padding-bottom: 2%; padding-top: 2%;">
-
+					<?php  if(isset($_SESSION['MyRegister'])){?>
 					<form action="<?php echo URL_DIR.'programm/hiking_detail';?>" method="post">
 						<?php foreach ($MyRegisterArray as $key => $element) { ?>
 
@@ -76,24 +85,35 @@ $MyRegisterArray=$_SESSION['MyRegister'];
 						</button>
 								<?php } ?>
 							</form>
-
+								<?php } ?>
 				</td>
 
 				<td style="width: 50%; padding: 2%;">
+					<?php  if(isset($_SESSION['MyFavoris'])){?>
 
-					<a href="http://localhost/cas_montana/views/proposal/proposal_detail.php">
-						<button id="1">
-							<p>Name</p>
-							<p>Description..........................</p>
-						</button>
-					</a>
-					<a href="http://localhost/cas_montana/views/proposal/proposal_detail.php">
-						<button id="0">
-							<p>Name</p>
-							<p>Description..........................</p>
-						</button>
-					</a>
 
+					<form action="<?php echo URL_DIR.'programm/hiking_detail';?>" method="post">
+						<?php foreach ($MyFavorisArray as $key => $element) { ?>
+
+
+						<button name = "selectedTour" value =<?php echo $key;?>>
+							<table style="width: 100%;">
+								<tr>
+							<td style="width: 20%">
+											<?php echo ' '.$MyFavorisArray[$key]->getTitre(); ?>
+							</td>
+							<td style="width: 20%">
+							<?php echo ' '.$MyFavorisArray[$key]->getInformation_fr(); ?>
+							</td>
+							<td style="width: 20%">
+							<?php echo ' '.$MyFavorisArray[$key]->getDateDebut() ?>
+							</td>
+						</tr>
+					</table>
+						</button>
+								<?php } ?>
+							</form>
+								<?php } ?>
 				</td>
 				<tr>
 				</table>
