@@ -1,7 +1,12 @@
 <?php include_once ROOT_DIR.'global/header.php';
 $tourArray=$_SESSION['tour'];
 include_once ROOT_DIR.'languages/common.php';
-$_SESSION['lang']=$_GET['lang'];
+if(isset($_GET['lang'])){
+$_SESSION['lang']=$_GET['lang'];}
+else {
+	$_SESSION['lang']='en';
+}
+
 ?>
 
 <html>
