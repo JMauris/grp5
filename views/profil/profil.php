@@ -23,7 +23,7 @@
 	<div  class="wrapper" style="height: 90%">
 		<h1><?php echo $lang['PROFIL_TITLE']; ?></h1>
 		<h3><?php echo $lang['FIELD_OBLIGATORY']; ?></h3>
-		<form method="post" action="<?php echo URL_DIR.'profil/save';?>" onsubmit="alert('Saved')">
+		<form style= "padding: 2%;"method="post" action="<?php echo URL_DIR.'profil/save';?>" onsubmit="alert('Saved')">
 			<table style="align:center">
 					<tr>
 						<th><label for="name"><?php echo $lang['P_NAME']; ?></label></th>
@@ -80,7 +80,9 @@
 			</table>
 		</form>
 		<br>
-			<input type="submit" name="action" value="<?php echo $lang['BTN_SAVE']; ?>"><br><br>
+			<button id= "submit1" type="submit" name="action"><?php echo $lang['BTN_SAVE']; ?></button>
+			<br>
+			<br>
 			<a href=""><?php echo $lang['LINK_CHANGE_PW']; ?></a>
 		</div>
 </body>
