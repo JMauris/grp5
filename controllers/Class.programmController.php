@@ -32,13 +32,23 @@ class ProgrammController extends Controller{
 function hiking_detail(){
 
 
-  if(!isset ($_POST['selectedTour']))
+  if(!isset ($_POST['selectedTour'] ))
   {
     $this->redirect('programm', 'programm');
     exit;
 
   }
+
+  if(isset ($_SESSION['tour'])){
+      $Tour=$_SESSION['tour'];
+  }
+  if(isset ($_SESSION['MyRegister'])){
+      $Tour=$_SESSION['MyRegister'];
+  }
+
+  //$Tour = $_SESSION[tour] OR $_SESSION ['']
   $Tour=$_SESSION['tour'];
+
   $id =$_POST['selectedTour'];
 
   $_SESSION['Selected_Tour'] = $Tour[$id];

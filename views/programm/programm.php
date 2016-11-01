@@ -1,6 +1,7 @@
 <?php include_once ROOT_DIR.'global/header.php';
 $tourArray=$_SESSION['tour'];
 include_once ROOT_DIR.'languages/common.php';
+$_SESSION['lang']=$_GET['lang'];
 ?>
 
 <html>
@@ -293,7 +294,23 @@ include_once ROOT_DIR.'languages/common.php';
               					<?php echo ' '.$tourArray[$cle]->getTitre(); ?>
 								</td>
 					 			<td style="width: 20%">
-								<?php echo ' '.$tourArray[$cle]->getInformation_fr(); ?>
+								<?php
+
+								switch ($_SESSION['lang']) {
+
+									  case 'de':
+									  	echo ' '.$tourArray[$cle]->getInfromation_de();
+									  break;
+
+									  case 'fr':
+									  	echo ' '.$tourArray[$cle]->getInformation_fr();
+									  break;
+
+										default:
+										echo ' '.$tourArray[$cle]->getInformation_fr();
+									}
+
+								 ?>
 								</td>
 								<td style="width: 20%">
 								<?php echo ' '.$tourArray[$cle]->getDepartHeure() ?>
@@ -316,4 +333,5 @@ include_once ROOT_DIR.'languages/common.php';
 	</body>
 </html>
 
-<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>
+<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';
+	include_once ROOT_DIR.'languages/common.php';?>?>

@@ -55,11 +55,11 @@ $MyRegisterArray=$_SESSION['MyRegister'];
 				<tr>
 				<td style="width: 50%; padding-left: 2%; padding-bottom: 2%; padding-top: 2%;">
 
-					<form action="<?php echo URL_DIR.'programm/programm_register';?>" method="post">
+					<form action="<?php echo URL_DIR.'programm/hiking_detail';?>" method="post">
 						<?php foreach ($MyRegisterArray as $key => $element) { ?>
 
 
-						<button name = "selectedMyRegister" value = <?php echo $key;?>>
+						<button name = "selectedTour" value =<?php echo $key;?>>
 							<table style="width: 100%;">
 								<tr>
 							<td style="width: 20%">
