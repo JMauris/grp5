@@ -29,9 +29,11 @@
 						<td><?php echo $lang['LOGIN_PW']; ?></td>
 						<td><input type="password" name="password" size="25"/><br><br></td>
 					</tr>
+					<table>
 					<tr>
-						<td><input type="submit" name="Submit" value="  OK  "/></td>
+						<button id= "submit1" type="submit" name="submit">Submit</button>
 					</tr>
+					</table>
 					<tr>
 						<td>
 							<br/>
