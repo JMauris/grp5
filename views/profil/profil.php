@@ -42,8 +42,7 @@
 					<th><input type="text" name="npa" value="<?php echo $user->getNpa()?>"></th>
 					</tr>
 						<tr>
-							<th><label for="locality"><?php echo $la'
-		ng['P_LOCALITY']; ?></label></th>
+							<th><label for="locality"><?php echo $lang['P_LOCALITY'];?></label></th>
 							<th><input type="text" name="localite" value="<?php echo $user->getLocalite()?>"></th>
 					</tr>
 						<tr>

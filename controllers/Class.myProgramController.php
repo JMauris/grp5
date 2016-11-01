@@ -24,7 +24,7 @@ class myProgramController extends Controller{
     //faire un array des  Tour enregistrer
     if($inscription!=false)
     {
-    $TourRegister = Tour::connectForMyProgramm($inscription,0);
+    $TourRegister = Tour::connectForMyProgramm($inscription,0,12);
 
     $_SESSION['MyRegister']=$TourRegister;
   }
@@ -35,9 +35,9 @@ class myProgramController extends Controller{
     //ne pas créer la session si elle est vide
     if($favoris!=false)
     {
-    
 
-      $TourFavoris = Tour::connectForMyProgramm($favoris,1);
+
+      $TourFavoris = Tour::connectForMyProgramm($favoris,1,12);
       $_SESSION['MyFavoris']=$TourFavoris;
 
 

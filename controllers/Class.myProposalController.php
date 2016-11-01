@@ -12,6 +12,11 @@ class myProposalController extends Controller{
       $this->redirect('login', 'login');
       exit;
     }
+
+
+      $iduser=$_SESSION['personne']->getId();
+
+
   }
 
 

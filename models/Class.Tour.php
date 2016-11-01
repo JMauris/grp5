@@ -559,7 +559,7 @@ private static function get_results($difficulty, $hikeType)
 
 }
 
-public static function connectForMyProgramm($inscriptionArray, $isFavoris)
+public static function connectForMyProgramm($inscriptionArray, $isFavoris,$type)
 {
 
   if($isFavoris==0)
@@ -570,22 +570,41 @@ public static function connectForMyProgramm($inscriptionArray, $isFavoris)
   {
     $condition = Tour::CreateConditionFavoris($inscriptionArray);
 }
+//add Type
+
 $query = "SELECT * FROM tour " . $condition ;
   $result = MySqlConn::getInstance()->selectDB($query);
 
 
   while($row = $result->fetch())
   {
-    $resultArray[] =   new Tour($row['idTour'],
-                $row['arriveeHeure'], $row['codeprogramme'],$row['dateDebut'], $row['dateFin'], $row['dateLimiteInscr'],
-                $row['departHeure'], $row['descente'],$row['description_de'], $row['description_fr'], $row['difficulte'],
-                $row['duree'], $row['idxArriveeLocalite'],$row['idxAssistant'], $row['idxDepartLocalite'], $row['idxGuide'],
-                $row['idxTypeTour'], $row['idxTypeTransport'],$row['information_de'], $row['information_fr'], $row['inscriptionMax'],
-                $row['lienCarte'], $row['lieuRDV'],$row['montee'], $row['prixMax'], $row['prixMin'],
-                $row['soustitre'], $row['status'],$row['titre'], $row['transportArrivee'], $row['transportDepart']);
+    if($type==12){
+      if($row['idxTypeTour']==2 || $row['idxTypeTour']==1){
+        $resultArray[] =   new Tour($row['idTour'],
+                    $row['arriveeHeure'], $row['codeprogramme'],$row['dateDebut'], $row['dateFin'], $row['dateLimiteInscr'],
+                    $row['departHeure'], $row['descente'],$row['description_de'], $row['description_fr'], $row['difficulte'],
+                    $row['duree'], $row['idxArriveeLocalite'],$row['idxAssistant'], $row['idxDepartLocalite'], $row['idxGuide'],
+                    $row['idxTypeTour'], $row['idxTypeTransport'],$row['information_de'], $row['information_fr'], $row['inscriptionMax'],
+                    $row['lienCarte'], $row['lieuRDV'],$row['montee'], $row['prixMax'], $row['prixMin'],
+                    $row['soustitre'], $row['status'],$row['titre'], $row['transportArrivee'], $row['transportDepart']);
 
-                }
+                    }
+              }
 
+        if($type==6){
+          if($row['idxTypeTour']==2 || $row['idxTypeTour']==1){
+              $resultArray[] =   new Tour($row['idTour'],
+                          $row['arriveeHeure'], $row['codeprogramme'],$row['dateDebut'], $row['dateFin'], $row['dateLimiteInscr'],
+                          $row['departHeure'], $row['descente'],$row['description_de'], $row['description_fr'], $row['difficulte'],
+                          $row['duree'], $row['idxArriveeLocalite'],$row['idxAssistant'], $row['idxDepartLocalite'], $row['idxGuide'],
+                          $row['idxTypeTour'], $row['idxTypeTransport'],$row['information_de'], $row['information_fr'], $row['inscriptionMax'],
+                          $row['lienCarte'], $row['lieuRDV'],$row['montee'], $row['prixMax'], $row['prixMin'],
+                          $row['soustitre'], $row['status'],$row['titre'], $row['transportArrivee'], $row['transportDepart']);
+
+                          }
+                        }
+
+}
                 $result->closeCursor();
 
 return $resultArray;
