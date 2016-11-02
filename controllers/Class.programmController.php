@@ -111,6 +111,10 @@ function hiking_detail(){
   {
 
   //
+      $Myvalue= $_POST['notice'];
+
+       $_SESSION['FavorisData']->updateNotice($_SESSION['FavorisData']->getIdTour(),$_SESSION['FavorisData']->getIdPersonne(),$Myvalue);
+ $this->redirect('programm', 'hiking_detail');
 
 
   }
