@@ -63,9 +63,18 @@ include_once ROOT_DIR.'languages/common.php';
 						<?php
 						for ($cpt=0; $cpt<=(count($optionNotice)-1); $cpt++) {
 
-						 echo '<option value="'.$cpt.'" selected="selected">'.$optionNotice[$cpt] .'</option>';
+							if(isset($_SESSION['FavorisData']))
+							{
+								if(($cpt)==$_SESSION['FavorisData']->getEvaluation())
+								{
+								echo '<option value="'.$cpt.'" selected="selected">'.$optionNotice[$cpt] .'</option>';
 
 							}
+							else{
+							echo '<option value="'.$cpt.'">'.$optionNotice[$cpt].'</option>';
+					 			}
+							}
+						}
 			?>
 			</SELECT>
 			</FORM>
@@ -76,12 +85,19 @@ include_once ROOT_DIR.'languages/common.php';
 
 				<tr>
 					<td>
+						<form method="post" action="<?php echo URL_DIR.'programm/saveFavoris';?>" >
 						<?php if(isset ($_SESSION['personne'])){
 
-						echo	'<a href="' .URL_DIR."programm/programm_register". '">
-						<input type="button" value="' .$lang['ADDFAVORIS'].'"</input>
-					</a>';
+						
+							if($_SESSION['FavorisData']->getEstFavoris()==1)
+							{
+								echo	'	<button name = "favoris" value="remove">' .$lang['REMOVEFAVORIS'].'</button>	';
+
+							}else{
+						echo	'<button name = "favoris" value="add">' .$lang['ADDFAVORIS'].'</button>	';
+						}
 						}  ?>
+						</form>
 					</td>
 
 				</tr>
