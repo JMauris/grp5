@@ -90,6 +90,28 @@ class Favoris {
 
 	}
 
+	public static function connectbyPersAndTour($idPersonne, $idTour) {
+		$query = "SELECT * FROM `favoris` WHERE `idPersonne` = $idPersonne AND `idTour` = $idTour  ";
+		$result = MySqlConn::getInstance()->selectDB($query);
+		$row = $result->fetch();
+		if(!$row) return false;
+
+
+ return new Favoris($row['idPersonne'],$row['idTour'], $row['estFavoris'], $row['evaluation']);
+
+
+
+	}
+
+	public function updateFavoris($idTour,$idPersonne,$value)
+	{
+		  $query = "UPDATE `favoris` SET `estFavoris`=$value WHERE `idTour` = $idTour AND `idPersonne` = $idPersonne";
+
+								return  MySqlConn::getInstance()->executeQuery($query);
+	}
+
+
+
 
 
 

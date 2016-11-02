@@ -74,6 +74,8 @@ $lang['BTN_ONLY_MULTI'] = 'Only multi-hike';
 
 $lang['YOUR_PROGRAMM'] = 'Your Programm:';
 $lang['BTN_VIEW'] = 'View all';
+$lang['ADDFAVORIS'] = 'add favoris';
+$lang['REMOVEFAVORIS'] = 'remove favoris';
 
 /*
  ------------------
@@ -106,7 +108,7 @@ $lang['DESCRIPTION'] = 'Description: ';
 $lang['POPULARITY'] = 'Popularity for the SAC Members:';
 $lang['OPINION'] = 'Share my Opinion:';
 $lang['BTN_BACK'] = 'Go back';
-$lang['ADDFAVORIS'] = 'add favoris';
+
 
 /*
  ------------------

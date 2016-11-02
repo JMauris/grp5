@@ -32,12 +32,9 @@ class ProgrammController extends Controller{
 function hiking_detail(){
 
 
-  if(!isset ($_POST['selectedTour'] ))
+  if(isset ($_POST['selectedTour'] ))
   {
-    $this->redirect('programm', 'programm');
-    exit;
 
-  }
 
   if(isset ($_SESSION['tour'])){
       $Tour=$_SESSION['tour'];
@@ -46,13 +43,22 @@ function hiking_detail(){
       $Tour=$_SESSION['MyRegister'];
   }
 
+    $id =$_POST['selectedTour'];
+    $_SESSION['Selected_Tour'] = $Tour[$id];
+}elseif (isset($_SESSION['idTourbyFavoris']))
+  {
+
+    $Tour=Tour::connectbyId($_SESSION['idTourbyFavoris']);
+    $idTour= $_SESSION['idTourbyFavoris'];
+      $_SESSION['Selected_Tour'] = $Tour;
+  }
 
   //$Tour = $_SESSION[tour] OR $_SESSION ['']
   $Tour=$_SESSION['tour'];
 
-  $id =$_POST['selectedTour'];
 
-  $_SESSION['Selected_Tour'] = $Tour[$id];
+
+
   //check the inscription to THIS programm
 
   $idTour =$_SESSION['Selected_Tour']->getId();
@@ -62,13 +68,44 @@ function hiking_detail(){
   {
       $_POST['isInscri']=Inscription::isInscri($_SESSION['personne']->getId(),$idTour);
 
+
+      $_SESSION['FavorisData']= Favoris::connectbyPersAndTour($_SESSION['personne']->getId(),$idTour);
+
+
+
   }
   else {
     $_POST['isInscri']=0;
   }
 
+
+
+
+
 }
 
+  function saveFavoris()
+  {
+  //
+
+
+
+    if($_POST['favoris']!='add')
+    {
+      $value= 0;
+    }else {
+        $value = 1 ;
+      }
+
+
+      
+
+       $_SESSION['FavorisData']->updateFavoris($_SESSION['FavorisData']->getIdTour(),$_SESSION['FavorisData']->getIdPersonne(),$value);
+
+
+     $this->redirect('programm', 'hiking_detail');
+
+  }
 
   function programm_register()
   {

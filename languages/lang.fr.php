@@ -73,7 +73,8 @@ $lang['BTN_ONLY_MULTI'] = 'Séjour uniquement';
 
 $lang['YOUR_PROGRAMM'] = 'Votre programme:';
 $lang['BTN_VIEW'] = 'Tout voir';
-$lang['ADDFAVORIS'] = 'add favoris';
+$lang['ADDFAVORIS'] = 'ajout favoris';
+$lang['REMOVEFAVORIS'] = 'remove favoris';
 
 /*
  ------------------
