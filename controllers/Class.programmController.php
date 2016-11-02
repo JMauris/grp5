@@ -98,12 +98,20 @@ function hiking_detail(){
       }
 
 
-      
+
 
        $_SESSION['FavorisData']->updateFavoris($_SESSION['FavorisData']->getIdTour(),$_SESSION['FavorisData']->getIdPersonne(),$value);
 
 
      $this->redirect('programm', 'hiking_detail');
+
+  }
+
+  function saveNotice()
+  {
+
+  //
+
 
   }
 

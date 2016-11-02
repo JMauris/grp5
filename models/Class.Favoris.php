@@ -110,6 +110,13 @@ class Favoris {
 								return  MySqlConn::getInstance()->executeQuery($query);
 	}
 
+	public function updateNotice($idTour,$idPersonne,$value)
+	{
+			$query = "UPDATE `favoris` SET `evaluation`=$value WHERE `idTour` = $idTour AND `idPersonne` = $idPersonne";
+
+								return  MySqlConn::getInstance()->executeQuery($query);
+	}
+
 
 
 
