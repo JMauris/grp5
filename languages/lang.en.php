@@ -17,6 +17,7 @@ $lang['MY_FAVORITES'] = 'My favorites';
 $lang['DATE_BEGIN'] = 'Date begin:';
 $lang['PROGRAMM_DETAIL'] = 'Programm Detail';
 $lang['REGISTER'] = 'Register';
+$lang['FAVORIS'] = 'Favoris';
 
 /*
  ------------------
@@ -105,6 +106,7 @@ $lang['DESCRIPTION'] = 'Description: ';
 $lang['POPULARITY'] = 'Popularity for the SAC Members:';
 $lang['OPINION'] = 'Share my Opinion:';
 $lang['BTN_BACK'] = 'Go back';
+$lang['ADDFAVORIS'] = 'add favoris';
 
 /*
  ------------------

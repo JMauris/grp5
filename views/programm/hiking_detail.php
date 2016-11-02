@@ -53,20 +53,57 @@ include_once ROOT_DIR.'languages/common.php';
 					<td></td>
 				</tr>
 				<tr>
+
+				<?php if(isset ($_SESSION['personne'])){?>
 					<td><?php echo $lang['OPINION']; ?></td>
-					<td>*********</td>
+					<td>
+							<?php $optionNotice = array(0,1,2,3,4,5); ?>
+						<FORM>
+					<SELECT name="notice" id= "notice">
+						<?php
+						for ($cpt=0; $cpt<=(count($optionNotice)-1); $cpt++) {
+
+						 echo '<option value="'.$cpt.'" selected="selected">'.$optionNotice[$cpt] .'</option>';
+
+							}
+			?>
+			</SELECT>
+			</FORM>
+			</td>
+						<?php	}  ?>
+				</tr>
+
+
+				<tr>
+					<td>
+						<?php if(isset ($_SESSION['personne'])){
+
+						echo	'<a href="' .URL_DIR."programm/programm_register". '">
+						<input type="button" value="' .$lang['ADDFAVORIS'].'"</input>
+					</a>';
+						}  ?>
+					</td>
+
 				</tr>
 			</table>
 			<a href="<?php echo URL_DIR.'programm/programm'?>">
 			<input type="button" value="<?php echo $lang['BTN_BACK']; ?>" ></input>
 			</a>
-			<?php if(isset ($_SESSION['personne'])&&$_POST['isInscri']==0)
+			<?php if(isset ($_SESSION['personne'])&&$_POST['isInscri']==1)
 				{
 					echo 'You are already register 	<input type="button" value="disregister">';
 				}
-				else{echo	'<a href="' .URL_DIR."programm/programm_register". '">
+				else{
+
+					echo	'<a href="' .URL_DIR."programm/programm_register". '">
 					<input type="button" value="' .$lang['REGISTER'].'"</input>
-				</a>';} ?> </th>
+				</a>';
+
+
+			}
+
+
+				 ?> </th>
 
 			<br>
 		</div>

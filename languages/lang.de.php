@@ -73,6 +73,7 @@ $lang['BTN_ONLY_MULTI'] = 'Mehrtageswanderung';
 
 $lang['YOUR_PROGRAMM'] = 'Dein Programm:';
 $lang['BTN_VIEW'] = 'alle anzeigen';
+$lang['ADDFAVORIS'] = 'add favoris';
 
 /*
  ------------------
