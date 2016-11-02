@@ -213,4 +213,5 @@ hearder
  $lang['H_MYPROPOSAL'] = 'Mes Propositions ';
  $lang['H_PROFIL'] = 'Profil ';
  $lang['H_ADMIN'] = 'Admin';
+ $lang['H_MYCHOICE'] = 'My Choice'
 ?>

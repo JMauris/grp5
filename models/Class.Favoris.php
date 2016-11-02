@@ -68,6 +68,28 @@ class Favoris {
 
 	}
 
+	public static function connectForEvalutation($idPersonne) {
+		$query = "SELECT * FROM `favoris` WHERE `idPersonne` = $idPersonne AND `evaluation` != 0  ";
+		$result = MySqlConn::getInstance()->selectDB($query);
+	  	if(empty($result)==true)
+				return false;
+
+		while($row = $result->fetch())
+		{
+			if(!$row) return false;
+			$resultArray[] = new Favoris($row['idPersonne'],$row['idTour'], $row['estFavoris'], $row['evaluation']);
+
+
+		}
+
+		$result->closeCursor();
+
+		return $resultArray;
+
+
+
+	}
+
 
 
 
