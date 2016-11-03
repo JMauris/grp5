@@ -1,4 +1,4 @@
-<? php
+<?php
 
 class Region
 {
@@ -51,16 +51,19 @@ class Region
       }
 
 
-      public static function connectbyId($id){
+      public static function connectbyId($id)
+      {
         $query =  "SELECT * From typetour WHERE idTypeTour='$id' ";
         $result = MySqlConn::getInstance()->selectDB($query);
         $row=$result->fetch();
         if(!$row) return false;
 
 
-        return new Typeretour($row['idTypeTour'],$row['typeTour_de'],$row['typeTour_fr'],)
+        return new Typeretour($row['idTypeTour'],$row['typeTour_de'],$row['typeTour_fr']);
 
       }
+
+
 
 }
 

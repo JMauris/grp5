@@ -1,9 +1,15 @@
-<?php include_once ROOT_DIR.'global/header.php'; $tourArray = $_SESSION['tour']; include_once ROOT_DIR.'languages/common.php';?>
-
+<?php include_once ROOT_DIR.'global/header.php';
+$difficulty= $_SESSION['DIFFICULTY'];
+include_once ROOT_DIR.'languages/common.php';
+if(isset($_GET['lang'])){
+$_SESSION['lang']=$_GET['lang'];}
+else {
+	$_SESSION['lang']='en';
+}?>
 
 <html>
 	<head>
-		<title>Proposal</title>
+		<title>Search Result</title>
 		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
 		<style type="text/css">
 			.top{
@@ -45,7 +51,7 @@
 	<body>
 		<div class= "wrapper">
 			<div class= "top">
-				<h1><?php echo $lang['PROPOSAL_TITLE']; ?></h1>
+				<h1>Search Result</h1>
 					<h2><?php echo $lang['PROPOSAL_SUBTITLE']; ?></h2>
 			</div>
 
@@ -55,13 +61,13 @@
 						<td style= "overflow-y: scroll; height: 100%;">
 							<div id="show"> 
 								<form action="<?php echo URL_DIR.'proposal/proposal_detail'?>" method= "post">
-					 				<?php foreach( $tourArray as $cle => $element)
+					 				<?php foreach( $difficulty as $cle => $element)
 
 					 					{?>
 
-										<button  name ="selectedTour" value = <?php echo $cle?> style="width: 100%;">
-										<p><?php echo ' '.$tourArray[$cle]->getTitre(); ?></p>
-										<p><?php echo ' '.$tourArray[$cle]->getInformation_fr(); ?></p>
+										<button  name ="selectedValue" value = <?php echo $cle?> style="width: 100%;">
+										<p><?php echo ' '.$difficulty[$cle]->getTitre(); ?></p>
+										<p><?php echo ' '.$difficulty[$cle]->getInformation_fr(); ?></p>
 									
 									</button>
 									<?php } ?>

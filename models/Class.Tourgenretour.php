@@ -1,26 +1,26 @@
-<? php
+<?php
 /**
  *
  */
 class Tourgenretour extends Tour
 {
 
-  private $id;
+  private $idxGenreTour;
   private $idxTour;
-  function __construct($id=null, $idxTour)
+  function __construct($idxGenreTour, $idxTour)
   {
     $this->setId($id);
     $this->setIdxTour($idxTour);
   }
 
-  public function getId(){
+  public function getIdxGenreTour(){
 
-    return $this->id;
+    return $this->idxGenreTour;
   }
 
-  public function setId($id)
+  public function setIdxGenreTour($idxGenreTour)
   {
-    $this->id= $id;
+    $this->idxGenreTour= $idxGenreTour;
   }
 
 
@@ -35,9 +35,9 @@ class Tourgenretour extends Tour
   }
 
 
-public static function connectbyId($id)
+public static function connectbyTourId($idxTour)
 {
-  $query =  "SELECT * From typetour WHERE idxGenreTour='$id' ";
+  $query =  "SELECT * From tourgenretour WHERE idxTour='$idxTour' ";
   $result = MySqlConn::getInstance()->selectDB($query);
   $row=$result->fetch();
   if(!$row) return false;

@@ -3,8 +3,8 @@ class Statusinscription{
 
   private $id;
 
-  private $status_de
-  private $status_fr
+  private $status_de;
+  private $status_fr;
 
   public function __construct($id=null,$status_de,$status_fr){
 
@@ -47,7 +47,6 @@ class Statusinscription{
     $this->id= $id;
   }
 
-}
 
 public static function connectbyId($id){
   $query =  "SELECT * From statusinscription WHERE idStatusInscr='$id' ";
@@ -59,4 +58,4 @@ return new Statusinscription($row['idStatusInscr'], $row['statusInscr_de'], $row
 }
 
 
- ?>
+} ?>

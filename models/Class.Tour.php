@@ -531,11 +531,13 @@ private static function queryTwo($idTour1, $idTour2)
   return $query;
 }
 
+
+// for Search page function
+
 private static function get_results($difficulty, $hikeType)
 {
 	$query = "SELECT * FROM tour
-				WHERE difficulte = $difficulty
-				AND idxTypeTour = $hikeType";
+				WHERE difficulte = $difficulty";
 
 	$result = MySqlConn::getInstance()->selectDB($query);
 
@@ -651,6 +653,129 @@ private static function CreateConditionFavoris($inscriptionArray)
   return $condition  ;
 
 }
+
+public static function connectForRegisterTour($inscriptionArray) {
+
+	$condition = Tour::CreateCondition($inscriptionArray);
+
+	$query = "SELECT * FROM tour " . $condition ;
+
+
+	$result = MySqlConn::getInstance()->selectDB($query);
+
+
+	while($row = $result->fetch()) {
+		$resultArray[] =   new Tour($row['idTour'],
+				$row['arriveeHeure'], $row['codeprogramme'],$row['dateDebut'], $row['dateFin'], $row['dateLimiteInscr'],
+				$row['departHeure'], $row['descente'],$row['description_de'], $row['description_fr'], $row['difficulte'],
+				$row['duree'], $row['idxArriveeLocalite'],$row['idxAssistant'], $row['idxDepartLocalite'], $row['idxGuide'],
+				$row['idxTypeTour'], $row['idxTypeTransport'],$row['information_de'], $row['information_fr'], $row['inscriptionMax'],
+				$row['lienCarte'], $row['lieuRDV'],$row['montee'], $row['prixMax'], $row['prixMin'],
+				$row['soustitre'], $row['status'],$row['titre'], $row['transportArrivee'], $row['transportDepart']);
+
+	}
+	$result->closeCursor();
+
+	return $resultArray;
+}
+
+
+private static function CreateCondition($inscriptionArray) {
+	$condition = "WHERE ";
+	foreach ($inscriptionArray as $key => $element) {
+		if($key==0){
+			$condition .= " idTour = " . $inscriptionArray[$key]->getIdRandonnee();
+		} else {
+			$condition .= " OR idTour = " . $inscriptionArray[$key]->getIdRandonnee();
+		}
+	}
+	return $condition  ;
+}
+
+public static function CreateNewTour($tour){
+
+	$type = $tour->getIdxTypeTour();
+	$title = $tour->getTitre();
+	$information =   $tour->getInformation_fr();
+	$difficulty = $tour->getDifficulte();
+	$guide =  $tour->getIdxGuide();
+	$time_from = $tour->getDepartHeure();
+	$time_to = $tour->getDescente();
+	$date_from = $tour->getDateDebut();
+	$date_to = $tour->getDateFin();
+
+	if($title !=''|| $date !='') {
+		$query = "INSERT INTO `tour`(`dateDebut`, `dateFin`, `difficulte`, `titre`, `departHeure`, `arriveeHeure`, `information_fr`, `IdxTypeTour`, `idxGuide`)
+		VALUES ('$date_from', '$date_to', '$difficulty', '$title', '$time_from', '$time_to', '$information', '$type', '$guide');";
+	} else {
+		echo "<p>Insertion Failed</p>";
+	}
+	MySqlConn::getInstance()->executeQuery($query);
+	//setup l'id de ce USER
+
+	$idquery = "SELECT idTour From tour
+	WHERE IdxTypeTour  ='$type'
+	AND dateDebut      ='$date_from'
+	AND dateFin    	   ='$date_to'
+	AND difficulte     ='$difficulty'
+	AND titre     	   ='$title'
+	AND departHeure    ='$time_from'
+	AND arriveeHeure   ='$time_to'
+	AND information_fr ='$information'
+	AND idxGuide	   ='$guide'
+	";
+
+
+	$result = MySqlConn::getInstance()->selectDB($idquery);
+	$row = $result->fetch();
+	if(!$row) return false;
+
+	$user->setId($row['idTour']);
+	$user->getId();
+	;
+
+}
+
+public function update($id){
+
+	$query = "UPDATE tour
+	SET IdxTypeTour = '$this->IdxTypeTour',
+	dateDebut= '$this->dateDebut',
+	dateFin='$this->dateFin',
+	difficulte='$this->difficulte',
+	titre='$this->titre',
+	departHeure='$this->departHeure',
+	arriveeHeure='$this->arriveeHeure'
+	information_fr='$this->information_fr'
+	idxGuide='$this->idxGuide'
+	WHERE idTour='$id'
+	;";
+
+	return  MySqlConn::getInstance()->executeQuery($query);
+}
+
+public static function connectbyId2($id) {
+	$query =  "SELECT * From tour WHERE idTour='$id' ";
+	$result = MySqlConn::getInstance()->selectDB($query);
+	$row=$result->fetch();
+	if(!$row) return false;
+
+	return new Tour($row['idTour'],
+			$row['arriveeHeure'], $row['codeprogramme'],$row['dateDebut'], $row['dateFin'], $row['dateLimiteInscr'],
+			$row['departHeure'], $row['descente'],$row['description_de'], $row['description_fr'], $row['difficulte'],
+			$row['duree'], $row['idxArriveeLocalite'],$row['idxAssistant'], $row['idxDepartLocalite'], $row['idxGuide'],
+			$row['idxTypeTour'], $row['idxTypeTransport'],$row['infromation_de'], $row['information_fr'], $row['inscriptionMax'],
+			$row['lienCarte'], $row['lieu'],$row['montee'], $row['prixMax'], $row['prixMin'],
+			$row['soustitre'], $row['status'],$row['titre'], $row['transportArrivee'], $row['transportDepart']);
+}
+
+public static function deleteById($id) {
+	$query =  "SELECT * From tour WHERE idTour='$id' ";
+	$result = MySqlConn::getInstance()->selectDB($query);
+	$row=$result->fetch();
+	if(!$row) return false;
+}
+
 
 
 
