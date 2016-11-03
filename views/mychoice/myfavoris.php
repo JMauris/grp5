@@ -57,7 +57,7 @@
 
 										{?>
 
-										<button  name ="submit1" value = <?php echo $cle?> style="width: 100%;">
+										<button  name ="selectedTour" value = <?php echo $cle?> style="width: 100%;">
 
 
 										<p><?php echo ' '.$tourArray[$cle]->getTitre(); ?></p>
