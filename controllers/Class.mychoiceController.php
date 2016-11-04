@@ -49,7 +49,7 @@ function mychoice(){
         $iduser=$_SESSION['personne']->getId();
 
         $notice =Favoris::connectForFavoris($iduser);
-
+        var_dump($notice);
         $_SESSION['notice']= $notice;
         //faire un array des  Tour enregistrer
         if($notice!=false)
@@ -85,6 +85,34 @@ function mychoice(){
 
         $_SESSION['MyRegister']=$TourRegister;
       }
+
+
+    }
+
+    function displaySelect()
+    {
+      $idtour=$_POST['tourSelect'];
+      $test=$_SERVER["HTTP_REFERER"];
+      var_dump($test);
+      if(strpos($test,'myregister'))
+      {
+        $Tour =   $_SESSION['MyRegister'];
+      }
+      elseif (strpos($test,'myfavoris')) {
+        $Tour =  $_SESSION['Mynotice'];
+      }    elseif (strpos($test,'mynotice')) {
+          $Tour =  $_SESSION['MyFavoris'];
+      }
+$_SESSION['tour']= $Tour;
+$_POST['selectedTour']=$idtour;
+
+  $test2=$Tour[$idtour];
+  if($test2->getIdxTypeTour()==1||$test2->getIdxTypeTour()==2){ $this->redirect('programm', 'hiking_detail');}
+  elseif ($test2->getIdxTypeTour()==6) {
+    $this->redirect('proposal', 'proposal_detail');
+  }
+
+
 
 
     }

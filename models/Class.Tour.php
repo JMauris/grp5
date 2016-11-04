@@ -534,10 +534,11 @@ private static function queryTwo($idTour1, $idTour2)
 
 // for Search page function
 
-private static function get_results($difficulty, $hikeType)
+public static function get_results($difficulty, $hikeType)
+
 {
-	$query = "SELECT * FROM tour
-				WHERE difficulte = $difficulty";
+
+	$query = "SELECT * FROM `tour` WHERE `difficulte` = '$difficulty' ";
 
 	$result = MySqlConn::getInstance()->selectDB($query);
 
@@ -755,7 +756,7 @@ public function update($id){
 }
 
 public static function connectbyId2($id) {
-	$query =  "SELECT * From tour WHERE idTour='$id' ";
+	$query =  "SELECT * FROM `tour` WHERE `idTour` = '$id' ";
 	$result = MySqlConn::getInstance()->selectDB($query);
 	$row=$result->fetch();
 	if(!$row) return false;

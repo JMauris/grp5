@@ -39,9 +39,7 @@ function hiking_detail(){
   if(isset ($_SESSION['tour'])){
       $Tour=$_SESSION['tour'];
   }
-  if(isset ($_SESSION['MyRegister'])){
-      $Tour=$_SESSION['MyRegister'];
-  }
+
 
     $id =$_POST['selectedTour'];
     $_SESSION['Selected_Tour'] = $Tour[$id];
@@ -52,6 +50,7 @@ function hiking_detail(){
     $idTour= $_SESSION['idTourbyFavoris'];
       $_SESSION['Selected_Tour'] = $Tour;
   }
+
 
   //$Tour = $_SESSION[tour] OR $_SESSION ['']
   $Tour=$_SESSION['tour'];
@@ -89,20 +88,21 @@ function hiking_detail(){
   //
 
 
-
-    if($_POST['favoris']!='add')
-    {
-      $value= 0;
-    }else {
-        $value = 1 ;
-      }
-
+            if($_POST['favoris']!='add')
+            {
+              $value= 0;
+            }else {
+                $value = 1 ;
+              }
 
 
+              if($_SESSION['FavorisData']==false)
+              {
 
-       $_SESSION['FavorisData']->updateFavoris($_SESSION['FavorisData']->getIdTour(),$_SESSION['FavorisData']->getIdPersonne(),$value);
-
-
+                    favoris::createFavoris($_SESSION['Selected_Tour']->getId(),$_SESSION['personne']->getId(),$value,0);
+              }else{
+          $_SESSION['FavorisData']->updateFavoris($_SESSION['FavorisData']->getIdTour(),$_SESSION['FavorisData']->getIdPersonne(),$value);
+        }
      $this->redirect('programm', 'hiking_detail');
 
   }
@@ -112,8 +112,13 @@ function hiking_detail(){
 
   //
       $Myvalue= $_POST['notice'];
+      if($_SESSION['FavorisData']==false)
+      {
 
+            favoris::createFavoris($_SESSION['Selected_Tour']->getId(),$_SESSION['personne']->getId(),0,$Myvalue);
+      }else{
        $_SESSION['FavorisData']->updateNotice($_SESSION['FavorisData']->getIdTour(),$_SESSION['FavorisData']->getIdPersonne(),$Myvalue);
+     }
  $this->redirect('programm', 'hiking_detail');
 
 

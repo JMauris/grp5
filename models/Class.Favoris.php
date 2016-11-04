@@ -47,7 +47,7 @@ class Favoris {
 	}
 
 	public static function connectForFavoris($idPersonne) {
-		$query = "SELECT * FROM `favoris` WHERE `idPersonne` = $idPersonne AND `estFavoris` = 1  ";
+		$query = "SELECT * FROM `favoris` WHERE `idPersonne` = $idPersonne AND `estFavoris` = '$idPersonne'  ";
 		$result = MySqlConn::getInstance()->selectDB($query);
 	  	if(empty($result)==true)
 				return false;
@@ -109,7 +109,12 @@ class Favoris {
 
 								return  MySqlConn::getInstance()->executeQuery($query);
 	}
-
+	public static function createFavoris($idTour,$idPersonne,$Favoris,$evaluation)
+	{
+	  $query = "INSERT INTO `favoris`(`idPersonne`, `idTour`, `estFavoris`, `evaluation`) VALUES ('$idPersonne','$idTour','$Favoris','$evaluation') ";
+	
+			return  MySqlConn::getInstance()->executeQuery($query);
+}
 	public function updateNotice($idTour,$idPersonne,$value)
 	{
 			$query = "UPDATE `favoris` SET `evaluation`=$value WHERE `idTour` = $idTour AND `idPersonne` = $idPersonne";

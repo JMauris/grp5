@@ -32,11 +32,11 @@ else {
 			<br>
 			<form action="<?php echo URL_DIR.'search/search_result';?>" method= "post">
 				<table>
-					
+
 					<tr>
 						<td><?php echo $lang['REGION']; ?></td>
 						<td>
-						
+
 							<select name="region">
 								<option value="all"><?php echo $lang['ALL']; ?></option>
 								<option value="1">Center</option>
@@ -45,13 +45,13 @@ else {
 								<option value="4">Outside</option>
 								<option value="5">Wallis</option>
 							</select>
-						
+
 						</td>
 					</tr>
 					<tr>
 						<td><?php echo $lang['DIFFICULTY']; ?>:</td>
 						<td>
-						
+
 							<select name="difficulty">
 							<option value="all"><?php echo $lang['ALL']; ?></option>
                 						 <option value="1">*</option>
@@ -91,9 +91,9 @@ else {
 							<button name="difficulty" value=5><?php echo $lang['SEARCH']; ?></button>
 						</td>
 					</tr>
-					
+
 				</table>
-				
+
 				</form>
 		</div>
 		</div>

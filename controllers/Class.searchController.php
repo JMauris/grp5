@@ -13,16 +13,19 @@ class searchController extends Controller
   {
   		$result = Tour::connectTour(1, 2);
   		$_SESSION['tour']=$result;
-  	
+
   }
-  
+
   function search_result()
   {
   	$Tour=$_SESSION['tour'];
-  	
+
+
   	$difficulty = $_POST['difficulty'];
-  	
-  	$_SESSION['difficulty'] = $Tour::get_results($difficulty);
+    var_dump($difficulty);
+$difficulty=2;
+  	$_SESSION['difficulty'] = Tour::get_results($difficulty,0);
+
   }
 }
 

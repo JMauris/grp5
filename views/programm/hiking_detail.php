@@ -59,13 +59,13 @@ include_once ROOT_DIR.'languages/common.php';
 					<td>
 							<?php $optionNotice = array(0,1,2,3,4,5); ?>
 						<FORM Method="post" action="<?php echo URL_DIR.'programm/saveNotice';?>" >
-					<SELECT name="notice" onchange="this.form.submit();"" >
+					<SELECT name="notice" onchange="this.form.submit();" >
 						<?php
 						for ($cpt=0; $cpt<=(count($optionNotice)-1); $cpt++) {
 
 							if(isset($_SESSION['FavorisData']))
 							{
-								if(($cpt)==$_SESSION['FavorisData']->getEvaluation())
+								if($_SESSION['FavorisData']!=false&&($cpt)==$_SESSION['FavorisData']->getEvaluation())
 								{
 								echo '<option value="'.$cpt.'" selected="selected"  >'.$optionNotice[$cpt] .'</option>';
 
@@ -89,7 +89,7 @@ include_once ROOT_DIR.'languages/common.php';
 						<?php if(isset ($_SESSION['personne'])){
 
 
-							if($_SESSION['FavorisData']->getEstFavoris()==1)
+							if($_SESSION['FavorisData']!=false&&$_SESSION['FavorisData']->getEstFavoris()==1)
 							{
 								echo	'	<button name = "favoris" value="remove">' .$lang['REMOVEFAVORIS'].'</button>	';
 

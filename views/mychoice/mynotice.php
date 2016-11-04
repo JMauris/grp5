@@ -58,12 +58,12 @@
 					<tr>
 						<td style= "overflow-y: scroll; height: 100%;">
 							<div id="show">
-						<form action="<?php echo URL_DIR.'proposal/proposal_detail'?>" method= "post">
+						<form action="<?php echo URL_DIR.'mychoice/displaySelect'?>" method= "post">
 					 				<?php foreach( $tourArray as $cle => $element)
 
 					 					{?>
 
-										<button  name ="submit1" value = <?php echo $cle?> style="width: 100%;">
+										<button  name ="tourSelect" value = <?php echo $cle?> style="width: 100%;">
 										<p><?php echo ' '.$tourArray[$cle]->getTitre(); ?></p>
 										<?php if( $tourArray[$cle]->getIdxTypeTour() == 1)
 											{
