@@ -17,6 +17,7 @@ $lang['MY_FAVORITES'] = 'My favorites';
 $lang['DATE_BEGIN'] = 'Date begin:';
 $lang['PROGRAMM_DETAIL'] = 'Programm Detail';
 $lang['REGISTER'] = 'Register';
+$lang['DISREGISTER'] = 'disregister';
 $lang['FAVORIS'] = 'Favoris';
 
 /*

@@ -1,5 +1,6 @@
 <?php include_once ROOT_DIR.'global/header.php';
 $SelectedTour = $_SESSION['Selected_Tour'];
+
 $nbrInscription = $_SESSION['nbrInscription'];
 include_once ROOT_DIR.'languages/common.php';
 ?>
@@ -103,12 +104,16 @@ include_once ROOT_DIR.'languages/common.php';
 				</tr>
 			</table>
 			<a href="<?php echo URL_DIR.'programm/programm'?>">
+
 			<input type="button" value="<?php echo $lang['BTN_BACK']; ?>" ></input>
 			</a>
-			<?php if(isset ($_SESSION['personne'])&&$_POST['isInscri']==1)
-				{
-					echo 'You are already register 	<input type="button" value="disregister">';
-				}
+		
+			<?php if(isset ($_SESSION['personne'])&&$_POST['isInscri'])
+				{?>
+						<form method="post" action="<?php echo URL_DIR.'programm/removeRegister';?>" >
+						<button name = "removeregister" value=<?php echo $SelectedTour->getId();?>><?php echo $lang['DISREGISTER']?></button>
+
+			<?php 	}
 				else{
 
 					echo	'<a href="' .URL_DIR."programm/programm_register". '">
@@ -119,7 +124,7 @@ include_once ROOT_DIR.'languages/common.php';
 			}
 
 
-				 ?> </th>
+				 ?> 	</form></th>
 
 			<br>
 		</div>

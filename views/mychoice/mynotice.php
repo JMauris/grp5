@@ -1,6 +1,11 @@
 <?php include_once ROOT_DIR.'global/header.php';
- $tourArray = $_SESSION['MyFavoris'];
- $noticeArray= $_SESSION['notice'] ;
+
+ if(isset($_SESSION['MyFavoris'])){
+ 	 $tourArray = $_SESSION['MyFavoris'];
+ }
+ if(isset($_SESSION['MyFavoris'])){
+ 	 $noticeArray = $_SESSION['notice'];
+ }
    include_once ROOT_DIR.'languages/common.php';
 
 
@@ -48,70 +53,59 @@
 			}
 		</style>
 	</head>
-	<body>
+  <body>
 		<div class= "wrapper">
 			<div class= "top">
 				</div>
-
 			<div class="middle">
+
 				<table class="show">
 					<tr>
+							<?php if(isset($_SESSION['MyFavoris'])) { ?>
 						<td style= "overflow-y: scroll; height: 100%;">
 							<div id="show">
-						<form action="<?php echo URL_DIR.'mychoice/displaySelect'?>" method= "post">
-					 				<?php foreach( $tourArray as $cle => $element)
 
-					 					{?>
+								<form action="<?php echo URL_DIR.'mychoice/displaySelect'?>" method= "post">
 
-										<button  name ="tourSelect" value = <?php echo $cle?> style="width: 100%;">
-										<p><?php echo ' '.$tourArray[$cle]->getTitre(); ?></p>
-										<?php if( $tourArray[$cle]->getIdxTypeTour() == 1)
-											{
-												echo "Hiking";
-											}
-												 elseif ($tourArray[$cle]->getIdxTypeTour() == 2)
-												 {
-														echo "Stay";
-												 }
-													elseif($tourArray[$cle]->getIdxTypeTour() == 6)
-														{
-														echo "Proposal";
-														}
-											?>
-										<p><?php echo ' '.$tourArray[$cle]->getInformation_fr(); ?></p>
-										<p><?php
-
-										foreach( $noticeArray as $key => $element){
-
-											if($noticeArray[$key]->getIdTour() == $tourArray[$cle]->getId())
-											{
-												echo "Evalutation :". $noticeArray[$key]->getEvaluation() ."/5";
-											}
+									<?php
+									 foreach( $tourArray as $cle => $element)	{ ?>
+										 <button  name ="tourSelect" value = <?php echo $cle?> style="width: 100%;">
 
 
-										}
+										 <p><?php echo ' '.$tourArray[$cle]->getTitre(); ?></p>
+										 <?php if( $tourArray[$cle]->getIdxTypeTour() == 1)
+											 {
+												 echo "Hiking";
+											 }
+													elseif ($tourArray[$cle]->getIdxTypeTour() == 2)
+													{
+														 echo "Stay";
+													}
+													 elseif($tourArray[$cle]->getIdxTypeTour() == 6)
+														 {
+														 echo "Proposal";
+														 }
+											 ?>
+										 <p><?php echo ' '.$tourArray[$cle]->getInformation_fr(); ?></p>
+
+									 </button>
 
 
-
-										 ?></p>
-
-									</button>
 									<?php } ?>
+
 								</form>
 
 							</div>
 						</td>
+						<?php } ?>
 						<a href="<?php echo URL_DIR.'mychoice/mychoice'?>">
 						<input type="button" value="<?php echo $lang['BTN_BACK']; ?>" ></input>
 						</a>
 					</tr>
 				</table>
 			</div>
-
-
-
 		</div>
 
-		<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>
+<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>
 </body>
 </html>

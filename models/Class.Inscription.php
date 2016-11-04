@@ -77,9 +77,16 @@ class Inscription {
 
 	}
 	public static function isInscri($idPersonne, $idRandonnee) {
-		$query = "SELECT * From inscription WHERE idPersonne='$idPersonne' AND idRandonnee='$idRandonnee'";
+		$query = " SELECT * FROM `inscription` WHERE `idPersonne` = $idPersonne AND`idRandonnee` = $idRandonnee ";
 		$result = MySqlConn::getInstance()->selectDB($query);
-		return $result!=null;
+		$row = $result->fetch();
+		if(!$row) {return false;}else {
+		return true;
+		}
+
+
+
+
 	}
 
 public static function Create($inscription){
@@ -106,16 +113,27 @@ public static function connectByUser($idPersonne){
 
   $query = "SELECT * FROM `inscription` WHERE `idPersonne` = '$idPersonne'";
   $result = MySqlConn::getInstance()->selectDB($query);
+			$isinstance = false;
 	while($row = $result->fetch())
 	{
 	$resultArray[] =   new inscription($row['idPersonne'], $row['idRandonnee'], $row['date'],$row['heure'], $row['idxStatus'], $row['remarque']);
-
+		$isinstance = true;
 	}
 	$result->closeCursor();
-//($idPersonne, $idRandonnee, $date, $heure, $idxStatus, $remarque)
 
 
-return $resultArray;
+	if($isinstance==true)
+			return $resultArray;
+			if($isinstance==false)
+					return false;
+
+}
+public static function removeRegisterByID($idTour, $idPersonne)
+{
+
+	$query = "DELETE FROM `inscription` WHERE `idRandonnee` = '$idTour' AND `idPersonne`= '$idPersonne' ";
+
+						return  MySqlConn::getInstance()->executeQuery($query);
 
 }
 

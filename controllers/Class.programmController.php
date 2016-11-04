@@ -124,6 +124,19 @@ function hiking_detail(){
 
   }
 
+  function removeRegister()
+
+  {
+
+
+      var_dump($_POST['removeregister']);
+
+
+      Inscription::removeRegisterByID($_POST['removeregister'],$_SESSION['personne']->getId());
+
+     $this->redirect('programm', 'hiking_detail');
+  }
+
   function programm_register()
   {
     if(!isset ($_SESSION['Selected_Tour']))

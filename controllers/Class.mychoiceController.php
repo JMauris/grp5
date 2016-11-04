@@ -49,7 +49,7 @@ function mychoice(){
         $iduser=$_SESSION['personne']->getId();
 
         $notice =Favoris::connectForFavoris($iduser);
-        var_dump($notice);
+
         $_SESSION['notice']= $notice;
         //faire un array des  Tour enregistrer
         if($notice!=false)
@@ -93,7 +93,7 @@ function mychoice(){
     {
       $idtour=$_POST['tourSelect'];
       $test=$_SERVER["HTTP_REFERER"];
-      var_dump($test);
+
       if(strpos($test,'myregister'))
       {
         $Tour =   $_SESSION['MyRegister'];
