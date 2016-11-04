@@ -443,7 +443,7 @@ public function setTransportDepart($transportDepart)
 
 public static function connectbyId($id)
 {
-  $query =  "SELECT * From tour WHERE idTour='$id' ";
+  $query =  "SELECT * From tour WHERE idTour= '$id' ";
   $result = MySqlConn::getInstance()->selectDB($query);
   $row=$result->fetch();
   if(!$row) return false;

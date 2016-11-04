@@ -22,7 +22,7 @@ function mychoice(){
 
         $iduser=$_SESSION['personne']->getId();
 
-        $favoris = Favoris::connectForEvalutation($iduser);
+        $favoris = Favoris::connectForFavoris($iduser);
 
 
         //ne pas créer la session si elle est vide
@@ -32,9 +32,6 @@ function mychoice(){
 
           $TourFavoris = Tour::connectForMyProgramm($favoris,1);
           $_SESSION['MyFavoris']=$TourFavoris;
-
-
-
 
       }
     }
@@ -48,7 +45,7 @@ function mychoice(){
         }
         $iduser=$_SESSION['personne']->getId();
 
-        $notice =Favoris::connectForFavoris($iduser);
+        $notice =Favoris::connectForEvalutation($iduser);
 
         $_SESSION['notice']= $notice;
         //faire un array des  Tour enregistrer
@@ -97,18 +94,21 @@ function mychoice(){
       if(strpos($test,'myregister'))
       {
         $Tour =   $_SESSION['MyRegister'];
+
       }
       elseif (strpos($test,'myfavoris')) {
-        $Tour =  $_SESSION['Mynotice'];
+        $Tour =  $_SESSION['MyFavoris'];
+
       }    elseif (strpos($test,'mynotice')) {
-          $Tour =  $_SESSION['MyFavoris'];
+          $Tour =  $_SESSION['Mynotice'];
       }
-$_SESSION['tour']= $Tour;
-$_POST['selectedTour']=$idtour;
+
+$_SESSION['MyselectedTour']=$Tour[$idtour];
+
 
   $test2=$Tour[$idtour];
   if($test2->getIdxTypeTour()==1||$test2->getIdxTypeTour()==2){ $this->redirect('programm', 'hiking_detail');}
-  elseif ($test2->getIdxTypeTour()==6) {
+  else {
     $this->redirect('proposal', 'proposal_detail');
   }
 

@@ -63,6 +63,7 @@ if(isset($_SESSION['MyFavoris'])){
 								<form action="<?php echo URL_DIR.'mychoice/displaySelect'?>" method= "post">
 
 									<?php
+
 									 foreach( $tourArray as $cle => $element)	{ ?>
 										 <button  name ="tourSelect" value = <?php echo $cle?> style="width: 100%;">
 
@@ -82,6 +83,13 @@ if(isset($_SESSION['MyFavoris'])){
 														 }
 											 ?>
 										 <p><?php echo ' '.$tourArray[$cle]->getInformation_fr(); ?></p>
+
+								  <?php foreach ($noticeArray as $key => $value){
+								    if($noticeArray[$key]->getIdTour() == $tourArray[$key]->getId())
+							      {
+								      echo "note :" . $noticeArray[$key]->getEvaluation() . "/5";
+								    }
+							    } ?>
 
 									 </button>
 
