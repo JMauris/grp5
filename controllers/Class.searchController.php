@@ -22,13 +22,12 @@ class searchController extends Controller
 
   function search_result()
   {
-  	
-	$idRegion = $_POST['region'];
+	$idRegion = $_POST['selected_region'];
   	$difficulty = $_POST['difficulty'];
   	$genre = $_POST['sort_hike'];
   	
   	$tourResults=Tour::get_results($idRegion, $difficulty, $genre);
-  	$_SESSION['tour']=$tourResults;
+  	$_SESSION['tour_results']=$tourResults;
   }
 }
 

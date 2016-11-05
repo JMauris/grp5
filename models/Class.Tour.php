@@ -543,13 +543,14 @@ public static function get_results($region, $difficulte, $genre)
 			INNER JOIN genretour ON genretour.idGenreTour = tourgenretour.idxGenreTour
 			INNER JOIN tourregion ON tourregion.idxTour = tour.idTour
 			INNER JOIN region ON region.idRegion = tourregion.idxRegion
-			WHERE 'idRegion' = '$region' AND `difficulte` = '$difficulte' AND 'idGenreTour' = '$genre'";
+			WHERE idRegion = $region AND difficulte = $difficulte AND idGenreTour = $genre";
 
 	$result = MySqlConn::getInstance()->selectDB($query);
 
 
 	while($row = $result->fetch())
 	{
+	
 		$resultArray[] =   new Tour($row['idTour'],
 				$row['arriveeHeure'], $row['codeprogramme'],$row['dateDebut'], $row['dateFin'], $row['dateLimiteInscr'],
 				$row['departHeure'], $row['descente'],$row['description_de'], $row['description_fr'], $row['difficulte'],
@@ -557,19 +558,21 @@ public static function get_results($region, $difficulte, $genre)
 				$row['idxTypeTour'], $row['idxTypeTransport'],$row['information_de'], $row['information_fr'], $row['inscriptionMax'],
 				$row['lienCarte'], $row['lieuRDV'],$row['montee'], $row['prixMax'], $row['prixMin'],
 				$row['soustitre'], $row['status'],$row['titre'], $row['transportArrivee'], $row['transportDepart']);
-
-	}
-
-	$result->closeCursor();
-	if ($resultArray = null){
-		$error1= "No results for the chosen search conditions. Please search again";
-		return $error1;
+	
+	
+	
+	
 	}
 	
-	else{
-	return $resultArray;
+	$result->closeCursor();
+	if(empty($resultArray)){
+		$error = "No search available";
+		return $error;
 	}
-
+		else{
+	return $resultArray;
+	
+		}
 }
 
 public static function connectForMyProgramm($inscriptionArray, $type) //0=>Register   1=>Favoris  2=>evalutation
@@ -787,6 +790,23 @@ public static function deleteById($id) {
 	if(!$row) return false;
 }
 
+public static function connectToAll() {
+	$query =  "SELECT * From tour ";
+	$result = MySqlConn::getInstance()->selectDB($query);
+	while($row = $result->fetch()) {
+		$resultArray[$row['idTour']] =   new Tour($row['idTour'],
+				$row['arriveeHeure'], $row['codeprogramme'],$row['dateDebut'], $row['dateFin'], $row['dateLimiteInscr'],
+				$row['departHeure'], $row['descente'],$row['description_de'], $row['description_fr'], $row['difficulte'],
+				$row['duree'], $row['idxArriveeLocalite'],$row['idxAssistant'], $row['idxDepartLocalite'], $row['idxGuide'],
+				$row['idxTypeTour'], $row['idxTypeTransport'],$row['information_de'], $row['information_fr'], $row['inscriptionMax'],
+				$row['lienCarte'], $row['lieuRDV'],$row['montee'], $row['prixMax'], $row['prixMin'],
+				$row['soustitre'], $row['status'],$row['titre'], $row['transportArrivee'], $row['transportDepart']);
+
+	}
+
+	$result->closeCursor();
+	return $resultArray;
+}
 
 
 

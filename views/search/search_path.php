@@ -34,17 +34,17 @@ else {
 		<div>
 			<h1><?php echo $lang['SEARCH']; ?></h1>
 			<br>
-			<form action="<?php echo URL_DIR.'search/search_result';?>" method= "post">
+			<form method= "post" action="<?php echo URL_DIR.'search/search_result';?>" >
 				<table>
 					<tr>
 						<td><?php echo $lang['REGION']; ?></td>
 						<td>
 
-							<select name="region">
+							<select name="selected_region">
 							<?php foreach( $region as $cle => $element)
 
 					 		{?>
-					 		<option value="$cle"><?php echo ' '.$region[$cle]->getRegion_fr();?></option>
+					 		<option value=<?php echo $cle?>><?php echo ' '.$region[$cle]->getRegion_fr();?></option>
 					 		<?php }?>
 							</select>
 						</td>
@@ -71,7 +71,7 @@ else {
 							<?php foreach( $genre as $cle => $element)
 
 					 		{?>
-					 		<option value="$cle"><?php echo ' '.$genre[$cle]->getGenreTour_fr();?></option>
+					 		<option value=<?php echo $cle?>><?php echo ' '.$genre[$cle]->getGenreTour_fr();?></option>
 					 		<?php }?>
 					 		
 							</select>
@@ -85,13 +85,13 @@ else {
 					</tr>
 					<tr>
 						<td>
-							<button name="difficulty" value=5><?php echo $lang['SEARCH']; ?></button>
+							<input type="submit" value="submit me!" />
 						</td>
 					</tr>
 
 				</table>
 
-				</form>
+			</form>
 		</div>
 		</div>
 	</body>
