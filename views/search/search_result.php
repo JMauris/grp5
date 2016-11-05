@@ -1,5 +1,6 @@
 <?php include_once ROOT_DIR.'global/header.php';
-$difficulty= $_SESSION['DIFFICULTY'];
+$tourResults = $_SESSION['tour'];
+
 include_once ROOT_DIR.'languages/common.php';
 if(isset($_GET['lang'])){
 $_SESSION['lang']=$_GET['lang'];}
@@ -60,17 +61,24 @@ else {
 					<tr>
 						<td style= "overflow-y: scroll; height: 100%;">
 							<div id="show"> 
-								<form action="<?php echo URL_DIR.'proposal/proposal_detail'?>" method= "post">
-					 				<?php foreach( $difficulty as $cle => $element)
+								<form action="<?php echo URL_DIR.'program/program_detail'?>" method= "post">
+					 				
+					 				<?php 
+					 				    if((is_array($tourResults) || is_object($tourResults))){?>
+					 					<a href="<?php echo URL_DIR.'search/search_path'?>"><img id="search1" src="<?php echo URL_DIR. 'public/img/searchRoute.png'?>"></a>
+					 					<?php }
+					 					else
+					 					{
+					 					foreach( $tourResults as $cle => $element)
 
 					 					{?>
 
 										<button  name ="selectedValue" value = <?php echo $cle?> style="width: 100%;">
-										<p><?php echo ' '.$difficulty[$cle]->getTitre(); ?></p>
-										<p><?php echo ' '.$difficulty[$cle]->getInformation_fr(); ?></p>
+										<p><?php echo ' '.$tourResults[$cle]->getTitre(); ?></p>
+										<p><?php echo ' '.$tourResults[$cle]->getInformation_fr(); ?></p>
 									
 									</button>
-									<?php } ?>
+									<?php }} ?>
 								</form>
 										
 							</div>

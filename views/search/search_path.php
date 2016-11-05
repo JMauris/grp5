@@ -1,5 +1,9 @@
 <?php include_once ROOT_DIR.'global/header.php';
-$tourArray=$_SESSION['tour'];
+
+$genre=$_SESSION['genretour'];
+
+$region=$_SESSION['region'];
+
 include_once ROOT_DIR.'languages/common.php';
 if(isset($_GET['lang'])){
 $_SESSION['lang']=$_GET['lang'];}
@@ -32,20 +36,17 @@ else {
 			<br>
 			<form action="<?php echo URL_DIR.'search/search_result';?>" method= "post">
 				<table>
-
 					<tr>
 						<td><?php echo $lang['REGION']; ?></td>
 						<td>
 
 							<select name="region">
-								<option value="all"><?php echo $lang['ALL']; ?></option>
-								<option value="1">Center</option>
-								<option value="2">Upper</option>
-								<option value="3">Lower</option>
-								<option value="4">Outside</option>
-								<option value="5">Wallis</option>
-							</select>
+							<?php foreach( $region as $cle => $element)
 
+					 		{?>
+					 		<option value="$cle"><?php echo ' '.$region[$cle]->getRegion_fr();?></option>
+					 		<?php }?>
+							</select>
 						</td>
 					</tr>
 					<tr>
@@ -67,16 +68,12 @@ else {
 						<td><?php echo $lang['SORT_HIKE']; ?></td>
 						<td>
 							<select name="sort_hike">
-								<option value="all"><?php echo $lang['ALL']; ?></option>
-								<option value="1"><?php echo $lang['SNOWSHOE']; ?></option>
-								<option value="2"><?php echo $lang['SKI_TOUR']; ?></option>
-								<option value="3"><?php echo $lang['HIKINGS']; ?></option>
-								<option value="4">Via Ferrata</option>
-								<option value="5">Bike - MTB</option>
-								<option value="6"><?php echo $lang['OTHERS']; ?></option>
-								<option value="7"><?php echo $lang['WINTER_HIKES']; ?></option>
-								<option value="8"><?php echo $lang['ALP_HIKES']; ?></option>
-								<option value="9"><?php echo $lang['MULTI_D_HIKE']; ?></option>
+							<?php foreach( $genre as $cle => $element)
+
+					 		{?>
+					 		<option value="$cle"><?php echo ' '.$genre[$cle]->getGenreTour_fr();?></option>
+					 		<?php }?>
+					 		
 							</select>
 						</td>
 					</tr>

@@ -534,11 +534,16 @@ private static function queryTwo($idTour1, $idTour2)
 
 // for Search page function
 
-public static function get_results($difficulty, $hikeType)
+public static function get_results($region, $difficulte, $genre)
 
 {
 
-	$query = "SELECT * FROM `tour` WHERE `difficulte` = '$difficulty' ";
+	$query = "SELECT * FROM tour 
+			INNER JOIN tourgenretour ON tour.idTour = tourgenretour.idxTour
+			INNER JOIN genretour ON genretour.idGenreTour = tourgenretour.idxGenreTour
+			INNER JOIN tourregion ON tourregion.idxTour = tour.idTour
+			INNER JOIN region ON region.idRegion = tourregion.idxRegion
+			WHERE 'idRegion' = '$region' AND `difficulte` = '$difficulte' AND 'idGenreTour' = '$genre'";
 
 	$result = MySqlConn::getInstance()->selectDB($query);
 
@@ -556,9 +561,14 @@ public static function get_results($difficulty, $hikeType)
 	}
 
 	$result->closeCursor();
-
+	if ($resultArray = null){
+		$error1= "No results for the chosen search conditions. Please search again";
+		return $error1;
+	}
+	
+	else{
 	return $resultArray;
-
+	}
 
 }
 

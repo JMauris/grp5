@@ -11,21 +11,24 @@ class searchController extends Controller
   }
   function search_path()
   {
-  		$result = Tour::connectTour(1, 2);
-  		$_SESSION['tour']=$result;
+  		$genre=Genretour::getAllGenre();
+  		$_SESSION['genretour']=$genre;
+ 
+  		$region=Region::getAllRegion();
+  		$_SESSION['region']=$region;
+  		
 
   }
 
   function search_result()
   {
-  	$Tour=$_SESSION['tour'];
-
-
+  	
+	$idRegion = $_POST['region'];
   	$difficulty = $_POST['difficulty'];
-    var_dump($difficulty);
-$difficulty=2;
-  	$_SESSION['difficulty'] = Tour::get_results($difficulty,0);
-
+  	$genre = $_POST['sort_hike'];
+  	
+  	$_SESSION['tour']=Tour::get_results($idRegion, $difficulty, $genre);
+  	$tourResults=$_SESSION['tour'];
   }
 }
 

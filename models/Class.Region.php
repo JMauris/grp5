@@ -46,6 +46,22 @@ public function setRegion_fr($region_fr)
 {
   $this->region_fr= $region_fr;
 }
+
+public static function getAllRegion(){
+  $query =  "SELECT * From region";
+  $result = MySqlConn::getInstance()->selectDB($query);
+  
+  while($row = $result->fetch())
+  {
+  	$resultArray[] =   new Region($row['idRegion'], $row['region_fr'],$row['region_de']);
+  }
+  
+  $result->closeCursor();
+  
+  return $resultArray;
+
+}
+
 public static function connectbyId($id){
   $query =  "SELECT * From region WHERE idRegion='$id' ";
   $result = MySqlConn::getInstance()->selectDB($query);

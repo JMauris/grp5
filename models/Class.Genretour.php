@@ -4,7 +4,7 @@ class Genretour {
 	
 	private $idGenreTour;
 	private $genreTour_fr;
-	private $genreTour_de;
+	private $genreTour_DE;
 	
 	public function __construct($idGenreTour=null, $genreTour_fr, $genreTour_de) {
 		$this->setId($idGenreTour);
@@ -29,11 +29,26 @@ class Genretour {
 	}
 	
 	public function getGenreTour_de() {
-		return $this->genreTour_de;
+		return $this->genreTour_DE;
 	}
 	
 	public function setGenreTour_de($genreTour_de) {
-		$this->genreTour_de=$genreTour_de;
+		$this->genreTour_DE=$genreTour_de;
+	}
+	
+	public static function getAllGenre(){
+		
+		$query = "SELECT * From genretour";
+		$result = MySqlConn::getInstance()->selectDB($query);
+		
+		while($row = $result->fetch())
+		{
+			$resultArray[] =   new Genretour($row['idGenreTour'],$row['genreTour_fr'],$row['genreTour_DE']);
+		}
+		
+		$result->closeCursor();
+		
+		return $resultArray;
 	}
 	
 	public static function connectByIdGenreTour($idGenreTour) {
@@ -44,7 +59,7 @@ class Genretour {
 		if(!$row) return false;
 		
 		
-		return new Genreretour($row['idGenreTour'],$row['genreTour_fr'],$row['genreTour_de']);
+		return new Genreretour($row['idGenreTour'],$row['genreTour_fr'],$row['genreTour_DE']);
 	}
 	
 }

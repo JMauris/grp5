@@ -77,7 +77,7 @@
 				<table class="buttons">
 					<tr>
 						<td id="buttonsTd">
-							<button id="submit1" href="<?php echo URL_DIR.'search/search_path.php'?>"><?php echo $lang['BTN_SEARCH']; ?></button>
+							<a href="<?php echo URL_DIR.'search/search_path'?>"><button id="submit1"><?php echo $lang['BTN_SEARCH']; ?></button></a>
 							<button id="submit1"><?php echo $lang['BTN_NEAR']; ?></button>
 						</td>
 					</tr>
