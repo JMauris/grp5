@@ -1,4 +1,5 @@
 <?php include_once ROOT_DIR.'global/header.php';
+
 $tourResults = $_SESSION['tour'];
 
 include_once ROOT_DIR.'languages/common.php';
@@ -47,13 +48,21 @@ else {
 				text-align: right;
 				padding: 2%;
 			}
+			#search1{
+				float: right;
+				width: 20%;
+			}
+			#search1:hover {
+			    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+			    border: 2px solid #555555;
+			}
 		</style>
 	</head>
 	<body>
 		<div class= "wrapper">
 			<div class= "top">
 				<h1>Search Result</h1>
-					<h2><?php echo $lang['PROPOSAL_SUBTITLE']; ?></h2>
+					<h2><?php echo $lang['SEARCH']; ?></h2>
 			</div>
 
 			<div class="middle">
@@ -64,12 +73,12 @@ else {
 								<form action="<?php echo URL_DIR.'program/program_detail'?>" method= "post">
 					 				
 					 				<?php 
-					 				    if((is_array($tourResults) || is_object($tourResults))){?>
-					 					<a href="<?php echo URL_DIR.'search/search_path'?>"><img id="search1" src="<?php echo URL_DIR. 'public/img/searchRoute.png'?>"></a>
-					 					<?php }
+					 				    if(empty($tourResults)){?>
+											<a href="<?php echo URL_DIR.'search/search_path'?>"><img id="search1" src="<?php echo URL_DIR. 'public/img/searchRoute.png'?>"></a>
+									<?php }
 					 					else
 					 					{
-					 					foreach( $tourResults as $cle => $element)
+					 					foreach( (array) $tourResults as $cle => $element)
 
 					 					{?>
 

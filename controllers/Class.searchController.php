@@ -27,8 +27,8 @@ class searchController extends Controller
   	$difficulty = $_POST['difficulty'];
   	$genre = $_POST['sort_hike'];
   	
-  	$_SESSION['tour']=Tour::get_results($idRegion, $difficulty, $genre);
-  	$tourResults=$_SESSION['tour'];
+  	$tourResults=Tour::get_results($idRegion, $difficulty, $genre);
+  	$_SESSION['tour']=$tourResults;
   }
 }
 
