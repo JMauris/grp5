@@ -5,10 +5,12 @@ class Personne{
 	private $firstname;
 	private $lastname;
 
+
 	private $email;
 	private $password;
 
 	private $role;
+
 
 	private $portable;
 	private $phone;
@@ -17,16 +19,22 @@ class Personne{
 	private $localite;
 	private $npa;
 
+
+
 	private $idxAbonnement;
 
+
+
+
 	//It uses null as the default value for the function argument $id
-	public function __construct($id=null, $firstname, $lastname, $adresse, $email, $password=null,
-			$phone, $portable, $numMember,  $estActif, $idxAbonnement,
-			$npa, $localite, $idxLangue, $role){
+	public function __construct($id=null, $firstname, $lastname,
+			$email, $password=null, $idxLangue, $estActif, $numMember, $role,
+			$portable, $phone, $adresse, $localite, $npa, $idxAbonnement){
 
 				$this->setId($id);
 				$this->setFirstname($firstname);
 				$this->setLastname($lastname);
+
 
 				$this->setEmail($email);
 
@@ -50,12 +58,15 @@ class Personne{
 
 	}
 
+
 	//id
 	public function getId(){
+
 		return $this->id;
 	}
 
-	public function setId($id) {
+	public function setId($id)
+	{
 		$this->id= $id;
 	}
 
@@ -92,7 +103,6 @@ class Personne{
 	public function setLastname($lastname){
 		$this->lastname = $lastname;
 	}
-	 
 	public function getAdresse(){
 		return $this->adresse;
 	}
@@ -101,7 +111,8 @@ class Personne{
 		$this->adresse = $adresse;
 	}
 
-	public function getLocalite() {
+	public function getLocalite()
+	{
 		return $this->localite;
 	}
 
@@ -110,7 +121,8 @@ class Personne{
 	}
 
 
-	public function getNpa() {
+	public function getNpa()
+	{
 		return $this->npa;
 	}
 
@@ -118,7 +130,8 @@ class Personne{
 		$this->npa=$npa;
 	}
 
-	public function getPortable() {
+	public function getPortable()
+	{
 		return $this->portable;
 	}
 
@@ -126,7 +139,8 @@ class Personne{
 		$this->portable= $portable;
 	}
 
-	public function getPhone() {
+	public function getPhone()
+	{
 		return $this->phone;
 	}
 
@@ -173,8 +187,8 @@ class Personne{
 	public function setIdxLangue($idxLangue){
 		$this->idxLangue = $idxLangue;
 	}
-	 
 	public static function connect($adressEmail,$pwd){
+
 		$pwd = sha1($pwd);
 		$query = "SELECT * From personne WHERE email='$adressEmail' AND motDePasse='$pwd'";
 		$result = MySqlConn::getInstance()->selectDB($query);
@@ -184,9 +198,12 @@ class Personne{
 		return new Personne($row['idPersonne'], $row['prenom'], $row['nom'],$row['email'], $row['motDePasse']
 				, $row['idxLangue'], $row['estActif'] , $row['numMembre'], $row['role'], $row['portable'],
 				$row['telephone'], $row['adresse'], $row['localite'], $row['NPA'], $row['idxAbonnement']);
+
+
 	}
 
 	public function update($id){
+
 		$query = "UPDATE personne
 		SET email= '$this->email',
 		portable= '$this->portable',
@@ -199,42 +216,13 @@ class Personne{
 		;";
 
 		return  MySqlConn::getInstance()->executeQuery($query);
-	}
-	 
-	public function update2($id){
-		$query = "UPDATE personne
-		SET lastname= '$this->lastname',
-		firstname= '$this->firstname',
-		adresse='$this->adresse',
-		npa='$this->npa',
-		localite='$this->localite',
-		portable='$this->portable',
-		phone='$this->phone',
-		email='$this->email'
 
-		WHERE idPersonne='$id'
-		;";
-		 
-		return  MySqlConn::getInstance()->executeQuery($query);
 	}
 
-	 
-	public static function connectToAll() {
-		$query =  "SELECT * From personne ";
-		$result = MySqlConn::getInstance()->selectDB($query);
-		while($row = $result->fetch()) {
-			
-			$resultArray[$row['idPersonne']] =   new Personne($row['idPersonne'], $row['prenom'], $row['nom'], $row['adresse'], $row['email'], $row['motDePasse']
-					, $row['telephone'], $row['portable'], $row['idxLangue'], $row['estActif'] , $row['numMembre'], $row['Localite'], $row['NPA'], $row['role'],
-					$row['idxAbonnement']);
-				
-		}
-
-		$result->closeCursor();
-		return $resultArray;
-	}
 
 	public static function checkExist($adressEmail,$name,$lastname){
+
+
 		$query = "SELECT * From personne WHERE email='$adressEmail' AND nom='$lastname' AND prenom='$name'";
 		$result = MySqlConn::getInstance()->selectDB($query);
 		$row = $result->fetch();
@@ -243,24 +231,31 @@ class Personne{
 		return new Personne($row['idPersonne'], $row['prenom'], $row['nom'],$row['email'], $row['motDePasse']
 				, $row['idxLangue'], $row['estActif'] , $row['numMembre'], $row['role'], $row['portable'],
 				$row['telephone'], $row['adresse'], $row['Localite'], $row['NPA'], $row['idxAbonnement']);
+
+
 	}
 
 
 	public static function CreateNonCAS($user){
+
+
 		$lastnameUser = $user->getLastname();
 		$firstnameUser = $user->getFirstname();
 		$adresseUser =   $user->getAdresse();
 		$emailUser = $user->getEmail();
 		$phoneUser =  $user->getPhone();
 		$portableUser = $user->getPortable();
-		if($user->getIdxAbonnement()==null) {
+		if($user->getIdxAbonnement()==null)
+		{
+
 			$idxAbonnementUser=0;
-		} else {
+		}else {
 			$idxAbonnementUser = $user->getIdxAbonnement();
 		}
 
 		$npaUser = $user->getNpa();
 		$localityUser = $user->getLocalite();
+
 
 		$query = "INSERT INTO `personne`(`nom`, `prenom`, `adresse`, `email`, `telephone`, `portable`,`idxAbonnement`, `NPA`, `localite`)
 		VALUES ('$lastnameUser','$firstnameUser','$adresseUser','$emailUser','$phoneUser','$portableUser','$idxAbonnementUser','$npaUser','$localityUser');";
@@ -283,9 +278,17 @@ class Personne{
 		if(!$row) return false;
 
 		$user->setId($row['idPersonne']);
-		$user->getId();
+		return getId();
+		;
+
 	}
-	 
+
+
+
+
+
+
+
 }
 
 ?>
