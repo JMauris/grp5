@@ -64,16 +64,11 @@ else {
 							<select name="sort_hike">
 							<?php foreach( $genre as $cle => $element)
 
-<<<<<<< HEAD
+
 					 					{?>
 					 				<option value=<?php echo $cle?>><?php echo ' '.$genre[$cle]->getGenreTour_fr();?></option>
 					 					<?php }?>
-=======
-					 		{?>
-					 		<option value=<?php echo $cle?>><?php echo ' '.$genre[$cle]->getGenreTour_fr();?></option>
-					 		<?php }?>
-					 		
->>>>>>> origin/master
+
 							</select>
 						</td>
 					</tr>
