@@ -27,6 +27,7 @@
 					<tr>
 						<td>Region:</td>
 						<td>
+<<<<<<< HEAD
 							<select name="region">
 								<option value="all">Alle</option>
 								<option value="1">Center</option>
@@ -34,6 +35,15 @@
 								<option value="3">Lower</option>
 								<option value="4">Outside</option>
 								<option value="5">Wallis</option>
+=======
+
+							<select name="selected_region">
+							<?php foreach( $region as $cle => $element)
+
+					 		{?>
+					 		<option value=<?php echo $cle?>><?php echo ' '.$region[$cle]->getRegion_fr();?></option>
+					 		<?php }?>
+>>>>>>> parent of 015871d... Some debugging on Search,
 							</select>
 						</td>
 					</tr>
@@ -41,18 +51,29 @@
 						<td>Difficulty:</td>
 						<td>
 							<select name="difficulty">
+<<<<<<< HEAD
 								<option value="all">Alle</option>
 								<option value="1">*</option>
 								<option value="2">**</option>
 								<option value="3">***</option>
 								<option value="4">****</option>
 								<option value="5">*****</option>
+=======
+							<option value="all"><?php echo $lang['ALL']; ?></option>
+                						 <option value="1">*</option>
+                						 <option value="2">**</option>
+             							 <option value="3">***</option>
+             							 <option value="4">****</option>
+             							 <option value="5">*****</option>
+             							 <option value="6">******</option>
+>>>>>>> parent of 015871d... Some debugging on Search,
 							</select>
 						</td>
 					</tr>
 					<tr>
 						<td>Sort of hike:</td>
 						<td>
+<<<<<<< HEAD
 							<select name="difficulty">
 								<option value="all">Alle</option>
 								<option value="1">Snowshoeing</option>
@@ -64,6 +85,15 @@
 								<option value="7">Winterhiking in the snow</option>
 								<option value="8">Alpine hiking</option>
 								<option value="9">multiple-day hiking</option>
+=======
+							<select name="sort_hike">
+							<?php foreach( $genre as $cle => $element)
+
+					 		{?>
+					 		<option value=<?php echo $cle?>><?php echo ' '.$genre[$cle]->getGenreTour_fr();?></option>
+					 		<?php }?>
+					 		
+>>>>>>> parent of 015871d... Some debugging on Search,
 							</select>
 						</td>
 					</tr>
