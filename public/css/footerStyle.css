@@ -1,34 +1,39 @@
-.footer, .push {
-	background: #6cf;
-	background-color: #333333;
-	clear: both;
-	position: absolute;
-	top: expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
+.footer {
 	width: 100%;
+	bottom: 0px;
+	height: 4em;
+	clear: both;
+	background:#6cf;
+	background-color: #333333;
+	margin: 0 auto;
+
 }
 
 .ulh {
-	background: #6cf;
-	background-color: #333333;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   background:#6cf;
+   background-color: #333333;
 }
 
 .lih {
-    float: center;
+    float:left;
 }
 
+
 .lif {
-	float: right;
     list-style-type: none;
+    float:right;
+
 }
 
 .af {
+display: block;
     color: white ;
-	display: block;
-	padding: 16px;
     text-align: center;
+    padding: 16px;
     text-decoration: none;
+
 }

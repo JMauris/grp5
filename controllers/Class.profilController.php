@@ -19,7 +19,7 @@ class profilController extends Controller{
 
   function save()
 
-  { 
+  { //update
     $user = $_SESSION['personne'];
 
     $adress=$_POST['adress'];
@@ -27,17 +27,19 @@ class profilController extends Controller{
     $locality = $_POST['localite'];
     $phone = $_POST['phone'];
     $mobile = $_POST['mobile'];
-    $abo = $_POST['abonnement'];
+
+
+
 
       $user->setAdresse($adress);
       $user->setNpa($npa);
       $user->setLocalite($locality);
       $user->setPhone($phone);
       $user->setPortable($mobile);
-      $user->setIdxAbonnement($abo);
+
 
       $user->update($user->getId());
-
+    
 
 	     $this->redirect('profil', 'profil');
 
