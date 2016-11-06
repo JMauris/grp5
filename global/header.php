@@ -44,17 +44,13 @@ include_once ROOT_DIR.'languages/common.php';
 
         {
           echo  '<c><a class="ah" href="' .URL_DIR."login/logout". ' ">Logout</a></c> ' ;
-          if($_SESSION["personne"]->getRole()=='admin')
+         //if($_SESSION["personne"]->getRole()=='admin')
             echo  '<c><a class="ah" href="' .URL_DIR."admin/admin". ' ">'.$lang['H_ADMIN'].'</a></c> ' ;
-
         }
         else {
          echo  '<c><a class="ah" href="' . URL_DIR."login/login". ' ">Login</a></c>';
      }
-
         ?>
       </ul>
-
-    </body>
-
+   </body>
 </html>

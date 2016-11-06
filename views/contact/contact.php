@@ -2,16 +2,6 @@
 
 	<html>
 		<head>
-		<style type="text/css">
-			#contactDiv{
-			color: black;
-			font-family: "Times New Roman", Times, serif;
-			font-size:105%;
-			padding-left: 20%;
-			text-align: left;
-			}
-			
-		</style>
 			<meta charset="UTF-8">
 			<title>Contact</title>
 		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
@@ -40,10 +30,9 @@
 				<p id= "contactDiv" style="padding-bottom: 2%; float: center;">    or by Mail:
 				<br> info[@]valrando.ch
 				</p>
-				
+				<div class="push"></div>
 			</div>
-			
-			<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?>
+			<div class= "footer"><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>	
 		</body>
 	</html>
 	

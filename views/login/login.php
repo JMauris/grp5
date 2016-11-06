@@ -7,12 +7,6 @@
 		<meta charset="UTF-8">
 		<title>Login</title>
 		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
-		<style type="text/css">
-			form {
-				width:25%;
-    			margin:0 auto;
-			}
-		</style>
 	</head>
 	<body>
 		<div class="wrapper">
@@ -43,9 +37,8 @@
 					</tr>
 				</table>
 			</form>
-		<div class="push"></div>
-			</div>
-
+		  <div class="push"></div>
+		</div>
 			<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?>
 		</body>
 	</html>

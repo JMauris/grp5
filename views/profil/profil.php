@@ -4,26 +4,12 @@
 	<meta charset="UTF-8">
 	<title>SAC Info</title>
 <link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
-<style>
-		form {
-			width:25%;
-				margin:0 auto;
-		}
-
-		table{
-			text-align: left;
-		}
-
-		h3, div {
-			text-align: center;
-		}
-	</style>
 </head>
 <body>
 	<div  class="wrapper" style="height: 90%">
 		<h1><?php echo $lang['PROFIL_TITLE']; ?></h1>
 		<h3><?php echo $lang['FIELD_OBLIGATORY']; ?></h3>
-		<form style= "padding: 2%;"method="post" action="<?php echo URL_DIR.'profil/save';?>" onsubmit="alert('Saved')">
+		<form id= "ProfilForm" method="post" action="<?php echo URL_DIR.'profil/save';?>" onsubmit="alert('Saved')">
 			<table style="align:center">
 					<tr>
 						<th><label for="name"><?php echo $lang['P_NAME']; ?></label></th>
@@ -84,8 +70,8 @@
 			<br>
 			<br>
 			<a href=""><?php echo $lang['LINK_CHANGE_PW']; ?></a>
+			<div class="push"></div>
 		</div>
+	<div class= "footer"><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
 </body>
 </html>
-
-<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?>

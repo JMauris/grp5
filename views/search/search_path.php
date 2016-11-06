@@ -16,22 +16,16 @@ else {
 		<meta charset="UTF-8">
 		<title>search path</title>
 		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css"><style type="text/css">
-			select{
-				width: 30%;
-			}
-
-			#filter{
-				width: 400px;
-			}
-
+			
 			table {
 				margin: 0 auto;
 			}
+			
 		</style>
 	</head>
 	<body>
 	<div class="wrapper">
-		<div>
+		<div style= "padding-bottom: 2%;">
 			<h1><?php echo $lang['SEARCH']; ?></h1>
 			<br>
 			<form method= "post" action="<?php echo URL_DIR.'search/search_result';?>" >
@@ -75,27 +69,25 @@ else {
 					 					{?>
 					 				<option value=<?php echo $cle?>><?php echo ' '.$genre[$cle]->getGenreTour_fr();?></option>
 					 					<?php }?>
-					 		
-									</select>
+							</select>
 						</td>
 					</tr>
 					<tr>
 						<td>Hikings:</td>
 						<td>
-							<input id="filter" placeholder="<?php echo $lang['PLACEHOLDER']; ?>" data-type="search">
+							<input style="width: 400px;" placeholder="<?php echo $lang['PLACEHOLDER']; ?>" data-type="search">
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<input type="submit" value="submit me!" />
+							<button id="submit1" style = "width: 100%;" type="submit" value="submit me!">Submit me!</button>
 						</td>
 					</tr>
-
 				</table>
-
 			</form>
 		</div>
+		<div class="push"></div>
 		</div>
+		<div class= "footer"><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
 	</body>
 </html>
-<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>

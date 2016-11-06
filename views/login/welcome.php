@@ -17,6 +17,7 @@
 				</td>
 			</tr>
 		</table>
+		<div class="push"></div>
 	</div>
 	<br/><br/><br/><br/>
 <?php
