@@ -35,12 +35,11 @@ else {
 						<td>
 
 							<select name="selected_region">
-								<option value="all"><?php echo $lang['ALL']; ?></option>
-								<?php foreach( $region as $cle => $element)
+							<?php foreach( $region as $cle => $element)
 
-					 			{?>
-					 			<option value=<?php echo' '.$region[$cle]->getId();?>> <?php echo ' '.$region[$cle]->getRegion_fr();?></option>
-					 			<?php }?>
+					 		{?>
+					 		<option value=<?php echo $cle?>><?php echo ' '.$region[$cle]->getRegion_fr();?></option>
+					 		<?php }?>
 							</select>
 						</td>
 					</tr>
@@ -49,7 +48,7 @@ else {
 						<td>
 
 							<select name="difficulty">
-										 <option value="all"><?php echo $lang['ALL']; ?></option>
+							<option value="all"><?php echo $lang['ALL']; ?></option>
                 						 <option value="1">*</option>
                 						 <option value="2">**</option>
              							 <option value="3">***</option>
@@ -63,12 +62,18 @@ else {
 						<td><?php echo $lang['SORT_HIKE']; ?></td>
 						<td>
 							<select name="sort_hike">
-									<option value="all"><?php echo $lang['ALL']; ?></option>
-										<?php foreach( $genre as $cle => $element)
+							<?php foreach( $genre as $cle => $element)
 
+<<<<<<< HEAD
 					 					{?>
 					 				<option value=<?php echo $cle?>><?php echo ' '.$genre[$cle]->getGenreTour_fr();?></option>
 					 					<?php }?>
+=======
+					 		{?>
+					 		<option value=<?php echo $cle?>><?php echo ' '.$genre[$cle]->getGenreTour_fr();?></option>
+					 		<?php }?>
+					 		
+>>>>>>> origin/master
 							</select>
 						</td>
 					</tr>
