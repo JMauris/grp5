@@ -122,10 +122,13 @@ include_once ROOT_DIR.'languages/common.php';
 
 
 			}
+
+
 				 ?> 	</form></th>
+
 			<br>
-			<div class="push"></div>
 		</div>
-		<div class= "footer"><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
 	</body>
 </html>
+
+<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>

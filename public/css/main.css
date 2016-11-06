@@ -3,7 +3,7 @@
 h1{
 	color:black;
 	text-align:center;
-	padding-top:1%;
+	padding-top:2%;
 	font-family: "Times New Roman", Times, serif;
 	font-style: normal;
 	font-size: 3.00em;
@@ -15,28 +15,85 @@ h1{
 	height:100%;
 	width: 85%;
 	margin: 0 auto 11em;
-	background-color: rgba(235,235,235,0.7);
+	background-color: rgba(235,235,235,0.85);
 	font-family: "Times New Roman", Times, serif;
 	font-style: normal;
 	font-size: 1.10em;
 }
 
-
 body {
 	height: 100%;
-	background: url('http://localhost/cas_montana/background.jpg') no-repeat fixed center !important;
+	background: url('http://localhost/grp5/public/img/Valais.jpg') no-repeat fixed center !important;
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	padding-bottom:16px;
 	background-attachment: fixed;	
 }
 
+
+#submit1{
+	float: center;
+	width: 30%;
+	-moz-box-shadow: 0px 0px 0px 2px #9fb4f2;
+	-webkit-box-shadow: 0px 0px 0px 2px #9fb4f2;
+	box-shadow: 0px 0px 0px 2px #9fb4f2;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #7892c2), color-stop(1, #476e9e));
+	background:-moz-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-webkit-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-o-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-ms-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7892c2', endColorstr='#476e9e',GradientType=0);
+	background-color:#7892c2;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #4e6096;
+	display:inline;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 100%;
+	padding:12px 37px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+	text-align: center;
+}
+			
+#submit1:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #476e9e), color-stop(1, #7892c2));
+	background:-moz-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+	background:-webkit-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+	background:-o-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+	background:-ms-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#476e9e', endColorstr='#7892c2',GradientType=0);
+	background-color:#476e9e;
+}
+
+#submit1:active {
+	position:relative;
+	top:1px;
+}
+
 p {
+	text-align: center;
 	margin: 200em, 20em;
 	color: black;
 	font-family: "Times New Roman", Times, serif;
 	font-size:105%;
-	padding-left: 3%;
-	padding-right: 3%;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-bottom: 2%;
+}
+
+.pLastMain {
+	text-align: center;
+	margin: 200em, 20em;
+	color: black;
+	font-family: "Times New Roman", Times, serif;
+	font-size:105%;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-bottom: 2%;
 }

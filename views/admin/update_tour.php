@@ -12,6 +12,10 @@ $SelectedTour = $_SESSION['selectedID'];
 				text-align: center;
 			}
 			
+			table {
+				margin: 0 auto;
+				text-align: left;
+			}
 		</style>
 	</head>
 	<body>
@@ -73,9 +77,9 @@ $SelectedTour = $_SESSION['selectedID'];
 					<input type="button" value="<?php echo $lang['BTN_BACK']; ?>" ></input>
 				</a>
 			</form>
-			<div class="push"></div>
 		</div>
-		<div class= "footer"><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
 	</body>
 </html>
+
+<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>
 			

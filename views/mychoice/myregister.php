@@ -8,14 +8,50 @@ if(isset($_SESSION['MyRegister']))
 	<head>
 		<title>Proposal</title>
 		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
+		<style type="text/css">
+			.top{
+				text-align: center;
+			}
+			.middle{
+				width: 96%;
+				height: 30%;
+				padding-left: 2%;
+				paddin g-right: 2%;
+			}
+			.show{
+				width: 100%;
+				height: 100%;
+			}
+			.bottom{
+				height: 100%;
+				width: 100%;
+			}
+			.buttons{
+				width: 100%;
+			}
+			#search {
+				display:inline-block;
+				align: left;
+				width: 20%;
+			}
+			a{
+				text-decoration: none;
+			}
+			#buttonsTd
+			{
+				width: 100%;
+				text-align: right;
+				padding: 2%;
+			}
+		</style>
 	</head>
 	<body>
 		<div class= "wrapper">
-			<div id= "MyRegisterTopDiv">
+			<div class= "top">
 				</div>
-			<div class="MyRegisterMiddleDiv">
+			<div class="middle">
 
-				<table id="MyRegisterShow">
+				<table class="show">
 					<tr>
 							<?php if(isset($_SESSION['MyRegister'])) { ?>
 						<td style= "overflow-y: scroll; height: 100%;">
@@ -45,19 +81,23 @@ if(isset($_SESSION['MyRegister']))
 										 <p><?php echo ' '.$tourArray[$cle]->getInformation_fr(); ?></p>
 
 									 </button>
+
+
 									<?php } ?>
+
 								</form>
+
 							</div>
 						</td>
 						<?php } ?>
 						<a href="<?php echo URL_DIR.'mychoice/mychoice'?>">
-						<button  id="submit1" style= "width: 15%;" type="button"><?php echo $lang['BTN_BACK']; ?></button>
+						<input type="button" value="<?php echo $lang['BTN_BACK']; ?>" ></input>
 						</a>
 					</tr>
 				</table>
 			</div>
-			<div class="push"></div>
 		</div>
-	<div class= "footer"><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
- </body>
+
+	<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>
+	</body>
 </html>
