@@ -28,7 +28,7 @@ class Personne{
 
   //It uses null as the default value for the function argument $id
   public function __construct($id=null, $firstname, $lastname,
-                              $email, $password=null, $idxLangue, $estActif, $numMember, $role,
+                              $email, $password, $idxLangue, $estActif, $numMember, $role,
                                $portable, $phone, $adresse, $localite, $npa, $idxAbonnement){
 
       $this->setId($id);
@@ -220,68 +220,6 @@ public function update($id){
 }
 
 
-public static function checkExist($adressEmail,$name,$lastname){
-
-
-  $query = "SELECT * From personne WHERE email='$adressEmail' AND nom='$lastname' AND prenom='$name'";
-  $result = MySqlConn::getInstance()->selectDB($query);
-  $row = $result->fetch();
-  if(!$row) return false;
-
-  return new Personne($row['idPersonne'], $row['prenom'], $row['nom'],$row['email'], $row['motDePasse']
-                      , $row['idxLangue'], $row['estActif'] , $row['numMembre'], $row['role'], $row['portable'],
-                       $row['telephone'], $row['adresse'], $row['Localite'], $row['NPA'], $row['idxAbonnement']);
-
-
-}
-
-
-public static function CreateNonCAS($user){
-
-
-  $lastnameUser = $user->getLastname();
-  $firstnameUser = $user->getFirstname();
-  $adresseUser =   $user->getAdresse();
-  $emailUser = $user->getEmail();
-  $phoneUser =  $user->getPhone();
-  $portableUser = $user->getPortable();
-  if($user->getIdxAbonnement()==null)
-  {
-
-    $idxAbonnementUser=0;
-  }else {
-      $idxAbonnementUser = $user->getIdxAbonnement();
-  }
-
-  $npaUser = $user->getNpa();
-  $localityUser = $user->getLocalite();
-
-
-  $query = "INSERT INTO `personne`(`nom`, `prenom`, `adresse`, `email`, `telephone`, `portable`,`idxAbonnement`, `NPA`, `localite`)
-          VALUES ('$lastnameUser','$firstnameUser','$adresseUser','$emailUser','$phoneUser','$portableUser','$idxAbonnementUser','$npaUser','$localityUser');";
-
-   MySqlConn::getInstance()->executeQuery($query);
-//setup l'id de ce USER
-
-  $idquery = "SELECT idPersonne From personne
-                WHERE nom     ='$lastnameUser'
-                AND prenom    ='$firstnameUser'
-                AND adresse   ='$adresseUser'
-                AND email     ='$emailUser'
-                AND NPA       ='$npaUser'
-                AND Localite  ='$localityUser'
-                  ";
-
-
-      $result = MySqlConn::getInstance()->selectDB($idquery);
-      $row = $result->fetch();
-      if(!$row) return false;
-
-      $user->setId($row['idPersonne']);
-      return getId();
-;
-
-}
 
 
 

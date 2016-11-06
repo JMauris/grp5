@@ -537,74 +537,14 @@ private static function queryTwo($idTour1, $idTour2)
 public static function get_results($region, $difficulte, $genre)
 
 {
-	
-	if($region == "all" and  $difficulte=="all" and  $genre =="all"){
-		
-		$query = "SELECT * FROM tour
-		INNER JOIN tourgenretour ON tour.idTour = tourgenretour.idxTour
-		INNER JOIN genretour ON genretour.idGenreTour = tourgenretour.idxGenreTour
-		INNER JOIN tourregion ON tourregion.idxTour = tour.idTour
-		INNER JOIN region ON region.idRegion = tourregion.idxRegion";
-		
-	}
-	elseif ($difficulte =="all" and  $genre =="all"){
-		$query = "SELECT * FROM tour
-				INNER JOIN tourgenretour ON tour.idTour = tourgenretour.idxTour
-				INNER JOIN genretour ON genretour.idGenreTour = tourgenretour.idxGenreTour
-				INNER JOIN tourregion ON tourregion.idxTour = tour.idTour
-				INNER JOIN region ON region.idRegion = tourregion.idxRegion
-				WHERE idRegion = $region";
-	}
-	elseif ($region == "all" and $genre == "all"){
-		$query = "SELECT * FROM tour
-		INNER JOIN tourgenretour ON tour.idTour = tourgenretour.idxTour
-		INNER JOIN genretour ON genretour.idGenreTour = tourgenretour.idxGenreTour
-		INNER JOIN tourregion ON tourregion.idxTour = tour.idTour
-		INNER JOIN region ON region.idRegion = tourregion.idxRegion
-		WHERE difficulte = $difficulte";
-	}
-	elseif ($region == "all" and $difficulte == "all"){
-		$query = "SELECT * FROM tour
-		INNER JOIN tourgenretour ON tour.idTour = tourgenretour.idxTour
-		INNER JOIN genretour ON genretour.idGenreTour = tourgenretour.idxGenreTour
-		INNER JOIN tourregion ON tourregion.idxTour = tour.idTour
-		INNER JOIN region ON region.idRegion = tourregion.idxRegion
-		WHERE idGenreTour = $genre";
-	}
-	elseif ($difficulte == "all"){
-		$query = "SELECT * FROM tour
-				INNER JOIN tourgenretour ON tour.idTour = tourgenretour.idxTour
-				INNER JOIN genretour ON genretour.idGenreTour = tourgenretour.idxGenreTour
-				INNER JOIN tourregion ON tourregion.idxTour = tour.idTour
-				INNER JOIN region ON region.idRegion = tourregion.idxRegion
-				WHERE idRegion = $region AND idGenreTour = $genre";
-	}
-	elseif ($genre =="all"){
-		$query = "SELECT * FROM tour
-				INNER JOIN tourgenretour ON tour.idTour = tourgenretour.idxTour
-				INNER JOIN genretour ON genretour.idGenreTour = tourgenretour.idxGenreTour
-				INNER JOIN tourregion ON tourregion.idxTour = tour.idTour
-				INNER JOIN region ON region.idRegion = tourregion.idxRegion
-				WHERE idRegion = $region AND difficulte = $difficulte";
-	}
-	elseif ($region=="all"){
-		$query = "SELECT * FROM tour
-		INNER JOIN tourgenretour ON tour.idTour = tourgenretour.idxTour
-		INNER JOIN genretour ON genretour.idGenreTour = tourgenretour.idxGenreTour
-		INNER JOIN tourregion ON tourregion.idxTour = tour.idTour
-		INNER JOIN region ON region.idRegion = tourregion.idxRegion
-		WHERE difficulte = $difficulte AND idGenreTour = $genre";
-	}
-	else{
-		$query = "SELECT * FROM tour
-					INNER JOIN tourgenretour ON tour.idTour = tourgenretour.idxTour
-					INNER JOIN genretour ON genretour.idGenreTour = tourgenretour.idxGenreTour
-					INNER JOIN tourregion ON tourregion.idxTour = tour.idTour
-					INNER JOIN region ON region.idRegion = tourregion.idxRegion
-					WHERE idRegion = $region AND difficulte = $difficulte AND idGenreTour = $genre";
-	}
-	
-	
+
+	$query = "SELECT * FROM tour 
+			INNER JOIN tourgenretour ON tour.idTour = tourgenretour.idxTour
+			INNER JOIN genretour ON genretour.idGenreTour = tourgenretour.idxGenreTour
+			INNER JOIN tourregion ON tourregion.idxTour = tour.idTour
+			INNER JOIN region ON region.idRegion = tourregion.idxRegion
+			WHERE idRegion = $region AND difficulte = $difficulte AND idGenreTour = $genre";
+
 	$result = MySqlConn::getInstance()->selectDB($query);
 
 

@@ -1,10 +1,9 @@
-<?php include_once ROOT_DIR.'global/header.php'; include_once ROOT_DIR.'languages/common.php';?>
-<html>
-	<title>search path</title>
-	<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">		
-</html>
-<body>
-	<div class="wrapper">
+<?php include_once ROOT_DIR.'global/header.php';
+
+
+?>
+
+<br><br>
 	<table>
 		<tr>
 			<td>
@@ -13,8 +12,9 @@
 			</td>
 		</tr>
 	</table>
-	</div>
-</body>
+<br/><br/><br/><br/>
 
 
-<?php include_once ROOT_DIR.'global/footer.php'; ?>
+<?php
+include_once ROOT_DIR.'global/footer.php';
+?>

@@ -1,9 +1,11 @@
 .footer {
-	position:absolute;
-   top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
+	width: 100%;
+	bottom: 0px;
+	height: 4em;
+	clear: both;
 	background:#6cf;
 	background-color: #333333;
-	width: 100%;
+	margin: 0 auto;
 
 }
 
