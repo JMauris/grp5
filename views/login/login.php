@@ -1,5 +1,5 @@
-<?php include_once ROOT_DIR.'global/header.php';
-	//Collect data from controller
+<?php include_once ROOT_DIR.'global/header.php'; include_once ROOT_DIR.'languages/common.php';
+		//Collect data from controller
 	$msg = $this->vars['msg'];
 ?>
 <html>
@@ -16,22 +16,24 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			
-			<h1>Mon Cas</h1>
+
+			<h1><?php echo $lang['MON_CAS']; ?></h1>
 			<form action="<?php echo URL_DIR.'login/connection';?>" method="post">
 				<?php echo $msg;?>
 				<table>
 					<tr>
-						<td>Email: </td>
+					<td><?php echo $lang['LOGIN_EMAIL']; ?></td>
 						<td><input type="text" name="email" size="25"/><br></td>
 					</tr>
 					<tr>
-						<td>Mot de passe: </td>
+						<td><?php echo $lang['LOGIN_PW']; ?></td>
 						<td><input type="password" name="password" size="25"/><br><br></td>
 					</tr>
+					<table>
 					<tr>
-						<td><input type="submit" name="Submit" value="  OK  "/></td>
+						<button id= "submit1" type="submit" name="submit">Submit</button>
 					</tr>
+					</table>
 					<tr>
 						<td>
 							<br/>
@@ -43,7 +45,7 @@
 			</form>
 		<div class="push"></div>
 			</div>
-			
+
 			<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?>
 		</body>
 	</html>

@@ -9,13 +9,35 @@ $memberArray=$_SESSION['get_all_Membershit'];
 		<title>Admin page</title>
 		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
 		<style type="text/css">			
-				
+			#ip1, #ip2, #ip3 {
+				font-style: normal;
+				font-family: "Times New Roman", Times, serif;
+				font-size: 1.5em;	
+			}
+						
+			h2 {
+				color:black;
+				text-align:center;
+				font-family: "Times New Roman", Times, serif;
+				font-style: normal;
+			}
+			
 			#insert_table, #table_members_header, #table_members {
 				margin: 0 auto;
 				text-align: left;
 				border-spacing: 10px;
 			}
-
+			
+			#button_save, #button_update, #button_delete {
+				font-style: normal;
+				font-family: "Times New Roman", Times, serif;
+				font-size: 1em;	
+			}			
+			
+			#main_div {
+				padding-bottom: 2%; padding-right: 2%; padding-left: 2%;
+			}
+					
 			#content_insert, #content_update, #content_delete {
 				display: none; text-align: center;
 			}
@@ -35,7 +57,15 @@ $memberArray=$_SESSION['get_all_Membershit'];
 				overflow-y : scroll;
 				margin-bottom: 2%;
 			}
-
+			
+			#div_list_header {
+				float: bottom;
+			}
+			
+			#button_div {
+				text-align: center;
+			}
+			
 		</style>
 		<script>	
 			function toggle_i() {
@@ -56,13 +86,13 @@ $memberArray=$_SESSION['get_all_Membershit'];
 		</script>
 	</head>
 	<body>
-		<div class="wrapper">
+		<div class="wrapper" id="main_div">
 			<h1>Managing Members</h1>
 			
-			<div style = "text-align: center;">
-				<button id="submit1" style = "width: 10%;" type="button" value="insert" onclick="toggle_i();">Insert</button>
-				<button id="submit1" style = "width: 10%;" type="button" value="update" onclick="toggle_u();">Update</button>
-				<button id="submit1" style = "width: 10%;" type="button" value="delete" onclick="toggle_d();">Delete</button>
+			<div id="button_div">
+				<input id="ip1" type="button" value="insert" onclick="toggle_i();"></input>
+				<input id="ip2" type="button" value="update" onclick="toggle_u();"></input>
+				<input id="ip3" type="button" value="delete" onclick="toggle_d();"></input>
 			</div>
 			
 			<div id="content_insert">
@@ -103,10 +133,10 @@ $memberArray=$_SESSION['get_all_Membershit'];
 						</tr>
 					</table>
 					<br>
-				  <button id="submit1" style = "width: 15%;" type="submit" name="action">Save</button>
+				  <button id="button_save" type="submit" name="action">save</button>
 				</form>
 				<a href="<?php echo URL_DIR.'admin/admin'?>">
-					<button id="submit1" style = "width: 15%;" type="button"><?php echo $lang['BTN_BACK']; ?></button>
+					<input type="button" value="<?php echo $lang['BTN_BACK']; ?>" ></input>
 				</a>
 			</div>
 						
@@ -197,7 +227,7 @@ $memberArray=$_SESSION['get_all_Membershit'];
 								</td>
 								<td style="width: 2%;"> 
 									<form action="<?php echo URL_DIR.'admin/update_member';?>" method= "post">
-										<button name ="selectedIDMember" value = "<?php echo $cle;?>" type = "submit">Edit</button>
+										<button  name ="selectedIDMember" value = <?php echo $cle;?> type = "submit">Edit</button>
 									</form>
 								</td>
 							</tr>	
@@ -206,9 +236,10 @@ $memberArray=$_SESSION['get_all_Membershit'];
 					</table>	
 				</div>
 				<a href="<?php echo URL_DIR.'admin/admin'?>">
-					<button id="submit1" style = "width: 15%;" type="button"><?php echo $lang['BTN_BACK']; ?></button>
+					<input type="button" value="<?php echo $lang['BTN_BACK']; ?>" ></input>
 				</a>
 			</div>
+			
 			<div id="content_delete">
 				<h2>Delete Member</h2>
 				Please tip in the ID of the Member you want to delete:
@@ -217,15 +248,15 @@ $memberArray=$_SESSION['get_all_Membershit'];
 					<input type="number" value="member">
 				</form>	
 				<br><br>		
-				<button id="submit1" style = "width: 15%;" type="submit" value="delete">Delete</button>			
+				<input type="submit" value="delete"></input>
+				
 				<a href="<?php echo URL_DIR.'admin/admin'?>">
-				<button id="submit1" style = "width: 15%;" type="button"><?php echo $lang['BTN_BACK']; ?></button>
-			   </a>
+				<input type="button" value="<?php echo $lang['BTN_BACK']; ?>" ></input>
+			</a>
 			</div>
 			<br><br><br>
-			<div class="push"></div>
 		</div>
-		<div class= "footer"><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
 	</body>
 </html>
+<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>
 

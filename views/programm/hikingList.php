@@ -19,6 +19,10 @@ $tour = $_SESSION['tour'];?>
 				text-align: left;
 			}
 
+			h2 {
+				text-align: center;
+			}
+
 			p {
 			    margin: 0;
 			    padding: 0;
@@ -66,8 +70,8 @@ $tour = $_SESSION['tour'];?>
 			</div>
 			<button id="searchButton"><img id="search" src="http://localhost/cas_montana/public/img/search.png" onclick="window.location = 'search_path.php';">Search route</button>
 			<button id="near">Near us</button>
-			<div class="push"></div>
 		</div>
-		<div class= "footer"><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
 	</body>
 </html>
+
+<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>

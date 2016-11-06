@@ -1,51 +1,24 @@
-<?php include_once ROOT_DIR.'global/header.php';?>
-
+<?php include_once ROOT_DIR.'global/header.php'; include_once ROOT_DIR.'languages/common.php';?>
 	<html>
 		<head>
 			<meta charset="UTF-8">
 			<title>Home</title>
-		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
+			<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
 		</head>
 		<body>
-			<div class="wrapper">
-				<h1>Welcome to CAS Montana!</h1>
+			<div class="wrapper" style="height: 600px;">
+				<h1><?php echo $lang['HOME_TITLE']; ?></h1>
 				<br>
 				<p>
-					Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-					sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-					aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-					duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-					sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-					consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-					labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
-					et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-					no sea takimata sanctus est Lorem ipsum dolor sit amet.
+					<?php echo $lang['HOME_TEXT_1'];?>
 				</p>
 				<p>
-					Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-					sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-					aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-					duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-					sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-					consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-					labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
-					et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-					no sea takimata sanctus est Lorem ipsum dolor sit amet.
+					<?php echo $lang['HOME_TEXT_2']; ?>
 				</p>
 				<p>
-					Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-					sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-					aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-					duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-					sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-					consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-					labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
-					et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-					no sea takimata sanctus est Lorem ipsum dolor sit amet.
+					<?php echo $lang['HOME_TEXT_3']; ?>
 				</p>
-			<div class="push"></div>
 			</div>
-			
-			<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?>
 		</body>
 	</html>
+<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?>

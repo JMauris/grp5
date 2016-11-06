@@ -6,7 +6,12 @@
 		<title>Admin page</title>
 		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
 		<style>
-			
+			h2 {
+				color:black;
+				text-align:center;
+				font-family: "Times New Roman", Times, serif;
+				font-style: normal;
+			}
 			
 			div {
 				text-align: center;
@@ -25,16 +30,10 @@
 			<h1>Welcome to the Admin page!</h1>
 			<h2>What do you want to manage?</h2>
 			
-			<a href="<?php echo URL_DIR.'admin/admin_details_tours'?>" >
-			<button id="submit1" type="button">Tours</button>
-			</a>
+			<a href="<?php echo URL_DIR.'admin/admin_details_tours'?>" ><input type="button" value="Tours"></input></a>
 			<br>
-			<a href="<?php echo URL_DIR.'admin/admin_details_members'?>">
-			<button id="submit1" type="button">Members</button>
-			</a>
+			<a href="<?php echo URL_DIR.'admin/admin_details_members'?>"><input type="button" value="Members"></input></a>
 			<br><br><br><br>
-			<div class="push"></div>
 		</div>
-		<div class= "footer"><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
 	</body>
 </html>
