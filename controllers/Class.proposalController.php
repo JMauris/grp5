@@ -11,57 +11,68 @@ class ProposalController extends Controller{
   	}
 
 
- function  proposal_detail()
-  	{
+ function  proposal_detail(){
+
+ if(strpos($_SERVER["HTTP_REFERER"],'programm')){
+   if(isset ($_POST['selectedTour'] ))
+   {
 
 
-
-        if(isset ($_POST['selectedTour'] ))
-        {
-
-
-        if(isset ($_SESSION['tour'])){
-            $Tour=$_SESSION['tour'];
-        }
+   if(isset ($_SESSION['tour'])){
+       $Tour=$_SESSION['tour'];
+   }
 
 
-          $id =$_POST['selectedTour'];
-          $_SESSION['Selected_Tour'] = $Tour[$id];
-      }elseif (isset($_SESSION['idTourbyFavoris']))
-        {
+     $id =$_POST['selectedTour'];
+     $_SESSION['Selected_Tour'] = $Tour[$id];
+ }elseif (isset($_SESSION['idTourbyFavoris']))
+   {
 
-          $Tour=Tour::connectbyId($_SESSION['idTourbyFavoris']);
-          $idTour= $_SESSION['idTourbyFavoris'];
-            $_SESSION['Selected_Tour'] = $Tour;
-        }
+     $Tour=Tour::connectbyId($_SESSION['idTourbyFavoris']);
+     $idTour= $_SESSION['idTourbyFavoris'];
+       $_SESSION['Selected_Tour'] = $Tour;
+   }
+ }
+ if(strpos($_SERVER["HTTP_REFERER"],'mychoice')){
 
-
-        //$Tour = $_SESSION[tour] OR $_SESSION ['']
-        $Tour=$_SESSION['tour'];
-
-
-
-
-        //check the inscription to THIS programm
-
-        $idTour =$_SESSION['Selected_Tour']->getId();
-
-
-        if(isset ($_SESSION['personne']))
-        {
-
-
-            $_SESSION['FavorisData']= Favoris::connectbyPersAndTour($_SESSION['personne']->getId(),$idTour);
-
-
-
-        }
+ $id= $_SESSION['MyselectedTour'];
+ //$Tour = $_SESSION[tour] OR $_SESSION ['']
+ $Tour=$_SESSION['tour'];
+     $_SESSION['Selected_Tour'] = $Tour[$_SESSION['MyselectedTour']];
+ }
 
 
 
 
 
-      }
+
+   //check the inscription to THIS programm
+
+   $idTour =$_SESSION['Selected_Tour']->getId();
+
+
+   if(isset ($_SESSION['personne']))
+   {
+
+
+
+       $_SESSION['FavorisData']= Favoris::connectbyPersAndTour($_SESSION['personne']->getId(),$idTour);
+
+
+
+   }
+   else {
+     $_POST['isInscri']=0;
+   }
+
+
+
+
+
+ }
+
+
+
 
         function saveFavoris()
         {

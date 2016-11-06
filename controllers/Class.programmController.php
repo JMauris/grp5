@@ -32,6 +32,7 @@ class ProgrammController extends Controller{
 function hiking_detail(){
 
 
+if(strpos($_SERVER["HTTP_REFERER"],'programm')){
   if(isset ($_POST['selectedTour'] ))
   {
 
@@ -50,10 +51,16 @@ function hiking_detail(){
     $idTour= $_SESSION['idTourbyFavoris'];
       $_SESSION['Selected_Tour'] = $Tour;
   }
+}
+if(strpos($_SERVER["HTTP_REFERER"],'mychoice')){
+
+$id= $_SESSION['MyselectedTour'];
+//$Tour = $_SESSION[tour] OR $_SESSION ['']
+$Tour=$_SESSION['tour'];
+    $_SESSION['Selected_Tour'] = $Tour[$_SESSION['MyselectedTour']];
+}
 
 
-  //$Tour = $_SESSION[tour] OR $_SESSION ['']
-  $Tour=$_SESSION['tour'];
 
 
 

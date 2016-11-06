@@ -99,15 +99,16 @@ function mychoice(){
         $Tour =   $_SESSION['MyRegister'];
       }
       elseif (strpos($test,'myfavoris')) {
-        $Tour =  $_SESSION['Mynotice'];
+        $Tour =  $_SESSION['MyFavoris'];
       }    elseif (strpos($test,'mynotice')) {
-          $Tour =  $_SESSION['MyFavoris'];
+          $Tour =  $_SESSION['Mynotice'];
       }
 $_SESSION['tour']= $Tour;
-$_POST['selectedTour']=$idtour;
-
+$_SESSION['MyselectedTour']=$idtour;
+//var_dump($_SESSION['MyselectedTour']);
   $test2=$Tour[$idtour];
-  if($test2->getIdxTypeTour()==1||$test2->getIdxTypeTour()==2){ $this->redirect('programm', 'hiking_detail');}
+  if($test2->getIdxTypeTour()==1||$test2->getIdxTypeTour()==2){ $this->redirect('programm', 'hiking_detail');
+  }
   elseif ($test2->getIdxTypeTour()==6) {
     $this->redirect('proposal', 'proposal_detail');
   }
