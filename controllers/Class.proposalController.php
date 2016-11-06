@@ -14,11 +14,7 @@ class ProposalController extends Controller{
  function  proposal_detail()
   	{
 
-      if(isset($_SESSION['MyselectedTour']))
-      {
-        $_SESSION['Selected_Tour']=$_SESSION['MyselectedTour'];
-        $id=$_SESSION['MyselectedTour']->getId();
-      }else{
+
 
         if(isset ($_POST['selectedTour'] ))
         {
@@ -40,7 +36,8 @@ class ProposalController extends Controller{
         }
 
 
-      }
+        //$Tour = $_SESSION[tour] OR $_SESSION ['']
+        $Tour=$_SESSION['tour'];
 
 
 
@@ -48,7 +45,8 @@ class ProposalController extends Controller{
         //check the inscription to THIS programm
 
         $idTour =$_SESSION['Selected_Tour']->getId();
-        $_SESSION['nbrInscription'] = Inscription::nbrInscription($idTour);
+
+
         if(isset ($_SESSION['personne']))
         {
 

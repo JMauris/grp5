@@ -88,13 +88,6 @@
 											 ?>
 										 <p><?php echo ' '.$tourArray[$cle]->getInformation_fr(); ?></p>
 
-                     <?php foreach ($noticeArray as $key => $value){
-                       if($noticeArray[$key]->getIdTour() == $tourArray[$cle]->getId())
-                       {
-                         echo "note :" . $noticeArray[$key]->getEvaluation() . "/5";
-                       }
-                     } ?>
-
 									 </button>
 
 

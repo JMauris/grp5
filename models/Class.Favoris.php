@@ -47,30 +47,25 @@ class Favoris {
 	}
 
 	public static function connectForFavoris($idPersonne) {
-		$query = " SELECT * FROM `favoris` WHERE `idPersonne` = '$idPersonne' AND `estFavoris` = '1' ";
+		$query = "SELECT * FROM `favoris` WHERE `idPersonne` = $idPersonne AND `estFavoris` = '$idPersonne'  ";
 		$result = MySqlConn::getInstance()->selectDB($query);
 
-		 $nbr=$result->rowCount();
-		 if($nbr==0)
-		 {
-			 return false;
-		 }
-		 else{
+		$isinstance = false;
 
 		while($row = $result->fetch())
 		{
-
+			if(!$row) return false;
 			$resultArray[] = new Favoris($row['idPersonne'],$row['idTour'], $row['estFavoris'], $row['evaluation']);
 
-
+			$isinstance = true;
 		}
 
 		$result->closeCursor();
 
-
+if($isinstance==true)
 		return $resultArray;
-
-	}
+		if($isinstance==false)
+				return false;
 
 
 
@@ -79,25 +74,22 @@ class Favoris {
 	public static function connectForEvalutation($idPersonne) {
 		$query = "SELECT * FROM `favoris` WHERE `idPersonne` = $idPersonne AND `evaluation` != 0  ";
 		$result = MySqlConn::getInstance()->selectDB($query);
-		$nbr=$result->rowCount();
-		if($nbr==0)
-		{
-			return false;
-		}
-		else{
+	  		$isinstance = false;
+
 		while($row = $result->fetch())
 		{
 			if(!$row) return false;
 			$resultArray[] = new Favoris($row['idPersonne'],$row['idTour'], $row['estFavoris'], $row['evaluation']);
 
-
+				$isinstance = true;
 		}
 
 		$result->closeCursor();
 
-
+		if($isinstance==true)
 				return $resultArray;
-			}
+				if($isinstance==false)
+						return false;
 
 
 

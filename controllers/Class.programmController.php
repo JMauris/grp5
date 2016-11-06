@@ -30,11 +30,7 @@ class ProgrammController extends Controller{
   }
 
 function hiking_detail(){
-if(isset($_SESSION['MyselectedTour']))
-{
-  $_SESSION['Selected_Tour']=$_SESSION['MyselectedTour'];
-  $id=$_SESSION['MyselectedTour']->getId();
-}else{
+
 
   if(isset ($_POST['selectedTour'] ))
   {
@@ -56,7 +52,8 @@ if(isset($_SESSION['MyselectedTour']))
   }
 
 
-}
+  //$Tour = $_SESSION[tour] OR $_SESSION ['']
+  $Tour=$_SESSION['tour'];
 
 
 
@@ -135,8 +132,9 @@ if(isset($_SESSION['MyselectedTour']))
       var_dump($_POST['removeregister']);
 
 
+      Inscription::removeRegisterByID($_POST['removeregister'],$_SESSION['personne']->getId());
 
-     //$this->redirect('programm', 'hiking_detail');
+     $this->redirect('programm', 'hiking_detail');
   }
 
   function programm_register()
