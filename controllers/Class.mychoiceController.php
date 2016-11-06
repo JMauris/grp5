@@ -22,7 +22,7 @@ function mychoice(){
 
         $iduser=$_SESSION['personne']->getId();
 
-        $favoris = Favoris::connectForEvalutation($iduser);
+        $favoris = Favoris::connectForFavoris($iduser);
 
 
         //ne pas créer la session si elle est vide
@@ -48,7 +48,7 @@ function mychoice(){
         }
         $iduser=$_SESSION['personne']->getId();
 
-        $notice =Favoris::connectForFavoris($iduser);
+        $notice =Favoris::connectForEvalutation($iduser);
 
         $_SESSION['notice']= $notice;
         //faire un array des  Tour enregistrer

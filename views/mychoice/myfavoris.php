@@ -2,6 +2,7 @@
 
 if(isset($_SESSION['MyFavoris'])){
 	 $tourArray = $_SESSION['MyFavoris'];
+
 }
 
  include_once ROOT_DIR.'languages/common.php';?>

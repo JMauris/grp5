@@ -47,7 +47,7 @@ class Favoris {
 	}
 
 	public static function connectForFavoris($idPersonne) {
-		$query = "SELECT * FROM `favoris` WHERE `idPersonne` = $idPersonne AND `estFavoris` = '$idPersonne'  ";
+		$query = "SELECT * FROM `favoris` WHERE `idPersonne` = $idPersonne AND `estFavoris` = 1 ";
 		$result = MySqlConn::getInstance()->selectDB($query);
 
 		$isinstance = false;

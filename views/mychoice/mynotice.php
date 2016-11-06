@@ -1,9 +1,9 @@
 <?php include_once ROOT_DIR.'global/header.php';
 
- if(isset($_SESSION['MyFavoris'])){
- 	 $tourArray = $_SESSION['MyFavoris'];
+ if(isset($_SESSION['Mynotice'])){
+ 	 $tourArray = $_SESSION['Mynotice'];
  }
- if(isset($_SESSION['MyFavoris'])){
+ if(isset($_SESSION['Mynotice'])){
  	 $noticeArray = $_SESSION['notice'];
  }
    include_once ROOT_DIR.'languages/common.php';
@@ -88,6 +88,13 @@
 											 ?>
 										 <p><?php echo ' '.$tourArray[$cle]->getInformation_fr(); ?></p>
 
+
+                     <?php foreach ($noticeArray as $key => $value){
+                     if($noticeArray[$key]->getIdTour() == $tourArray[$cle]->getId())
+                     {
+                       echo "note :" . $noticeArray[$key]->getEvaluation() . "/5";
+                     }
+                   } ?>
 									 </button>
 
 
