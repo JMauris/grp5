@@ -16,54 +16,18 @@
 	<head>
 		<title>Proposal</title>
 		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
-		<style type="text/css">
-			.top{
-				text-align: center;
-			}
-			.middle{
-				width: 96%;
-				height: 30%;
-				padding-left: 2%;
-				paddin g-right: 2%;
-			}
-			.show{
-				width: 100%;
-				height: 100%;
-			}
-			.bottom{
-				height: 100%;
-				width: 100%;
-			}
-			.buttons{
-				width: 100%;
-			}
-			#search {
-				display:inline-block;
-				align: left;
-				width: 20%;
-			}
-			a{
-				text-decoration: none;
-			}
-			#buttonsTd
-			{
-				width: 100%;
-				text-align: right;
-				padding: 2%;
-			}
-		</style>
 	</head>
   <body>
-		<div class= "wrapper">
-			<div class= "top">
+		<div id= "wrapper">
+			<div class= "MynoticeTopDiv">
 				</div>
-			<div class="middle">
+			<div id="MynoticeMiddleDiv">
 
-				<table class="show">
+				<table id="MynoticeShowTable">
 					<tr>
 							<?php if(isset($_SESSION['MyFavoris'])) { ?>
 						<td style= "overflow-y: scroll; height: 100%;">
-							<div id="show">
+							<div>
 
 								<form action="<?php echo URL_DIR.'mychoice/displaySelect'?>" method= "post">
 
@@ -96,17 +60,13 @@
                      }
                    } ?>
 									 </button>
-
-
 									<?php } ?>
-
 								</form>
-
 							</div>
 						</td>
 						<?php } ?>
 						<a href="<?php echo URL_DIR.'mychoice/mychoice'?>">
-						<input type="button" value="<?php echo $lang['BTN_BACK']; ?>" ></input>
+						<button id="submit1" style="width: 15%;" type="button"><?php echo $lang['BTN_BACK']; ?></button>
 						</a>
 					</tr>
 				</table>

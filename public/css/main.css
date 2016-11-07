@@ -238,4 +238,20 @@ a {
 
 
 
-
+/* Mynotice Css */
+#MynoticeTopDiv {
+	text-align: center;
+}
+			
+#MynoticeMiddleDiv {
+	width: 96%;
+	height: 30%;
+	padding-left: 2%;
+	paddin g-right: 2%;
+}
+			
+#MynoticeShowTable {
+	width: 100%;
+	height: 100%;
+}
+	
