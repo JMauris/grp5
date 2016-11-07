@@ -7,24 +7,13 @@ $SelectedMember = $_SESSION['selectedMember'];
 	<head>
 		<title>Update Member</title>
 		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
-		<style type="text/css">
-			#main_div {
-				height: 100%;
-				text-align: center;
-			}
-			
-			table {
-				margin: 0 auto;
-				text-align: left;
-			}
-		</style>
 	</head>
 	<body>
-		<div class= "wrapper" id="main_div">
+		<div class= "wrapper">
 			<h2>Update Member</h2>
 			
 			<form method="post" action="<?php echo URL_DIR.'admin/updateMember';?>">
-			  <table>
+			  <table id="UpdateMemberTable">
 					<tr>
 						<td>Firstname:</td>
 						<td>
@@ -79,7 +68,7 @@ $SelectedMember = $_SESSION['selectedMember'];
 			<input type="submit" value="save changes"></input>
 			
 			<a href="<?php echo URL_DIR.'admin/admin_details_members'?>">
-				<input type="button" value="<?php echo $lang['BTN_BACK']; ?>" ></input>
+				<button id="submit1" style="width: 15%;" type="button" ><?php echo $lang['BTN_BACK']; ?></button>
 			</a>
 		</div>
 		<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>	

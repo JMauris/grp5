@@ -180,7 +180,6 @@ $memberArray=$_SESSION['get_all_Membershit'];
 					<input type="button" value="<?php echo $lang['BTN_BACK']; ?>" ></input>
 				</a>
 			</div>
-			
 			<div id="content_delete">
 				<h2>Delete Member</h2>
 				Please tip in the ID of the Member you want to delete:
@@ -191,8 +190,8 @@ $memberArray=$_SESSION['get_all_Membershit'];
 				<br><br>		
 				<input type="submit" value="delete"></input>		
 				<a href="<?php echo URL_DIR.'admin/admin'?>">
-				<button id="submit1" style="width: 15%;" type="button"><?php echo $lang['BTN_BACK']; ?></button>
-			</a>
+					<button id="submit1" style="width: 15%;" type="button"><?php echo $lang['BTN_BACK']; ?></button>
+				</a>
 			</div>
 			<br><br><br>
 		</div>
