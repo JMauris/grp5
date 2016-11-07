@@ -297,7 +297,13 @@ public static function connectToAll() {
 	return $resultArray;
 }
 
-
+public static function deleteById($id) {
+	$query =  "DELETE FROM personne WHERE idPersonne='$id' ";
+	$result = MySqlConn::getInstance()->selectDB($query);
+	$row=$result->fetch();
+	if(!$row) return false;
+	return true;
+}
 
 
 

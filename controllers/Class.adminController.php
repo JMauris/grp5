@@ -149,7 +149,12 @@ class adminController extends Controller {
 		$updateMember->update2($updateMember->getId());
 		$this->redirect('admin', 'admin_details_members');
 	}
-	 
+	function deleteMember(){
+		date_default_timezone_set('UTC');
+		$idForDelete=$_POST['selectedIDMember'];
+		$delteTour=Personne::deleteById($idForDelete);
+		$this->redirect('admin', 'admin');
+	}
 }
 
 ?>

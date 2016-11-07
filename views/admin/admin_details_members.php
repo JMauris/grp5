@@ -181,14 +181,100 @@ $memberArray=$_SESSION['get_all_Membershit'];
 				</a>
 			</div>
 			<div id="content_delete">
-				<h2>Delete Member</h2>
-				Please tip in the ID of the Member you want to delete:
-				<form id="list_hikes" method="post" action="<?php echo URL_DIR.'admin/admin_details_members';?>" onsubmit="alert('Deleted')">
-					<br>
-					<input type="number" value="member">
-				</form>	
-				<br><br>		
-				<button id="submit1" style="width: 15%;" type="submit" value="delete">Delete</button>		
+				<h2>Update Member</h2>
+				
+				<div id="AdminDetailsMembersListDiv" >				
+					<table id="AdminDetailsMembersTable">
+						<thead>
+							<tr>
+							 	<th style = "width: 2%; text-align: left;"> ID </th>
+		              			<th style = "width: 10%; text-align: left;"> Firstname </th>
+		              			<th style = "width: 10%; text-align: left;"> Lastname </th>
+							 	<th style = "width: 10%; text-align: left;"> Adress </th>
+							 	<th style = "width: 2%; text-align: left;"> NPA </th>
+							 	<th style = "width: 5%; text-align: left;"> Locality </th>
+							 	<th style = "width: 10%; text-align: left;"> Phone </th>
+							 	<th style = "width: 10%; text-align: left;"> Mobile </th>
+							 	<th style = "width: 10%; text-align: left;"> Email </th>
+							 	<th style = "width: 2%; text-align: left;">  </th>
+						 	</tr>
+					 	</thead>
+					 	<tbody>
+						<?php foreach($memberArray as $cle => $element) {?>
+							<tr>
+								<td style="width: 2%;" >
+									<?php echo ' '.$memberArray[$cle]->getId(); ?>
+								</td>
+								<td style="width: 10%;">
+								   	<?php echo ' '.$memberArray[$cle]->getFirstname(); ?>
+								</td>
+								<td style="width: 10%;">
+								   	<?php echo ' '.$memberArray[$cle]->getLastname(); ?>
+							    </td>
+								<td style="width: 20%;">
+									<?php 
+										if( $memberArray[$cle]->getAdresse() == null){
+											echo '---';
+										} else {
+											echo ' '.$memberArray[$cle]->getAdresse(); 
+										}
+									?>
+								</td>
+								<td style="width: 2%;">
+									<?php 
+										if($memberArray[$cle]->getNpa() == null){
+											echo '---';
+										} else {
+											echo ' '.$memberArray[$cle]->getNpa(); 
+										}
+									?>
+								</td>
+								<td style="width: 5%;">
+									<?php 
+										if($memberArray[$cle]->getLocalite() == null){
+											echo '---';
+										} else {	
+											echo ' '.$memberArray[$cle]->getLocalite(); 
+										}
+									?>
+								</td>
+								<td style="width: 10%;">
+									<?php 
+										if($memberArray[$cle]->getPhone() == null){
+											echo '---';
+										} else {
+											echo ' '.$memberArray[$cle]->getPhone();
+										}
+									?>
+								</td>
+								<td style="width: 10%;">
+									<?php 
+										if($memberArray[$cle]->getPortable() == null){
+											echo '---';
+										} else {
+											echo ' '.$memberArray[$cle]->getPortable();
+										}
+									?>
+								</td>
+								<td style="width: 10%;">
+									<?php 
+										if($memberArray[$cle]->getEmail() == null){
+											echo '---';
+										} else {
+											echo ' '.$memberArray[$cle]->getEmail();
+										}
+									?>
+								</td>
+								<td style="width: 2%;"> 
+									<form action="<?php echo URL_DIR.'admin/deleteMember';?>" method= "post">
+										<button  name ="selectedIDMember" value = <?php echo $memberArray[$cle]->getId();?> type = "submit">Delete</button>
+									</form>
+								</td>
+							</tr>	
+						<?php } ?>
+						<tbody>
+					</table>	
+				</div>
 				<a href="<?php echo URL_DIR.'admin/admin'?>">
 					<button id="submit1" style="width: 15%;" type="button"><?php echo $lang['BTN_BACK']; ?></button>
 				</a>
