@@ -61,8 +61,7 @@ else {
 	<body>
 		<div class= "wrapper">
 			<div class= "top">
-				<h1>Search Result</h1>
-					<h2><?php echo $lang['SEARCH']; ?></h2>
+				<h1>Search Results</h1>
 			</div>
 
 			<div class="middle">
@@ -71,7 +70,7 @@ else {
 						<td style= "overflow-y: scroll; height: 100%;">
 							<div id="show"> 
 							
-								<form action="<?php echo URL_DIR.'program/program_detail'?>" method= "post">
+								<form action="<?php echo URL_DIR.'search/search_detail'?>" method= "post">
 					 				
 					 			<?php if($tourResults == "error"){?>
 					 				<h3>There are no Tours with the given search conditions. Please search again</h3>
@@ -82,7 +81,7 @@ else {
 
 					 					{?>
 
-										<button  name ="selectedValue" value = <?php echo $cle?> style="width: 100%;">
+										<button  name ="selectedTour" value = <?php echo $cle?> style="width: 100%;">
 										<p><?php echo ' '.$tourResults[$cle]->getTitre(); ?></p>
 										<p>Difficulty: <?php echo ' '.$tourResults[$cle]->getDifficulte(); ?></p>
 										<p><?php echo ' '.$tourResults[$cle]->getInformation_fr(); ?></p>

@@ -606,8 +606,7 @@ public static function get_results($region, $difficulte, $genre)
 	
 	
 	$result = MySqlConn::getInstance()->selectDB($query);
-
-
+	
 	while($row = $result->fetch())
 	{
 	
@@ -625,14 +624,9 @@ public static function get_results($region, $difficulte, $genre)
 	}
 	
 	$result->closeCursor();
-	if(empty($resultArray)){
-		$error = "No search available";
-		return $error;
-	}
-		else{
 	return $resultArray;
+		
 	
-		}
 }
 
 public static function connectForMyProgramm($inscriptionArray, $type) //0=>Register   1=>Favoris  2=>evalutation
