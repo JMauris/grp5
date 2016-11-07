@@ -28,13 +28,15 @@ class searchController extends Controller
   	
   	$tourResults=Tour::get_results($idRegion, $difficulty, $genre);
   	
-  	if($tourResults==1)
+  	if($tourResults== false)
   	{
   		$tourResults = "error";
   	}
   		
   	$_SESSION['tour_results']=$tourResults;
   }
+  
+  
   function  search_detail(){
   
   	if(strpos($_SERVER["HTTP_REFERER"],'search')){

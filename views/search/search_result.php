@@ -101,9 +101,7 @@ else {
 				<table class="buttons">
 					<tr>
 						<td id="buttonsTd">
-							<a href="<?php echo URL_DIR.'search/search_path'?>"><img id="search1" src="<?php echo URL_DIR. 'public/img/searchRoute.png'?>"></a>
-					 			
-							<button id="submit1"><?php echo $lang['BTN_NEAR']; ?></button>
+							<a href="<?php echo URL_DIR.'search/search_path'?>"><img id="search1" src="<?php echo URL_DIR. 'public/img/searchRoute.png'?>"></a>			 			
 						</td>
 					</tr>
 				</table>

@@ -606,7 +606,10 @@ public static function get_results($region, $difficulte, $genre)
 	
 	
 	$result = MySqlConn::getInstance()->selectDB($query);
-	
+	$row_no = $result->rowCount();
+	if($row_no == 0){
+		return false;
+	}
 	while($row = $result->fetch())
 	{
 	
