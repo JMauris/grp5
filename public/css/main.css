@@ -156,3 +156,26 @@ a {
 
 
 
+/* Admin_details_tours Css */
+#AdminDetailsToursTable {
+	margin: 0 auto;
+	text-align: left;
+	border-spacing: 10px;
+}
+					
+#content_insert, #content_update, #content_delete {
+	display: none; text-align: center;
+}
+
+			
+#AdminDetailsToursListDiv {
+	float: bottom;
+	background-color : lightgrey;
+	height: 500px;
+	overflow-y : scroll;
+	margin-bottom: 2%;
+}
+
+
+
+

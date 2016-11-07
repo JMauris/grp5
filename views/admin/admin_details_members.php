@@ -31,7 +31,7 @@ $memberArray=$_SESSION['get_all_Membershit'];
 			<h1>Managing Members</h1>
 			
 			<div id="AdminDetailsMembersButtonDiv">
-				<button id="submit1" style = "width: 10%;"type="button" value="insert" onclick="toggle_i();">Insert</button>
+				<button id="submit1" style = "width: 10%;" type="button" value="insert" onclick="toggle_i();">Insert</button>
 				<button id="submit1" style = "width: 10%;" type="button" value="update" onclick="toggle_u();">Update</button>
 				<button id="submit1" style = "width: 10%;" type="button" value="delete" onclick="toggle_d();">Delete</button>
 			</div>
@@ -177,7 +177,7 @@ $memberArray=$_SESSION['get_all_Membershit'];
 					</table>	
 				</div>
 				<a href="<?php echo URL_DIR.'admin/admin'?>">
-					<input type="button" value="<?php echo $lang['BTN_BACK']; ?>" ></input>
+					<button id="submit1" style="width: 15%;" type="button"><?php echo $lang['BTN_BACK']; ?></button>
 				</a>
 			</div>
 			<div id="content_delete">
@@ -188,7 +188,7 @@ $memberArray=$_SESSION['get_all_Membershit'];
 					<input type="number" value="member">
 				</form>	
 				<br><br>		
-				<input type="submit" value="delete"></input>		
+				<button id="submit1" style="width: 15%;" type="submit" value="delete">Delete</button>		
 				<a href="<?php echo URL_DIR.'admin/admin'?>">
 					<button id="submit1" style="width: 15%;" type="button"><?php echo $lang['BTN_BACK']; ?></button>
 				</a>
