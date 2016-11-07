@@ -283,6 +283,19 @@ public static function CreateNonCAS($user){
 
 }
 
+public static function connectToAll() {
+	$query =  "SELECT * From personne ";
+	$result = MySqlConn::getInstance()->selectDB($query);
+	while($row = $result->fetch()) {
+		$resultArray[$row['idPersonne']] =   new Personne($row['idPersonne'], $row['prenom'], $row['nom'], $row['adresse'], $row['email'], $row['motDePasse']
+				, $row['telephone'], $row['portable'], $row['idxLangue'], $row['estActif'] , $row['numMembre'], $row['Localite'], $row['NPA'], $row['role'],
+				$row['idxAbonnement']);
+			
+	}
+
+	$result->closeCursor();
+	return $resultArray;
+}
 
 
 
