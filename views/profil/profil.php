@@ -17,7 +17,7 @@
 		h3, div {
 			text-align: center;
 		}
-	</style>
+	</style>zzz
 </head>
 <body>
 	<div  class="wrapper" style="height: 90%">
@@ -55,7 +55,7 @@
 					</tr>
 						<tr>
 							<th><label for="email"><?php echo $lang['P_EMAIL']; ?></label></th>
-						<th><input type="text" name="email" value="<?php echo $user->getEmail()?>"></th>
+						<th><input type="text" name="email" value="<?php echo $user->getEmail()?>"  disabled="disabled"></th>
 					</tr>
 				<tr>
 					<th><label for="abonnement"><?php echo $lang['P_ABO']; ?></label></th>
@@ -83,7 +83,7 @@
 			<button id= "submit1" type="submit" name="action"><?php echo $lang['BTN_SAVE']; ?></button>
 			<br>
 			<br>
-			<a href=""><?php echo $lang['LINK_CHANGE_PW']; ?></a>
+			<a href="<?php echo URL_DIR.'profil/change_password'?>"><?php echo $lang['LINK_CHANGE_PW']; ?></a>
 		</div>
 		<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
 	</body>
