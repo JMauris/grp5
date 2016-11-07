@@ -97,6 +97,7 @@ $SelectedTour = $_SESSION['Selected_Tour'];
 			<a href="<?php echo URL_DIR.'search/search_path'?>">
 				<input type="button" value="go back" ></input>
 			</a>
+			<div class="push"></div>
 			</div>
 		<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
 	</body>

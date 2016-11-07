@@ -19,4 +19,5 @@
 		</table>
 	</div>
 	<br/><br/><br/><br/>
-	<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
+	<div class="push"></div>
+<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>

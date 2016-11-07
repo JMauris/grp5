@@ -30,7 +30,7 @@
 				<p id= "contactDiv" style="padding-bottom: 2%; float: center;">    or by Mail:
 				<br> info[@]valrando.ch
 				</p>
-				
+				<div class="push"></div>
 			</div>
 		<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
 	</body>

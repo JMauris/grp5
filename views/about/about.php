@@ -68,6 +68,7 @@
 					<td><a href="http://www.casmontana.ch/Default.aspx?num=37"><?php echo $lang['DES_STATUTES']; ?></a></td>
 				</tr>
 			</table>
+			<div class="push"></div>
 		</div>
 		<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; include_once ROOT_DIR.'languages/common.php';?></div>
 	</body>

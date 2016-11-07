@@ -18,6 +18,7 @@
 			<button id="submit1" style= "text-align: center; width: 15%;" type="button">Members</button>
 			</a>
 			<br><br><br><br>
+			<div class="push"></div>
 		</div>
 		<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
 	</body>

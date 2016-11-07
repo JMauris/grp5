@@ -83,6 +83,7 @@
 					</tr>
 				</table>
 			</div>
+			<div class="push"></div>
 		</div>
 		<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
 	</body>

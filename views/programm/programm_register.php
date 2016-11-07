@@ -111,7 +111,9 @@ $SelectedTour = $_SESSION['Selected_Tour'];
 		</form>
 		<br>
 		<div class="g-recaptcha" data-sitekey="6Lc43gkUAAAAAPsuLQ6YjIL5wYo5fi51_wcDLcOl"></div>
-		<input type="submit" name="action" value="Save"><br><br>
+		<input type="submit" name="action" value="Save">
+		<br><br>
+		<div class="push"></div>
 		</div>
 		<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
 	</body>
