@@ -77,7 +77,7 @@
 							if($_SESSION['FavorisData']!=false&&$_SESSION['FavorisData']->getEstFavoris()==1)
 							{?>
 									<button id="submit1" style="width: 15%;" name = "favoris" value="remove"><?php echo $lang['REMOVEFAVORIS']; ?></button>
-									
+
 							<?php }else{?>
 									<button id="submit1" style="width: 15%;" name = "favoris" value="add"><?php echo $lang['ADDFAVORIS']; ?></button>
 						<?php }
@@ -89,7 +89,7 @@
 			<table style="width: 100%; text-align: center;">
 				<tr>
 					<td>
-						<a href="<?php echo URL_DIR.'proposal/proposal'?>">
+						<a href="<?php echo $_SESSION['back_proposal']?>">
 							<button id="submit1" style="width: 15%;" type="button" value="go back" >Go back</button>
 						</a>
 					</td>

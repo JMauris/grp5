@@ -52,6 +52,7 @@ if(strpos($_SERVER["HTTP_REFERER"],'programm')){
       $_SESSION['Selected_Tour'] = $Tour;
   }
 }
+
 if(strpos($_SERVER["HTTP_REFERER"],'mychoice')){
 
 $id= $_SESSION['MyselectedTour'];

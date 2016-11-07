@@ -61,13 +61,17 @@ class ProposalController extends Controller{
 
 
    }
-   else {
-     $_POST['isInscri']=0;
+   
+
+
+
+   if (isset($_SESSION['back_proposal']))
+   {
+     if(!(strpos($_SERVER["HTTP_REFERER"],'proposal_detail')))
+       $_SESSION['back_proposal']= $_SERVER["HTTP_REFERER"];
+   }else {
+     $_SESSION['back_proposal']= $_SERVER["HTTP_REFERER"];
    }
-
-
-
-
 
  }
 

@@ -92,15 +92,7 @@ include_once ROOT_DIR.'languages/common.php';
 					</td>
 				</tr>
 			</table>
-			<table style="width: 100%; text-align: center;">
-				<tr>
-					<td>
-						<a href="<?php echo $_SESSION['back']?>">
-						<button id="submit1" style="width: 15%;" type="button"><?php echo $lang['BTN_BACK']; ?></button>
-						</a>
-					</td>
-				</tr>
-			</table>
+
 			<?php if(isset ($_SESSION['personne'])&&$_POST['isInscri'])
 				{?>
 						<form method="post" action="<?php echo URL_DIR.'programm/removeRegister';?>" >
@@ -117,6 +109,15 @@ include_once ROOT_DIR.'languages/common.php';
 					<td>
 						<a href=" <?php echo ' .URL_DIR."programm/programm_register". '?>">
 						<button id="submit1" style="width: 15%;" type="button"><?php echo $lang['REGISTER'];?></button>
+						</a>
+					</td>
+				</tr>
+			</table>
+			<table style="width: 100%; text-align: center;">
+				<tr>
+					<td>
+						<a href="<?php echo $_SESSION['back']?>">
+						<button id="submit1" style="width: 15%;" type="button"><?php echo $lang['BTN_BACK']; ?></button>
 						</a>
 					</td>
 				</tr>
