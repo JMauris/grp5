@@ -70,8 +70,10 @@ include_once ROOT_DIR.'languages/common.php';
 			</SELECT>
 			</FORM>
 			</td>
-						<?php	}  ?>
-				</tr>
+				<?php	}  ?>
+			</tr>
+			</table>
+			<table style="width: 100%; text-align: center;">
 				<tr>
 					<td>
 						<form method="post" action="<?php echo URL_DIR.'programm/saveFavoris';?>" >
@@ -79,34 +81,47 @@ include_once ROOT_DIR.'languages/common.php';
 
 
 							if($_SESSION['FavorisData']!=false&&$_SESSION['FavorisData']->getEstFavoris()==1)
-							{
-								echo	'	<button name = "favoris" value="remove">' .$lang['REMOVEFAVORIS'].'</button>	';
-
-							}else{
-						echo	'<button name = "favoris" value="add">' .$lang['ADDFAVORIS'].'</button>	';
-						}
+							{?>
+									<button id="submit1" style="width: 15%;" name = "favoris" value="remove"><?php echo $lang['REMOVEFAVORIS']; ?></button>
+									
+							<?php }else{?>
+									<button id="submit1" style="width: 15%;" name = "favoris" value="add"><?php echo $lang['ADDFAVORIS']; ?></button>
+						<?php }
 						}  ?>
 						</form>
 					</td>
 				</tr>
 			</table>
-			<a href="<?php echo $_SERVER["HTTP_REFERER"]?>">
-
-			<input type="button" value="<?php echo $lang['BTN_BACK']; ?>" ></input>
-			</a>
-
+			<table style="width: 100%; text-align: center;">
+				<tr>
+					<td>
+						<a href="<?php echo $_SERVER["HTTP_REFERER"]?>">
+						<button id="submit1" style="width: 15%;" type="button"><?php echo $lang['BTN_BACK']; ?></button>
+						</a>
+					</td>
+				</tr>
+			</table>
 			<?php if(isset ($_SESSION['personne'])&&$_POST['isInscri'])
 				{?>
 						<form method="post" action="<?php echo URL_DIR.'programm/removeRegister';?>" >
-						<button name = "removeregister" value=<?php echo $SelectedTour->getId();?>><?php echo $lang['DISREGISTER']?></button>
-
+			<table style="width: 100%; text-align: center;">
+				<tr>
+					<td><button id="submit1" style="width: 15%;" name = "removeregister" value=<?php echo $SelectedTour->getId();?>><?php echo $lang['DISREGISTER']?></button></td>
+				</tr>
+			</table>
+						
 			<?php 	}
-				else{
-
-					echo	'<a href="' .URL_DIR."programm/programm_register". '">
-					<input type="button" value="' .$lang['REGISTER'].'"</input>
-				</a>';
-					}
+				else{?>
+			<table style="width: 100%; text-align: center;">
+				<tr>
+					<td>
+						<a href=" <?php echo ' .URL_DIR."programm/programm_register". '?>">			
+						<button id="submit1" style="width: 15%;" type="button"><?php echo $lang['REGISTER'];?></button>
+						</a>
+					</td>
+				</tr>
+			</table>
+					<?php }
 				 ?>
 				 </form>
 				<br>

@@ -84,9 +84,11 @@ else {
 							<input name="filter" placeholder="<?php echo $lang['PLACEHOLDER']; ?>" data-type="search">
 						</td>
 					</tr>
+				</table>
+				<table style="width: 100%; text-align: center;">
 					<tr>
 						<td>
-							<input type="submit" value="submit me!" />
+							<button id="submit1" style="width: 15%;" type="submit">Search</button>
 						</td>
 					</tr>
 				</table>

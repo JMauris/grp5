@@ -17,7 +17,7 @@ $lang['MY_FAVORITES'] = 'My favorites';
 $lang['DATE_BEGIN'] = 'Date begin:';
 $lang['PROGRAMM_DETAIL'] = 'Programm Detail';
 $lang['REGISTER'] = 'Register';
-$lang['DISREGISTER'] = 'disregister';
+$lang['DISREGISTER'] = 'Disregister';
 $lang['FAVORIS'] = 'Favoris';
 
 /*
@@ -75,8 +75,8 @@ $lang['BTN_ONLY_MULTI'] = 'Only multi-hike';
 
 $lang['YOUR_PROGRAMM'] = 'Your Programm:';
 $lang['BTN_VIEW'] = 'View all';
-$lang['ADDFAVORIS'] = 'add favoris';
-$lang['REMOVEFAVORIS'] = 'remove favoris';
+$lang['ADDFAVORIS'] = 'Add favoris';
+$lang['REMOVEFAVORIS'] = 'Remove favoris';
 
 /*
  ------------------

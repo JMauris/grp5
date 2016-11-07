@@ -66,6 +66,8 @@ $SelectedTour = $_SESSION['Selected_Tour'];
 				</td>
 						<?php	}  ?>
 				</tr>
+			</table>
+			<table style="width: 100%; text-align: center;">
 				<tr>
 					<td>
 						<form method="post" action="<?php echo URL_DIR.'search/saveFavoris';?>" >
@@ -73,20 +75,26 @@ $SelectedTour = $_SESSION['Selected_Tour'];
 
 
 							if($_SESSION['FavorisData']!=false&&$_SESSION['FavorisData']->getEstFavoris()==1)
-							{
-								echo	'	<button name = "favoris" value="remove">' .$lang['REMOVEFAVORIS'].'</button>	';
-
-							}else{
-						echo	'<button name = "favoris" value="add">' .$lang['ADDFAVORIS'].'</button>	';
-						}
+							{?>
+									<button id="submit1" style="width: 15%;" name = "favoris" value="remove"><?php echo $lang['REMOVEFAVORIS']; ?></button>
+									
+							<?php }else{?>
+									<button id="submit1" style="width: 15%;" name = "favoris" value="add"><?php echo $lang['ADDFAVORIS']; ?></button>
+						<?php }
 						}  ?>
 						</form>
 					</td>
 				</tr>
 			</table>
-			<a href="<?php echo URL_DIR.'search/search_path'?>">
-				<input type="button" value="go back" ></input>
-			</a>
+			<table style="width: 100%; text-align: center;">
+					<tr>
+						<td>
+							<a href="<?php echo URL_DIR.'search/search_path'?>">
+								<button id="submit1" style="width: 15%;" type="button" value="go back" >Go back</button>
+							</a>
+						</td>
+					</tr>
+				</table>
 			<div class="push"></div>
 			</div>
 		<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
