@@ -188,7 +188,8 @@ class Personne{
       $this->idxLangue = $idxLangue;
     }
 public static function connect($adressEmail,$pwd){
-
+  var_dump($adressEmail);
+  var_dump($pwd);
   $pwd = sha1($pwd);
   $query = "SELECT * From personne WHERE email='$adressEmail' AND motDePasse='$pwd'";
   $result = MySqlConn::getInstance()->selectDB($query);
@@ -201,6 +202,7 @@ public static function connect($adressEmail,$pwd){
 
 
 }
+
 
 public function update($id){
 
@@ -217,6 +219,23 @@ public function update($id){
 
   return  MySqlConn::getInstance()->executeQuery($query);
 
+}
+
+
+public static function updatePassword($user){
+{
+
+  $t = $user->getPassword();
+  $pwd = sha1($t);
+  $id = $user->getId();
+}
+
+  $query = "UPDATE personne
+            SET motDePasse= '$pwd'
+            WHERE idPersonne='$id'
+            ;";
+
+  return  MySqlConn::getInstance()->executeQuery($query);
 }
 
 
@@ -290,7 +309,7 @@ public static function connectToAll() {
 		$resultArray[$row['idPersonne']] =   new Personne($row['idPersonne'], $row['prenom'], $row['nom'], $row['adresse'], $row['email'], $row['motDePasse']
 				, $row['telephone'], $row['portable'], $row['idxLangue'], $row['estActif'] , $row['numMembre'], $row['Localite'], $row['NPA'], $row['role'],
 				$row['idxAbonnement']);
-			
+
 	}
 
 	$result->closeCursor();

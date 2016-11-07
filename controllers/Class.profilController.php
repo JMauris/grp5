@@ -59,17 +59,36 @@ class profilController extends Controller{
     }
     else{
       //Load user from DB if exists
-      $result = Personne::connect($_SESSION['personne']->getEmail(), $oldpwd);
 
-      //Put user in session if exists or return error msg
-      if(!$result){
+
+            $mypassword=$_SESSION['personne']->getPassword();
+           if($mypassword==sha1($oldpwd)){
+           $result = true;}
+           else
+           {
+             $result = false;}
+
+
+
+    if(!$result){
         $_SESSION['msg'] = '<span class="error">password incorrect!</span>';
-        $this->redirect('login', 'login');
+        $this->redirect('profil', 'change_password');
       }
-      else{
-        $_SESSION['msg'] = '<span class="success">Welcome '. $result->getFirstname(). ' '.$result->getLastname().'!</span>';
-        $_SESSION['personne'] = $result;
-        $this->redirect('login', 'welcome');
+  else{
+
+        if($newpassword!=$controlpassword)
+        {
+          $_SESSION['msg'] = '<span class="error">new password are not the same on the two field</span>';
+          $this->redirect('profil', 'change_password');
+        }
+        else {
+          $_SESSION['personne']->setPassword($newpassword);
+
+          Personne::updatePassword($_SESSION['personne']);
+          $_SESSION['msg'] = '<span class="success">password changed</span>';
+          $this->redirect('profil', 'change_password');
+        }
+
       }
     }
 
