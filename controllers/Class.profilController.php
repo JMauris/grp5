@@ -19,7 +19,7 @@ class profilController extends Controller{
 
   function save()
 
-  { 
+  {
     $user = $_SESSION['personne'];
 
     $adress=$_POST['adress'];
@@ -28,6 +28,7 @@ class profilController extends Controller{
     $phone = $_POST['phone'];
     $mobile = $_POST['mobile'];
     $abo = $_POST['abonnement'];
+
 
       $user->setAdresse($adress);
       $user->setNpa($npa);
@@ -44,9 +45,42 @@ class profilController extends Controller{
   }
 
 
+  function connection(){
+    //Get data posted by the form
+
+    $oldpwd = $_POST['oldpassword'];
+    $newpassword = $_POST['newpassword'];
+    $controlpassword = $_POST['controlpassword'];
+
+    //Check if data valid
+    if(empty($newpassword) or empty($oldpwd) or empty($controlpassword)){
+      $_SESSION['msg'] = '<span class="error">A required field is empty!</span>';
+      $this->redirect('profil', 'change_password');
+    }
+    else{
+      //Load user from DB if exists
+      $result = Personne::connect($_SESSION['personne']->getEmail(), $oldpwd);
+
+      //Put user in session if exists or return error msg
+      if(!$result){
+        $_SESSION['msg'] = '<span class="error">password incorrect!</span>';
+        $this->redirect('login', 'login');
+      }
+      else{
+        $_SESSION['msg'] = '<span class="success">Welcome '. $result->getFirstname(). ' '.$result->getLastname().'!</span>';
+        $_SESSION['personne'] = $result;
+        $this->redirect('login', 'welcome');
+      }
+    }
 
 
 
+
+}
+function change_password()
+{
+$this->vars['msg'] = isset($_SESSION['msg']) ? $_SESSION['msg'] : '';
+}
 
 
 }
