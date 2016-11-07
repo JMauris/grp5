@@ -163,7 +163,7 @@ if(isset($_GET['lang'])){
 					<input type="number" name="delete_id">	
 				</form>	
 				<br><br>		
-				<input id="button_delete" type="submit" name="submit_delete" value="delete"></input>
+				<button id="submit1" style = "width: 15%;" type="submit" name="submit_delete" value="delete">Delete</button>
 				
 				<a href="<?php echo URL_DIR.'admin/admin'?>">
 					<button id="submit1" style = "width: 15%;" type="button"><?php echo $lang['BTN_BACK']; ?></button>
