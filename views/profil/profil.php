@@ -66,10 +66,20 @@
 			</table>
 		</form>
 		<br>
-			<button id= "submit1" type="submit" name="action"><?php echo $lang['BTN_SAVE']; ?></button>
-			<br>
-			<br>
-			<a href="<?php echo URL_DIR.'profil/change_password'?>"><?php echo $lang['LINK_CHANGE_PW']; ?></a>
+		<table style="width: 100%; text-align: center;">
+			<tr>
+				<td>
+					<button id= "submit1" type="submit" name="action"><?php echo $lang['BTN_SAVE']; ?></button>
+				</td>		
+			</tr>
+		</table>
+		<table style="width: 100%; text-align: center;">
+			<tr>
+				<td>
+					<a href="<?php echo URL_DIR.'profil/change_password'?>"><?php echo $lang['LINK_CHANGE_PW']; ?></a>
+				</td>
+			</tr>
+		</table>
 			<div class="push"></div>
 		</div>
 		<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>

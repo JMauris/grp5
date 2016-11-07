@@ -27,10 +27,12 @@
         <td><input type="password" name="controlpassword" size="25"/><br><br></td>
       </tr>
 
-      <table>
-      <tr>
-        <button id= "submit1" type="submit" name="submit">Submit</button>
-      </tr>
+      <table style="width: 100%; text-align: center;">
+			<tr>
+				<td>
+        			<button id= "submit1" type="submit" name="submit">Submit</button>
+        		</td>
+     		</tr>
       </table>
       <tr>
         <td>

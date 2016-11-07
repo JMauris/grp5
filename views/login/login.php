@@ -23,11 +23,13 @@
 						<td><?php echo $lang['LOGIN_PW']; ?></td>
 						<td><input type="password" name="password" size="25"/><br><br></td>
 					</tr>
-					<table>
+				<table style="width: 100%; text-align: center;">
 					<tr>
-						<button id= "submit1" type="submit" name="submit">Submit</button>
+						<td>
+							<button id= "submit1" type="submit" name="submit">Submit</button>
+						</td>
 					</tr>
-					</table>
+				</table>
 					<tr>
 						<td>
 							<br/>
