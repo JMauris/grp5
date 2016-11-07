@@ -84,7 +84,13 @@ $Tour=$_SESSION['tour'];
     $_POST['isInscri']=0;
   }
 
-
+if (isset($_SESSION['back']))
+{
+  if(!(strpos($_SERVER["HTTP_REFERER"],'hiking_detail')))
+    $_SESSION['back']= $_SERVER["HTTP_REFERER"];
+}else {
+  $_SESSION['back']= $_SERVER["HTTP_REFERER"];
+}
 
 
 

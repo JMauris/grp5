@@ -83,7 +83,7 @@ include_once ROOT_DIR.'languages/common.php';
 							if($_SESSION['FavorisData']!=false&&$_SESSION['FavorisData']->getEstFavoris()==1)
 							{?>
 									<button id="submit1" style="width: 15%;" name = "favoris" value="remove"><?php echo $lang['REMOVEFAVORIS']; ?></button>
-									
+
 							<?php }else{?>
 									<button id="submit1" style="width: 15%;" name = "favoris" value="add"><?php echo $lang['ADDFAVORIS']; ?></button>
 						<?php }
@@ -95,7 +95,7 @@ include_once ROOT_DIR.'languages/common.php';
 			<table style="width: 100%; text-align: center;">
 				<tr>
 					<td>
-						<a href="<?php echo $_SERVER["HTTP_REFERER"]?>">
+						<a href="<?php echo $_SESSION['back']?>">
 						<button id="submit1" style="width: 15%;" type="button"><?php echo $lang['BTN_BACK']; ?></button>
 						</a>
 					</td>
@@ -109,13 +109,13 @@ include_once ROOT_DIR.'languages/common.php';
 					<td><button id="submit1" style="width: 15%;" name = "removeregister" value=<?php echo $SelectedTour->getId();?>><?php echo $lang['DISREGISTER']?></button></td>
 				</tr>
 			</table>
-						
+
 			<?php 	}
 				else{?>
 			<table style="width: 100%; text-align: center;">
 				<tr>
 					<td>
-						<a href=" <?php echo ' .URL_DIR."programm/programm_register". '?>">			
+						<a href=" <?php echo ' .URL_DIR."programm/programm_register". '?>">
 						<button id="submit1" style="width: 15%;" type="button"><?php echo $lang['REGISTER'];?></button>
 						</a>
 					</td>
