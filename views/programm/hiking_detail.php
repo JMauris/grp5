@@ -100,11 +100,11 @@ include_once ROOT_DIR.'languages/common.php';
 					</td>
 				</tr>
 			</table>
-			<a href="<?php echo URL_DIR.'programm/programm'?>">
+			<a href="<?php echo $_SERVER["HTTP_REFERER"]?>">
 
 			<input type="button" value="<?php echo $lang['BTN_BACK']; ?>" ></input>
 			</a>
-		
+
 			<?php if(isset ($_SESSION['personne'])&&$_POST['isInscri'])
 				{?>
 						<form method="post" action="<?php echo URL_DIR.'programm/removeRegister';?>" >
@@ -117,7 +117,7 @@ include_once ROOT_DIR.'languages/common.php';
 					<input type="button" value="' .$lang['REGISTER'].'"</input>
 				</a>';
 					}
-				 ?> 	
+				 ?>
 				 </form>
 				<br>
 			</div>
