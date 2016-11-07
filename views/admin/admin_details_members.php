@@ -9,18 +9,8 @@ $memberArray=$_SESSION['get_all_Membershit'];
 		<title>Admin page</title>
 		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
 		<style type="text/css">			
-			#ip1, #ip2, #ip3 {
-				font-style: normal;
-				font-family: "Times New Roman", Times, serif;
-				font-size: 1.5em;	
-			}
-						
-			h2 {
-				color:black;
-				text-align:center;
-				font-family: "Times New Roman", Times, serif;
-				font-style: normal;
-			}
+		
+			
 			
 			#insert_table, #table_members_header, #table_members {
 				margin: 0 auto;
@@ -33,11 +23,7 @@ $memberArray=$_SESSION['get_all_Membershit'];
 				font-family: "Times New Roman", Times, serif;
 				font-size: 1em;	
 			}			
-			
-			#main_div {
-				padding-bottom: 2%; padding-right: 2%; padding-left: 2%;
-			}
-					
+	
 			#content_insert, #content_update, #content_delete {
 				display: none; text-align: center;
 			}
@@ -86,13 +72,13 @@ $memberArray=$_SESSION['get_all_Membershit'];
 		</script>
 	</head>
 	<body>
-		<div class="wrapper" id="main_div">
+		<div class="wrapper">
 			<h1>Managing Members</h1>
 			
 			<div id="button_div">
-				<input id="ip1" type="button" value="insert" onclick="toggle_i();"></input>
-				<input id="ip2" type="button" value="update" onclick="toggle_u();"></input>
-				<input id="ip3" type="button" value="delete" onclick="toggle_d();"></input>
+				<button id="submit1" style = "width: 10%;"type="button" value="insert" onclick="toggle_i();">Insert</button>
+				<button id="submit1" style = "width: 10%;" type="button" value="update" onclick="toggle_u();">Update</button>
+				<button id="submit1" style = "width: 10%;" type="button" value="delete" onclick="toggle_d();">Delete</button>
 			</div>
 			
 			<div id="content_insert">
