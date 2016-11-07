@@ -810,17 +810,17 @@ public static function CreateNewTour($tour){
 public function update($id){
 
 	$query = "UPDATE tour
-	SET IdxTypeTour = '$this->IdxTypeTour',
+	SET IdxTypeTour = '$this->idxTypeTour',
 	dateDebut= '$this->dateDebut',
 	dateFin='$this->dateFin',
 	difficulte='$this->difficulte',
 	titre='$this->titre',
 	departHeure='$this->departHeure',
-	arriveeHeure='$this->arriveeHeure'
-	information_fr='$this->information_fr'
+	arriveeHeure='$this->arriveeHeure',
+	information_fr='$this->information_fr',
 	idxGuide='$this->idxGuide'
 	WHERE idTour='$id'
-	;";
+	";
 
 	return  MySqlConn::getInstance()->executeQuery($query);
 }
@@ -841,10 +841,11 @@ public static function connectbyId2($id) {
 }
 
 public static function deleteById($id) {
-	$query =  "SELECT * From tour WHERE idTour='$id' ";
+	$query =  "DELETE FROM tour WHERE idTour='$id' ";
 	$result = MySqlConn::getInstance()->selectDB($query);
 	$row=$result->fetch();
 	if(!$row) return false;
+	return true;
 }
 
 public static function connectToAll() {

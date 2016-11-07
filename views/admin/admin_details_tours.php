@@ -156,15 +156,61 @@ if(isset($_GET['lang'])){
 			</div>
 			
 			<div id="content_delete">
-				<h2>Delete Tours</h2>
-				Please give the ID of the Tour you want to delete: 
-				<br><br>
-				<form id="list_hikes" method="post" action="<?php echo URL_DIR.'admin/admin_details_tours';?>" onsubmit="alert('Deleted')">
-					<input type="number" name="delete_id">	
-				</form>	
-				<br><br>		
-				<button id="submit1" style = "width: 15%;" type="submit" name="submit_delete" value="delete">Delete</button>
+				<h2>List of all Tours</h2>
 				
+				<table id="AdminDetailsToursTable">
+					 <tr>
+					 	<th style = "width: 20%; text-align: left;"> ID </th>
+              			<th style = "width: 20%; text-align: left;"> Type </th>
+              			<th style = "width: 20%; text-align: left;"> Titre </th>
+					 	<th style = "width: 20%; text-align: left;"> Information </th>
+					 	<th style = "width: 20%; text-align: left;">  </th>
+				 	</tr>
+				</table>
+				
+				<div id="AdminDetailsToursListDiv">
+					<?php foreach( $tourArray as $cle => $element) {?>
+								<table id="AdminDetailsToursTable">
+									<tr>
+										<td style="width: 20%">
+											<?php echo ' '.$tourArray[$cle]->getId(); ?>
+										</td>
+										<td style="width: 20%">
+									    	<?php if( $tourArray[$cle]->getIdxTypeTour() == 1){
+								        				echo "Hiking";
+									              } elseif ($tourArray[$cle]->getIdxTypeTour() == 2) {
+								             			echo "Stay";
+								             	  } else {					
+								                		echo "Proposal";
+								              	  }
+								            ?>
+						              	</td>
+										<td style="width: 20%">
+							            	<?php echo ' '.$tourArray[$cle]->getTitre(); ?>
+										</td>
+										<td style="width: 20%">
+											<?php
+												switch ($_SESSION['lang']) {
+													  case 'de':
+														  	echo ' '.$tourArray[$cle]->getInfromation_de();
+											     		    break;
+													  case 'fr':
+														  	echo ' '.$tourArray[$cle]->getInformation_fr();
+									     				    break;
+													  default:
+															echo ' '.$tourArray[$cle]->getInformation_fr();
+												}
+								    	  ?>
+										</td>
+										<td style="width: 20%"> 
+											<form action="<?php echo URL_DIR.'admin/deleteTour';?>" method= "post">
+												<button name ="selectedTour" value = <?php echo $tourArray[$cle]->getId();?> type = "submit">Delete</button>
+											</form>
+										</td>
+									</tr>
+								</table>	
+					<?php } ?>
+				</div>
 				<a href="<?php echo URL_DIR.'admin/admin'?>">
 					<button id="submit1" style = "width: 15%;" type="button"><?php echo $lang['BTN_BACK']; ?></button>
 				</a>

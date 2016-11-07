@@ -55,7 +55,7 @@ class adminController extends Controller {
 		 
 		$updateTour = $_SESSION['selectedID'];
 		 
-		$tour = $_POST['type_input_update'];
+		$type = $_POST['type_input_update'];
 			
 		$title = $_POST['update_title'];
 		$information = $_POST['update_info'];
@@ -81,7 +81,13 @@ class adminController extends Controller {
 		$updateTour->update($updateTour->getId());
 		$this->redirect('admin', 'admin');
 	}
-	 
+	
+	 function deleteTour(){
+	 	date_default_timezone_set('UTC');
+	 	$idForDelete=$_POST['selectedTour'];
+	 	$delteTour=Tour::deleteById($idForDelete);
+	 	$this->redirect('admin', 'admin');
+	 }
 	//----------------------------------------------------------------
 	 
 	function admin_details_members() {
