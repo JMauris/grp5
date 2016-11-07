@@ -37,7 +37,7 @@ else {
 
 					 					{?>
 
-										<button  name ="selectedTour" value = <?php echo $cle?> style="width: 100%;">
+										<button  name ="selectedTour" style="width: 100%;" value = <?php echo $tourResults[$cle]->getId(); ?>>
 										<p><?php echo ' '.$tourResults[$cle]->getTitre(); ?></p>
 										<p>Difficulty: <?php echo ' '.$tourResults[$cle]->getDifficulte(); ?></p>
 										<p><?php echo ' '.$tourResults[$cle]->getInformation_fr(); ?></p>
