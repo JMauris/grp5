@@ -7,24 +7,20 @@ $SelectedTour = $_SESSION['selectedID'];
 		<title>Update Tour</title>
 		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
 		<style type="text/css">
-			#main_div {
-				height: 100%;
-				text-align: center;
-			}
-			
-			table {
+
+			#UpdateToursTable {
 				margin: 0 auto;
-				text-align: left;
+				text-align: center;
 			}
 		</style>
 	</head>
 	<body>
-		<div class= "wrapper" id="main_div">
+		<div class= "wrapper">
 			<h2>Update Tour</h2>
 			<h3>All fields are obligatory!!</h3>
 			<br>
 			<form method="post" action="<?php echo URL_DIR.'admin/updateTour';?>">
-			  <table>
+			  <table id="UpdateToursTable">
 			  	<tr>
 			  		<td>ID: </td>
 			  		<td><input type="text" name="update_ID" value="<?php echo ' '.$SelectedTour->getID(); ?>" disabled></td>
@@ -71,11 +67,17 @@ $SelectedTour = $_SESSION['selectedID'];
 			  	</tr>
 			  </table>
 			  	<br>
-				<input id="button_update" type="submit" name="submit_update" value="save changes"></input>
+			  	<table style="width: 100%; text-align: center; padding-bottom:2%;">
+			  		<tr>
+			  			<td>
+			  				<button id="submit1" style="width: 15%; text-align: center;" type="submit" name="submit_update" value="save changes">Save changes</button>
 				
-				<a href="<?php echo URL_DIR.'admin/admin_details_tours'?>">
-					<input type="button" value="<?php echo $lang['BTN_BACK']; ?>" ></input>
-				</a>
+							<a href="<?php echo URL_DIR.'admin/admin_details_tours'?>">
+							<button id="submit1" style="width: 15%; text-align: center;" type="button" ><?php echo $lang['BTN_BACK']; ?></button>
+							</a>
+			  			</td>
+			  		</tr>
+			  	</table>
 			</form>
 		</div>
 		<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>

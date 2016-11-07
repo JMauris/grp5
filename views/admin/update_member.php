@@ -65,10 +65,10 @@ $SelectedMember = $_SESSION['selectedMember'];
 				</table>
 			</form>
 			<br>
-			<input type="submit" value="save changes"></input>
+			<button id="submit1" style="width: 15%; text-align: center;" type="submit">Save changes</button>
 			
 			<a href="<?php echo URL_DIR.'admin/admin_details_members'?>">
-				<button id="submit1" style="width: 15%;" type="button" ><?php echo $lang['BTN_BACK']; ?></button>
+				<button id="submit1" style="width: 15%; text-align: center;" type="button" ><?php echo $lang['BTN_BACK']; ?></button>
 			</a>
 		</div>
 		<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>	
