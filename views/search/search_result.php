@@ -70,10 +70,10 @@ else {
 					<tr>
 						<td style= "overflow-y: scroll; height: 100%;">
 							<div id="show"> 
+							
 								<form action="<?php echo URL_DIR.'program/program_detail'?>" method= "post">
 					 				
-					 			<?php 
-					 			if(empty($tourResults)){?>
+					 			<?php if($tourResults == "error"){?>
 					 				<h3>There are no Tours with the given search conditions. Please search again</h3>
 					 			 	<?php }
 					 			else

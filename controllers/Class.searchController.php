@@ -28,6 +28,11 @@ class searchController extends Controller
   	
   	$tourResults=Tour::get_results($idRegion, $difficulty, $genre);
   	
+  	if($tourResults==1)
+  	{
+  		$tourResults = "error";
+  	}
+  		
   	$_SESSION['tour_results']=$tourResults;
   }
 }

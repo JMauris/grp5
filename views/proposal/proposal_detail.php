@@ -48,6 +48,7 @@
 					<td>Description:</td>
 					<td><?php echo ' '.$SelectedTour->getInformation_fr(); ?></td>
 				</tr>
+				<tr>
 				<?php if(isset ($_SESSION['personne'])){?>
 					<td><?php echo $lang['OPINION']; ?></td>
 					<td>

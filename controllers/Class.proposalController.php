@@ -13,7 +13,7 @@ class ProposalController extends Controller{
 
  function  proposal_detail(){
 
- if(strpos($_SERVER["HTTP_REFERER"],'programm')){
+ if(strpos($_SERVER["HTTP_REFERER"],'proposal')){
    if(isset ($_POST['selectedTour'] ))
    {
 
