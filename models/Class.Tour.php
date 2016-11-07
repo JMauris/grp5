@@ -906,7 +906,29 @@ public static function connectToAll() {
 	return $resultArray;
 }
 
-
+public static function get_registered_members($idTour)
+{
+	$query = "SELECT * FROM inscription
+				INNER JOIN tour ON tour.idTour=inscription.idRandonnee
+				INNER JOIN personne ON personne.idPersonne=inscription.idPersonne
+				WHERE tour.idTour='$idTour'";
+	
+	$result = MySqlConn::getInstance()->selectDB($query);
+	$row_no = $result->rowCount();
+	if($row_no == 0){
+		return false;
+	}
+	else{
+	while($row = $result->fetch())
+	{
+		$resultArray[]= new Personne($row['idPersonne'], $row['prenom'], $row['nom'],$row['email'], $row['motDePasse']
+                      , $row['idxLangue'], $row['estActif'] , $row['numMembre'], $row['role'], $row['portable'],
+                       $row['telephone'], $row['adresse'], $row['Localite'], $row['NPA'], $row['idxAbonnement']);
+	}
+	$result->closeCursor();
+	return $resultArray;
+	}
+}
 
 }
 

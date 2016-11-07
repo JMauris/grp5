@@ -145,6 +145,9 @@ if(isset($_GET['lang'])){
 											<form action="<?php echo URL_DIR.'admin/update_tour';?>" method= "post">
 												<button name ="selectedTour" value = <?php echo $cle;?> type = "submit">Edit</button>
 											</form>
+											<form action="<?php echo URL_DIR.'admin/show_registered';?>" method= "post">
+												<button name ="selectedTour" value = <?php echo $cle;?> type = "submit">Show registered members</button>
+											</form>
 										</td>
 									</tr>
 								</table>	

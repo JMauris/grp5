@@ -155,6 +155,14 @@ class adminController extends Controller {
 		$delteTour=Personne::deleteById($idForDelete);
 		$this->redirect('admin', 'admin');
 	}
+	
+	function show_registered() {
+		$Tour=$_SESSION['tour'];
+		$idTour = $_POST['selectedTour'];
+		
+		$PersonneList = Tour::get_registered_members($idTour);
+		$_SESSION['listPersonne']=$PersonneList;
+	}
 }
 
 ?>
