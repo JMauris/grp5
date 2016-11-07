@@ -186,3 +186,56 @@ a {
 
 
 
+/* Update_tour Css */
+#UpdateToursTable {
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+
+
+/* Contact Div Css */
+#contactDiv {
+	color: black;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 105%;
+	padding-left: 20%;
+	text-align: left;
+}
+
+
+
+
+/* Mychoice Form Css */
+#MyChoiceForm {
+	width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    float: center;
+}
+
+
+
+
+/* Myfavoris Css */
+#MyfavorisTopDiv {
+	text-align: center;
+}
+			
+#MyfavorisMiddleDiv {
+	width: 96%;
+	height: 30%;
+	padding-left: 2%;
+	paddin g-right: 2%;
+}
+			
+#MyfavorisShowTable {
+	width: 100%;
+	height: 100%;
+}
+
+
+
+
+

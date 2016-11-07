@@ -2,16 +2,6 @@
 
 	<html>
 		<head>
-		<style type="text/css">
-			#contactDiv{
-			color: black;
-			font-family: "Times New Roman", Times, serif;
-			font-size:105%;
-			padding-left: 20%;
-			text-align: left;
-			}
-			
-		</style>
 			<meta charset="UTF-8">
 			<title>Contact</title>
 		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">

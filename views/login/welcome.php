@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
 	<br><br>
 	<div class="wrapper">
-		<table style="align:center">
+		<table style="text-align:center; width: 100%; padding-bottom: 2%;">
 			<tr>
 				<td>
 					<?php echo $msg;?>

@@ -8,38 +8,35 @@
 		<title>Login</title>
 		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
 		<style type="text/css">
-			form {
-				width:25%;
-    			margin:0 auto;
-			}
+			
 		</style>
 	</head>
 	<body>
 		<div class="wrapper">
 
 			<h1><?php echo $lang['MON_CAS']; ?></h1>
-			<form action="<?php echo URL_DIR.'mychoice/myregister';?>" method="post">
+			<form id="MyChoiceForm" action="<?php echo URL_DIR.'mychoice/myregister';?>" method="post">
 
 					<table>
 					<tr>
-						<button type="submit" name="register">Register</button>
+						<button id="submit1" style="width: 10%;" type="submit" name="register">Register</button>
 					</tr>
 					</table>
 			</form>
 
-      <form action="<?php echo URL_DIR.'mychoice/myfavoris';?>" method="post">
+      <form id="MyChoiceForm" action="<?php echo URL_DIR.'mychoice/myfavoris';?>" method="post">
 
           <table>
           <tr>
-            <button type="submit" name="favoris">Favoris</button>
+            <button id="submit1" style="width: 10%;" type="submit" name="favoris">Favoris</button>
           </tr>
           </table>
       </form>
-      <form action="<?php echo URL_DIR.'mychoice/mynotice';?>" method="post">
+      <form id="MyChoiceForm" style="padding-bottom: 2%;" action="<?php echo URL_DIR.'mychoice/mynotice';?>" method="post">
 
           <table>
           <tr>
-            <button  type="submit" name="notice">Notice</button>
+            <button id="submit1" style="width: 10%;" type="submit" name="notice">Notice</button>
           </tr>
           </table>
       </form>

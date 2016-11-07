@@ -6,13 +6,6 @@ $SelectedTour = $_SESSION['selectedID'];
 	<head>
 		<title>Update Tour</title>
 		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
-		<style type="text/css">
-
-			#UpdateToursTable {
-				margin: 0 auto;
-				text-align: center;
-			}
-		</style>
 	</head>
 	<body>
 		<div class= "wrapper">

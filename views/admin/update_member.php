@@ -65,12 +65,18 @@ $SelectedMember = $_SESSION['selectedMember'];
 				</table>
 			</form>
 			<br>
-			<button id="submit1" style="width: 15%; text-align: center;" type="submit">Save changes</button>
+			<table style="width: 100%; text-align: center; padding-bottom:2%;">
+			  		<tr>
+			  			<td>
+							<button id="submit1" style="width: 15%; text-align: center;" type="submit">Save changes</button>
 			
-			<a href="<?php echo URL_DIR.'admin/admin_details_members'?>">
-				<button id="submit1" style="width: 15%; text-align: center;" type="button" ><?php echo $lang['BTN_BACK']; ?></button>
-			</a>
-		</div>
+							<a href="<?php echo URL_DIR.'admin/admin_details_members'?>">
+							<button id="submit1" style="width: 15%; text-align: center;" type="button" ><?php echo $lang['BTN_BACK']; ?></button>
+							</a>
+						</td>
+					</tr>
+				</table>
+			</div>
 		<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>	
 	</body>
 </html>
