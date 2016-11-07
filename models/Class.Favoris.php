@@ -49,8 +49,10 @@ class Favoris {
 	public static function connectForFavoris($idPersonne) {
 		$query = "SELECT * FROM `favoris` WHERE `idPersonne` = $idPersonne AND `estFavoris` = 1 ";
 		$result = MySqlConn::getInstance()->selectDB($query);
-
-		$isinstance = false;
+		$nbr=$result->rowCount();
+		if($nbr==0){
+			return false;
+		}else{
 
 		while($row = $result->fetch())
 		{
@@ -62,11 +64,9 @@ class Favoris {
 
 		$result->closeCursor();
 
-if($isinstance==true)
-		return $resultArray;
-		if($isinstance==false)
-				return false;
 
+		return $resultArray;
+	}
 
 
 	}
@@ -74,7 +74,10 @@ if($isinstance==true)
 	public static function connectForEvalutation($idPersonne) {
 		$query = "SELECT * FROM `favoris` WHERE `idPersonne` = $idPersonne AND `evaluation` != 0  ";
 		$result = MySqlConn::getInstance()->selectDB($query);
-	  		$isinstance = false;
+		$nbr=$result->rowCount();
+		if($nbr==0){
+			return false;
+		}else{
 
 		while($row = $result->fetch())
 		{
@@ -86,10 +89,9 @@ if($isinstance==true)
 
 		$result->closeCursor();
 
-		if($isinstance==true)
+
 				return $resultArray;
-				if($isinstance==false)
-						return false;
+		}
 
 
 

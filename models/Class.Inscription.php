@@ -113,7 +113,10 @@ public static function connectByUser($idPersonne){
 
   $query = "SELECT * FROM `inscription` WHERE `idPersonne` = '$idPersonne'";
   $result = MySqlConn::getInstance()->selectDB($query);
-			$isinstance = false;
+	$nbr=$result->rowCount();
+	if($nbr==0){
+		return false;
+	}else{
 	while($row = $result->fetch())
 	{
 	$resultArray[] =   new inscription($row['idPersonne'], $row['idRandonnee'], $row['date'],$row['heure'], $row['idxStatus'], $row['remarque']);
@@ -122,10 +125,9 @@ public static function connectByUser($idPersonne){
 	$result->closeCursor();
 
 
-	if($isinstance==true)
+
 			return $resultArray;
-			if($isinstance==false)
-					return false;
+}
 
 }
 public static function removeRegisterByID($idTour, $idPersonne)

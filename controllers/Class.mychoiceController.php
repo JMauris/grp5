@@ -50,7 +50,9 @@ function mychoice(){
 
         $notice =Favoris::connectForEvalutation($iduser);
 
+
         $_SESSION['notice']= $notice;
+    
         //faire un array des  Tour enregistrer
         if($notice!=false)
         {
@@ -58,6 +60,7 @@ function mychoice(){
 
           $TourNotice = Tour::connectForMyProgramm($notice,1);
           $_SESSION['Mynotice']=$TourNotice;
+
 
 
       }

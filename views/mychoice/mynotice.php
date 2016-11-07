@@ -3,7 +3,7 @@
  if(isset($_SESSION['Mynotice'])){
  	 $tourArray = $_SESSION['Mynotice'];
  }
- if(isset($_SESSION['Mynotice'])){
+ if(isset($_SESSION['notice'])){
  	 $noticeArray = $_SESSION['notice'];
  }
    include_once ROOT_DIR.'languages/common.php';
@@ -25,7 +25,7 @@
 
 				<table id="MynoticeShowTable">
 					<tr>
-							<?php if(isset($_SESSION['MyFavoris'])) { ?>
+							<?php if(isset($_SESSION['Mynotice'])) { ?>
 						<td style= "overflow-y: scroll; height: 100%;">
 							<div>
 
