@@ -254,4 +254,43 @@ a {
 	width: 100%;
 	height: 100%;
 }
-	
+
+
+
+
+
+/* Myregister Css */
+#MyregisterTopDiv {
+	text-align: center;
+}
+			
+#MyregisterMiddleDiv {
+	width: 96%;
+	height: 30%;
+	padding-left: 2%;
+	paddin g-right: 2%;
+}
+			
+#MyregisterShowTable {
+	width: 100%;
+	height: 100%;
+}
+
+
+
+
+/* Profil Form Css */
+#ProfilForm {
+	width: 25%;
+	margin: 0 auto;
+	padding: 2%;
+}
+
+
+
+
+/* Hiking_detail Table Css */
+#HikingDetailsTable {
+	margin: 0 auto;
+	text-align: left;
+}

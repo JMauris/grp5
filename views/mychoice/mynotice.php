@@ -18,7 +18,7 @@
 		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
 	</head>
   <body>
-		<div id= "wrapper">
+		<div class= "wrapper">
 			<div class= "MynoticeTopDiv">
 				</div>
 			<div id="MynoticeMiddleDiv">
