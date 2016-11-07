@@ -41,7 +41,7 @@
 					</tr>
 						<tr>
 							<th><label for="email"><?php echo $lang['P_EMAIL']; ?></label></th>
-						<th><input type="text" name="email" value="<?php echo $user->getEmail()?>"></th>
+						<th><input type="text" name="email" value="<?php echo $user->getEmail()?>"  disabled="disabled"></th>
 					</tr>
 				<tr>
 					<th><label for="abonnement"><?php echo $lang['P_ABO']; ?></label></th>
