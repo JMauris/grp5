@@ -5,29 +5,16 @@
 		<meta charset="UTF-8">
 		<title>search path</title>
 		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
-		<style type="text/css">
-			select{
-				width: 150px;
-			}
-
-			#filter{
-				width: 400px;
-			}
-
-			table {
-				margin: 0 auto;
-			}
-		</style>
 	</head>
 	<body>
-		<div style="height: 600px;">
+		<div class="wrapper">
 			<h1><?php echo $lang['SEARCH']; ?></h1>
 			<br>
-				<table>
+				<table style="margin: 0 auto;">
 					<tr>
 						<td><?php echo $lang['REGION']; ?></td>
 						<td>
-							<select name="region">
+							<select style="SearchPathSelect" name="region">
 								<option value="all"><?php echo $lang['ALL']; ?></option>
 								<option value="1">Center</option>
 								<option value="2">Upper</option>
@@ -40,7 +27,7 @@
 					<tr>
 						<td><?php echo $lang['DIFFICULTY']; ?>:</td>
 						<td>
-							<select name="difficulty">
+							<select style="SearchPathSelect" name="difficulty">
 								<option value="all"><?php echo $lang['ALL']; ?></option>
 								<option value="1">*</option>
 								<option value="2">**</option>
@@ -53,7 +40,7 @@
 					<tr>
 						<td><?php echo $lang['SORT_HIKE']; ?></td>
 						<td>
-							<select name="difficulty">
+							<select style="SearchPathSelect" name="difficulty">
 								<option value="all"><?php echo $lang['ALL']; ?></option>
 								<option value="1"><?php echo $lang['SNOWSHOE']; ?></option>
 								<option value="2"><?php echo $lang['SKI_TOUR']; ?></option>
@@ -70,7 +57,7 @@
 					<tr>
 						<td>Hikings:</td>
 						<td>
-							<input id="filter" placeholder="<?php echo $lang['PLACEHOLDER']; ?>" data-type="search">
+							<input id="SearchPathFilter" placeholder="<?php echo $lang['PLACEHOLDER']; ?>" data-type="search">
 						</td>
 					</tr>
 					<tr>

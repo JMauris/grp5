@@ -24,115 +24,28 @@ else {
 		     $("#datepicker, #datepicker2, #datepicker3").datepicker();
 		   });
 		</script>
-
-		<style type="text/css">
-
-			button {
-				width: 100%;
-				text-align: left;
-			}
-			p {
-				margin: 0;
-				padding: 0;
-			}
-
-			#tableDiv{
-				height: 50%;
-				background: transparent;
-				padding-left: 2%;
-				padding-right: 2%;
-				padding-top: 2%;
-			}
-			#insideTable{
-				background: transparent;
-				padding: 0;
-				margin-bottom: 3%;
-				width: 94%;
-				text-align: left;
-				float: top;
-				text-align: center;
-			}
-			tr{
-				text-align:left;
-			}
-			#buttonsTr
-			{
-				text-align: center;
-			}
-			#search{
-				display:inline-block;
-				align: left;
-				width: 20%;
-			}
-			#top {
-				float: top;
-				height: 6%;
-				background-color : transparent;
-				padding-bottom: 2%;
-			}
-
-			#yourProg{
-				background-color : transparent;
-				text-align: center;
-				padding-bottom:2%;
-				padding-left: 2%;
-				padding-right: 2%;
-			}
-
-			#mainTable{
-				width: 100%;
-				padding-top: 2%;
-				padding-left: 2%;
-				padding-right: 2%;
-			}
-			#bottom {
-				float: bottom;
-				background-color : transparent;
-				height: 150px;
-				overflow-y : scroll;
-				margin-bottom: 2%;
-			}			
-			#table{
-				border: 1px;
-			}
-			#topButton{
-				background: transparent;
-			}
-			#search1{
-				float: right;
-				width: 20%;
-			}
-			#search1:hover {
-			    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-			    border: 2px solid #555555;
-			}
-			#datepicker{
-				width: 100%;
-				padding: 0;
-			}
-		</style>
 	</head>
 	<body>
 		<div class="wrapper" style= "padding-bottom: 2%; padding-right: 2%; padding-left: 2%;">
 				<h1><?php echo $lang['PROGRAM_TITLE']; ?></h1>
-				<div id="topButton">
-					<a href="<?php echo URL_DIR.'search/search_path'?>"><img id="search1" src="<?php echo URL_DIR. 'public/img/searchRoute.png'?>"></a>
+				<div id="ProgrammTopButton">
+					<a href="<?php echo URL_DIR.'search/search_path'?>"><img id="ProgrammImage" src="<?php echo URL_DIR. 'public/img/searchRoute.png'?>"></a>
 				</div>
 
 				<div>
 
-				<div id="top">
+				<div id="ProgrammTopDiv">
 					<table style="width: 100%;">
 						<tr>
 							<td style="text-align: center; width: 50%;">
 								<h2><?php echo $lang['SINGLE_HIKES']; ?></h2>
-						<p>
+						<p id="ProgrammP">
 							Description
 						</P>
 					</td>
 					<td style="text-align: center; width: 50%;">
 				<h2><?php echo $lang['MULTI_DAY_HIKES']; ?></h2>
-						<p>
+						<p id="ProgrammP">
 							Description
 						</P>
 					</td>
@@ -140,11 +53,11 @@ else {
 			</table>
 			</div>
 
-		<div id="tableDiv">
-				<table id = "mainTable">
+		<div id="ProgrammDiv">
+				<table id = "ProgrammMainTable">
 					<tr>
 						<td style="width: 50%;">
-							<div id="insideTable">
+							<div id="ProgrammTable">
 								<table>
 									<tr>
 									  <td><?php echo $lang['CHOOSE_A_DAY']; ?></td>
@@ -158,7 +71,7 @@ else {
 							</div>
 						</td>
 						<td style="width: 50%;">
-							<div id="insideTable">
+							<div id="ProgrammTable">
 							  	<table>
 								  	<tr>
 								  		<td><?php echo $lang['CHOOSE_DATE']; ?></td>
@@ -183,7 +96,7 @@ else {
 			</div>
 		   <div>
 			<table style="width: 100%;">
-					<tr id="buttonsTr">
+					<tr id="ProgrammTr">
 						<td>
 							<form action="<?php echo URL_DIR.'programm/programm'?>" method= "post">
 								<button id="submit1" name ="type" value = '1'><?php echo $lang['BTN_ONLY_HIKE']; ?></button>
@@ -218,7 +131,7 @@ else {
 					 </tr>
 				</table>
 			</div>
-		<div id="bottom">
+		<div id="ProgrammBottomDiv">
 					 <table id="table">
 					 <tr>
 					  <td colspan = "5">
@@ -227,7 +140,7 @@ else {
 
 					 		{?>
 
-					 	<button  name ="selectedTour" value = <?php echo $cle;?>>
+					 	<button id="ProgrammButton" name ="selectedTour" value = <?php echo $cle;?>>
 					 		<table style="width: 100%;">
 					 			<tr>
 					 			<td style="width: 20%">

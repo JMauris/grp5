@@ -13,59 +13,15 @@ else {
 	<head>
 		<title>Search Result</title>
 		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
-		<style type="text/css">
-			.top{
-				text-align: center;
-			}
-			.middle{
-				width: 96%;
-				height: 30%;
-				padding-left: 2%;
-				paddin g-right: 2%;
-			}
-			.show{
-				width: 100%;
-				height: 100%;
-			}
-			.bottom{
-				height: 100%;
-				width: 100%;
-			}
-			.buttons{
-				width: 100%;
-			}
-			#search {
-				display:inline-block;
-				align: left;
-				width: 20%;
-			}
-			a{
-				text-decoration: none;
-			}
-			#buttonsTd
-			{
-				width: 100%;
-				text-align: right;
-				padding: 2%;
-			}
-			#search1{
-				float: right;
-				width: 20%;
-			}
-			#search1:hover {
-			    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-			    border: 2px solid #555555;
-			}
-		</style>
 	</head>
 	<body>
 		<div class= "wrapper">
-			<div class= "top">
+			<div id= "SearchResultTopDiv">
 				<h1>Search Results</h1>
 			</div>
 
-			<div class="middle">
-				<table class="show">
+			<div id="SearchResultMiddleDiv">
+				<table id="SearchResultShowTable">
 					<tr>
 						<td style= "overflow-y: scroll; height: 100%;">
 							<div id="show"> 
@@ -97,11 +53,11 @@ else {
 				</table>
 			</div>
 
-			<div class = "bottom">
-				<table class="buttons">
+			<div id= "SearchResultBottomDiv">
+				<table id="SearchResultTable">
 					<tr>
-						<td id="buttonsTd">
-							<a href="<?php echo URL_DIR.'search/search_path'?>"><img id="search1" src="<?php echo URL_DIR. 'public/img/searchRoute.png'?>"></a>			 			
+						<td id="SearchResultTd">
+							<a href="<?php echo URL_DIR.'search/search_path'?>"><img id="SearchResultImage" src="<?php echo URL_DIR. 'public/img/searchRoute.png'?>"></a>			 			
 						</td>
 					</tr>
 				</table>

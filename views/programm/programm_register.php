@@ -11,27 +11,13 @@ $SelectedTour = $_SESSION['Selected_Tour'];
 	<!-- Google reCaptcha JS -->
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
-<style>
-		form {
-			width:25%;
-				margin:0 auto;
-		}
-
-		table{
-			text-align: left;
-		}
-
-		h3, div {
-			text-align: center;
-		}
-	</style>
 </head>
 <body>
 	<div  class="wrapper" style="height: 90%">
 		<h1> Register</h1>
 		<h2> <?php echo ' '.$SelectedTour->getTitre(); ?></h2>
 		<h3>* = field obligatory</h3>
-		<form method="post" action="<?php echo URL_DIR.'programm/register_save';?>" onsubmit="alert('Saved')">
+		<form id="ProgrammRegisterForm" method="post" action="<?php echo URL_DIR.'programm/register_save';?>" onsubmit="alert('Saved')">
 			<table style="align:center">
 					<tr>
 					<th><label for="name">Name</label>* : </th>

@@ -8,22 +8,12 @@
 	<head>
 		<title>Proposal Detail</title>
 		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
-		<style type="text/css">
-			div {
-				text-align: center;
-			}
-
-			table {
-				margin: 0 auto;
-				text-align: left;
-			}
-		</style>
 	</head>
 	<body>
 		<div class="wrapper" style="height: 100%">
 			<h1>Proposal Detail</h1>
 			<h3><?php echo ' '.$SelectedTour->getTitre(); ?></h3>
-			<table>
+			<table id="ProposalDetailTable">
 				<tr>
 					<td>Date begin:</td>
 					<td><?php echo ' '.$SelectedTour->getDateDebut(); ?></td>
