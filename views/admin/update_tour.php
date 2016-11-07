@@ -78,8 +78,6 @@ $SelectedTour = $_SESSION['selectedID'];
 				</a>
 			</form>
 		</div>
+		<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
 	</body>
-</html>
-
-<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>
-			
+</html>			

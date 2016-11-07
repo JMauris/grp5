@@ -71,7 +71,6 @@ $tour = $_SESSION['tour'];?>
 			<button id="searchButton"><img id="search" src="http://localhost/cas_montana/public/img/search.png" onclick="window.location = 'search_path.php';">Search route</button>
 			<button id="near">Near us</button>
 		</div>
+		<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
 	</body>
 </html>
-
-<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>

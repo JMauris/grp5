@@ -85,7 +85,6 @@
 			<br>
 			<a href=""><?php echo $lang['LINK_CHANGE_PW']; ?></a>
 		</div>
-</body>
+		<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
+	</body>
 </html>
-
-<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?>

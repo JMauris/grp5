@@ -42,8 +42,7 @@
 				</p>
 				
 			</div>
-			
-			<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?>
-		</body>
-	</html>
+		<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
+	</body>
+</html>
 	

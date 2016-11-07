@@ -276,17 +276,16 @@ else {
 								</tr>
 							</table>
 						</button>
-									<?php } ?>
+								<?php } ?>
 						</form>
 						</td>
 					</tr>
-			</table>
-
+				</table>
 			</div>
 		</div>
 		</div>
+		<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; include_once ROOT_DIR.'languages/common.php';?>?></div>
 	</body>
 </html>
 
-<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';
-	include_once ROOT_DIR.'languages/common.php';?>?>
+

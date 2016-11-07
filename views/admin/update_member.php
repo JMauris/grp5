@@ -82,7 +82,6 @@ $SelectedMember = $_SESSION['selectedMember'];
 				<input type="button" value="<?php echo $lang['BTN_BACK']; ?>" ></input>
 			</a>
 		</div>
+		<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>	
 	</body>
 </html>
-
-<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>

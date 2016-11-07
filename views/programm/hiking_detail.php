@@ -82,8 +82,6 @@ include_once ROOT_DIR.'languages/common.php';
 			</td>
 						<?php	}  ?>
 				</tr>
-
-
 				<tr>
 					<td>
 						<form method="post" action="<?php echo URL_DIR.'programm/saveFavoris';?>" >
@@ -100,7 +98,6 @@ include_once ROOT_DIR.'languages/common.php';
 						}  ?>
 						</form>
 					</td>
-
 				</tr>
 			</table>
 			<a href="<?php echo URL_DIR.'programm/programm'?>">
@@ -119,16 +116,11 @@ include_once ROOT_DIR.'languages/common.php';
 					echo	'<a href="' .URL_DIR."programm/programm_register". '">
 					<input type="button" value="' .$lang['REGISTER'].'"</input>
 				</a>';
-
-
-			}
-
-
-				 ?> 	</form></th>
-
-			<br>
-		</div>
+					}
+				 ?> 	
+				 </form>
+				<br>
+			</div>
+		<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
 	</body>
 </html>
-
-<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>

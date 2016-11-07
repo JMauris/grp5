@@ -19,6 +19,6 @@
 					<?php echo $lang['HOME_TEXT_3']; ?>
 				</p>
 			</div>
-		</body>
-	</html>
-<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?>
+		<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
+	</body>
+</html>

@@ -14,7 +14,5 @@
 		</tr>
 	</table>
 	</div>
+	<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
 </body>
-
-
-<?php include_once ROOT_DIR.'global/footer.php'; ?>

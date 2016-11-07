@@ -83,12 +83,8 @@ if(isset($_SESSION['MyFavoris'])){
 														 }
 											 ?>
 										 <p><?php echo ' '.$tourArray[$cle]->getInformation_fr(); ?></p>
-
 									 </button>
-
-
 									<?php } ?>
-
 								</form>
 
 							</div>
@@ -101,7 +97,6 @@ if(isset($_SESSION['MyFavoris'])){
 				</table>
 			</div>
 		</div>
-
-<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>
-</body>
+		<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
+	</body>
 </html>

@@ -256,7 +256,6 @@ $memberArray=$_SESSION['get_all_Membershit'];
 			</div>
 			<br><br><br>
 		</div>
+	 <div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
 	</body>
 </html>
-<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>
-

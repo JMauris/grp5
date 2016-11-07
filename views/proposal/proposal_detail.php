@@ -76,8 +76,6 @@
 				</td>
 						<?php	}  ?>
 				</tr>
-
-
 				<tr>
 					<td>
 						<form method="post" action="<?php echo URL_DIR.'proposal/saveFavoris';?>" >
@@ -94,15 +92,12 @@
 						}  ?>
 						</form>
 					</td>
-
 				</tr>
-
 			</table>
 			<a href="<?php echo URL_DIR.'proposal/proposal'?>">
 				<input type="button" value="go back" ></input>
 			</a>
 			</div>
-
-			<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?>
-		</body>
-	</html>
+		<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
+	</body>
+</html>

@@ -81,12 +81,8 @@ if(isset($_SESSION['MyRegister']))
 										 <p><?php echo ' '.$tourArray[$cle]->getInformation_fr(); ?></p>
 
 									 </button>
-
-
 									<?php } ?>
-
 								</form>
-
 							</div>
 						</td>
 						<?php } ?>
@@ -97,7 +93,6 @@ if(isset($_SESSION['MyRegister']))
 				</table>
 			</div>
 		</div>
-
-	<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>
+		<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
 	</body>
 </html>

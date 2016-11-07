@@ -35,5 +35,6 @@
 			<a href="<?php echo URL_DIR.'admin/admin_details_members'?>"><input type="button" value="Members"></input></a>
 			<br><br><br><br>
 		</div>
+		<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
 	</body>
 </html>

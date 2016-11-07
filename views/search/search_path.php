@@ -74,8 +74,7 @@ else {
 
 					 					{?>
 					 				<option value=<?php echo $cle?>><?php echo ' '.$genre[$cle]->getGenreTour_fr();?></option>
-					 					<?php }?>
-					 		
+					 					<?php }?>					 		
 									</select>
 						</td>
 					</tr>
@@ -90,12 +89,10 @@ else {
 							<input type="submit" value="submit me!" />
 						</td>
 					</tr>
-
 				</table>
-
 			</form>
 		</div>
 		</div>
+		<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
 	</body>
 </html>
-<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php'; ?>
