@@ -8,51 +8,6 @@ $memberArray=$_SESSION['get_all_Membershit'];
 		<meta charset="UTF-8">
 		<title>Admin page</title>
 		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
-		<style type="text/css">			
-		
-			
-			
-			#insert_table, #table_members_header, #table_members {
-				margin: 0 auto;
-				text-align: left;
-				border-spacing: 10px;
-			}
-			
-			#button_save, #button_update, #button_delete {
-				font-style: normal;
-				font-family: "Times New Roman", Times, serif;
-				font-size: 1em;	
-			}			
-	
-			#content_insert, #content_update, #content_delete {
-				display: none; text-align: center;
-			}
-			
-			#table_members_header {
-				width: 100%; text-align:left;
-			}
-			
-			#table_members {
-				width: 100%; text-align:left;
-			}
-			
-			#div_list_members {
-				float: bottom;
-				background-color: lightgrey;
-				height: 500px;
-				overflow-y : scroll;
-				margin-bottom: 2%;
-			}
-			
-			#div_list_header {
-				float: bottom;
-			}
-			
-			#button_div {
-				text-align: center;
-			}
-			
-		</style>
 		<script>	
 			function toggle_i() {
 			    document.getElementById("content_insert").style.display = 'block';
@@ -75,7 +30,7 @@ $memberArray=$_SESSION['get_all_Membershit'];
 		<div class="wrapper">
 			<h1>Managing Members</h1>
 			
-			<div id="button_div">
+			<div id="AdminDetailsMembersButtonDiv">
 				<button id="submit1" style = "width: 10%;"type="button" value="insert" onclick="toggle_i();">Insert</button>
 				<button id="submit1" style = "width: 10%;" type="button" value="update" onclick="toggle_u();">Update</button>
 				<button id="submit1" style = "width: 10%;" type="button" value="delete" onclick="toggle_d();">Delete</button>
@@ -84,7 +39,7 @@ $memberArray=$_SESSION['get_all_Membershit'];
 			<div id="content_insert">
 				<h2>New Member</h2>
 				<form method="post" action="<?php echo URL_DIR.'admin/saveNewMember';?>">
-				  <table id="insert_table">
+				  <table id="AdminDetailsMembersTable">
 						<tr>
 							<td>Firstname:</td>
 							<td><input type="text" name="name" value=""></td>
@@ -119,18 +74,18 @@ $memberArray=$_SESSION['get_all_Membershit'];
 						</tr>
 					</table>
 					<br>
-				  <button id="button_save" type="submit" name="action">save</button>
+				  <button id="submit1" style="width: 15%;" type="submit" name="action">Save</button>
 				</form>
 				<a href="<?php echo URL_DIR.'admin/admin'?>">
-					<input type="button" value="<?php echo $lang['BTN_BACK']; ?>" ></input>
+					<button id="submit1" style="width: 15%;" type="button" ><?php echo $lang['BTN_BACK']; ?></button>
 				</a>
 			</div>
 						
 			<div id="content_update">
 				<h2>Update Member</h2>
 				
-				<div id="div_list_members" >				
-					<table id="table_members">
+				<div id="AdminDetailsMembersListDiv" >				
+					<table id="AdminDetailsMembersTable">
 						<thead>
 							<tr>
 							 	<th style = "width: 2%; text-align: left;"> ID </th>
@@ -234,10 +189,9 @@ $memberArray=$_SESSION['get_all_Membershit'];
 					<input type="number" value="member">
 				</form>	
 				<br><br>		
-				<input type="submit" value="delete"></input>
-				
+				<input type="submit" value="delete"></input>		
 				<a href="<?php echo URL_DIR.'admin/admin'?>">
-				<input type="button" value="<?php echo $lang['BTN_BACK']; ?>" ></input>
+				<button id="submit1" style="width: 15%;" type="button"><?php echo $lang['BTN_BACK']; ?></button>
 			</a>
 			</div>
 			<br><br><br>
