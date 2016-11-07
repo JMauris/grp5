@@ -632,6 +632,46 @@ public static function get_results($region, $difficulte, $genre)
 	
 }
 
+public static function get_results_byTxt($tx){
+	
+	$query = "SELECT * FROM tour
+	INNER JOIN tourgenretour ON tour.idTour = tourgenretour.idxTour
+	INNER JOIN genretour ON genretour.idGenreTour = tourgenretour.idxGenreTour
+	INNER JOIN tourregion ON tourregion.idxTour = tour.idTour
+	INNER JOIN region ON region.idRegion = tourregion.idxRegion
+	WHERE region.region_fr LIKE '%$tx%' OR region.region_de LIKE '%$tx%' 
+	OR tour.titre  LIKE '%$tx%' OR genreTour.genreTour_fr LIKE '%$tx%' OR genreTour.genreTour_DE  LIKE '%$tx%'";
+	
+	$result = MySqlConn::getInstance()->selectDB($query);
+	$row_no = $result->rowCount();
+	if($row_no == 0){
+		return false;
+	}
+	while($row = $result->fetch())
+	{
+	
+		$resultArray[] =   new Tour($row['idTour'],
+				$row['arriveeHeure'], $row['codeprogramme'],$row['dateDebut'], $row['dateFin'], $row['dateLimiteInscr'],
+				$row['departHeure'], $row['descente'],$row['description_de'], $row['description_fr'], $row['difficulte'],
+				$row['duree'], $row['idxArriveeLocalite'],$row['idxAssistant'], $row['idxDepartLocalite'], $row['idxGuide'],
+				$row['idxTypeTour'], $row['idxTypeTransport'],$row['information_de'], $row['information_fr'], $row['inscriptionMax'],
+				$row['lienCarte'], $row['lieuRDV'],$row['montee'], $row['prixMax'], $row['prixMin'],
+				$row['soustitre'], $row['status'],$row['titre'], $row['transportArrivee'], $row['transportDepart']);
+	
+	
+	
+	
+	}
+	
+	$result->closeCursor();
+	return $resultArray;
+	
+
+}
+
+
+
+
 public static function connectForMyProgramm($inscriptionArray, $type) //0=>Register   1=>Favoris  2=>evalutation
 {
 

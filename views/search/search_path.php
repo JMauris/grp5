@@ -81,7 +81,7 @@ else {
 					<tr>
 						<td>Hikings:</td>
 						<td>
-							<input id="filter" placeholder="<?php echo $lang['PLACEHOLDER']; ?>" data-type="search">
+							<input name="filter" placeholder="<?php echo $lang['PLACEHOLDER']; ?>" data-type="search">
 						</td>
 					</tr>
 					<tr>

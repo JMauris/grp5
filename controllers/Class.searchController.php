@@ -25,7 +25,16 @@ class searchController extends Controller
 	$idRegion = $_POST['selected_region'];
   	$difficulty = $_POST['difficulty'];
   	$genre = $_POST['sort_hike'];
-  	
+  	$txt = $_POST['filter'];
+  	if($txt != null){
+  		$tourResults=Tour::get_results_byTxt($txt);
+  		if($tourResults== false)
+  		{
+  			$tourResults = "error";
+  		}
+  		$_SESSION['tour_results']=$tourResults;
+  	}
+  	else{
   	$tourResults=Tour::get_results($idRegion, $difficulty, $genre);
   	
   	if($tourResults== false)
@@ -34,6 +43,7 @@ class searchController extends Controller
   	}
   		
   	$_SESSION['tour_results']=$tourResults;
+  }
   }
   
   
