@@ -69,7 +69,7 @@
 			<button id= "submit1" type="submit" name="action"><?php echo $lang['BTN_SAVE']; ?></button>
 			<br>
 			<br>
-			<a href=""><?php echo $lang['LINK_CHANGE_PW']; ?></a>
+			<a href="<?php echo URL_DIR.'profil/change_password'?>"><?php echo $lang['LINK_CHANGE_PW']; ?></a>
 			<div class="push"></div>
 		</div>
 		<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
