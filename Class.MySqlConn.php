@@ -3,9 +3,15 @@
 class MySqlConn {
 	const HOST = "127.0.0.1";
 	const PORT = "3306";
-	const DATABASE = "casmontana";
+/*
+	const DATABASE = "grp5";
 	const USER = "grp5";
 	const PWD = "Reunion2012";
+*/
+
+	const DATABASE = "casmontana";
+	const USER = "root";
+	const PWD = "";
 
 	private static $instance;
 	private $_conn;
@@ -19,8 +25,9 @@ class MySqlConn {
 			$this->_conn = new PDO('mysql:host='.self::HOST.
 								  ';port='.self::PORT.
 								  ';dbname='.self::DATABASE,
-									self::USER, self::PWD);
-		}
+									self::USER, self::PWD,array(
+                  PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+  }
 		catch (PDOException $e) {
 			die ('Connection failed: ' . $e->getMessage());
 		}
@@ -57,6 +64,14 @@ class MySqlConn {
 			else
 				die(print_r($this->_conn->errorInfo(), true));
 		}
+		return $result;
+	}
+
+	public function executeInsert($query)
+	{
+		$result = $this->_conn->query($query)
+			or die(print_r($this->_conn->errorInfo(), true));
+
 		return $result;
 	}
 }
