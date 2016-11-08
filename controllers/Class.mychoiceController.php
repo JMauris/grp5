@@ -65,9 +65,7 @@ function mychoice(){
 
 
 
-      }
-    }
-    else{
+      } else{
     unset($_SESSION['Mynotice']);
 
     }
@@ -94,12 +92,11 @@ function mychoice(){
         $TourRegister = Tour::connectForMyProgramm($inscription,0);
 
         $_SESSION['MyRegister']=$TourRegister;
-      }
-    }
-    else{
-    unset($_SESSION['MyRegister']);
+      }    else{
+          unset($_SESSION['MyRegister']);
 
-    }
+          }
+
 
 
     }
