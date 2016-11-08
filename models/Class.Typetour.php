@@ -7,6 +7,12 @@ class Region
   private $typeTour_fr;
 
 
+  /**
+   * 
+   * @param unknown $id
+   * @param unknown $typeTour_de
+   * @param unknown $typeTour_fr
+   */
   function __construct($id=null, $typeTour_de, $typeTour_fr)
   {
 

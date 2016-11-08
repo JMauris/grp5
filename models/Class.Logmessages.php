@@ -6,6 +6,13 @@ class Logmessages {
 	private $idRandonnee;
 	private $message_fr;
 	
+	
+	/**
+	 * 
+	 * @param unknown $idLog
+	 * @param unknown $idRandonnee
+	 * @param unknown $message_fr
+	 */
 	public function __construct($idLog, $idRandonnee, $message_fr) {
 		$this->setIdLog($idLog);
 		$this->setIdRandonnee($idRandonnee);

@@ -22,11 +22,26 @@ class Personne{
 
 
   private $idxAbonnement;
+  
 
-
-
-
-
+  /**
+   * 
+   * @param unknown $id
+   * @param unknown $firstname
+   * @param unknown $lastname
+   * @param unknown $email
+   * @param unknown $password
+   * @param unknown $idxLangue
+   * @param unknown $estActif
+   * @param unknown $numMember
+   * @param unknown $role
+   * @param unknown $portable
+   * @param unknown $phone
+   * @param unknown $adresse
+   * @param unknown $localite
+   * @param unknown $npa
+   * @param unknown $idxAbonnement
+   */
   public function __construct($id=null, $firstname, $lastname,
                               $email, $password=null, $idxLangue, $estActif, $numMember, $role,
                                $portable, $phone, $adresse, $localite, $npa, $idxAbonnement){

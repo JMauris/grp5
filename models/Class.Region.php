@@ -6,6 +6,13 @@ class Region
   private $region_de;
   private  $region_fr;
   
+  
+  /**
+   * 
+   * @param unknown $id
+   * @param unknown $region_fr
+   * @param unknown $region_de
+   */
   function __construct($id=null, $region_fr, $region_de )
   {
 

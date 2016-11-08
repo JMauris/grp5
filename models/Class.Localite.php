@@ -6,6 +6,13 @@ class Localite {
 	private $localite;
 	private $idxRegion;
 	
+	
+	/**
+	 * 
+	 * @param unknown $npa
+	 * @param unknown $localite
+	 * @param unknown $idxRegion
+	 */
 	public function __construct($npa, $localite, $idxRegion) {
 		$this->setNPA($npa);
 		$this->setLocalite($localite);

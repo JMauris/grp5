@@ -5,6 +5,12 @@ class Langue {
 	private $codeLangue;
 	private $langue;
 	
+	
+	/**
+	 * 
+	 * @param unknown $codeLangue
+	 * @param unknown $langue
+	 */
 	public function __construct($codeLangue, $langue) {
 		$this->setCodeLangue($codeLangue);
 		$this->setLangue($langue);

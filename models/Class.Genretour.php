@@ -6,6 +6,13 @@ class Genretour {
 	private $genreTour_fr;
 	private $genreTour_DE;
 	
+	
+	/**
+	 * 
+	 * @param unknown $idGenreTour
+	 * @param unknown $genreTour_fr
+	 * @param unknown $genreTour_de
+	 */
 	public function __construct($idGenreTour=null, $genreTour_fr, $genreTour_de) {
 		$this->setId($idGenreTour);
 		$this->setGenreTour_fr($genreTour_fr);

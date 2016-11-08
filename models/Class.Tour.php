@@ -41,9 +41,42 @@ class Tour
   protected $titre;
   protected $transportArrivee;
   protected $transportDepart;
-
-
-
+  
+  
+  /**
+   * 
+   * @param unknown $id
+   * @param unknown $arriveeHeure
+   * @param unknown $codeprogramme
+   * @param unknown $dateDebut
+   * @param unknown $dateFin
+   * @param unknown $dateLimiteInscr
+   * @param unknown $departHeure
+   * @param unknown $descente
+   * @param unknown $description_de
+   * @param unknown $description_fr
+   * @param unknown $difficulte
+   * @param unknown $duree
+   * @param unknown $idxArriveeLocalite
+   * @param unknown $idxAssistant
+   * @param unknown $idxDepartLocalite
+   * @param unknown $idxGuide
+   * @param unknown $idxTypeTour
+   * @param unknown $idxTypeTransport
+   * @param unknown $infromation_de
+   * @param unknown $information_fr
+   * @param unknown $inscriptionMax
+   * @param unknown $lienCarte
+   * @param unknown $lieuRDV
+   * @param unknown $montee
+   * @param unknown $prixMax
+   * @param unknown $prixMin
+   * @param unknown $soustitre
+   * @param unknown $status
+   * @param unknown $titre
+   * @param unknown $transportArrivee
+   * @param unknown $transportDepart
+   */
   function __construct($id=null,
                         $arriveeHeure, $codeprogramme, $dateDebut, $dateFin, $dateLimiteInscr,
                         $departHeure, $descente, $description_de, $description_fr, $difficulte,

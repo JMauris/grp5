@@ -7,6 +7,13 @@ class Tourgenretour extends Tour
 
   private $idxGenreTour;
   private $idxTour;
+  
+  
+  /**
+   * 
+   * @param unknown $idxGenreTour
+   * @param unknown $idxTour
+   */
   function __construct($idxGenreTour, $idxTour)
   {
     $this->setId($id);

@@ -7,6 +7,14 @@ class Favoris {
 	private $estFavoris;
 	private $evaluation;
 
+	
+	/**
+	 * 
+	 * @param unknown $idPersonne
+	 * @param unknown $idTour
+	 * @param unknown $estFavoris
+	 * @param unknown $evaluation
+	 */
 	public function __construct($idPersonne, $idTour, $estFavoris, $evaluation) {
 		$this->setIdPersonne($idPersonne);
 		$this->setIdTour($idTour);

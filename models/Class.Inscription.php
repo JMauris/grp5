@@ -9,6 +9,16 @@ class Inscription {
 	private $idxStatus;
 	private $remarque;
 
+	
+	/**
+	 * 
+	 * @param unknown $idPersonne
+	 * @param unknown $idRandonnee
+	 * @param unknown $date
+	 * @param unknown $heure
+	 * @param unknown $idxStatus
+	 * @param unknown $remarque
+	 */
 	public function __construct($idPersonne, $idRandonnee, $date, $heure, $idxStatus, $remarque) {
 		$this->setIdPersonne($idPersonne);
 		$this->setIdRandonnee($idRandonnee);

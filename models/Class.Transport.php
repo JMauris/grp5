@@ -9,6 +9,13 @@ class transport
    private $transport_de;
    private $transport_fr;
 
+   
+   /**
+    * 
+    * @param unknown $id
+    * @param unknown $transport_de
+    * @param unknown $transport_fr
+    */
   function __construct($id, $transport_de, $transport_fr)
   {
     $this->setId($id);

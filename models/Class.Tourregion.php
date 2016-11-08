@@ -9,6 +9,12 @@ class Tourregion extends Tour
   private $idxRegion;
   private $idxTour;
 
+  
+  /**
+   * 
+   * @param unknown $idxRegion
+   * @param unknown $idxTour
+   */
   function __construct($idxRegion,$idxTour)
   {
     $this-> setIdxRegion($idxRegion);

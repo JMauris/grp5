@@ -6,6 +6,13 @@ class Statusinscription{
   private $status_de;
   private $status_fr;
 
+  
+  /**
+   * 
+   * @param unknown $id
+   * @param unknown $status_de
+   * @param unknown $status_fr
+   */
   public function __construct($id=null,$status_de,$status_fr){
 
     $this->setId($id);

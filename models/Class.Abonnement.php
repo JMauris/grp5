@@ -6,6 +6,12 @@ class Abonnement {
 	private $abo_fr;
 	private $abo_de;
 	
+	/**
+	 * 
+	 * @param unknown $id
+	 * @param unknown $abo_fr
+	 * @param unknown $abo_de
+	 */
 	public function __construct($id=null, $abo_fr, $abo_de) {
 		$this->setId($id);
 		$this->setAbo_fr($abo_fr);
