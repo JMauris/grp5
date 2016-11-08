@@ -107,7 +107,7 @@ include_once ROOT_DIR.'languages/common.php';
 			<table style="width: 100%; text-align: center;">
 				<tr>
 					<td>
-						<a href=" <?php echo ' .URL_DIR."programm/programm_register". '?>">
+						<a href=" <?php echo URL_DIR."programm/programm_register" ?>">
 						<button id="submit1" style="width: 15%;" type="button"><?php echo $lang['REGISTER'];?></button>
 						</a>
 					</td>

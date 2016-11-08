@@ -1,26 +1,22 @@
 <?php include_once ROOT_DIR.'global/header.php';
-
 if(isset($_SESSION['MyFavoris'])){
 	 $tourArray = $_SESSION['MyFavoris'];
 
 }
-
- include_once ROOT_DIR.'languages/common.php';?>
+include_once ROOT_DIR.'languages/common.php';
+?>
 
 <html>
 	<head>
-
 		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css">
 	</head>
 	<body>
 		<div class= "wrapper">
-			<div id= "MyfavorisTopDiv">
-				</div>
+			<div id= "MyfavorisTopDiv"></div>
 			<div id="MyfavorisMiddleDiv">
-
 				<table id="MyfavorisShowTable">
 					<tr>
-							<?php if(isset($_SESSION['MyFavoris'])) { ?>
+						<?php if(isset($_SESSION['MyFavoris'])) { ?>
 						<td style= "overflow-y: scroll; height: 100%;">
 							<div>
 								<form action="<?php echo URL_DIR.'mychoice/displaySelect'?>" method= "post">

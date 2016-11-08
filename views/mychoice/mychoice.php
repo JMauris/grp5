@@ -19,7 +19,7 @@
 
 					<table>
 					<tr>
-						<button id="submit1" style="width: 10%;" type="submit" name="register">Register</button>
+						<button id="submit1" style="width: 10%;" type="submit" name="register"><?php echo $lang['BTN_REGISTER']; ?></button>
 					</tr>
 					</table>
 			</form>
@@ -28,7 +28,7 @@
 
           <table>
           <tr>
-            <button id="submit1" style="width: 10%;" type="submit" name="favoris">Favoris</button>
+            <button id="submit1" style="width: 10%;" type="submit" name="favoris"><?php echo $lang['BTN_FAVORIS']; ?></button>
           </tr>
           </table>
       </form>
@@ -36,7 +36,7 @@
 
           <table>
           <tr>
-            <button id="submit1" style="width: 10%;" type="submit" name="notice">Notice</button>
+            <button id="submit1" style="width: 10%;" type="submit" name="notice"><?php echo $lang['BTN_NOTICE']; ?></button>
           </tr>
           </table>
       </form>

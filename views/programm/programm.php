@@ -67,11 +67,11 @@ else {
 			<div>
 				<table style = "width: 100%;">
 					 <tr>
-              			<th style = "width: 20%; text-align: left;"> Type </th>
-						 <th style = "width: 20%; text-align: left;"> Titre </th>
-						 <th style = "width: 20%; text-align: left;"> Information </th>
-						 <th style = "width: 20%; text-align: left;"> Depart</th>
-						 <th style = "width: 20%; text-align: left;"> Date debut </th>
+              			<th style = "width: 20%; text-align: left;"> <?php echo $lang['TYPE_TOUR']; ?> </th>
+						 <th style = "width: 20%; text-align: left;"> <?php echo $lang['TITLE_TOUR']; ?> </th>
+						 <th style = "width: 20%; text-align: left;"> <?php echo $lang['INFO']; ?> </th>
+						 <th style = "width: 20%; text-align: left;"> <?php echo $lang['TIME']; ?></th>
+						 <th style = "width: 20%; text-align: left;"> <?php echo $lang['DATE']; ?> </th>
 					 </tr>
 				</table>
 			</div>

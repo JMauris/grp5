@@ -8,8 +8,8 @@ $tour = $_SESSION['tour'];?>
 	</head>
 	<body>
 		<div style="height: 100%">
-			<h1>Available Hikings</h1>
-			<h2>These are the available Hikings for the chosen day:</h2>
+			<h1><?php echo $lang['HIKLIST_TITLE']; ?></h1>
+			<h2><?php echo $lang['HIKLIST_SUBTITLE']; ?>:</h2>
 			<div id="HikingListShowDiv">
 			<a href="<?php echo URL_DIR.'programm/hiking_detail'?>">
 				<button id="0">
@@ -24,8 +24,8 @@ $tour = $_SESSION['tour'];?>
 					</button>
 				</a>
 			</div>
-			<button id="HikingListButton"><img id="HikingListImage" src="http://localhost/cas_montana/public/img/search.png" onclick="window.location = 'search_path.php';">Search route</button>
-			<button id="HikingListButton">Near us</button>
+			<button id="HikingListButton"><img id="HikingListImage" src="http://localhost/cas_montana/public/img/search.png" onclick="window.location = 'search_path.php';"><?php echo $lang['BTN_SEARCH']; ?></button>
+			<button id="HikingListButton"><?php echo $lang['BTN_NEAR']; ?></button>
 			<div class="push"></div>
 		</div>
 		<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>

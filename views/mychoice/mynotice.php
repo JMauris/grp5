@@ -7,9 +7,7 @@
  	 $noticeArray = $_SESSION['notice'];
  }
    include_once ROOT_DIR.'languages/common.php';
-
-
-	 ?>
+?>
 
 
 <html>
@@ -22,20 +20,15 @@
 			<div class= "MynoticeTopDiv">
 				</div>
 			<div id="MynoticeMiddleDiv">
-
 				<table id="MynoticeShowTable">
 					<tr>
 							<?php if(isset($_SESSION['Mynotice'])) { ?>
 						<td style= "overflow-y: scroll; height: 100%;">
 							<div>
-
 								<form action="<?php echo URL_DIR.'mychoice/displaySelect'?>" method= "post">
-
 									<?php
 									 foreach( $tourArray as $cle => $element)	{ ?>
 										 <button  name ="tourSelect" value = <?php echo $cle?> style="width: 100%;">
-
-
 										 <p><?php echo ' '.$tourArray[$cle]->getTitre(); ?></p>
 										 <?php if( $tourArray[$cle]->getIdxTypeTour() == 1)
 											 {
@@ -51,7 +44,6 @@
 														 }
 											 ?>
 										 <p><?php echo ' '.$tourArray[$cle]->getInformation_fr(); ?></p>
-
 
                      <?php foreach ($noticeArray as $key => $value){
                      if($noticeArray[$key]->getIdTour() == $tourArray[$cle]->getId())

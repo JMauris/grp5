@@ -10,7 +10,6 @@
 	</head>
 	<body>
 		<div class="wrapper">
-
 			<h1><?php echo $lang['MON_CAS']; ?></h1>
 			<form id = "LoginForm" action="<?php echo URL_DIR.'login/connection';?>" method="post">
 				<?php echo $msg;?>

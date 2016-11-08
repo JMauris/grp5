@@ -17,7 +17,7 @@ else {
 	<body>
 		<div class= "wrapper">
 			<div id= "SearchResultTopDiv">
-				<h1>Search Results</h1>
+				<h1><?php echo $lang['SEARCH_RESULT']; ?></h1>
 			</div>
 
 			<div id="SearchResultMiddleDiv">
@@ -29,7 +29,7 @@ else {
 								<form action="<?php echo URL_DIR.'search/search_detail'?>" method= "post">
 					 				
 					 			<?php if($tourResults == "error"){?>
-					 				<h3>There are no Tours with the given search conditions. Please search again</h3>
+					 				<h3><?php echo $lang['BLABLA']; ?></h3>
 					 			 	<?php }
 					 			else
 					 				{

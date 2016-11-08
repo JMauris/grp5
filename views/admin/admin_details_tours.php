@@ -3,7 +3,7 @@ include_once ROOT_DIR.'languages/common.php';
 //$tourArray=Tour::connectToAll();
 $tourArray=$_SESSION['get_all_shit'];
 if(isset($_GET['lang'])){
-	$_SESSION['lang']=$_GET['lang'];}
+		$_SESSION['lang']=$_GET['lang'];}
 	else {
 		$_SESSION['lang']='en';
 	}
@@ -34,7 +34,7 @@ if(isset($_GET['lang'])){
 	</head>
 	<body>
 		<div class="wrapper" style="text-align: center;">
-			<h1>Managing Tours</h1>
+			<h1><?php echo $lang['TOUR_TITLE']; ?></h1>
 			<div>
 				<button id="submit1" style = "width: 10%;" type="button" value="insert" onclick="toggle_i();">Insert</button>
 				<button id="submit1" style = "width: 10%;" type="button" value="List" onclick="toggle_u();">List</button>
@@ -42,11 +42,11 @@ if(isset($_GET['lang'])){
 			</div>
 			
 			<div id="content_insert">
-				<h2>New Tour</h2>
+				<h2><?php echo $lang['TITLE_NEW_TOUR']; ?></h2>
 				<form method="post" action="<?php echo URL_DIR.'admin/saveNew';?>">
 				  <table id="AdminDetailsToursTable">
 				  	<tr>
-				  		<td>Type of Tour:</td>
+				  		<td><?php echo $lang['TYPE_TOUR']; ?>:</td>
 				  		<td>
 				  			<select id="type_input_new">
 				  				<option value="1">single-day hike</option>
@@ -56,30 +56,30 @@ if(isset($_GET['lang'])){
 				  		</td>
 				  	</tr>
 				  	<tr>
-				  		<td>Title: </td>
+				  		<td><?php echo $lang['TITLE_TOUR']; ?>: </td>
 				  		<td><input type="text" name="title_input_new"></td>
 				  	</tr>
 				  	<tr>
-				  		<td>Information: </td>
+				  		<td><?php echo $lang['INFO']; ?>: </td>
 				  		<td><input type="text" name="info_input_new"></td>
 				  	</tr>
 				  	<tr>
-				  		<td>Difficulty: </td>
+				  		<td><?php echo $lang['DIFFICULTY']; ?>: </td>
 				  		<td><input type="number" name="difficulty_input_new" max="10"></td>
 				  	</tr>
 				  	<tr>
-				  		<td>Guide: </td>
+				  		<td><?php echo $lang['GUIDE']; ?>: </td>
 				  		<td><input type="text" name="guide_input_new"></td>
 				  	</tr>
 				  	<tr>
-				  		<td>Time: </td>
+				  		<td><?php echo $lang['TIME']; ?>: </td>
 				  		<td>
 				  			<input type="time" name="timeF_input_new">
 				  			<input type="time" name="timeT_input_new">
 				  		</td>
 				  	</tr>
 				  	<tr>
-				  		<td>Date: </td>
+				  		<td><?php echo $lang['DATE']; ?>: </td>
 				  		<td>
 				  			<input id="from" type="date" name="date_input_from" value="">
 				  			<input id="to" type="date" name="date_input_to" value="">
@@ -87,7 +87,7 @@ if(isset($_GET['lang'])){
 				  	</tr>
 				  </table>
 				  <br>
-				  <button id="submit1" style = "width: 15%;" type="submit" name="action">Save</button>
+				  <button id="submit1" style = "width: 15%;" type="submit" name="action"><?php echo $lang['BTN_SAVE']; ?></button>
 				</form>
 				<a href="<?php echo URL_DIR.'admin/admin'?>">
 					<button id="submit1" style = "width: 15%;" type="button"><?php echo $lang['BTN_BACK']; ?></button>
@@ -95,14 +95,14 @@ if(isset($_GET['lang'])){
 			</div>
 			
 			<div id="content_update">
-				<h2>List of all Tours</h2>
+				<h2><?php echo $lang['TITLE_LIST_TOUR']; ?></h2>
 				
 				<table id="AdminDetailsToursTable">
 					 <tr>
 					 	<th style = "width: 20%; text-align: left;"> ID </th>
-              			<th style = "width: 20%; text-align: left;"> Type </th>
-              			<th style = "width: 20%; text-align: left;"> Titre </th>
-					 	<th style = "width: 20%; text-align: left;"> Information </th>
+              			<th style = "width: 20%; text-align: left;"> <?php echo $lang['TYPE_TOUR']; ?> </th>
+              			<th style = "width: 20%; text-align: left;"> <?php echo $lang['TITLE_TOUR']; ?> </th>
+					 	<th style = "width: 20%; text-align: left;"> <?php echo $lang['INFO']; ?> </th>
 					 	<th style = "width: 20%; text-align: left;">  </th>
 				 	</tr>
 				</table>
@@ -143,10 +143,10 @@ if(isset($_GET['lang'])){
 										</td>
 										<td style="width: 20%"> 
 											<form action="<?php echo URL_DIR.'admin/update_tour';?>" method= "post">
-												<button name ="selectedTour" value = <?php echo $cle;?> type = "submit">Edit</button>
+												<button name ="selectedTour" value = <?php echo $cle;?> type = "submit"><?php echo $lang['BTN_EDIT']; ?></button>
 											</form>
 											<form action="<?php echo URL_DIR.'admin/show_registered';?>" method= "post">
-												<button name ="selectedTour" value = <?php echo $cle;?> type = "submit">Show registered members</button>
+												<button name ="selectedTour" value = <?php echo $cle;?> type = "submit"><?php echo $lang['BTN_SHOW_MEMBERS']; ?></button>
 											</form>
 										</td>
 									</tr>
@@ -159,14 +159,14 @@ if(isset($_GET['lang'])){
 			</div>
 			
 			<div id="content_delete">
-				<h2>List of all Tours</h2>
+				<h2><?php echo $lang['TITLE_LIST_TOUR']; ?></h2>
 				
 				<table id="AdminDetailsToursTable">
 					 <tr>
 					 	<th style = "width: 20%; text-align: left;"> ID </th>
-              			<th style = "width: 20%; text-align: left;"> Type </th>
-              			<th style = "width: 20%; text-align: left;"> Titre </th>
-					 	<th style = "width: 20%; text-align: left;"> Information </th>
+              			<th style = "width: 20%; text-align: left;"> <?php echo $lang['TYPE_TOUR']; ?> </th>
+              			<th style = "width: 20%; text-align: left;"> <?php echo $lang['TITLE_TOUR']; ?> </th>
+					 	<th style = "width: 20%; text-align: left;"> <?php echo $lang['INFO']; ?> </th>
 					 	<th style = "width: 20%; text-align: left;">  </th>
 				 	</tr>
 				</table>
@@ -207,7 +207,7 @@ if(isset($_GET['lang'])){
 										</td>
 										<td style="width: 20%"> 
 											<form action="<?php echo URL_DIR.'admin/deleteTour';?>" method= "post">
-												<button name ="selectedTour" value = <?php echo $tourArray[$cle]->getId();?> type = "submit">Delete</button>
+												<button name ="selectedTour" value = <?php echo $tourArray[$cle]->getId();?> type = "submit"><?php echo $lang['BTN_DELETE']; ?></button>
 											</form>
 										</td>
 									</tr>

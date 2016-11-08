@@ -11,31 +11,31 @@ $SelectedTour = $_SESSION['Selected_Tour'];
 	</head>
 	<body>
 		<div class="wrapper" style="height: 100%">
-			<h1>Search Detail</h1>
+			<h1><?php echo $lang['SEARCH_DETAIL']; ?></h1>
 			<h3><?php echo ' '.$SelectedTour->getTitre(); ?></h3>
 			<table id="SearchDetailTable">
 				<tr>
-					<td>Date begin:</td>
+					<td><?php echo $lang['DATE_BEGIN']; ?></td>
 					<td><?php echo ' '.$SelectedTour->getDateDebut(); ?></td>
 				</tr>
 				<tr>
-					<td>Place of departure: </td>
+					<td><?php echo $lang['PLACE_OF_DEP']; ?></td>
 					<td><?php echo ' '.$SelectedTour->getLieuRDV(); ?></td>
 				</tr>
 				<tr>
-					<td>Destination:</td>
+					<td><?php echo $lang['DESTINATION']; ?></td>
 					<td><?php echo ' '.$SelectedTour->getIdxArriveeLocalite(); ?></td>
 				</tr>
 				<tr>
-					<td>difficulty:</td>
+					<td><?php echo $lang['DIFFICULTY']; ?></td>
 					<td><?php echo ' '.$SelectedTour->getDifficulte(); ?></td>
 				</tr>
 				<tr>
-					<td>Duration:</td>
+					<td><?php echo $lang['DURATION']; ?></td>
 					<td><?php echo ' '.$SelectedTour->getDuree(); ?></td>
 				</tr>
 				<tr>
-					<td>Description:</td>
+					<td><?php echo $lang['DESCRIPTION']; ?></td>
 					<td><?php echo ' '.$SelectedTour->getInformation_fr(); ?></td>
 				</tr>
 				<tr>
@@ -90,7 +90,7 @@ $SelectedTour = $_SESSION['Selected_Tour'];
 					<tr>
 						<td>
 							<a href="<?php echo URL_DIR.'search/search_path'?>">
-								<button id="submit1" style="width: 15%;" type="button" value="go back" >Go back</button>
+								<button id="submit1" style="width: 15%;" type="button" value="go back"><?php echo $lang['BTN_BACK']; ?></button>
 							</a>
 						</td>
 					</tr>
