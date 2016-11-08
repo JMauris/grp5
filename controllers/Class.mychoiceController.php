@@ -23,18 +23,20 @@ function mychoice(){
         $iduser=$_SESSION['personne']->getId();
 
         $favoris = Favoris::connectForFavoris($iduser);
-
+        var_dump($favoris);
 
         //ne pas créer la session si elle est vide
         if($favoris!=false)
         {
-
-
           $TourFavoris = Tour::connectForMyProgramm($favoris,1);
           $_SESSION['MyFavoris']=$TourFavoris;
 
 
 
+
+      }
+      else{
+      unset($_SESSION['MyFavoris']);
 
       }
     }
@@ -52,7 +54,7 @@ function mychoice(){
 
 
         $_SESSION['notice']= $notice;
-    
+
         //faire un array des  Tour enregistrer
         if($notice!=false)
         {
@@ -64,6 +66,11 @@ function mychoice(){
 
 
       }
+    }
+    else{
+    unset($_SESSION['Mynotice']);
+
+    }
       }
 
 
@@ -88,6 +95,11 @@ function mychoice(){
 
         $_SESSION['MyRegister']=$TourRegister;
       }
+    }
+    else{
+    unset($_SESSION['MyRegister']);
+
+    }
 
 
     }

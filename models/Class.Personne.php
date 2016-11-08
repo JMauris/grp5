@@ -26,7 +26,7 @@ class Personne{
 
 
 
-  //It uses null as the default value for the function argument $id
+
   public function __construct($id=null, $firstname, $lastname,
                               $email, $password=null, $idxLangue, $estActif, $numMember, $role,
                                $portable, $phone, $adresse, $localite, $npa, $idxAbonnement){
