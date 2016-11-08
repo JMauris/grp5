@@ -1,8 +1,6 @@
 <?php
 /**
- * @author S. Martin
- * @link http://www.hevs.ch	
- *
+ *Method that controls all Controllers
  */
 class errorController extends Controller {	
     /**

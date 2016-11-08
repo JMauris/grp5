@@ -1,7 +1,9 @@
 <?php
 
 class mychoiceController extends Controller{
-
+/**
+ * Method that controls page 'mychoice.php'
+ */
 function mychoice(){
 
   //The page cannot be displayed if no user connected
@@ -12,6 +14,9 @@ function mychoice(){
 
   }
 
+  /**
+   * Method that controls 'myfavoris.php'
+   */
   function myfavoris(){
 
     //The page cannot be displayed if no user connected
@@ -41,6 +46,9 @@ function mychoice(){
       }
     }
 
+    /**
+     * Method that controls page 'mynotice.php'
+     */
   function mynotice(){
 
       //The page cannot be displayed if no user connected
@@ -69,8 +77,11 @@ function mychoice(){
     unset($_SESSION['Mynotice']);
 
     }
-      }
+   }
 
+   /**
+    * Method that controls page 'myregister.php'
+    */
 
   function myregister(){
 
@@ -92,15 +103,15 @@ function mychoice(){
         $TourRegister = Tour::connectForMyProgramm($inscription,0);
 
         $_SESSION['MyRegister']=$TourRegister;
-      }    else{
+        }else{
           unset($_SESSION['MyRegister']);
 
-          }
-
-
-
+       }
     }
-
+	
+    /**
+     * Method for controlling the selected Tour using 'hiking_detail.php' or 'prposal_detail.php'
+     */
     function displaySelect()
     {
       $idtour=$_POST['tourSelect'];
@@ -115,30 +126,17 @@ function mychoice(){
       }    elseif (strpos($test,'mynotice')) {
           $Tour =  $_SESSION['Mynotice'];
       }
-$_SESSION['tour']= $Tour;
-$_SESSION['MyselectedTour']=$idtour;
-//var_dump($_SESSION['MyselectedTour']);
-  $test2=$Tour[$idtour];
-  if($test2->getIdxTypeTour()==1||$test2->getIdxTypeTour()==2){ $this->redirect('programm', 'hiking_detail');
-  }
-  elseif ($test2->getIdxTypeTour()==6) {
+	$_SESSION['tour']= $Tour;
+	$_SESSION['MyselectedTour']=$idtour;
+	//var_dump($_SESSION['MyselectedTour']);
+  	$test2=$Tour[$idtour];
+  	if($test2->getIdxTypeTour()==1||$test2->getIdxTypeTour()==2){ $this->redirect('programm', 'hiking_detail');
+  	}
+  	elseif ($test2->getIdxTypeTour()==6) {
     $this->redirect('proposal', 'proposal_detail');
+ 	 
+  	}
   }
-
-
-
-
-    }
-
-
-
-
-
-
-
-
-
-
 }
 
  ?>
