@@ -16,17 +16,11 @@ else {
 		<meta charset="UTF-8">
 		<title>search path</title>
 		<link rel="stylesheet" type="text/css" href="/<?php echo SITE_NAME; ?>/public/css/main.css"><style type="text/css">
-			select{
-				width: 30%;
-			}
 
 			#filter{
 				width: 400px;
 			}
 
-			table {
-				margin: 0 auto;
-			}
 		</style>
 	</head>
 	<body>
@@ -35,12 +29,12 @@ else {
 			<h1><?php echo $lang['SEARCH']; ?></h1>
 			<br>
 			<form method= "post" action="<?php echo URL_DIR.'search/search_result';?>" >
-				<table>
+				<table style="margin: 0;">
 					<tr>
 						<td><?php echo $lang['REGION']; ?></td>
 						<td>
 
-							<select name="selected_region">
+							<select style="width: 30%;" name="selected_region">
 								<option value="all"><?php echo $lang['ALL']; ?></option>
 								<?php foreach( $region as $cle => $element)
 
@@ -54,7 +48,7 @@ else {
 						<td><?php echo $lang['DIFFICULTY']; ?>:</td>
 						<td>
 
-							<select name="difficulty">
+							<select style="width: 30%;" name="difficulty">
 										 <option value="all"><?php echo $lang['ALL']; ?></option>
                 						 <option value="1">*</option>
                 						 <option value="2">**</option>
@@ -68,7 +62,7 @@ else {
 					<tr>
 						<td><?php echo $lang['SORT_HIKE']; ?></td>
 						<td>
-							<select name="sort_hike">
+							<select style="width: 30%;" name="sort_hike">
 									<option value="all"><?php echo $lang['ALL']; ?></option>
 										<?php foreach( $genre as $cle => $element)
 

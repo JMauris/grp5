@@ -95,7 +95,13 @@ $SelectedTour = $_SESSION['Selected_Tour'];
 				</form>
 				<br>
 			<div class="g-recaptcha" data-sitekey="6Lc43gkUAAAAAPsuLQ6YjIL5wYo5fi51_wcDLcOl"></div>
-			<input type="submit" name="action" value="Save">
+			<table style="width: 100%; text-align: center;">
+				<tr>
+					<td>
+						<button id="submit1" style="width: 15%;" type="submit" name="action" value="Save">Save</button>
+					</td>
+				</tr>
+			</table>
 			<br><br>
 			<div class="push"></div>
 		</div>
