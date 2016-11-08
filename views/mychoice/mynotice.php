@@ -1,5 +1,4 @@
 <?php
-
 include_once ROOT_DIR . 'global/header.php';
 
 if (isset ( $_SESSION ['Mynotice'] )) {
@@ -37,7 +36,7 @@ include_once ROOT_DIR . 'languages/common.php';
 									<p><?php echo ' '.$tourArray[$cle]->getTitre(); ?></p>
 										 <?php
 									
-if ($tourArray [$cle]->getIdxTypeTour () == 1) {
+									if ($tourArray [$cle]->getIdxTypeTour () == 1) {
 										echo "Hiking";
 									} elseif ($tourArray [$cle]->getIdxTypeTour () == 2) {
 										echo "Stay";
@@ -49,7 +48,7 @@ if ($tourArray [$cle]->getIdxTypeTour () == 1) {
 
                      <?php
 									
-foreach ( $noticeArray as $key => $value ) {
+									foreach ( $noticeArray as $key => $value ) {
 										if ($noticeArray [$key]->getIdTour () == $tourArray [$cle]->getId ()) {
 											echo "note :" . $noticeArray [$key]->getEvaluation () . "/5";
 										}

@@ -1,5 +1,4 @@
 <?php
-
 include_once ROOT_DIR . 'global/header.php';
 include_once ROOT_DIR . 'languages/common.php';
 // Collect data from controller

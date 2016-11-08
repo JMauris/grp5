@@ -1,35 +1,35 @@
 @CHARSET "UTF-8";
 
-h1{
-	color:black;
-	text-align:center;
-	padding-top:2%;
+h1 {
+	color: black;
+	text-align: center;
+	padding-top: 2%;
 	font-family: "Times New Roman", Times, serif;
 	font-style: normal;
 	font-size: 3.00em;
 }
 
 h2 {
-	color:black;
-	text-align:center;
+	color: black;
+	text-align: center;
 	font-family: "Times New Roman", Times, serif;
 	font-style: normal;
 }
 
 h3 {
-	color:black;
-	text-align:center;
+	color: black;
+	text-align: center;
 	font-family: "Times New Roman", Times, serif;
 	font-style: normal;
 }
 
-.wrapper{
+.wrapper {
 	min-height: 100%;
 	height: auto !important;
-	height:100%;
+	height: 100%;
 	width: 85%;
 	margin: 0 auto 11em;
-	background-color: rgba(235,235,235,0.85);
+	background-color: rgba(235, 235, 235, 0.85);
 	font-family: "Times New Roman", Times, serif;
 	font-style: normal;
 	font-size: 1.10em;
@@ -44,27 +44,29 @@ body {
 	background-attachment: fixed;
 }
 
-#submit1{
+#submit1 {
 	float: center;
 	width: 30%;
 	-moz-box-shadow: 0px 0px 0px 2px #9fb4f2;
 	-webkit-box-shadow: 0px 0px 0px 2px #9fb4f2;
 	box-shadow: 0px 0px 0px 2px #9fb4f2;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #7892c2), color-stop(1, #476e9e));
-	background:-moz-linear-gradient(top, #7892c2 5%, #476e9e 100%);
-	background:-webkit-linear-gradient(top, #7892c2 5%, #476e9e 100%);
-	background:-o-linear-gradient(top, #7892c2 5%, #476e9e 100%);
-	background:-ms-linear-gradient(top, #7892c2 5%, #476e9e 100%);
-	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7892c2', endColorstr='#476e9e',GradientType=0);
-	background-color:#7892c2;
-	-moz-border-radius:10px;
-	-webkit-border-radius:10px;
-	border-radius:10px;
-	border:1px solid #4e6096;
-	display:inline;
-	cursor:pointer;
-	color:#ffffff;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #7892c2
+		), color-stop(1, #476e9e));
+	background: -moz-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background: -webkit-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background: -o-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background: -ms-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background: linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7892c2',
+		endColorstr='#476e9e', GradientType=0);
+	background-color: #7892c2;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px solid #4e6096;
+	display: inline;
+	cursor: pointer;
+	color: #ffffff;
 	font-family: "Times New Roman", Times, serif;
 	font-size: 100%;
 	margin: 0.5%;
@@ -75,14 +77,16 @@ body {
 }
 
 #submit1:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #476e9e), color-stop(1, #7892c2));
-	background:-moz-linear-gradient(top, #476e9e 5%, #7892c2 100%);
-	background:-webkit-linear-gradient(top, #476e9e 5%, #7892c2 100%);
-	background:-o-linear-gradient(top, #476e9e 5%, #7892c2 100%);
-	background:-ms-linear-gradient(top, #476e9e 5%, #7892c2 100%);
-	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#476e9e', endColorstr='#7892c2',GradientType=0);
-	background-color:#476e9e;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #476e9e
+		), color-stop(1, #7892c2));
+	background: -moz-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+	background: -webkit-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+	background: -o-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+	background: -ms-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+	background: linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#476e9e',
+		endColorstr='#7892c2', GradientType=0);
+	background-color: #476e9e;
 }
 
 #submit1:active {
@@ -95,7 +99,7 @@ p {
 	margin: 200em, 20em;
 	color: black;
 	font-family: "Times New Roman", Times, serif;
-	font-size:105%;
+	font-size: 105%;
 	padding-left: 2%;
 	padding-right: 2%;
 	padding-bottom: 2%;
@@ -106,7 +110,7 @@ p {
 	margin: 200em, 20em;
 	color: black;
 	font-family: "Times New Roman", Times, serif;
-	font-size:105%;
+	font-size: 105%;
 	padding-left: 2%;
 	padding-right: 2%;
 	padding-bottom: 2%;
@@ -116,17 +120,11 @@ a {
 	text-decoration: none;
 }
 
-
-
-
 /* Login Form Css */
 #LoginForm {
-	width:25%;
-    margin:0 auto;
+	width: 25%;
+	margin: 0 auto;
 }
-
-
-
 
 /* Admin_details_members Css */
 #AdminDetailsMembersTable {
@@ -135,7 +133,8 @@ a {
 }
 
 #content_insert, #content_update, #content_delete {
-	display: none; text-align: center;
+	display: none;
+	text-align: center;
 	padding: 2%;
 }
 
@@ -143,24 +142,18 @@ a {
 	float: bottom;
 	background-color: lightgrey;
 	height: 350px;
-	overflow-y : scroll;
+	overflow-y: scroll;
 }
 
 #AdminDetailsMembersButtonDiv {
 	text-align: center;
 }
 
-
-
-
 /* Update_member Css */
 #UpdateMemberTable {
 	margin: 0 auto;
 	text-align: center;
 }
-
-
-
 
 /* Admin_details_tours Css */
 #AdminDetailsToursTable {
@@ -170,29 +163,23 @@ a {
 }
 
 #content_insert, #content_update, #content_delete {
-	display: none; text-align: center;
+	display: none;
+	text-align: center;
 }
-
 
 #AdminDetailsToursListDiv {
 	float: bottom;
-	background-color : lightgrey;
+	background-color: lightgrey;
 	height: 500px;
-	overflow-y : scroll;
+	overflow-y: scroll;
 	margin-bottom: 2%;
 }
-
-
-
 
 /* Update_tour Css */
 #UpdateToursTable {
 	margin: 0 auto;
 	text-align: center;
 }
-
-
-
 
 /* Contact Div Css */
 #contactDiv {
@@ -203,19 +190,13 @@ a {
 	text-align: left;
 }
 
-
-
-
 /* Mychoice Form Css */
 #MyChoiceForm {
 	width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    float: center;
+	margin: 0 auto;
+	text-align: center;
+	float: center;
 }
-
-
-
 
 /* Myfavoris Css */
 #MyfavorisTopDiv {
@@ -237,9 +218,6 @@ a {
 	padding-bottom: 2%;
 }
 
-
-
-
 /* Mynotice Css */
 #MynoticeTopDiv {
 	text-align: center;
@@ -257,9 +235,6 @@ a {
 	width: 100%;
 	height: 100%;
 }
-
-
-
 
 /* Myregister Css */
 #MyregisterTopDiv {
@@ -279,9 +254,6 @@ a {
 	height: 100%;
 }
 
-
-
-
 /* Profil Form Css */
 #ProfilForm {
 	width: 25%;
@@ -289,29 +261,23 @@ a {
 	padding: 2%;
 }
 
-
-
-
 /* Hiking_detail Table Css */
 #HikingDetailsTable {
 	margin: 0 auto;
 	text-align: left;
 }
 
-
-
-
 /* HikingList Css */
 #HikingListShowDiv {
-	overflow-y : scroll;
-	background-color : transparent;
+	overflow-y: scroll;
+	background-color: transparent;
 	height: 30%;
 	border: 1px solid black;
 	padding-bottom: 2%;
 }
 
 #HikingListImage {
-	display:inline-block;
+	display: inline-block;
 	align: left;
 	width: 20%;
 }
@@ -329,17 +295,11 @@ a {
 	font-size: 1.30em;
 }
 
-
-
-
 /* Programm_register Form Css */
 #ProgrammRegisterForm {
-	width:25%;
-	margin:0 auto;
+	width: 25%;
+	margin: 0 auto;
 }
-
-
-
 
 /* Programm Css */
 #ProgrammDiv {
@@ -369,7 +329,8 @@ a {
 }
 
 #ProgrammImage:hover {
-	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
 	border: 2px solid #555555;
 }
 
@@ -380,10 +341,10 @@ a {
 	padding-bottom: 2%;
 }
 
-#yourProg{
+#yourProg {
 	background-color: transparent;
 	text-align: center;
-	padding-bottom :2%;
+	padding-bottom: 2%;
 	padding-left: 2%;
 	padding-right: 2%;
 }
@@ -397,9 +358,9 @@ a {
 
 #ProgrammBottomDiv {
 	float: bottom;
-	background-color : transparent;
+	background-color: transparent;
 	height: 150px;
-	overflow-y : scroll;
+	overflow-y: scroll;
 	margin-bottom: 2%;
 }
 
@@ -423,22 +384,16 @@ a {
 	padding: 0;
 }
 
-
-
-
 /* Proposal_detail Table Css */
 #ProposalDetailTable {
 	margin: 0 auto;
 	text-align: left;
 }
 
-
-
-
 /* Proposal Css */
 #ProposalTopDiv {
 	text-align: center;
-			}
+}
 
 #ProposalMiddleDiv {
 	width: 96%;
@@ -467,17 +422,11 @@ a {
 	padding: 2%;
 }
 
-
-
-
 /* Search_detail Table Css */
 #SearchDetailTable {
 	margin: 0 auto;
 	text-align: left;
 }
-
-
-
 
 /* Search_path Css */
 #SearchPathSelect {
@@ -488,21 +437,17 @@ a {
 	width: 400px;
 }
 
-
-
-
 /* Search_result Css */
 #SearchResultTopDivn {
 	text-align: center;
-			}
+}
 
 #SearchResultMiddleDiv {
 	width: 96%;
 	height: 450px;
 	padding-left: 2%;
 	padding-right: 2%;
-	overflow-y : scroll;
-
+	overflow-y: scroll;
 }
 
 #SearchResultShowTable {
@@ -531,6 +476,7 @@ a {
 }
 
 #SearchResultImage:hover {
-	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
 	border: 2px solid #555555;
 }

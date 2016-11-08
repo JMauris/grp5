@@ -1,5 +1,4 @@
 <?php
-
 include_once ROOT_DIR . 'global/header.php';
 if (isset ( $_SESSION ['MyRegister'] )) {
 	$tourArray = $_SESSION ['MyRegister'];
@@ -38,7 +37,7 @@ include_once ROOT_DIR . 'languages/common.php';
 									<p><?php echo ' '.$tourArray[$cle]->getTitre(); ?></p>
 										 <?php
 									
-if ($tourArray [$cle]->getIdxTypeTour () == 1) {
+									if ($tourArray [$cle]->getIdxTypeTour () == 1) {
 										echo "Hiking";
 									} elseif ($tourArray [$cle]->getIdxTypeTour () == 2) {
 										echo "Stay";

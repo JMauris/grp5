@@ -1,5 +1,4 @@
 <?php
-
 include_once ROOT_DIR . 'global/header.php';
 include_once ROOT_DIR . 'languages/common.php';
 $memberArray = $_SESSION ['get_all_Membershit'];
@@ -92,19 +91,19 @@ $memberArray = $_SESSION ['get_all_Membershit'];
 			<h2><?php echo $lang['TITLE_LIST_MEMBER']; ?></h2>
 			<table style="width: 100%; padding-right: 13%;">
 				<thead>
-						<tr>
-							<th style="width: 2%; text-align: left;">ID</th>
-							<th style="width: 10%; text-align: left;"> <?php echo $lang['FIRSTNAME']; ?> </th>
-							<th style="width: 10%; text-align: left;"> <?php echo $lang['LASTNAME']; ?> </th>
-							<th style="width: 10%; text-align: left;"> <?php echo $lang['ADRESS']; ?> </th>
-							<th style="width: 2%; text-align: left;"> <?php echo $lang['NPA']; ?> </th>
-							<th style="width: 5%; text-align: left;"> <?php echo $lang['LOCALITY']; ?> </th>
-							<th style="width: 10%; text-align: left;"> <?php echo $lang['PHONE']; ?> </th>
-							<th style="width: 10%; text-align: left;"> <?php echo $lang['MOBILE']; ?> </th>
-							<th style="width: 10%; text-align: left;"> <?php echo $lang['MAIL']; ?> </th>
-							<th style="width: 2%; text-align: left;"></th>
-						</tr>
-					</thead>
+					<tr>
+						<th style="width: 2%; text-align: left;">ID</th>
+						<th style="width: 10%; text-align: left;"> <?php echo $lang['FIRSTNAME']; ?> </th>
+						<th style="width: 10%; text-align: left;"> <?php echo $lang['LASTNAME']; ?> </th>
+						<th style="width: 10%; text-align: left;"> <?php echo $lang['ADRESS']; ?> </th>
+						<th style="width: 2%; text-align: left;"> <?php echo $lang['NPA']; ?> </th>
+						<th style="width: 5%; text-align: left;"> <?php echo $lang['LOCALITY']; ?> </th>
+						<th style="width: 10%; text-align: left;"> <?php echo $lang['PHONE']; ?> </th>
+						<th style="width: 10%; text-align: left;"> <?php echo $lang['MOBILE']; ?> </th>
+						<th style="width: 10%; text-align: left;"> <?php echo $lang['MAIL']; ?> </th>
+						<th style="width: 2%; text-align: left;"></th>
+					</tr>
+				</thead>
 			</table>
 
 			<div id="AdminDetailsMembersListDiv">
@@ -185,6 +184,9 @@ $memberArray = $_SESSION ['get_all_Membershit'];
 						</tr>	
 						<?php } ?>
 						
+					
+					
+					
 					
 					
 					<tbody>
@@ -292,6 +294,9 @@ $memberArray = $_SESSION ['get_all_Membershit'];
 						
 					
 					
+					
+					
+					
 					<tbody>
 				
 				</table>
@@ -300,9 +305,7 @@ $memberArray = $_SESSION ['get_all_Membershit'];
 				<button id="submit1" style="width: 15%;" type="button"><?php echo $lang['BTN_BACK']; ?></button>
 			</a>
 		</div>
-		<br>
-		<br>
-		<br>
+		<br> <br> <br>
 		<div class="push"></div>
 	</div>
 	<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
