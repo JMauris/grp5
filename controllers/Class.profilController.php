@@ -3,7 +3,7 @@ class profilController extends Controller{
 
 
   /**
-   * Method that controls the page 'myProgram.php'
+   * Method that controls the page 'profil.php'
    */
   function profil(){
     //The page cannot be displayed if no user connected
@@ -17,6 +17,9 @@ class profilController extends Controller{
   }
 
 
+  /**
+   * Method used to save the changes done to the profile by taking the posted on form
+   */
   function save()
 
   {
@@ -44,7 +47,9 @@ class profilController extends Controller{
 
   }
 
-
+/**
+ * Method that controls the password change
+ */
   function connection(){
     //Get data posted by the form
 
@@ -91,17 +96,15 @@ class profilController extends Controller{
 
       }
     }
-
-
-
-
-}
-function change_password()
-{
-$this->vars['msg'] = isset($_SESSION['msg']) ? $_SESSION['msg'] : '';
 }
 
-
+/**
+ * Method that controls the results from changing password in 'change_password.php'
+ */
+	function change_password()
+		{
+			$this->vars['msg'] = isset($_SESSION['msg']) ? $_SESSION['msg'] : '';
+		}
 }
 
 ?>
