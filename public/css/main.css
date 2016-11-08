@@ -132,7 +132,6 @@ a {
 #AdminDetailsMembersTable {
 	margin: 0 auto;
 	text-align: left;
-	border-spacing: 10px;
 }
 
 #content_insert, #content_update, #content_delete {
@@ -143,7 +142,7 @@ a {
 #AdminDetailsMembersListDiv {
 	float: bottom;
 	background-color: lightgrey;
-	height: 100%;
+	height: 350px;
 	overflow-y : scroll;
 }
 

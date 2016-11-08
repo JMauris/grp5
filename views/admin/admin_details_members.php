@@ -90,10 +90,8 @@ $memberArray = $_SESSION ['get_all_Membershit'];
 
 		<div id="content_update">
 			<h2><?php echo $lang['TITLE_LIST_MEMBER']; ?></h2>
-
-			<div id="AdminDetailsMembersListDiv">
-				<table id="AdminDetailsMembersTable">
-					<thead>
+			<table style="width: 100%; padding-right: 13%;">
+				<thead>
 						<tr>
 							<th style="width: 2%; text-align: left;">ID</th>
 							<th style="width: 10%; text-align: left;"> <?php echo $lang['FIRSTNAME']; ?> </th>
@@ -107,6 +105,10 @@ $memberArray = $_SESSION ['get_all_Membershit'];
 							<th style="width: 2%; text-align: left;"></th>
 						</tr>
 					</thead>
+			</table>
+
+			<div id="AdminDetailsMembersListDiv">
+				<table id="AdminDetailsMembersTable">
 					<tbody>
 						<?php foreach($memberArray as $cle => $element) {?>
 							<tr>
