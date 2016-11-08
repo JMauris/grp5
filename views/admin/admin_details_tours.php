@@ -166,7 +166,7 @@ if (isset ( $_GET ['lang'] )) {
 		<div id="content_delete">
 			<h2><?php echo $lang['TITLE_LIST_TOUR']; ?></h2>
 
-			<table id="AdminDetailsToursTable">
+			<table style="width: 100%;">
 				<tr>
 					<th style="width: 20%; text-align: left;">ID</th>
 					<th style="width: 20%; text-align: left;"> <?php echo $lang['TYPE_TOUR']; ?> </th>
@@ -178,7 +178,7 @@ if (isset ( $_GET ['lang'] )) {
 
 			<div id="AdminDetailsToursListDiv">
 					<?php foreach( $tourArray as $cle => $element) {?>
-								<table id="AdminDetailsToursTable">
+					<table id="AdminDetailsToursTable">
 					<tr>
 						<td style="width: 20%">
 											<?php echo ' '.$tourArray[$cle]->getId(); ?>

@@ -189,6 +189,9 @@ $memberArray = $_SESSION ['get_all_Membershit'];
 					
 					
 					
+					
+					
+					
 					<tbody>
 				
 				</table>
@@ -199,23 +202,24 @@ $memberArray = $_SESSION ['get_all_Membershit'];
 		</div>
 		<div id="content_delete">
 			<h2><?php echo $lang['TITLE_LIST_MEMBER']; ?></h2>
-
+			<table style="width: 100%; padding-right: 13%;">
+				<thead>
+					<tr>
+						<th style="width: 2%; text-align: left;">ID</th>
+						<th style="width: 10%; text-align: left;"> <?php echo $lang['FIRSTNAME']; ?> </th>
+						<th style="width: 10%; text-align: left;"> <?php echo $lang['LASTNAME']; ?> </th>
+						<th style="width: 10%; text-align: left;"> <?php echo $lang['ADRESS']; ?> </th>
+						<th style="width: 2%; text-align: left;"> <?php echo $lang['NPA']; ?> </th>
+						<th style="width: 5%; text-align: left;"> <?php echo $lang['LOCALITY']; ?> </th>
+						<th style="width: 10%; text-align: left;"> <?php echo $lang['PHONE']; ?> </th>
+						<th style="width: 10%; text-align: left;"> <?php echo $lang['MOBILE']; ?> </th>
+						<th style="width: 10%; text-align: left;"> <?php echo $lang['MAIL']; ?> </th>
+						<th style="width: 2%; text-align: left;"></th>
+					</tr>
+				</thead>
+			</table>
 			<div id="AdminDetailsMembersListDiv">
 				<table id="AdminDetailsMembersTable">
-					<thead>
-						<tr>
-							<th style="width: 2%; text-align: left;">ID</th>
-							<th style="width: 10%; text-align: left;"> <?php echo $lang['FIRSTNAME']; ?> </th>
-							<th style="width: 10%; text-align: left;"> <?php echo $lang['LASTNAME']; ?> </th>
-							<th style="width: 10%; text-align: left;"> <?php echo $lang['ADRESS']; ?> </th>
-							<th style="width: 2%; text-align: left;"> <?php echo $lang['NPA']; ?> </th>
-							<th style="width: 5%; text-align: left;"> <?php echo $lang['LOCALITY']; ?> </th>
-							<th style="width: 10%; text-align: left;"> <?php echo $lang['PHONE']; ?> </th>
-							<th style="width: 10%; text-align: left;"> <?php echo $lang['MOBILE']; ?> </th>
-							<th style="width: 10%; text-align: left;"> <?php echo $lang['MAIL']; ?> </th>
-							<th style="width: 2%; text-align: left;"></th>
-						</tr>
-					</thead>
 					<tbody>
 						<?php foreach($memberArray as $cle => $element) {?>
 							<tr>
@@ -292,6 +296,9 @@ $memberArray = $_SESSION ['get_all_Membershit'];
 						</tr>	
 						<?php } ?>
 						
+					
+					
+					
 					
 					
 					
