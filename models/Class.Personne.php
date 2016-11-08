@@ -22,10 +22,10 @@ class Personne{
 
 
   private $idxAbonnement;
-  
+
 
   /**
-   * 
+   *
    * @param unknown $id
    * @param unknown $firstname
    * @param unknown $lastname
@@ -321,9 +321,9 @@ public static function connectToAll() {
 	$query =  "SELECT * From personne ";
 	$result = MySqlConn::getInstance()->selectDB($query);
 	while($row = $result->fetch()) {
-		$resultArray[$row['idPersonne']] =   new Personne($row['idPersonne'], $row['prenom'], $row['nom'], $row['adresse'], $row['email'], $row['motDePasse']
-				, $row['telephone'], $row['portable'], $row['idxLangue'], $row['estActif'] , $row['numMembre'], $row['Localite'], $row['NPA'], $row['role'],
-				$row['idxAbonnement']);
+		$resultArray[$row['idPersonne']] =   new Personne($row['idPersonne'], $row['prenom'], $row['nom'],
+                                                      $row['email'], $row['motDePasse'], $row['idxLangue'], $row['estActif'], $row['numMembre'], $row['Localite'],
+                                                     $row['portable'], $row['telephone'], $row['adresse'], $row['Localite'], $row['NPA'], $row['idxAbonnement']);
 
 	}
 
