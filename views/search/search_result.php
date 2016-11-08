@@ -23,7 +23,7 @@ else {
 			<div id="SearchResultMiddleDiv">
 				<table id="SearchResultShowTable">
 					<tr>
-						<td style= "overflow-y: scroll; height: 100%;">
+						<td style= "height: 100%;">
 							<div id="show"> 
 							
 								<form action="<?php echo URL_DIR.'search/search_detail'?>" method= "post">

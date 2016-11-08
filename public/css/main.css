@@ -445,7 +445,7 @@ a {
 	width: 96%;
 	height: 30%;
 	padding-left: 2%;
-	paddin g-right: 2%;
+	padding-right: 2%;
 }
 			
 #ProposalShowTable {
@@ -497,14 +497,16 @@ a {
 	text-align: center;
 			}
 			
-#SearchResultMiddleDivn {
+#SearchResultMiddleDiv {
 	width: 96%;
-	height: 30%;
+	height: 450px;
 	padding-left: 2%;
-	paddin g-right: 2%;
+	padding-right: 2%;
+	overflow-y : scroll;
+	
 }
 			
-#SearchResultShowTablen {
+#SearchResultShowTable {
 	width: 100%;
 	height: 100%;
 }

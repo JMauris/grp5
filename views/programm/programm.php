@@ -28,87 +28,31 @@ else {
 	<body>
 		<div class="wrapper" style= "padding-bottom: 2%; padding-right: 2%; padding-left: 2%;">
 				<h1><?php echo $lang['PROGRAM_TITLE']; ?></h1>
+				
 				<div id="ProgrammTopButton">
 					<a href="<?php echo URL_DIR.'search/search_path'?>"><img id="ProgrammImage" src="<?php echo URL_DIR. 'public/img/searchRoute.png'?>"></a>
 				</div>
 
 				<div>
 
-				<div id="ProgrammTopDiv">
+				<div id="ProgrammTopDiv" >
 					<table style="width: 100%;">
 						<tr>
 							<td style="text-align: center; width: 50%;">
-								<h2><?php echo $lang['SINGLE_HIKES']; ?></h2>
-						<p id="ProgrammP">
-							Description
-						</P>
+								<form action="<?php echo URL_DIR.'programm/programm'?>" method= "post">
+									<button id="submit1" name ="type" value = '1'><?php echo $lang['SINGLE_HIKES']; ?></button>
+								</form>
 					</td>
 					<td style="text-align: center; width: 50%;">
-				<h2><?php echo $lang['MULTI_DAY_HIKES']; ?></h2>
-						<p id="ProgrammP">
-							Description
-						</P>
+						<form action="<?php echo URL_DIR.'programm/programm'?>" method= "post">
+							<button id="submit1" name ="type" value = '2'><?php echo $lang['MULTI_DAY_HIKES']; ?></button>
+						</form>
 					</td>
 				</tr>
 			</table>
 			</div>
 
-		<div id="ProgrammDiv">
-				<table id = "ProgrammMainTable">
-					<tr>
-						<td style="width: 50%;">
-							<div id="ProgrammTable">
-								<table>
-									<tr>
-									  <td><?php echo $lang['CHOOSE_A_DAY']; ?></td>
-									  <td><input type="text" id="datepicker" name="from"></td>
-									</tr>
-									<tr>
-										<td><?php echo $lang['DAY_ROUTE']; ?></td>
-										<td>...</td>
-									</tr>
-							  	</table>
-							</div>
-						</td>
-						<td style="width: 50%;">
-							<div id="ProgrammTable">
-							  	<table>
-								  	<tr>
-								  		<td><?php echo $lang['CHOOSE_DATE']; ?></td>
-								  	</tr>
-								  	<tr>
-									    <td><b><?php echo $lang['FROM']; ?></b></td>
-									    <td><input type="text" id="datepicker2" name="from"></td>
-									</tr>
-									<tr>
-										<td><b><?php echo $lang['TO']; ?></b></td>
-										<td><input type="text" id="datepicker3" name="to"></td>
-									</tr>
-									<tr>
-										<td><?php echo $lang['STAY_ROUTE']; ?></td>
-										<td>....</td>
-									</tr>
-							  	</table>
-							</div>
-						</td>
-					</tr>
-				</table>
-			</div>
-		   <div>
-			<table style="width: 100%;">
-					<tr id="ProgrammTr">
-						<td>
-							<form action="<?php echo URL_DIR.'programm/programm'?>" method= "post">
-								<button id="submit1" name ="type" value = '1'><?php echo $lang['BTN_ONLY_HIKE']; ?></button>
-							</form>
-						</td>
-						<td>
-							<form action="<?php echo URL_DIR.'programm/programm'?>" method= "post">
-								<button id="submit1" name ="type" value = '2'><?php echo $lang['BTN_ONLY_MULTI']; ?></button>
-							</form>
-						</td>
-					</tr>
-			</table>
+			
 		</div>
 
 		<div id="yourProg">
