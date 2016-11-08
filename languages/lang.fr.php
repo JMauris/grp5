@@ -48,59 +48,59 @@ $lang['DES_STATUTES'] = 'Télécharger les statues de pdf';
  */
 
 //startpage
-$lang['ADMIN_TITLE'] = 'Welcome to the Admin page!';
-$lang['ADMIN_SUBTITLE'] = 'What do you want to manage?';
-$lang['BTN_TOURS'] = 'Tours';
-$lang['BTN_MEMBERS'] = 'Members';
+$lang['ADMIN_TITLE'] = 'Bienvenue sur la page Administration';
+$lang['ADMIN_SUBTITLE'] = 'Que voulez-vous gérer ?';
+$lang['BTN_TOURS'] = 'Randonnées';
+$lang['BTN_MEMBERS'] = 'Membres';
 
 //tours+ Members
-$lang['TOUR_TITLE'] = 'Managing Tours';
-$lang['MEMBERS_TITLE'] = 'Managing Members';
-$lang['BTN_INSERT'] = 'Insert';
-$lang['BTN_UPDATE'] = 'List';
-$lang['BTN_DELETE'] = 'Delete';
+$lang['TOUR_TITLE'] = 'Gérer les randonnées';
+$lang['MEMBERS_TITLE'] = 'Gérer les membres';
+$lang['BTN_INSERT'] = 'Insertion';
+$lang['BTN_UPDATE'] = 'Liste';
+$lang['BTN_DELETE'] = 'Suppression';
 
-$lang['BTN_SAVE'] = 'save';
+$lang['BTN_SAVE'] = 'sauvegarde';
 
-$lang['BTN_EDIT'] = 'edit';
-$lang['BTN_SHOW_MEMBERS'] = 'show registered members';
+$lang['BTN_EDIT'] = 'édition';
+$lang['BTN_SHOW_MEMBERS'] = 'afficher les membres inscrits';
 
 //tours insert/update/delete
-$lang['TITLE_NEW_TOUR'] = 'New Tour';
+$lang['TITLE_NEW_TOUR'] = 'Nouvelles randonnées';
 $lang['TYPE_TOUR'] = 'Type';
-$lang['TITLE_TOUR'] = 'Title';
+$lang['TITLE_TOUR'] = 'Titre';
 $lang['INFO'] = 'Information';
-$lang['DIFFICULTY'] = 'Difficulty';
+$lang['DIFFICULTY'] = 'Difficulté';
 $lang['GUIDE'] = 'Guide';
-$lang['TIME'] = 'Time';
+$lang['TIME'] = 'Temps';
 $lang['DATE'] = 'Date';
 
-$lang['TITLE_LIST_TOUR'] = 'List of all Tours';
+$lang['TITLE_LIST_TOUR'] = 'Liste de toutes les randonnées';
 
 //members insert/update/delete
-$lang['TITLE_NEW_MEMBER'] = 'New Member';
-$lang['FIRSTNAME'] = 'Firstname';
-$lang['LASTNAME'] = 'Lastname';
+$lang['TITLE_NEW_MEMBER'] = 'Nouveau membre';
+$lang['FIRSTNAME'] = 'Prénom';
+$lang['LASTNAME'] = 'Nom';
 $lang['ADRESS'] = 'Adress';
 $lang['NPA'] = 'NPA';
-$lang['LOCALITY'] = 'Locality';
-$lang['PHONE'] = 'Phone';
+$lang['LOCALITY'] = 'Localité';
+$lang['PHONE'] = 'Téléphone';
 $lang['MOBILE'] = 'Mobile';
 $lang['MAIL'] = 'Email';
 
-$lang['TITLE_LIST_MEMBER'] = 'List of all Members';
+$lang['TITLE_LIST_MEMBER'] = 'Liste de tous les membres';
 
 //show_registered
-$lang['TITLE_REG_MEMBERS'] = 'Registered members to tour';
-$lang['LIST_REG_M'] = 'List of registered members:';
+$lang['TITLE_REG_MEMBERS'] = 'Membres inscrits à la randonnée';
+$lang['LIST_REG_M'] = 'Liste des membres enregistrer:';
 
 //update member
-$lang['TITLE_UPDATE_MEM'] = 'Update Member';
-$lang['BTN_SAVE_CHANGE'] = 'save changes';
+$lang['TITLE_UPDATE_MEM'] = 'Mise à jour des membres';
+$lang['BTN_SAVE_CHANGE'] = 'sauver les changements';
 
 //update tour
-$lang['TITLE_UPDATE_TOUR'] = 'Update Tour';
-$lang['SUBTITLE_UPDATE_TOUR'] = 'All fields are obligatory!!';
+$lang['TITLE_UPDATE_TOUR'] = 'Misa à jour des Randonnées';
+$lang['SUBTITLE_UPDATE_TOUR'] = 'Tout les champs sont obligatoire !!';
 
 /*
  ------------------
@@ -124,19 +124,19 @@ $lang['WELCOME_TITLE'] = 'Bienvenue ';
  Home page
  ------------------
  */
-$lang['HOME_TITLE'] = 'Welcome to CAS Montana';
-$lang['HOME_TEXT_1'] = 'The two neighboring resorts of Crans and Montana are situated at an altitude of 1500 m on a sun-drenched plateau high above the Rhone Valley. Together they form one of the biggest holiday destinations in the Valais.These twin towns have much to offer, including an impressive view of the chain of mountain peaks from the Matterhorn to Mont Blanc and a particularly wide programme of activities all year round.';
-$lang['HOME_TEXT_2'] = 'Idyllic mountain village or alpine town? Crans-Montana embodies both and combines all the comforts of a modern holiday resort with an expansive natural landscape and panoramic views of the Valais Alps. The modern side of Crans-Montana offers the most extensive alpine shopping for miles around. It also boasts a renowned cultural and congress centre; and a wide range of accommodation. As a venue for major sporting events, and with a reputation as a golfing Mecca, Crans-Montana draws visitors from all over the world.';
-$lang['HOME_TEXT_3'] = 'Commune with nature in this family-friendly resort, where you can enjoy five swimming lakes; walks through aromatic mountain forests along an extensive network of footpaths; and cosy fondue evenings in rustic inns.';
+$lang['HOME_TITLE'] = 'Bienvenue au CAS Montana';
+$lang['HOME_TEXT_1'] = "Les deux stations voisines de Crans et Montana sont situées à une altitude de 1500 m sur un plateau ensoleillé au-dessus de la vallée du Rhône. Ensemble, ils forment l'une des plus grandes destinations de villégiature du Valais. Ces villes jumelles ont beaucoup à offrir, y compris une vue impressionnante sur la chaîne de sommets du Mont Cervin au Mont Blanc et un programme d'activités particulièrement large toute l'année.";
+$lang['HOME_TEXT_2'] = "Village de montagne idyllique ou ville alpine? Crans-Montana incarne les deux et allie tous les conforts d'une station de vacances moderne avec un vaste paysage naturel et des vues panoramiques sur les Alpes valaisannes. Le côté moderne de Crans-Montana offre le shopping alpin le plus étendu pour des milles autour. Il dispose également d'un centre culturel et de congrès de renom; Et un large éventail d'hébergements. En tant que lieu d'événements sportifs majeurs, et avec une réputation de Mecque de golf, Crans-Montana attire des visiteurs de partout dans le monde.";
+$lang['HOME_TEXT_3'] = "Commune avec la nature dans cette station familiale, où vous pourrez profiter de cinq lacs de baignade; Promenades à travers des forêts de montagne aromatiques le long d'un vaste réseau de sentiers; Et des soirées de fondue cosy dans des auberges rustiques.";
 
 /*
  ------------------
  mychoice pages
  ------------------
  */
-$lang['BTN_REGISTER'] = 'Register';
+$lang['BTN_REGISTER'] = 'Inscription';
 $lang['BTN_FAVORIS'] = 'Favoris';
-$lang['BTN_NOTICE'] = 'Notice';
+$lang['BTN_NOTICE'] = 'Evalutation';
 
 /*
  ------------------
@@ -165,11 +165,11 @@ $lang['SELECTION_3'] = 'Abonnement général';
 $lang['SELECTION_4'] = 'demi tarif';
 
 //change password
-$lang['OLD_PW'] = 'old password';
-$lang['NEW_PW'] = 'new password';
-$lang['CONTROL_NEW_PW'] = 'control new password';
+$lang['OLD_PW'] = 'vieux mot de passe';
+$lang['NEW_PW'] = 'nouveau mot de passe';
+$lang['CONTROL_NEW_PW'] = 'controller le nouveau mot de passe';
 
-$lang['BTN_SUBMIT'] = 'submit';
+$lang['BTN_SUBMIT'] = 'soumettre';
 
 /*
  ------------------
@@ -193,12 +193,12 @@ $lang['BTN_ONLY_MULTI'] = 'Séjour uniquement';
 $lang['YOUR_PROGRAMM'] = 'Votre programme:';
 $lang['BTN_VIEW'] = 'Tout voir';
 $lang['ADDFAVORIS'] = 'ajout favoris';
-$lang['REMOVEFAVORIS'] = 'remove favoris';
+$lang['REMOVEFAVORIS'] = 'supprimer des favoris';
 
-$lang['HIKLIST_TITLE'] = 'Available Hikings';
-$lang['HIKLIST_SUBTITLE'] = 'These are the available Hikings for the chosen day';
+$lang['HIKLIST_TITLE'] = 'Randonnées disponibles';
+$lang['HIKLIST_SUBTITLE'] = 'Ce sont les randonnées disponibles pour la journée choisie';
 
-$lang['ABONEMENT'] = 'Abonnement for public transport';
+$lang['ABONEMENT'] = 'Abonnement pour les transports public';
 
 /*
  ------------------
@@ -244,9 +244,9 @@ $lang['MULTI_D_HIKE'] = 'Séjour';
 $lang['AVAIL_HIKINGS'] = 'Randonnée disponible';
 $lang['AVAIL_LIST'] = 'Randonnée disponible pour le jour choisi :';
 
-$lang['SEARCH_DETAIL'] = 'Search Detail';
-$lang['SEARCH_RESULT'] = 'Search Results';
-$lang['BLABLA'] = 'There are no Tours with the given search conditions. Please search again';
+$lang['SEARCH_DETAIL'] = 'Détails de la Recherche';
+$lang['SEARCH_RESULT'] = 'Résultats de la recherche';
+$lang['BLABLA'] = "Il n'y a pas de randonnées avec les conditions de recherche données. Veuillez réessayer";
 
 /*
 ------------------
