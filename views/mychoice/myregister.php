@@ -15,7 +15,7 @@ include_once ROOT_DIR . 'languages/common.php';
 	href="/<?php echo SITE_NAME; ?>/public/css/main.css">
 </head>
 <body>
-	<div class="wrapper">
+	<div class="wrapper" style="height: 600px; margin-top: 2%;">
 		<div id="MyregisterTopDiv"></div>
 		<div id="MyregisterMiddleDiv">
 

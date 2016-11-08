@@ -19,7 +19,7 @@ include_once ROOT_DIR . 'languages/common.php';
 	href="/<?php echo SITE_NAME; ?>/public/css/main.css">
 </head>
 <body>
-	<div class="wrapper">
+	<div class="wrapper" style="height: 600px; margin-top: 2%;">
 		<div class="MynoticeTopDiv"></div>
 		<div id="MynoticeMiddleDiv">
 			<table id="MynoticeShowTable">

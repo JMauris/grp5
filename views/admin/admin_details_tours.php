@@ -1,5 +1,4 @@
 <?php
-
 include_once ROOT_DIR . 'global/header.php';
 include_once ROOT_DIR . 'languages/common.php';
 // $tourArray=Tour::connectToAll();
@@ -97,7 +96,7 @@ if (isset ( $_GET ['lang'] )) {
 		<div id="content_update">
 			<h2><?php echo $lang['TITLE_LIST_TOUR']; ?></h2>
 
-			<table id="AdminDetailsToursTable">
+			<table style="width: 100%;">
 				<tr>
 					<th style="width: 20%; text-align: left;">ID</th>
 					<th style="width: 20%; text-align: left;"> <?php echo $lang['TYPE_TOUR']; ?> </th>
@@ -117,7 +116,7 @@ if (isset ( $_GET ['lang'] )) {
 						<td style="width: 20%">
 									    	<?php
 						
-if ($tourArray [$cle]->getIdxTypeTour () == 1) {
+						if ($tourArray [$cle]->getIdxTypeTour () == 1) {
 							echo "Hiking";
 						} elseif ($tourArray [$cle]->getIdxTypeTour () == 2) {
 							echo "Stay";
@@ -187,7 +186,7 @@ if ($tourArray [$cle]->getIdxTypeTour () == 1) {
 						<td style="width: 20%">
 									    	<?php
 						
-if ($tourArray [$cle]->getIdxTypeTour () == 1) {
+						if ($tourArray [$cle]->getIdxTypeTour () == 1) {
 							echo "Hiking";
 						} elseif ($tourArray [$cle]->getIdxTypeTour () == 2) {
 							echo "Stay";
@@ -228,9 +227,7 @@ if ($tourArray [$cle]->getIdxTypeTour () == 1) {
 				<button id="submit1" style="width: 15%;" type="button"><?php echo $lang['BTN_BACK']; ?></button>
 			</a>
 		</div>
-		<br>
-		<br>
-		<br>
+		<br> <br> <br>
 		<div class="push"></div>
 	</div>
 	<div><?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?></div>
